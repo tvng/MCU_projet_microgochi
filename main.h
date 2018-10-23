@@ -12,10 +12,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 #include <pic18f4550.h>
 
 #include "glcd.h"
 #include "microgochi.h" 
+#include "game.h"
+#include "screen.h"
 
 #endif	/* MAIN_H */

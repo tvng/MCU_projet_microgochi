@@ -7,6 +7,8 @@
       <itemPath>glcd.h</itemPath>
       <itemPath>microgochi.h</itemPath>
       <itemPath>main.h</itemPath>
+      <itemPath>game.h</itemPath>
+      <itemPath>screen.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +20,8 @@
       <itemPath>microgochi.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>glcd.c</itemPath>
+      <itemPath>game.c</itemPath>
+      <itemPath>screen.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -21,11 +21,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18.h
 [v __delay `JF3150 ~T0 @X0 0 e ]
 [p i __delay ]
-"41 ./glcd.h
-[; ;./glcd.h: 41: extern void glcd_WriteByte(unsigned char side, unsigned char data);
+"40 ./glcd.h
+[; ;./glcd.h: 40: extern void glcd_WriteByte(unsigned char side, unsigned char data);
 [v _glcd_WriteByte `(v ~T0 @X0 0 ef2`uc`uc ]
-"45
-[; ;./glcd.h: 45: extern void glcd_FillScreen(unsigned char color);
+"44
+[; ;./glcd.h: 44: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
 "4001 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));

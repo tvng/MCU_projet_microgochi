@@ -19,9 +19,12 @@ struct Microgochi{
 
   unsigned char age;
   unsigned char satiete;
-  unsigned char fatigue;
+  unsigned char energie;
+
   unsigned char proprete;
-  unsigned char amusement;
+
+  unsigned char vivant;
+
 };
 
 void initMicrogochi(struct Microgochi *m);
@@ -33,8 +36,10 @@ void initMicrogochi(struct Microgochi *m)
 {
     m->age=0;
     m->satiete=100;
-    m->fatigue=100;
+    m->energie=100;
     m->proprete=100;
-    m->amusement=100;
+
+
+    m->vivant=1;
 
 }

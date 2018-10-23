@@ -1,26 +1,29 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"11 ./microgochi.h
+[; ;./microgochi.h: 11: struct Microgochi{
+[s S369 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S369 Microgochi age satiete energie proprete vivant ]
 [p mainexit ]
-"3625 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"2453
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2453: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
-[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"3427 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 3427: extern volatile unsigned char TRISA __attribute__((address(0xF92)));
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"2314
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2314: extern volatile unsigned char PORTA __attribute__((address(0xF80)));
+[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
 "4001
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "2705
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2705: extern volatile unsigned char PORTD __attribute__((address(0xF83)));
 [v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
-"40 ./glcd.h
-[; ;./glcd.h: 40: extern void glcd_Init(unsigned char mode);
+"39 ./glcd.h
+[; ;./glcd.h: 39: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
-"11 ./microgochi.h
-[; ;./microgochi.h: 11: struct Microgochi{
-[s S369 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S369 Microgochi age satiete fatigue proprete amusement ]
-"20
-[; ;./microgochi.h: 20: void initMicrogochi(struct Microgochi *m);
+"11 ./screen.h
+[; ;./screen.h: 11: void screen_credits();
+[v _screen_credits `(v ~T0 @X0 0 e? ]
+"23 ./microgochi.h
+[; ;./microgochi.h: 23: void initMicrogochi(struct Microgochi *m);
 [v _initMicrogochi `(v ~T0 @X0 0 ef1`*S369 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -532,63 +535,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"10 main.c
+[; ;main.c: 10: void game_play(struct Microgochi *m)
+[v _game_play `(v ~T0 @X0 1 ef1`*S369 ]
+"11
+[; ;main.c: 11: {
+{
+[e :U _game_play ]
+"10
+[; ;main.c: 10: void game_play(struct Microgochi *m)
+[v _m `*S369 ~T0 @X0 1 r1 ]
+"11
+[; ;main.c: 11: {
+[f ]
+"12
+[; ;main.c: 12:     while (m->vivant==1)
+[e $U 371  ]
+[e :U 372 ]
+"13
+[; ;main.c: 13:     {
+{
+"16
+[; ;main.c: 16:     }
+}
+[e :U 371 ]
+"12
+[; ;main.c: 12:     while (m->vivant==1)
+[e $ == -> . *U _m 4 `i -> 1 `i 372  ]
+[e :U 373 ]
+"17
+[; ;main.c: 17: }
+[e :UE 370 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"14 main.c
-[; ;main.c: 14: int main(int argc, char** argv) {
+"19
+[; ;main.c: 19: int main(int argc, char** argv) {
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"20
-[; ;main.c: 20:     TRISB=0b00001111;
-[e = _TRISB -> -> 15 `i `uc ]
-"21
-[; ;main.c: 21:     PORTB=0b00001111;
-[e = _PORTB -> -> 15 `i `uc ]
 "23
-[; ;main.c: 23:     TRISD = 0xff;
-[e = _TRISD -> -> 255 `i `uc ]
+[; ;main.c: 23:     TRISA=0b00000111;
+[e = _TRISA -> -> 7 `i `uc ]
 "24
-[; ;main.c: 24:  PORTD = 0x00;
+[; ;main.c: 24:     PORTA=0b00000111;
+[e = _PORTA -> -> 7 `i `uc ]
+"26
+[; ;main.c: 26:     TRISD = 0xff;
+[e = _TRISD -> -> 255 `i `uc ]
+"27
+[; ;main.c: 27:  PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"28
-[; ;main.c: 28:     glcd_Init(1);
+"29
+[; ;main.c: 29:     glcd_Init(1);
 [e ( _glcd_Init (1 -> -> 1 `i `uc ]
-"31
-[; ;main.c: 31:     struct Microgochi mGogo;
+"30
+[; ;main.c: 30:     struct Microgochi mGogo;
 [v _mGogo `S369 ~T0 @X0 1 a ]
 "32
-[; ;main.c: 32:     initMicrogochi(& mGogo);
-[e ( _initMicrogochi (1 &U _mGogo ]
-"33
-[; ;main.c: 33:     int vivant=0;
-[v _vivant `i ~T0 @X0 1 a ]
-[e = _vivant -> 0 `i ]
-"39
-[; ;main.c: 39:     vivant=1;
-[e = _vivant -> 1 `i ]
-"42
-[; ;main.c: 42:     while (vivant==1)
-[e $U 371  ]
-[e :U 372 ]
-"43
-[; ;main.c: 43:     {
+[; ;main.c: 32:     screen_credits();
+[e ( _screen_credits ..  ]
+"34
+[; ;main.c: 34:     while (1)
+[e :U 376 ]
+"35
+[; ;main.c: 35:     {
 {
-"62
-[; ;main.c: 62:     }
-}
-[e :U 371 ]
+"36
+[; ;main.c: 36:         initMicrogochi(&mGogo);
+[e ( _initMicrogochi (1 &U _mGogo ]
 "42
-[; ;main.c: 42:     while (vivant==1)
-[e $ == _vivant -> 1 `i 372  ]
-[e :U 373 ]
-"64
-[; ;main.c: 64:     return (0);
+[; ;main.c: 42:         game_play(&mGogo);
+[e ( _game_play (1 &U _mGogo ]
+"45
+[; ;main.c: 45:     }
+}
+[e :U 375 ]
+[e $U 376  ]
+[e :U 377 ]
+"47
+[; ;main.c: 47:     return (0);
 [e ) -> 0 `i ]
-[e $UE 370  ]
-"65
-[; ;main.c: 65: }
-[e :UE 370 ]
+[e $UE 374  ]
+"48
+[; ;main.c: 48: }
+[e :UE 374 ]
 }

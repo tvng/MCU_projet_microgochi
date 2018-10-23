@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./microgochi.h
 [; ;./microgochi.h: 11: struct Microgochi{
 [s S1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1 Microgochi age satiete fatigue proprete amusement ]
+[n S1 Microgochi age satiete energie proprete vivant ]
 "10 microgochi.c
 [; ;microgochi.c: 10: void initMicrogochi(struct Microgochi *m)
 [v _initMicrogochi `(v ~T0 @X0 1 ef1`*S1 ]
@@ -23,15 +23,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;microgochi.c: 13:     m->satiete=100;
 [e = . *U _m 1 -> -> 100 `i `uc ]
 "14
-[; ;microgochi.c: 14:     m->fatigue=100;
+[; ;microgochi.c: 14:     m->energie=100;
 [e = . *U _m 2 -> -> 100 `i `uc ]
 "15
 [; ;microgochi.c: 15:     m->proprete=100;
 [e = . *U _m 3 -> -> 100 `i `uc ]
-"16
-[; ;microgochi.c: 16:     m->amusement=100;
-[e = . *U _m 4 -> -> 100 `i `uc ]
 "18
-[; ;microgochi.c: 18: }
+[; ;microgochi.c: 18:     m->vivant=1;
+[e = . *U _m 4 -> -> 1 `i `uc ]
+"20
+[; ;microgochi.c: 20: }
 [e :UE 2 ]
 }

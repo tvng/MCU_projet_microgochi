@@ -233,7 +233,6 @@ size_t __ctype_get_mb_cur_max(void);
 # 13 "./main.h" 2
 
 
-
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\__at.h" 1 3
@@ -5689,7 +5688,7 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 16 "./main.h" 2
+# 15 "./main.h" 2
 
 
 # 1 "./glcd.h" 1
@@ -5763,7 +5762,6 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 
-
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);
@@ -5774,7 +5772,7 @@ extern void glcd_WriteChar8X8( unsigned char ch, unsigned char color);
 extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
 extern void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
-# 18 "./main.h" 2
+# 17 "./main.h" 2
 
 # 1 "./microgochi.h" 1
 # 11 "./microgochi.h"
@@ -5782,51 +5780,62 @@ struct Microgochi{
 
   unsigned char age;
   unsigned char satiete;
-  unsigned char fatigue;
+  unsigned char energie;
+
   unsigned char proprete;
-  unsigned char amusement;
+
+  unsigned char vivant;
+
 };
 
 void initMicrogochi(struct Microgochi *m);
+# 18 "./main.h" 2
+
+# 1 "./game.h" 1
 # 19 "./main.h" 2
+
+# 1 "./screen.h" 1
+# 11 "./screen.h"
+void screen_credits();
+# 20 "./main.h" 2
 # 8 "main.c" 2
 
 
+void game_play(struct Microgochi *m)
+{
+    while (m->vivant==1)
+    {
 
 
-
+    }
+}
 
 int main(int argc, char** argv) {
 
 
 
-
-
-    TRISB=0b00001111;
-    PORTB=0b00001111;
+    TRISA=0b00000111;
+    PORTA=0b00000111;
 
     TRISD = 0xff;
  PORTD = 0x00;
 
-
-
     glcd_Init(1);
-
-
     struct Microgochi mGogo;
-    initMicrogochi(& mGogo);
-    int vivant=0;
 
+    screen_credits();
 
-
-
-
-    vivant=1;
-
-
-    while (vivant==1)
+    while (1)
     {
-# 62 "main.c"
+        initMicrogochi(&mGogo);
+
+
+
+
+
+        game_play(&mGogo);
+
+
     }
 
     return (0);

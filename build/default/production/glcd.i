@@ -5623,7 +5623,6 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 
-
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);

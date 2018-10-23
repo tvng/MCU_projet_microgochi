@@ -7,58 +7,41 @@
 
 #include "main.h" 
 
-
-
-
+void game_play(struct Microgochi *m)
+{
+    while (m->vivant==1) //tant que le microgochi est vivant
+    {
+        //si on appuie sur 
+        
+    }
+}
 
 int main(int argc, char** argv) {
     
     
-    
-    
     // ** init easypic -----------
-    TRISB=0b00001111;
-    PORTB=0b00001111;
+    TRISA=0b00000111;
+    PORTA=0b00000111;
     
     TRISD = 0xff;			//PORTD input
 	PORTD = 0x00; 				//Reset PORTD
     
+    glcd_Init(GLCD_ON);// ** init ecran
+    struct Microgochi mGogo;    //creation structure Microgochi
+   
+    screen_credits(); //pour afficher les credits cf screen.c : A FAIRE !!!!!!!!!!!!!!!!!
     
-    // ** init ecran
-    glcd_Init(GLCD_ON);
-    
-    // ** init perso -----------
-    struct Microgochi mGogo;
-    initMicrogochi(& mGogo);
-    int vivant=0;
-    //boolean pour dire 1 si vivant et 0 si mort
-
-
-    //  *** GAME START!! ***
-    //anim rapide d'un oeuf qui devient un lapin
-    vivant=1;
-
-    
-    while (vivant==1) //boucle de jeu
+    while (1) //boucle de jeu
     {
-        // ********** STATUT : jauges du Microgogo qui diminuent au fil du temps
+        initMicrogochi(&mGogo); //on reinitialise les parametres du microgochi
         
-        //toutes les 60s, il grandit d'un jour 
-        //toutes les 30s, il perd 10 de satiete
-        //toutes les 10s, il perd 10 d'energie
-        //toutes les 30s, il perd 5 de proprete
-        //toutes les 40s, il perd 5 d'amusement
+        //un truc qui dit que notre microgochi vient de naitre
         
+        //affichage de notre notre lapin de base et avec le menu
         
-        // *********** MENU : avec boutons RB0, RB1, RB2 ************
-            
-        //s'il mange, il gagne 30 de satiete et perd 30 de proprete
-        //il dort, il gagne 20 d'energie toutes les 5s
-        //S'il dort trop, il perd de l'énergie
-        //s'il n'a plus d'énergie il meurt
-        //etc cf overleaf
-      
-        //une fois qu'on arrive a 100 jours, il meurt et on sort de la boucle
+        game_play(&mGogo);
+        
+        //un truc qui dit que notre microgochi meurt
     }
 
     return (EXIT_SUCCESS);

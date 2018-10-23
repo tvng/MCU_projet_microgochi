@@ -12,9 +12,12 @@ struct Microgochi{
     
   unsigned char age;
   unsigned char satiete;
-  unsigned char fatigue;
+  unsigned char energie;
+  
   unsigned char proprete;
-  unsigned char amusement;
+  
+  unsigned char vivant; //boolean
+  
 };
 
 void initMicrogochi(struct Microgochi *m);

@@ -41,15 +41,19 @@
 [v _glcd_WriteChar8X8 glcd_WriteChar8X8 `(v  1 e 1 0 ]
 "683
 [v _glcd_WriteChar3x6 glcd_WriteChar3x6 `(v  1 e 1 0 ]
-"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\main.c
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\main.c
+[v _game_play game_play `(v  1 e 1 0 ]
+"19
 [v _main main `(i  1 e 2 0 ]
 "10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\microgochi.c
 [v _initMicrogochi initMicrogochi `(v  1 e 1 0 ]
-"2453 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
-[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\screen.c
+[v _screen_credits screen_credits `(v  1 e 1 0 ]
+"2314 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S69 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S80 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -59,7 +63,7 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3100
-[s S78 . 1 `uc 1 LB0 1 0 :1:0 
+[s S89 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -68,12 +72,12 @@
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S87 . 1 `S69 1 . 1 0 `S78 1 . 1 0 ]
-[v _LATBbits LATBbits `VES87  1 e 1 @3978 ]
+[u S98 . 1 `S80 1 . 1 0 `S89 1 . 1 0 ]
+[v _LATBbits LATBbits `VES98  1 e 1 @3978 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-"3625
-[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"3427
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\glcd.c
@@ -85,22 +89,25 @@
 "395
 [v _x x `uc  1 e 1 0 ]
 [v _y y `uc  1 e 1 0 ]
-"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\main.c
+"19 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 fatigue 1 2 `uc 1 proprete 1 3 `uc 1 amusement 1 4 ]
-"31
-[v main@mGogo mGogo `S24  1 a 5 13 ]
-"33
-[v main@vivant vivant `i  1 a 2 11 ]
-"65
+[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
+"30
+[v main@mGogo mGogo `S24  1 a 5 11 ]
+"48
+} 0
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\screen.c
+[v _screen_credits screen_credits `(v  1 e 1 0 ]
+{
+"13
 } 0
 "10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\microgochi.c
 [v _initMicrogochi initMicrogochi `(v  1 e 1 0 ]
 {
-[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 fatigue 1 2 `uc 1 proprete 1 3 `uc 1 amusement 1 4 ]
+[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 [v initMicrogochi@m m `*.39S24  1 p 2 0 ]
-"18
+"20
 } 0
 "401 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
@@ -133,4 +140,11 @@
 "443
 [v glcd_WriteByte@side side `uc  1 a 1 1 ]
 "469
+} 0
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\main.c
+[v _game_play game_play `(v  1 e 1 0 ]
+{
+[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
+[v game_play@m m `*.39S24  1 p 2 0 ]
+"17
 } 0
