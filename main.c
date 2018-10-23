@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     
     
     // ** init ecran
-    glcd_init();
+    glcd_Init(GLCD_ON);
     
     // ** init perso -----------
     struct Microgochi mGogo;

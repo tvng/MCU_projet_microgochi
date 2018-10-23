@@ -14,6 +14,8 @@
 
 
 
+# 1 "./main.h" 1
+# 12 "./main.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -165,7 +167,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 8 "main.c" 2
+# 12 "./main.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
@@ -228,7 +230,8 @@ udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
 # 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
 size_t __ctype_get_mb_cur_max(void);
-# 9 "main.c" 2
+# 13 "./main.h" 2
+
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 1 3
@@ -5686,13 +5689,92 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 11 "main.c" 2
-
+# 16 "./main.h" 2
 
 
 # 1 "./glcd.h" 1
-# 14 "main.c" 2
+# 35 "./glcd.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 1 3
 
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 1 3
+# 12 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
+# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18_chip_select.h" 1 3
+# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 2 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
+__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
+
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\errata.h" 1 3
+# 26 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 2 3
+# 49 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 3
+#pragma intrinsic(__nop)
+extern void __nop(void);
+# 154 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
+__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
+__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
+# 174 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 3
+unsigned char __t1rd16on(void);
+unsigned char __t3rd16on(void);
+
+
+
+
+
+
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(unsigned long);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
+#pragma intrinsic(_delay3)
+extern __attribute__((nonreentrant)) void _delay3(unsigned char);
+# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 2 3
+# 35 "./glcd.h" 2
+
+
+
+
+
+extern void glcd_Init(unsigned char mode);
+extern void glcd_WriteByte(unsigned char side, unsigned char data);
+extern unsigned char glcd_ReadByte(unsigned char side);
+extern void glcd_PlotPixel(unsigned char x, unsigned char y, unsigned char color);
+extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+extern void glcd_FillScreen(unsigned char color);
+extern void glcd_WriteChar8X8( unsigned char ch, unsigned char color);
+extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
+extern void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color);
+extern void glcd_Image(void);
+# 18 "./main.h" 2
 
 # 1 "./microgochi.h" 1
 # 11 "./microgochi.h"
@@ -5702,23 +5784,50 @@ struct Microgochi{
   unsigned char satiete;
   unsigned char fatigue;
   unsigned char proprete;
-  unsigned char sante;
-  unsigned char affection;
   unsigned char amusement;
 };
 
 void initMicrogochi(struct Microgochi *m);
-# 16 "main.c" 2
-# 25 "main.c"
+# 19 "./main.h" 2
+# 8 "main.c" 2
+
+
+
+
+
+
 int main(int argc, char** argv) {
+
+
+
 
 
     TRISB=0b00001111;
     PORTB=0b00001111;
 
+    TRISD = 0xff;
+ PORTD = 0x00;
+
+
+
+    glcd_Init(1);
+
 
     struct Microgochi mGogo;
     initMicrogochi(& mGogo);
+    int vivant=0;
+
+
+
+
+
+    vivant=1;
+
+
+    while (vivant==1)
+    {
+# 62 "main.c"
+    }
 
     return (0);
 }
