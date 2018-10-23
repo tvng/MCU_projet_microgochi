@@ -5,41 +5,39 @@
  * Created on 22 octobre 2018, 14:44
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#include <pic18f4550.h>
+#include "main.h" 
 
 
-#include "glcd.h" 
-
-#include "microgochi.h" 
-
-
-/*
- *
- *   
-  unsigned char age;
-  unsigned char satiete;
-  unsigned char energie;
-  unsigned char proprete;
-  unsigned char amusement;
- * 
- */
 
 
 
 int main(int argc, char** argv) {
     
+    
+    
+    
     // ** init easypic -----------
     TRISB=0b00001111;
     PORTB=0b00001111;
     
+    TRISD = 0xff;			//PORTD input
+	PORTD = 0x00; 				//Reset PORTD
+    
+    
+    // ** init ecran
+    glcd_init();
+    
     // ** init perso -----------
     struct Microgochi mGogo;
     initMicrogochi(& mGogo);
-    int vivant=1;
+    int vivant=0;
     //boolean pour dire 1 si vivant et 0 si mort
+
+
+    //  *** GAME START!! ***
+    //anim rapide d'un oeuf qui devient un lapin
+    vivant=1;
+
     
     while (vivant==1) //boucle de jeu
     {

@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>glcd.h</itemPath>
       <itemPath>microgochi.h</itemPath>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
