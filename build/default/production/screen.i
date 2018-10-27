@@ -16,7 +16,7 @@
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
-void screen_credits();
+void screen_credits(void);
 # 8 "screen.c" 2
 
 

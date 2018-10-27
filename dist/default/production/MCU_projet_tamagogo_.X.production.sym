@@ -1,16 +1,17 @@
-_x 12 0 COMRAM 1
-_y 11 0 COMRAM 1
+_x 11 0 COMRAM 1
+_y 10 0 COMRAM 1
 __size_of_game_play 0 0 ABS 0
 __S0 30000E 0 ABS 0
-__S1 13 0 ABS 0
+__S1 12 0 ABS 0
 __S2 0 0 ABS 0
 __Hintentry 0 0 ABS 0
 __Lintentry 0 0 ABS 0
+__end_of_microgochi_init 7158 0 CODE 0
 glcd_FillScreen@color 3 0 COMRAM 1
 _LATD F8C 0 ABS 0
 glcd_WriteByte@data 1 0 COMRAM 1
 __size_of_screen_credits 0 0 ABS 0
-_main 7154 0 CODE 0
+_main 7158 0 CODE 0
 ___sp 0 0 STACK 2
 start 0 0 CODE 0
 _TRISA F92 0 ABS 0
@@ -68,7 +69,8 @@ __Labs1 0 0 ABS 0
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 game_play@m 1 0 COMRAM 1
-main@mGogo C 0 COMRAM 1
+microgochi_init@m 1 0 COMRAM 1
+main@mGogo E 0 COMRAM 1
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
 stackhi 7FF 0 ABS 0
@@ -82,18 +84,18 @@ __Linit 0 0 CODE 0
 __Hintcodelo 0 0 CODE 0
 __Lintcodelo 0 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main 7194 0 CODE 0
+__end_of_main 71E2 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
-_screen_credits 70E0 0 CODE 0
-end_of_initialization 70E6 0 CODE 0
-__end_of_glcd_WriteByte 7154 0 CODE 0
+_screen_credits 708A 0 CODE 0
+end_of_initialization 7090 0 CODE 0
+__end_of_glcd_WriteByte 710A 0 CODE 0
 _glcd_Init 71E2 0 CODE 0
 __end_of_Font8x8 7B3B 0 MEDIUMCONST 0
+__size_of_microgochi_init 0 0 ABS 0
 glcd_WriteByte@side 2 0 COMRAM 1
-__size_of_initMicrogochi 0 0 ABS 0
-_game_play 70F0 0 CODE 0
+_game_play 709A 0 CODE 0
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
 __Hifardata 0 0 CODE 0
@@ -122,13 +124,13 @@ __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
-__ptext0 7154 0 CODE 0
+__ptext0 7158 0 CODE 0
 __Htext2 0 0 ABS 0
 __Ltext2 0 0 ABS 0
-__ptext1 70E0 0 CODE 0
+__ptext1 708A 0 CODE 0
 __Htext3 0 0 ABS 0
 __Ltext3 0 0 ABS 0
-__ptext2 7194 0 CODE 0
+__ptext2 710A 0 CODE 0
 __Htext4 0 0 ABS 0
 __Ltext4 0 0 ABS 0
 __ptext3 71E2 0 CODE 0
@@ -137,16 +139,17 @@ __Ltext5 0 0 ABS 0
 __ptext4 7282 0 CODE 0
 __Htext6 0 0 ABS 0
 __Ltext6 0 0 ABS 0
-__ptext5 711A 0 CODE 0
-__ptext6 70F0 0 CODE 0
+__ptext5 70D0 0 CODE 0
+_microgochi_init 710A 0 CODE 0
+__ptext6 709A 0 CODE 0
 __HbssCOMRAM 0 0 ABS 0
 __LbssCOMRAM 0 0 ABS 0
-__pbssCOMRAM 11 0 COMRAM 1
+__pbssCOMRAM 10 0 COMRAM 1
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-_glcd_WriteByte 711A 0 CODE 0
+_glcd_WriteByte 70D0 0 CODE 0
 __end_of_glcd_Init 7282 0 CODE 0
-__end_of__initialization 70E6 0 CODE 0
+__end_of__initialization 7090 0 CODE 0
 ___rparam_used 1 0 ABS 0
 __Hidata 0 0 CODE 0
 __Lidata 0 0 CODE 0
@@ -165,7 +168,7 @@ __LcstackCOMRAM 0 0 ABS 0
 __pcstackCOMRAM 1 0 COMRAM 1
 _acceuil 7B3B 0 MEDIUMCONST 0
 __end_of_glcd_FillScreen 733A 0 CODE 0
-__Hspace_1 13 0 ABS 0
+__Hspace_1 12 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
@@ -175,7 +178,7 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit 70E2 0 CODE 0
+__pcinit 708C 0 CODE 0
 __ramtop 800 0 RAM 0
 __mediumconst 733A 0 MEDIUMCONST 0
 __size_of_main 0 0 ABS 0
@@ -189,8 +192,7 @@ ___intlo_sp 0 0 STACK 2
 __smallconst 0 0 SMALLCONST 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
-__end_of_initMicrogochi 71E2 0 CODE 0
-__end_of_game_play 711A 0 CODE 0
+__end_of_game_play 70D0 0 CODE 0
 __size_of_glcd_WriteByte 0 0 ABS 0
 __accesstop 60 0 ABS 0
 __Hintcode_body 0 0 ABS 0
@@ -198,14 +200,13 @@ __Lintcode_body 0 0 ABS 0
 intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
-_initMicrogochi 7194 0 CODE 0
 intlevel3 0 0 CODE 0
+main@bool_jeu C 0 COMRAM 1
 _glcd_FillScreen 7282 0 CODE 0
-__end_of_screen_credits 70E2 0 CODE 0
-start_initialization 70E2 0 CODE 0
-initMicrogochi@m 1 0 COMRAM 1
+__end_of_screen_credits 708C 0 CODE 0
+start_initialization 708C 0 CODE 0
 glcd_Init@mode 6 0 COMRAM 1
-__initialization 70E2 0 CODE 0
+__initialization 708C 0 CODE 0
 __activetblptr 2 0 ABS 0
 glcd_FillScreen@i 5 0 COMRAM 1
 glcd_FillScreen@j 4 0 COMRAM 1
@@ -214,53 +215,59 @@ reset_vec 0 3 CODE 0 0
 mediumconst 733A 7FFF MEDIUMCONST 733A 0
 config 300000 30000D CONFIG 300000 0
 idloc 200000 200007 IDLOC 200000 0
-cstackCOMRAM 1 12 COMRAM 1 1
+cstackCOMRAM 1 11 COMRAM 1 1
 text4 7282 7339 CODE 7282 0
 text3 71E2 7281 CODE 71E2 0
-text2 7194 71E1 CODE 7194 0
-text0 7154 7193 CODE 7154 0
-text5 711A 7153 CODE 711A 0
-text6 70F0 7119 CODE 70F0 0
-cinit 70E2 70EF CODE 70E2 0
-text1 70E0 70E1 CODE 70E0 0
+text0 7158 71E1 CODE 7158 0
+text2 710A 7157 CODE 710A 0
+text5 70D0 7109 CODE 70D0 0
+text6 709A 70CF CODE 709A 0
+cinit 708C 7099 CODE 708C 0
+text1 708A 708B CODE 708A 0
 %locals
 dist/default/production\MCU_projet_tamagogo_.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
-C:\Users\acajo\AppData\Local\Temp\s8co.
-4109 70E2 0 CODE 0
-4111 70E2 0 CODE 0
-4114 70E2 0 CODE 0
-4129 70E2 0 CODE 0
-4130 70E4 0 CODE 0
-4136 70E6 0 CODE 0
-4139 70E6 0 CODE 0
-4140 70E8 0 CODE 0
-4141 70EA 0 CODE 0
-4142 70EC 0 CODE 0
+C:\Users\acajo\AppData\Local\Temp\sduo.
+4449 708C 0 CODE 0
+4451 708C 0 CODE 0
+4454 708C 0 CODE 0
+4469 708C 0 CODE 0
+4470 708E 0 CODE 0
+4476 7090 0 CODE 0
+4479 7090 0 CODE 0
+4480 7092 0 CODE 0
+4481 7094 0 CODE 0
+4482 7096 0 CODE 0
 main.c
-19 7154 0 CODE 0
-23 7154 0 CODE 0
+20 7158 0 CODE 0
 24 7158 0 CODE 0
-26 715C 0 CODE 0
-27 715E 0 CODE 0
-29 7162 0 CODE 0
-32 7168 0 CODE 0
-34 7170 0 CODE 0
-36 7170 0 CODE 0
-42 717C 0 CODE 0
-45 718C 0 CODE 0
-48 7190 0 CODE 0
+25 715C 0 CODE 0
+27 7160 0 CODE 0
+28 7162 0 CODE 0
+30 7166 0 CODE 0
+32 716C 0 CODE 0
+33 7174 0 CODE 0
+35 717C 0 CODE 0
+38 7180 0 CODE 0
+39 7184 0 CODE 0
+44 7190 0 CODE 0
+49 719C 0 CODE 0
+55 71B8 0 CODE 0
+57 71C4 0 CODE 0
+60 71C8 0 CODE 0
+35 71C8 0 CODE 0
+63 71DE 0 CODE 0
 screen.c
-10 70E0 0 CODE 0
-13 70E0 0 CODE 0
+10 708A 0 CODE 0
+13 708A 0 CODE 0
 microgochi.c
-10 7194 0 CODE 0
-12 7194 0 CODE 0
-13 71A0 0 CODE 0
-14 71B0 0 CODE 0
-15 71C0 0 CODE 0
-18 71D0 0 CODE 0
-20 71E0 0 CODE 0
+11 710A 0 CODE 0
+13 710A 0 CODE 0
+14 7116 0 CODE 0
+15 7126 0 CODE 0
+16 7136 0 CODE 0
+17 7146 0 CODE 0
+19 7156 0 CODE 0
 glcd.c
 401 71E2 0 CODE 0
 405 71E4 0 CODE 0
@@ -304,28 +311,29 @@ glcd.c
 494 7322 0 CODE 0
 495 7338 0 CODE 0
 glcd.c
-441 711A 0 CODE 0
-443 711C 0 CODE 0
-445 712C 0 CODE 0
-446 712E 0 CODE 0
-447 7130 0 CODE 0
-448 7134 0 CODE 0
-450 7134 0 CODE 0
-451 7136 0 CODE 0
-452 713C 0 CODE 0
-454 713C 0 CODE 0
-455 7140 0 CODE 0
-457 7142 0 CODE 0
-461 7146 0 CODE 0
-462 7148 0 CODE 0
-463 714A 0 CODE 0
-464 714C 0 CODE 0
-467 714E 0 CODE 0
-468 7150 0 CODE 0
-469 7152 0 CODE 0
-main.c
-10 70F0 0 CODE 0
-12 70F0 0 CODE 0
-16 70F8 0 CODE 0
-12 70F8 0 CODE 0
-17 7118 0 CODE 0
+441 70D0 0 CODE 0
+443 70D2 0 CODE 0
+445 70E2 0 CODE 0
+446 70E4 0 CODE 0
+447 70E6 0 CODE 0
+448 70EA 0 CODE 0
+450 70EA 0 CODE 0
+451 70EC 0 CODE 0
+452 70F2 0 CODE 0
+454 70F2 0 CODE 0
+455 70F6 0 CODE 0
+457 70F8 0 CODE 0
+461 70FC 0 CODE 0
+462 70FE 0 CODE 0
+463 7100 0 CODE 0
+464 7102 0 CODE 0
+467 7104 0 CODE 0
+468 7106 0 CODE 0
+469 7108 0 CODE 0
+game.c
+11 709A 0 CODE 0
+13 709A 0 CODE 0
+21 709E 0 CODE 0
+23 70AE 0 CODE 0
+13 70AE 0 CODE 0
+24 70CE 0 CODE 0

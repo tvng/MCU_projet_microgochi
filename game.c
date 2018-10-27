@@ -4,16 +4,24 @@
  *
  * Created on 23 octobre 2018, 17:24
  */
+#include "main.h"
 #include "game.h"
 
-/*void game_play(struct Microgochi *m)
+
+void game_play(Microgochi *m)
 {
     while (m->vivant==1) //tant que le microgochi est vivant
     {
         //si on appuie sur 
         
+        
+        
+        
+        //quand il meurt
+        m->vivant=0;
+        
     }
-}*/
+}
 
   // ********** STATUT : jauges du Microgogo qui diminuent au fil du temps
         

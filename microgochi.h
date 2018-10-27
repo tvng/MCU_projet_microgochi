@@ -6,8 +6,10 @@
  */
 
 
+typedef struct Microgochi Microgochi; //pour enlever le struc et ecrire que Microgochi a chaque fois
 
 
+//notre structure
 struct Microgochi{
     
   unsigned char age;
@@ -20,4 +22,4 @@ struct Microgochi{
   
 };
 
-void initMicrogochi(struct Microgochi *m);
+void microgochi_init(Microgochi *m);

@@ -14,7 +14,18 @@
 
 
 # 1 "./microgochi.h" 1
-# 11 "./microgochi.h"
+
+
+
+
+
+
+
+
+typedef struct Microgochi Microgochi;
+
+
+
 struct Microgochi{
 
   unsigned char age;
@@ -27,19 +38,18 @@ struct Microgochi{
 
 };
 
-void initMicrogochi(struct Microgochi *m);
+void microgochi_init(Microgochi *m);
 # 7 "microgochi.c" 2
 
 
 
-void initMicrogochi(struct Microgochi *m)
+
+void microgochi_init(Microgochi *m)
 {
     m->age=0;
     m->satiete=100;
     m->energie=100;
     m->proprete=100;
-
-
     m->vivant=1;
 
 }

@@ -7,13 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
-
-
-
-
-
-
+# 17 "main.c"
 # 1 "./main.h" 1
 # 12 "./main.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
@@ -5691,6 +5685,35 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 15 "./main.h" 2
 
 
+
+# 1 "./microgochi.h" 1
+
+
+
+
+
+
+
+
+typedef struct Microgochi Microgochi;
+
+
+
+struct Microgochi{
+
+  unsigned char age;
+  unsigned char satiete;
+  unsigned char energie;
+
+  unsigned char proprete;
+
+  unsigned char vivant;
+
+};
+
+void microgochi_init(Microgochi *m);
+# 18 "./main.h" 2
+
 # 1 "./glcd.h" 1
 # 35 "./glcd.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 1 3
@@ -5772,43 +5795,20 @@ extern void glcd_WriteChar8X8( unsigned char ch, unsigned char color);
 extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
 extern void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
-# 17 "./main.h" 2
-
-# 1 "./microgochi.h" 1
-# 11 "./microgochi.h"
-struct Microgochi{
-
-  unsigned char age;
-  unsigned char satiete;
-  unsigned char energie;
-
-  unsigned char proprete;
-
-  unsigned char vivant;
-
-};
-
-void initMicrogochi(struct Microgochi *m);
-# 18 "./main.h" 2
+# 19 "./main.h" 2
 
 # 1 "./game.h" 1
-# 19 "./main.h" 2
+# 13 "./game.h"
+void game_play(Microgochi *m);
+# 20 "./main.h" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
-void screen_credits();
-# 20 "./main.h" 2
-# 8 "main.c" 2
+void screen_credits(void);
+# 21 "./main.h" 2
+# 17 "main.c" 2
 
 
-void game_play(struct Microgochi *m)
-{
-    while (m->vivant==1)
-    {
-
-
-    }
-}
 
 int main(int argc, char** argv) {
 
@@ -5821,19 +5821,33 @@ int main(int argc, char** argv) {
  PORTD = 0x00;
 
     glcd_Init(1);
-    struct Microgochi mGogo;
 
-    screen_credits();
+    Microgochi *mGogo=((void*)0);
+    int bool_jeu=1;
 
-    while (1)
+    while (bool_jeu==1)
     {
-        initMicrogochi(&mGogo);
+
+        screen_credits();
+        microgochi_init(mGogo);
 
 
 
 
+        game_play(mGogo);
 
-        game_play(&mGogo);
+
+
+
+        if (mGogo->vivant==0)
+        {
+
+
+
+
+            bool_jeu=0;
+
+        }
 
 
     }

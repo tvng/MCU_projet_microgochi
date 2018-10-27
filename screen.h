@@ -8,7 +8,7 @@
 #ifndef SCREEN_H
 #define	SCREEN_H
 
-void screen_credits();
+void screen_credits(void);
 
 #endif	/* SCREEN_H */
 
