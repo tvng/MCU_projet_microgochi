@@ -10,15 +10,6 @@
 
 //lib jsais pas quoi
 #include <stdio.h>
-#include <stdlib.h>
-//lib pic
-#include <pic18f4550.h>
-
-//include files
-#include "microgochi.h" 
-#include "glcd.h"
-#include "game.h"
-#include "screen.h"
 
 
 // DEFINE !!!!!!!! ----------------------- pour les port etc

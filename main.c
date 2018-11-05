@@ -14,7 +14,16 @@
 
 */
 
+//lib pic
+#include <pic18f4550.h>
+
 #include "main.h" 
+
+//include files
+#include "microgochi.h" 
+#include "glcd.h"
+#include "game.h"
+#include "screen.h"
 
 
 int main(int argc, char** argv) {
@@ -34,9 +43,10 @@ int main(int argc, char** argv) {
     
     while (bool_jeu==1) //boucle de jeu
     {
+        microgochi_init(mGogo); //on reinitialise les parametres du microgochi
+     
         
         screen_credits(); //pour afficher les credits cf screen.c : A FAIRE !!!!!!!!!!!!!!!!
-        microgochi_init(mGogo); //on reinitialise les parametres du microgochi
         
         //un truc qui dit que notre microgochi vient de naitre
         

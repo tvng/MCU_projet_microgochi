@@ -9,6 +9,7 @@
 #define	GAME_H
 
 
+#include "microgochi.h"
 
 void game_play(Microgochi *m);
 

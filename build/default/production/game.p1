@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "13 ./microgochi.h
 [; ;./microgochi.h: 13: struct Microgochi{
-[s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S370 Microgochi age satiete energie proprete vivant ]
+[s S363 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S363 Microgochi age satiete energie proprete vivant ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -515,21 +515,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "11 game.c
 [; ;game.c: 11: void game_play(Microgochi *m)
-[v _game_play `(v ~T0 @X0 1 ef1`*S370 ]
+[v _game_play `(v ~T0 @X0 1 ef1`*S363 ]
 "12
 [; ;game.c: 12: {
 {
 [e :U _game_play ]
 "11
 [; ;game.c: 11: void game_play(Microgochi *m)
-[v _m `*S370 ~T0 @X0 1 r1 ]
+[v _m `*S363 ~T0 @X0 1 r1 ]
 "12
 [; ;game.c: 12: {
 [f ]
 "13
 [; ;game.c: 13:     while (m->vivant==1)
-[e $U 373  ]
-[e :U 374 ]
+[e $U 366  ]
+[e :U 367 ]
 "14
 [; ;game.c: 14:     {
 {
@@ -539,12 +539,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [; ;game.c: 23:     }
 }
-[e :U 373 ]
+[e :U 366 ]
 "13
 [; ;game.c: 13:     while (m->vivant==1)
-[e $ == -> . *U _m 4 `i -> 1 `i 374  ]
-[e :U 375 ]
+[e $ == -> . *U _m 4 `i -> 1 `i 367  ]
+[e :U 368 ]
 "24
 [; ;game.c: 24: }
-[e :UE 372 ]
+[e :UE 365 ]
 }

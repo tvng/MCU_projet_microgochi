@@ -4,11 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/glcd.c</file>
+            <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/screen.c</file>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/main.c</file>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/microgochi.h</file>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/main.h</file>
+            <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/game.h</file>
+            <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/screen.h</file>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/microgochi.c</file>
             <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/game.c</file>
+            <file>file:/D:/ECE_PARIS/ING4/Microcontroleur/projet/MCU_projet_tamagogo%20.X/glcd.h</file>
         </group>
     </open-files>
 </project-private>

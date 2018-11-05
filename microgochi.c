@@ -4,6 +4,7 @@
  *
  * Created on 22 octobre 2018, 17:44
  */
+#include <pic18f4550.h>
 #include "microgochi.h"
 
 
