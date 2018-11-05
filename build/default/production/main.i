@@ -5808,7 +5808,7 @@ extern void glcd_Image(void);
 # 24 "main.c" 2
 
 # 1 "./game.h" 1
-# 12 "./game.h"
+# 13 "./game.h"
 void game_play(Microgochi *m);
 # 25 "main.c" 2
 

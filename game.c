@@ -5,6 +5,8 @@
  * Created on 23 octobre 2018, 17:24
  */
 #include <pic18f4550.h>
+
+#include "microgochi.h"
 #include "game.h"
 
 

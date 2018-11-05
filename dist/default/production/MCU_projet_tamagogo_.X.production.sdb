@@ -29,7 +29,7 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"11 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\game.c
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 "401 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
@@ -104,23 +104,43 @@
 {
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 "46
-[v main@mGogo mGogo `*.2S24  1 a 2 30 ]
+[v main@mGogo mGogo `*.2S24  1 a 2 65 ]
 "47
-[v main@bool_jeu bool_jeu `i  1 a 2 28 ]
+[v main@bool_jeu bool_jeu `i  1 a 2 63 ]
 "78
 } 0
 "12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
 {
+"22
+[v screen_credits@str_a str_a `[7]uc  1 a 7 31 ]
 "20
-[v screen_credits@string_test string_test `[3]uc  1 a 3 20 ]
+[v screen_credits@str_nom2 str_nom2 `[7]uc  1 a 7 24 ]
 "19
-[v screen_credits@string_jeu string_jeu `[3]uc  1 a 3 17 ]
+[v screen_credits@str_nom1 str_nom1 `[7]uc  1 a 7 17 ]
+"24
+[v screen_credits@str_p str_p `[6]uc  1 a 6 38 ]
+"23
+[v screen_credits@str_a2 str_a2 `[5]uc  1 a 5 49 ]
+"21
+[v screen_credits@str_nom3 str_nom3 `[5]uc  1 a 5 44 ]
+"25
+[v screen_credits@str_t str_t `[4]uc  1 a 4 54 ]
 "15
-[v screen_credits@F3187 F3187 `[3]uc  1 s 3 F3187 ]
+[v screen_credits@F3187 F3187 `[7]uc  1 s 7 F3187 ]
 "19
-[v screen_credits@F3189 F3189 `[3]uc  1 s 3 F3189 ]
-"30
+[v screen_credits@F3189 F3189 `[7]uc  1 s 7 F3189 ]
+"20
+[v screen_credits@F3191 F3191 `[5]uc  1 s 5 F3191 ]
+"21
+[v screen_credits@F3193 F3193 `[7]uc  1 s 7 F3193 ]
+"22
+[v screen_credits@F3195 F3195 `[5]uc  1 s 5 F3195 ]
+"23
+[v screen_credits@F3197 F3197 `[6]uc  1 s 6 F3197 ]
+"24
+[v screen_credits@F3199 F3199 `[4]uc  1 s 4 F3199 ]
+"46
 } 0
 "728 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\glcd.c
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
@@ -216,10 +236,10 @@
 [v glcd_WriteByte@side side `uc  1 a 1 1 ]
 "469
 } 0
-"11 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\game.c
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo .X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 {
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 [v game_play@m m `*.2S24  1 p 2 0 ]
-"24
+"26
 } 0

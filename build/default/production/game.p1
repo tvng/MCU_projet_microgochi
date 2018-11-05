@@ -513,38 +513,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"11 game.c
-[; ;game.c: 11: void game_play(Microgochi *m)
+"13 game.c
+[; ;game.c: 13: void game_play(Microgochi *m)
 [v _game_play `(v ~T0 @X0 1 ef1`*S363 ]
-"12
-[; ;game.c: 12: {
+"14
+[; ;game.c: 14: {
 {
 [e :U _game_play ]
-"11
-[; ;game.c: 11: void game_play(Microgochi *m)
-[v _m `*S363 ~T0 @X0 1 r1 ]
-"12
-[; ;game.c: 12: {
-[f ]
 "13
-[; ;game.c: 13:     while (m->vivant==1)
+[; ;game.c: 13: void game_play(Microgochi *m)
+[v _m `*S363 ~T0 @X0 1 r1 ]
+"14
+[; ;game.c: 14: {
+[f ]
+"15
+[; ;game.c: 15:     while (m->vivant==1)
 [e $U 366  ]
 [e :U 367 ]
-"14
-[; ;game.c: 14:     {
+"16
+[; ;game.c: 16:     {
 {
-"21
-[; ;game.c: 21:         m->vivant=0;
-[e = . *U _m 4 -> -> 0 `i `uc ]
 "23
-[; ;game.c: 23:     }
+[; ;game.c: 23:         m->vivant=0;
+[e = . *U _m 4 -> -> 0 `i `uc ]
+"25
+[; ;game.c: 25:     }
 }
 [e :U 366 ]
-"13
-[; ;game.c: 13:     while (m->vivant==1)
+"15
+[; ;game.c: 15:     while (m->vivant==1)
 [e $ == -> . *U _m 4 `i -> 1 `i 367  ]
 [e :U 368 ]
-"24
-[; ;game.c: 24: }
+"26
+[; ;game.c: 26: }
 [e :UE 365 ]
 }

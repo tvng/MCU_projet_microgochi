@@ -5654,15 +5654,31 @@ void screen_credits()
 
 
 
- unsigned char string_jeu[3] = { 'H', 'o', '\0' };
- unsigned char string_test[3] = { 'H', 'i', '\0' };
+ unsigned char str_nom1[] = "Projet";
+    unsigned char str_nom2[] = "Microg";
+    unsigned char str_nom3[] = "ochi";
+ unsigned char str_a[] ="ARENDA";
+    unsigned char str_a2[] ="RSKI";
+    unsigned char str_p[] ="PAGES";
+    unsigned char str_t[] ="TAO";
 
 
 
- glcd_SetCursor(54,0);
- glcd_WriteString(string_jeu,1,1);
- glcd_SetCursor(35,1);
- glcd_WriteString(string_test,1,1);
+ glcd_SetCursor(0,0);
+ glcd_WriteString(str_nom1,1,1);
+    glcd_SetCursor(0,1);
+ glcd_WriteString(str_nom2,1,1);
+    glcd_SetCursor(50,1);
+ glcd_WriteString(str_nom3,1,1);
 
-    _delay((unsigned long)((100)*(8000000/4000.0)));
+ glcd_SetCursor(0,3);
+ glcd_WriteString(str_a,1,1);
+    glcd_SetCursor(49,3);
+ glcd_WriteString(str_a2,1,1);
+    glcd_SetCursor(0,4);
+ glcd_WriteString(str_p,1,1);
+    glcd_SetCursor(0,5);
+ glcd_WriteString(str_t,1,1);
+
+    _delay((unsigned long)((600)*(8000000/4000.0)));
 }

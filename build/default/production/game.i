@@ -5470,8 +5470,7 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 7 "game.c" 2
 
-# 1 "./game.h" 1
-# 12 "./game.h"
+
 # 1 "./microgochi.h" 1
 
 
@@ -5498,11 +5497,12 @@ struct Microgochi{
 };
 
 void microgochi_init(Microgochi *m);
-# 12 "./game.h" 2
+# 9 "game.c" 2
 
-
+# 1 "./game.h" 1
+# 13 "./game.h"
 void game_play(Microgochi *m);
-# 8 "game.c" 2
+# 10 "game.c" 2
 
 
 

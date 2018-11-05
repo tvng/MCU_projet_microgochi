@@ -16,15 +16,31 @@ void screen_credits()
     //Jeu fait par ...
     
     
-	unsigned char string_jeu[3] = { 'H', 'o', '\0' };
-	unsigned char string_test[3] = { 'H', 'i', '\0' };
+	unsigned char str_nom1[] = "Projet";
+    unsigned char str_nom2[] = "Microg"; 
+    unsigned char str_nom3[] = "ochi"; //je dois couper en 2 sinon ça bug
+	unsigned char str_a[] ="ARENDA";
+    unsigned char str_a2[] ="RSKI";
+    unsigned char str_p[] ="PAGES";
+    unsigned char str_t[] ="TAO";
 	
 	//GLCD ecran d'acceuil pendant 2s
 
-	glcd_SetCursor(54,0);				//place le curseur
-	glcd_WriteString(string_jeu,f8X8,1);	//ecrit 
-	glcd_SetCursor(35,1);			
-	glcd_WriteString(string_test,f8X8,1);	
+	glcd_SetCursor(0,0);				//place le curseur
+	glcd_WriteString(str_nom1,f8X8,1);	//ecrit 
+    glcd_SetCursor(0,1);				
+	glcd_WriteString(str_nom2,f8X8,1);	
+    glcd_SetCursor(50,1);				
+	glcd_WriteString(str_nom3,f8X8,1);	
     
-    __delay_ms(100);
+	glcd_SetCursor(0,3);		
+	glcd_WriteString(str_a,f8X8,1);	
+    glcd_SetCursor(49,3);		
+	glcd_WriteString(str_a2,f8X8,1);	
+    glcd_SetCursor(0,4);		
+	glcd_WriteString(str_p,f8X8,1);	
+    glcd_SetCursor(0,5);		
+	glcd_WriteString(str_t,f8X8,1);	
+    
+    __delay_ms(600);
 }

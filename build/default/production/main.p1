@@ -34,8 +34,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
-"12 ./game.h
-[; ;./game.h: 12: void game_play(Microgochi *m);
+"13 ./game.h
+[; ;./game.h: 13: void game_play(Microgochi *m);
 [v _game_play `(v ~T0 @X0 0 ef1`*S365 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
