@@ -5808,7 +5808,7 @@ extern void glcd_Image(void);
 # 24 "main.c" 2
 
 # 1 "./game.h" 1
-# 13 "./game.h"
+# 12 "./game.h"
 void game_play(Microgochi *m);
 # 25 "main.c" 2
 
@@ -5821,6 +5821,7 @@ void screen_credits(void);
 
 int main(int argc, char** argv) {
 
+    ADCON1 = 0x0F;
 
 
     TRISA=0b00000111;
@@ -5828,6 +5829,10 @@ int main(int argc, char** argv) {
 
     TRISD = 0xff;
  PORTD = 0x00;
+
+ TRISB = 0;
+ PORTB = 0;
+
 
     glcd_Init(1);
 

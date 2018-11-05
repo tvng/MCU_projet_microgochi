@@ -1,6 +1,9 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"3427 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+"6581 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 6581: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"3427
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 3427: extern volatile unsigned char TRISA __attribute__((address(0xF92)));
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
 "2314
@@ -12,6 +15,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2705
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2705: extern volatile unsigned char PORTD __attribute__((address(0xF83)));
 [v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
+"3625
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"2453
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2453: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
+[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
 "39 ./glcd.h
 [; ;./glcd.h: 39: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
@@ -25,8 +34,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
-"13 ./game.h
-[; ;./game.h: 13: void game_play(Microgochi *m);
+"12 ./game.h
+[; ;./game.h: 12: void game_play(Microgochi *m);
 [v _game_play `(v ~T0 @X0 0 ef1`*S365 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -547,71 +556,80 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"33
-[; ;main.c: 33:     TRISA=0b00000111;
-[e = _TRISA -> -> 7 `i `uc ]
+"31
+[; ;main.c: 31:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
 "34
-[; ;main.c: 34:     PORTA=0b00000111;
+[; ;main.c: 34:     TRISA=0b00000111;
+[e = _TRISA -> -> 7 `i `uc ]
+"35
+[; ;main.c: 35:     PORTA=0b00000111;
 [e = _PORTA -> -> 7 `i `uc ]
-"36
-[; ;main.c: 36:     TRISD = 0xff;
-[e = _TRISD -> -> 255 `i `uc ]
 "37
-[; ;main.c: 37:  PORTD = 0x00;
+[; ;main.c: 37:     TRISD = 0xff;
+[e = _TRISD -> -> 255 `i `uc ]
+"38
+[; ;main.c: 38:  PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"39
-[; ;main.c: 39:     glcd_Init(1);
-[e ( _glcd_Init (1 -> -> 1 `i `uc ]
+"40
+[; ;main.c: 40:  TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "41
-[; ;main.c: 41:     Microgochi *mGogo=((void*)0);
+[; ;main.c: 41:  PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"44
+[; ;main.c: 44:     glcd_Init(1);
+[e ( _glcd_Init (1 -> -> 1 `i `uc ]
+"46
+[; ;main.c: 46:     Microgochi *mGogo=((void*)0);
 [v _mGogo `*S365 ~T0 @X0 1 a ]
 [e = _mGogo -> -> -> 0 `i `*v `*S365 ]
-"42
-[; ;main.c: 42:     int bool_jeu=1;
+"47
+[; ;main.c: 47:     int bool_jeu=1;
 [v _bool_jeu `i ~T0 @X0 1 a ]
 [e = _bool_jeu -> 1 `i ]
-"44
-[; ;main.c: 44:     while (bool_jeu==1)
+"49
+[; ;main.c: 49:     while (bool_jeu==1)
 [e $U 373  ]
 [e :U 374 ]
-"45
-[; ;main.c: 45:     {
+"50
+[; ;main.c: 50:     {
 {
-"46
-[; ;main.c: 46:         microgochi_init(mGogo);
+"51
+[; ;main.c: 51:         microgochi_init(mGogo);
 [e ( _microgochi_init (1 _mGogo ]
-"49
-[; ;main.c: 49:         screen_credits();
-[e ( _screen_credits ..  ]
 "54
-[; ;main.c: 54:         game_play(mGogo);
-[e ( _game_play (1 _mGogo ]
+[; ;main.c: 54:         screen_credits();
+[e ( _screen_credits ..  ]
 "59
-[; ;main.c: 59:         if (mGogo->vivant==0)
+[; ;main.c: 59:         game_play(mGogo);
+[e ( _game_play (1 _mGogo ]
+"64
+[; ;main.c: 64:         if (mGogo->vivant==0)
 [e $ ! == -> . *U _mGogo 4 `i -> 0 `i 376  ]
-"60
-[; ;main.c: 60:         {
-{
 "65
-[; ;main.c: 65:             bool_jeu=0;
+[; ;main.c: 65:         {
+{
+"70
+[; ;main.c: 70:             bool_jeu=0;
 [e = _bool_jeu -> 0 `i ]
-"67
-[; ;main.c: 67:         }
+"72
+[; ;main.c: 72:         }
 }
 [e :U 376 ]
-"70
-[; ;main.c: 70:     }
+"75
+[; ;main.c: 75:     }
 }
 [e :U 373 ]
-"44
-[; ;main.c: 44:     while (bool_jeu==1)
+"49
+[; ;main.c: 49:     while (bool_jeu==1)
 [e $ == _bool_jeu -> 1 `i 374  ]
 [e :U 375 ]
-"72
-[; ;main.c: 72:     return (0);
+"77
+[; ;main.c: 77:     return (0);
 [e ) -> 0 `i ]
 [e $UE 372  ]
-"73
-[; ;main.c: 73: }
+"78
+[; ;main.c: 78: }
 [e :UE 372 ]
 }

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\MCU_projet_tamagogo_.X.production.sym \
   --cmf=dist/default/production\MCU_projet_tamagogo_.X.production.cmf -z \
-  -Q18F4550 -oC:\Users\acajo\AppData\Local\Temp\s5d0.2 \
+  -Q18F4550 -oC:\Users\acajo\AppData\Local\Temp\se3g.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MCU_projet_tamagogo_.X.production.map -E1 \
   -ver=XC8 --acfsm=1493 -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\acajo\AppData\Local\Temp\s5d0.o \
+  C:\Users\acajo\AppData\Local\Temp\se3g.o \
   dist/default/production\MCU_projet_tamagogo_.X.production.o 
 
 Object code version is 3.11
@@ -37,47 +37,47 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\acajo\AppData\Local\Temp\s5d0.o
+C:\Users\acajo\AppData\Local\Temp\se3g.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production\MCU_projet_tamagogo_.X.production.o
                 mediumconst                        733A     733A      CC6     399D       0
-                text10                             6CE0     6CE0       36     3670       0
-                text9                              6D16     6D16       3A     368B       0
+                text10                             6CD4     6CD4       36     366A       0
+                text9                              6D0A     6D0A       3A     3685       0
                 text8                              7012     7012       B8     3809       0
                 text7                              6F72     6F72       A0     37B9       0
-                text6                              6D50     6D50       4E     36A8       0
-                text5                              6E04     6E04       70     3702       0
+                text6                              6D44     6D44       4E     36A2       0
+                text5                              6DF8     6DF8       70     36FC       0
                 text4                              71F6     71F6      144     38FB       0
                 text3                              70CA     70CA      12C     3865       0
-                text2                              6D9E     6D9E       66     36CF       0
-                text1                              6E74     6E74       74     373A       0
-                text0                              6EE8     6EE8       8A     3774       0
+                text2                              6D92     6D92       66     36C9       0
+                text1                              6E68     6E68       74     3734       0
+                text0                              6EDC     6EDC       96     376E       0
                 cstackCOMRAM                          1        1       20        1       1
                 dataCOMRAM                           21       21        6        1       1
                 bssCOMRAM                            27       27        2        1       1
-                cinit                              6CB2     6CB2       2E     3659       0
-                idataCOMRAM                        6CAC     6CAC        6     6CAC       0
+                cinit                              6CA6     6CA6       2E     3653       0
+                idataCOMRAM                        6CA0     6CA0        6     6CA0       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text10                             6CE0     6CE0       36         0
-                text9                              6D16     6D16       3A         0
+                text10                             6CD4     6CD4       36         0
+                text9                              6D0A     6D0A       3A         0
                 text8                              7012     7012       B8         0
                 text7                              6F72     6F72       A0         0
-                text6                              6D50     6D50       4E         0
-                text5                              6E04     6E04       70         0
+                text6                              6D44     6D44       4E         0
+                text5                              6DF8     6DF8       70         0
                 text4                              71F6     71F6      144         0
                 text3                              70CA     70CA      12C         0
-                text2                              6D9E     6D9E       66         0
-                text1                              6E74     6E74       74         0
-                text0                              6EE8     6EE8       8A         0
-                cinit                              6CB2     6CB2       2E         0
-                idataCOMRAM                        6CAC     6CAC        6         0
+                text2                              6D92     6D92       66         0
+                text1                              6E68     6E68       74         0
+                text0                              6EDC     6EDC       96         0
+                cinit                              6CA6     6CA6       2E         0
+                idataCOMRAM                        6CA0     6CA0        6         0
 
         CLASS   CONST          
 
@@ -131,15 +131,15 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000028  000029         1       1  COMRAM  
-                idataCOMRAM                    006CAC  000006  006CB2      6CAC       0  CODE    
-                cinit                          006CB2  00002E  006CE0      3659       0  CODE    
-                text10                         006CE0  000036  006D16      3670       0  CODE    
-                text9                          006D16  00003A  006D50      368B       0  CODE    
-                text6                          006D50  00004E  006D9E      36A8       0  CODE    
-                text2                          006D9E  000066  006E04      36CF       0  CODE    
-                text5                          006E04  000070  006E74      3702       0  CODE    
-                text1                          006E74  000074  006EE8      373A       0  CODE    
-                text0                          006EE8  00008A  006F72      3774       0  CODE    
+                idataCOMRAM                    006CA0  000006  006CA6      6CA0       0  CODE    
+                cinit                          006CA6  00002E  006CD4      3653       0  CODE    
+                text10                         006CD4  000036  006D0A      366A       0  CODE    
+                text9                          006D0A  00003A  006D44      3685       0  CODE    
+                text6                          006D44  00004E  006D92      36A2       0  CODE    
+                text2                          006D92  000066  006DF8      36C9       0  CODE    
+                text5                          006DF8  000070  006E68      36FC       0  CODE    
+                text1                          006E68  000074  006EDC      3734       0  CODE    
+                text0                          006EDC  000096  006F72      376E       0  CODE    
                 text7                          006F72  0000A0  007012      37B9       0  CODE    
                 text8                          007012  0000B8  0070CA      3809       0  CODE    
                 text3                          0070CA  00012C  0071F6      3865       0  CODE    
@@ -161,25 +161,28 @@ UNUSED ADDRESS RANGES
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
         BIGRAM           000029-0007FF              7D7
-        CODE             000004-006CAB             6CA8
+        CODE             000004-006C9F             6C9C
         COMRAM           000029-00005F               37
-        CONST            000004-006CAB             6CA8
+        CONST            000004-006C9F             6C9C
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000800-006CAB             64AC
+        MEDIUMCONST      000800-006C9F             64A0
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000800-006CAB              100
+        SMALLCONST       000800-006C9F              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
 
+_ADCON1                     (abs)        000FC1
 _Font3x6                    mediumconst  007F3B
 _Font8x8                    mediumconst  00733B
 _LATBbits                   (abs)        000F8A
 _LATD                       (abs)        000F8C
 _PORTA                      (abs)        000F80
+_PORTB                      (abs)        000F81
 _PORTD                      (abs)        000F83
 _TRISA                      (abs)        000F92
+_TRISB                      (abs)        000F93
 _TRISD                      (abs)        000F95
 __HRAM                      (abs)        000000
 __Habs1                     abs1         000000
@@ -337,38 +340,38 @@ __accesstop                 (abs)        000060
 __activetblptr              (abs)        000002
 __end_of_Font3x6            mediumconst  007FFE
 __end_of_Font8x8            mediumconst  007B3B
-__end_of__initialization    cinit        006CD6
+__end_of__initialization    cinit        006CCA
 __end_of_acceuil            mediumconst  007F3B
-__end_of_game_play          text10       006D16
+__end_of_game_play          text10       006D0A
 __end_of_glcd_FillScreen    text8        0070CA
 __end_of_glcd_Init          text7        007012
-__end_of_glcd_SetCursor     text5        006E74
-__end_of_glcd_WriteByte     text9        006D50
+__end_of_glcd_SetCursor     text5        006E68
+__end_of_glcd_WriteByte     text9        006D44
 __end_of_glcd_WriteChar3x6  text4        00733A
 __end_of_glcd_WriteChar8X8  text3        0071F6
-__end_of_glcd_WriteString   text2        006E04
+__end_of_glcd_WriteString   text2        006DF8
 __end_of_main               text0        006F72
-__end_of_microgochi_init    text6        006D9E
-__end_of_screen_credits     text1        006EE8
-__initialization            cinit        006CB2
+__end_of_microgochi_init    text6        006D92
+__end_of_screen_credits     text1        006EDC
+__initialization            cinit        006CA6
 __mediumconst               mediumconst  00733A
 __pbssCOMRAM                bssCOMRAM    000027
-__pcinit                    cinit        006CB2
+__pcinit                    cinit        006CA6
 __pcstackCOMRAM             cstackCOMRAM 000001
 __pdataCOMRAM               dataCOMRAM   000021
-__pidataCOMRAM              idataCOMRAM  006CAC
+__pidataCOMRAM              idataCOMRAM  006CA0
 __pmediumconst              mediumconst  00733A
-__ptext0                    text0        006EE8
-__ptext1                    text1        006E74
-__ptext10                   text10       006CE0
-__ptext2                    text2        006D9E
+__ptext0                    text0        006EDC
+__ptext1                    text1        006E68
+__ptext10                   text10       006CD4
+__ptext2                    text2        006D92
 __ptext3                    text3        0070CA
 __ptext4                    text4        0071F6
-__ptext5                    text5        006E04
-__ptext6                    text6        006D50
+__ptext5                    text5        006DF8
+__ptext6                    text6        006D44
 __ptext7                    text7        006F72
 __ptext8                    text8        007012
-__ptext9                    text9        006D16
+__ptext9                    text9        006D0A
 __ramtop                    ramtop       000800
 __size_of_game_play         (abs)        000000
 __size_of_glcd_FillScreen   (abs)        000000
@@ -383,20 +386,20 @@ __size_of_microgochi_init   (abs)        000000
 __size_of_screen_credits    (abs)        000000
 __smallconst                smallconst   000000
 _acceuil                    mediumconst  007B3B
-_game_play                  text10       006CE0
+_game_play                  text10       006CD4
 _glcd_FillScreen            text8        007012
 _glcd_Init                  text7        006F72
-_glcd_SetCursor             text5        006E04
-_glcd_WriteByte             text9        006D16
+_glcd_SetCursor             text5        006DF8
+_glcd_WriteByte             text9        006D0A
 _glcd_WriteChar3x6          text4        0071F6
 _glcd_WriteChar8X8          text3        0070CA
-_glcd_WriteString           text2        006D9E
-_main                       text0        006EE8
-_microgochi_init            text6        006D50
-_screen_credits             text1        006E74
+_glcd_WriteString           text2        006D92
+_main                       text0        006EDC
+_microgochi_init            text6        006D44
+_screen_credits             text1        006E68
 _x                          bssCOMRAM    000028
 _y                          bssCOMRAM    000027
-end_of_initialization       cinit        006CD6
+end_of_initialization       cinit        006CCA
 game_play@m                 cstackCOMRAM 000001
 glcd_FillScreen@color       cstackCOMRAM 000003
 glcd_FillScreen@i           cstackCOMRAM 000005
@@ -435,7 +438,7 @@ screen_credits@string_test  cstackCOMRAM 000015
 stackhi                     (abs)        0007FF
 stacklo                     (abs)        000060
 start                       init         000000
-start_initialization        cinit        006CB2
+start_initialization        cinit        006CA6
 
 
 FUNCTION INFORMATION:
@@ -808,32 +811,32 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 microgochi.c
-		_microgochi_init		CODE           	6D50	0000	79
+		_microgochi_init		CODE           	6D44	0000	79
 
 microgochi.c estimated size: 79
 
 screen.c
-		_screen_credits		CODE           	6E74	0000	117
+		_screen_credits		CODE           	6E68	0000	117
 
 screen.c estimated size: 117
 
 shared
 		_Font3x6       		MEDIUMCONST    	7F3B	0000	196
 		_Font8x8       		MEDIUMCONST    	733B	0000	2049
-		__initialization		CODE           	6CB2	0000	37
+		__initialization		CODE           	6CA6	0000	37
 		_acceuil       		MEDIUMCONST    	7B3B	0000	1025
 
 shared estimated size: 3307
 
 game.c
-		_game_play     		CODE           	6CE0	0000	55
+		_game_play     		CODE           	6CD4	0000	55
 
 game.c estimated size: 55
 
 glcd.c
-		_glcd_SetCursor		CODE           	6E04	0000	113
-		_glcd_WriteString		CODE           	6D9E	0000	103
-		_glcd_WriteByte		CODE           	6D16	0000	59
+		_glcd_SetCursor		CODE           	6DF8	0000	113
+		_glcd_WriteString		CODE           	6D92	0000	103
+		_glcd_WriteByte		CODE           	6D0A	0000	59
 		_glcd_Init     		CODE           	6F72	0000	161
 		_glcd_WriteChar8X8		CODE           	70CA	0000	301
 		_glcd_FillScreen		CODE           	7012	0000	185
@@ -842,7 +845,7 @@ glcd.c
 glcd.c estimated size: 1247
 
 main.c
-		_main          		CODE           	6EE8	0000	139
+		_main          		CODE           	6EDC	0000	151
 
-main.c estimated size: 139
+main.c estimated size: 151
 

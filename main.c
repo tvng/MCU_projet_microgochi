@@ -28,6 +28,7 @@
 
 int main(int argc, char** argv) {
     
+    ADCON1 = 0x0F;
     
     // ** init easypic -----------
     TRISA=0b00000111;
@@ -35,6 +36,10 @@ int main(int argc, char** argv) {
     
     TRISD = 0xff;			//PORTD input
 	PORTD = 0x00; 				//Reset PORTD
+
+	TRISB = 0;				//PORTB output
+	PORTB = 0; 				//Reset PORTB
+
     
     glcd_Init(GLCD_ON);// ** initialisation ecran
     
