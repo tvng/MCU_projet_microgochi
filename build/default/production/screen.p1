@@ -555,20 +555,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;screen.c: 35:  glcd_SetCursor(0,3);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
 "36
-[; ;screen.c: 36:  glcd_WriteString("ARENDARSKI",1,1);
+[; ;screen.c: 36:  glcd_WriteString("ARENDA",1,1);
 [e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"37
+[; ;screen.c: 37:     glcd_SetCursor(65,3);
+[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
+"38
+[; ;screen.c: 38:  glcd_WriteString("RSKI",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "39
 [; ;screen.c: 39:     glcd_SetCursor(0,4);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
 "40
 [; ;screen.c: 40:  glcd_WriteString("PAGES",1,1);
-[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "41
 [; ;screen.c: 41:     glcd_SetCursor(0,5);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
 "42
 [; ;screen.c: 42:  glcd_WriteString("TAO",1,1);
-[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[e ( _glcd_WriteString (3 , , :s 7C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "44
 [; ;screen.c: 44:     _delay(1000);
 [e ( __delay (1 -> -> -> 1000 `i `l `ul ]
@@ -579,6 +585,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 1C 80 114 111 106 101 116 0 ]
 [a 2C 77 105 99 114 111 0 ]
 [a 3C 103 111 99 104 105 0 ]
-[a 5C 80 65 71 69 83 0 ]
-[a 6C 84 65 79 0 ]
-[a 4C 65 82 69 78 68 65 82 83 75 73 0 ]
+[a 6C 80 65 71 69 83 0 ]
+[a 7C 84 65 79 0 ]
+[a 5C 82 83 75 73 0 ]
+[a 4C 65 82 69 78 68 65 0 ]
