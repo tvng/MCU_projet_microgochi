@@ -8,123 +8,12 @@
 # 2 "<built-in>" 2
 # 1 "glcd.c" 2
 
+
+
+
+
+
 # 1 "./glcd.h" 1
-# 35 "./glcd.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-# 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
-size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18_chip_select.h" 1 3
-# 629 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18_chip_select.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\__at.h" 1 3
@@ -5580,7 +5469,125 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 629 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18_chip_select.h" 2 3
+# 1 "./glcd.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int wchar_t;
+# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+int atoi (const char *);
+long atol (const char *);
+long long atoll (const char *);
+double atof (const char *);
+
+float strtof (const char *restrict, char **restrict);
+double strtod (const char *restrict, char **restrict);
+long double strtold (const char *restrict, char **restrict);
+
+
+
+
+
+long strtol (const char *restrict, char **restrict, int);
+unsigned long strtoul (const char *restrict, char **restrict, int);
+long long strtoll (const char *restrict, char **restrict, int);
+unsigned long long strtoull (const char *restrict, char **restrict, int);
+
+int rand (void);
+void srand (unsigned);
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
+          void abort (void);
+int atexit (void (*) (void));
+          void exit (int);
+          void _Exit (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
+void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
+
+
+
+
+
+__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
+
+int abs (int);
+long labs (long);
+long long llabs (long long);
+
+typedef struct { int quot, rem; } div_t;
+typedef struct { long quot, rem; } ldiv_t;
+typedef struct { long long quot, rem; } lldiv_t;
+
+div_t div (int, int);
+ldiv_t ldiv (long, long);
+lldiv_t lldiv (long long, long long);
+
+
+typedef struct { unsigned int quot, rem; } udiv_t;
+typedef struct { unsigned long quot, rem; } uldiv_t;
+udiv_t udiv (unsigned int, unsigned int);
+uldiv_t uldiv (unsigned long, unsigned long);
+# 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
+size_t __ctype_get_mb_cur_max(void);
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\xc8debug.h" 2 3
+
+
+
+
+
+
+
+
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
+# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 2 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18_chip_select.h" 1 3
 # 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 2 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
@@ -5617,165 +5624,837 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\htc.h" 2 3
-# 35 "./glcd.h" 2
+# 2 "./glcd.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
 
 
 
 
+typedef short int16_t;
+
+
+
+
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 191 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 227 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 37 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef float float_t;
+
+
+
+
+typedef double double_t;
+# 15 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 2 3
+# 46 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+int __fpclassifyf(float);
+# 97 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+int __signbitf(float);
+# 149 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+double acos(double);
+float acosf(float);
+long double acosl(long double);
+
+
+
+
+
+double acosh(double);
+float acoshf(float);
+long double acoshl(long double);
+
+
+
+
+
+double asin(double);
+float asinf(float);
+long double asinl(long double);
+
+
+
+
+
+double asinh(double);
+float asinhf(float);
+long double asinhl(long double);
+
+
+
+
+
+double atan(double);
+float atanf(float);
+long double atanl(long double);
+
+
+
+
+
+double atan2(double, double);
+float atan2f(float, float);
+long double atan2l(long double, long double);
+
+
+
+
+
+double atanh(double);
+float atanhf(float);
+long double atanhl(long double);
+
+
+
+
+
+double cbrt(double);
+float cbrtf(float);
+long double cbrtl(long double);
+
+
+
+
+
+double ceil(double);
+float ceilf(float);
+long double ceill(long double);
+
+
+
+
+
+double copysign(double, double);
+float copysignf(float, float);
+long double copysignl(long double, long double);
+
+
+
+
+
+double cos(double);
+float cosf(float);
+long double cosl(long double);
+
+
+
+
+
+double cosh(double);
+float coshf(float);
+long double coshl(long double);
+
+
+
+
+
+double erf(double);
+float erff(float);
+long double erfl(long double);
+
+
+
+
+
+double erfc(double);
+float erfcf(float);
+long double erfcl(long double);
+
+
+
+
+
+double exp(double);
+float expf(float);
+long double expl(long double);
+
+
+
+
+
+double exp2(double);
+float exp2f(float);
+long double exp2l(long double);
+
+
+
+
+
+double expm1(double);
+float expm1f(float);
+long double expm1l(long double);
+
+
+
+
+
+double fabs(double);
+float fabsf(float);
+long double fabsl(long double);
+
+
+
+
+
+double fdim(double, double);
+float fdimf(float, float);
+long double fdiml(long double, long double);
+
+
+
+
+
+double floor(double);
+float floorf(float);
+long double floorl(long double);
+
+
+
+
+
+double fma(double, double, double);
+float fmaf(float, float, float);
+long double fmal(long double, long double, long double);
+
+
+
+
+
+double fmax(double, double);
+float fmaxf(float, float);
+long double fmaxl(long double, long double);
+
+
+
+
+
+double fmin(double, double);
+float fminf(float, float);
+long double fminl(long double, long double);
+
+
+
+
+
+double fmod(double, double);
+float fmodf(float, float);
+long double fmodl(long double, long double);
+
+
+
+
+
+double frexp(double, int *);
+float frexpf(float, int *);
+long double frexpl(long double, int *);
+
+
+
+
+
+double hypot(double, double);
+float hypotf(float, float);
+long double hypotl(long double, long double);
+
+
+
+
+
+int ilogb(double);
+int ilogbf(float);
+int ilogbl(long double);
+
+
+
+
+
+double ldexp(double, int);
+float ldexpf(float, int);
+long double ldexpl(long double, int);
+
+
+
+
+
+double lgamma(double);
+float lgammaf(float);
+long double lgammal(long double);
+
+
+
+
+
+long long llrint(double);
+long long llrintf(float);
+long long llrintl(long double);
+
+
+
+
+
+long long llround(double);
+long long llroundf(float);
+long long llroundl(long double);
+
+
+
+
+
+double log(double);
+float logf(float);
+long double logl(long double);
+
+
+
+
+
+double log10(double);
+float log10f(float);
+long double log10l(long double);
+
+
+
+
+
+double log1p(double);
+float log1pf(float);
+long double log1pl(long double);
+
+
+
+
+
+double log2(double);
+float log2f(float);
+long double log2l(long double);
+
+
+
+
+
+double logb(double);
+float logbf(float);
+long double logbl(long double);
+
+
+
+
+
+long lrint(double);
+long lrintf(float);
+long lrintl(long double);
+
+
+
+
+
+long lround(double);
+long lroundf(float);
+long lroundl(long double);
+
+
+
+
+
+double modf(double, double *);
+float modff(float, float *);
+long double modfl(long double, long double *);
+
+
+
+
+
+double nan(const char *);
+float nanf(const char *);
+long double nanl(const char *);
+
+
+
+
+
+double nearbyint(double);
+float nearbyintf(float);
+long double nearbyintl(long double);
+
+
+
+
+
+double nextafter(double, double);
+float nextafterf(float, float);
+long double nextafterl(long double, long double);
+
+
+
+
+
+double nexttoward(double, long double);
+float nexttowardf(float, long double);
+long double nexttowardl(long double, long double);
+# 498 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+double pow(double, double);
+__attribute__((nonreentrant)) float powf(float, float);
+long double powl(long double, long double);
+
+
+
+
+
+double remainder(double, double);
+float remainderf(float, float);
+long double remainderl(long double, long double);
+
+
+
+
+
+double remquo(double, double, int *);
+float remquof(float, float, int *);
+long double remquol(long double, long double, int *);
+
+
+
+
+
+double rint(double);
+float rintf(float);
+long double rintl(long double);
+
+
+
+
+
+double round(double);
+float roundf(float);
+long double roundl(long double);
+
+
+
+
+
+double scalbln(double, long);
+float scalblnf(float, long);
+long double scalblnl(long double, long);
+
+
+
+
+
+double scalbn(double, int);
+float scalbnf(float, int);
+long double scalbnl(long double, int);
+
+
+
+
+
+double sin(double);
+float sinf(float);
+long double sinl(long double);
+
+
+
+
+
+double sinh(double);
+float sinhf(float);
+long double sinhl(long double);
+
+
+
+
+
+double sqrt(double);
+float sqrtf(float);
+long double sqrtl(long double);
+
+
+
+
+
+double tan(double);
+float tanf(float);
+long double tanl(long double);
+
+
+
+
+
+double tanh(double);
+float tanhf(float);
+long double tanhl(long double);
+
+
+
+
+
+double tgamma(double);
+float tgammaf(float);
+long double tgammal(long double);
+
+
+
+
+
+double trunc(double);
+float truncf(float);
+long double truncl(long double);
+# 631 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\math.h" 3
+extern int signgam;
+
+double j0(double);
+double j1(double);
+double jn(int, double);
+
+double y0(double);
+double y1(double);
+double yn(int, double);
+# 3 "./glcd.h" 2
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 145 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 244 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 397 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 5 "./glcd.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\ctype.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\ctype.h" 3
+int isalnum(int);
+int isalpha(int);
+int isblank(int);
+int iscntrl(int);
+int isdigit(int);
+int isgraph(int);
+int islower(int);
+int isprint(int);
+int ispunct(int);
+int isspace(int);
+int isupper(int);
+int isxdigit(int);
+int tolower(int);
+int toupper(int);
+# 41 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\ctype.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 409 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 41 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\ctype.h" 2 3
+
+
+int isalnum_l(int, locale_t);
+int isalpha_l(int, locale_t);
+int isblank_l(int, locale_t);
+int iscntrl_l(int, locale_t);
+int isdigit_l(int, locale_t);
+int isgraph_l(int, locale_t);
+int islower_l(int, locale_t);
+int isprint_l(int, locale_t);
+int ispunct_l(int, locale_t);
+int isspace_l(int, locale_t);
+int isupper_l(int, locale_t);
+int isxdigit_l(int, locale_t);
+int tolower_l(int, locale_t);
+int toupper_l(int, locale_t);
+
+int isascii(int);
+int toascii(int);
+# 6 "./glcd.h" 2
+# 43 "./glcd.h"
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);
 extern void glcd_PlotPixel(unsigned char x, unsigned char y, unsigned char color);
 extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+void glcd_Rect(unsigned char xs, unsigned char ys, unsigned char xe ,unsigned char ye,unsigned char color);
 extern void glcd_FillScreen(unsigned char color);
 extern void glcd_WriteChar8X8( unsigned char ch, unsigned char color);
 extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
-extern void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color);
+extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
-# 2 "glcd.c" 2
-
-
-const unsigned char acceuil[1024]={
-   0, 0, 0, 0, 0, 0, 0, 0,128,128,128,128, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,128, 0, 0,128,
-   0, 0,128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 62, 65,128,128,128,128, 65, 62, 0, 0,
- 216,148,164,108, 0, 0,120,132,132, 76, 0,136,252,128,129,255,
- 128,129,255,128, 0,120,132,132,132,120, 0, 0,216,148,164,108,
-   0, 0,120,132,132, 76, 0, 0,120,132,132,132,120, 0, 8,252,
-  72,132,132,120, 0, 0,120,148,148, 88, 0, 0, 0, 0, 0,216,
- 148,164,108, 0, 4, 28,100,128,116, 12, 4, 0,216,148,164,108,
-   0, 4,255,132, 64, 0,120,148,148, 88, 0,136,252,136, 4,252,
- 136, 4,248,128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 7,
-   4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 4, 4, 6, 1, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
- 128,240,248, 24, 28, 14, 14, 28, 24,120,240,192,128, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,128,240,
- 248, 24, 28, 12, 14, 14, 28, 24,248,240,128, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,248,
- 255, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15,255,248, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,248,255, 15,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 15,255,248, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 8, 0, 28,252,
- 248,128, 8, 0, 8, 0, 8, 0, 8, 0, 8, 0, 8,224,255, 63,
-   9, 0, 8, 0, 8, 0, 8, 0, 8, 0, 8, 0, 9, 63,255,224,
-   8, 0, 8, 0, 8, 0, 8, 0, 8, 0, 8,224,255, 63, 9, 0,
-   8, 0, 8, 0, 8, 0, 8, 0, 8, 0, 9, 15, 15, 0, 8, 0,
-   8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   7, 63,252,224, 0, 0, 0, 0, 0, 0,128,192,252,127, 7, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 63,
- 252,224, 0, 0, 0, 0, 0, 0, 0,192,252,127, 7, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 1, 7, 15, 28, 24, 24, 28, 15, 7, 1, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   1, 7, 15, 28, 24, 24, 28, 12, 15, 7, 1, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-
-
-
+void glcd_text_write(const char str[], unsigned char x, unsigned char y);
+# 7 "glcd.c" 2
 
 
 
 
 const unsigned char Font3x6[65][3]={
-0x00,0x00,0x00,
-0x00,0x5C,0x00,
-0x0C,0x00,0x0C,
-0x7C,0x28,0x7C,
-0x7C,0x44,0x7C,
-0x24,0x10,0x48,
-0x28,0x54,0x08,
-0x00,0x0C,0x00,
-0x38,0x44,0x00,
-0x44,0x38,0x00,
-0x20,0x10,0x08,
-0x10,0x38,0x10,
-0x80,0x40,0x00,
-0x10,0x10,0x10,
-0x00,0x40,0x00,
-0x20,0x10,0x08,
-0x38,0x44,0x38,
-0x00,0x7C,0x00,
-0x64,0x54,0x48,
-0x44,0x54,0x28,
-0x1C,0x10,0x7C,
-0x4C,0x54,0x24,
-0x38,0x54,0x20,
-0x04,0x74,0x0C,
-0x28,0x54,0x28,
-0x08,0x54,0x38,
-0x00,0x50,0x00,
-0x80,0x50,0x00,
-0x10,0x28,0x44,
-0x28,0x28,0x28,
-0x44,0x28,0x10,
-0x04,0x54,0x08,
-0x38,0x4C,0x5C,
-0x78,0x14,0x78,
-0x7C,0x54,0x28,
-0x38,0x44,0x44,
-0x7C,0x44,0x38,
-0x7C,0x54,0x44,
-0x7C,0x14,0x04,
-0x38,0x44,0x34,
-0x7C,0x10,0x7C,
-0x00,0x7C,0x00,
-0x20,0x40,0x3C,
-0x7C,0x10,0x6C,
-0x7C,0x40,0x40,
-0x7C,0x08,0x7C,
-0x7C,0x04,0x7C,
-0x7C,0x44,0x7C,
-0x7C,0x14,0x08,
-0x38,0x44,0x78,
-0x7C,0x14,0x68,
-0x48,0x54,0x24,
-0x04,0x7C,0x04,
-0x7C,0x40,0x7C,
-0x3C,0x40,0x3C,
-0x7C,0x20,0x7C,
-0x6C,0x10,0x6C,
-0x1C,0x60,0x1C,
-0x64,0x54,0x4C,
-0x7C,0x44,0x00,
-0x08,0x10,0x20,
-0x44,0x7C,0x00,
-0x08,0x04,0x08,
-0x80,0x80,0x80,
-0x04,0x08,0x00
- };
+     0x00,0x00,0x00,
+     0x00,0x5C,0x00,
+     0x0C,0x00,0x0C,
+     0x7C,0x28,0x7C,
+     0x7C,0x44,0x7C,
+     0x24,0x10,0x48,
+     0x28,0x54,0x08,
+     0x00,0x0C,0x00,
+     0x38,0x44,0x00,
+     0x44,0x38,0x00,
+     0x20,0x10,0x08,
+     0x10,0x38,0x10,
+     0x80,0x40,0x00,
+     0x10,0x10,0x10,
+     0x00,0x40,0x00,
+     0x20,0x10,0x08,
+     0x38,0x44,0x38,
+     0x00,0x7C,0x00,
+     0x64,0x54,0x48,
+     0x44,0x54,0x28,
+     0x1C,0x10,0x7C,
+     0x4C,0x54,0x24,
+     0x38,0x54,0x20,
+     0x04,0x74,0x0C,
+     0x28,0x54,0x28,
+     0x08,0x54,0x38,
+     0x00,0x50,0x00,
+     0x80,0x50,0x00,
+     0x10,0x28,0x44,
+     0x28,0x28,0x28,
+     0x44,0x28,0x10,
+     0x04,0x54,0x08,
+     0x38,0x4C,0x5C,
+     0x78,0x14,0x78,
+     0x7C,0x54,0x28,
+     0x38,0x44,0x44,
+     0x7C,0x44,0x38,
+     0x7C,0x54,0x44,
+     0x7C,0x14,0x04,
+     0x38,0x44,0x34,
+     0x7C,0x10,0x7C,
+     0x00,0x7C,0x00,
+     0x20,0x40,0x3C,
+     0x7C,0x10,0x6C,
+     0x7C,0x40,0x40,
+     0x7C,0x08,0x7C,
+     0x7C,0x04,0x7C,
+     0x7C,0x44,0x7C,
+     0x7C,0x14,0x08,
+     0x38,0x44,0x78,
+     0x7C,0x14,0x68,
+     0x48,0x54,0x24,
+     0x04,0x7C,0x04,
+     0x7C,0x40,0x7C,
+     0x3C,0x40,0x3C,
+     0x7C,0x20,0x7C,
+     0x6C,0x10,0x6C,
+     0x1C,0x60,0x1C,
+     0x64,0x54,0x4C,
+     0x7C,0x44,0x00,
+     0x08,0x10,0x20,
+     0x44,0x7C,0x00,
+     0x08,0x04,0x08,
+     0x80,0x80,0x80,
+     0x04,0x08,0x00
+};
 
 
 
@@ -5816,218 +6495,222 @@ const unsigned char Font8x8[2048] =
    0, 0, 0, 0, 0, 0, 0, 0,
    0, 0, 0, 0, 0, 0, 0, 0,
    0, 0, 0, 0, 0, 0, 0, 0,
-          0, 6, 95, 95, 6, 0, 0, 0,
-          0, 7, 7, 0, 7, 7, 0, 0,
-         20, 127, 127, 20, 127, 127, 20, 0,
-         36, 46, 107, 107, 58, 18, 0, 0,
-         70, 102, 48, 24, 12, 102, 98, 0,
-         48, 122, 79, 93, 55, 122, 72, 0,
-          4, 7, 3, 0, 0, 0, 0, 0,
-          0, 28, 62, 99, 65, 0, 0, 0,
-          0, 65, 99, 62, 28, 0, 0, 0,
-          8, 42, 62, 28, 28, 62, 42, 8,
-          8, 8, 62, 62, 8, 8, 0, 0,
-          0, 128, 224, 96, 0, 0, 0, 0,
-          8, 8, 8, 8, 8, 8, 0, 0,
-          0, 0, 96, 96, 0, 0, 0, 0,
-         96, 48, 24, 12, 6, 3, 1, 0,
-         62, 127, 113, 89, 77, 127, 62, 0,
-         64, 66, 127, 127, 64, 64, 0, 0,
-         98, 115, 89, 73, 111, 102, 0, 0,
-         34, 99, 73, 73, 127, 54, 0, 0,
-         24, 28, 22, 83, 127, 127, 80, 0,
-         39, 103, 69, 69, 125, 57, 0, 0,
-         60, 126, 75, 73, 121, 48, 0, 0,
-          3, 3, 113, 121, 15, 7, 0, 0,
-         54, 127, 73, 73, 127, 54, 0, 0,
-          6, 79, 73, 105, 63, 30, 0, 0,
-          0, 0, 102, 102, 0, 0, 0, 0,
-          0, 128, 230, 102, 0, 0, 0, 0,
-          8, 28, 54, 99, 65, 0, 0, 0,
-         36, 36, 36, 36, 36, 36, 0, 0,
-          0, 65, 99, 54, 28, 8, 0, 0,
-          2, 3, 81, 89, 15, 6, 0, 0,
-         62, 127, 65, 93, 93, 31, 30, 0,
-        124, 126, 19, 19, 126, 124, 0, 0,
-         65, 127, 127, 73, 73, 127, 54, 0,
-         28, 62, 99, 65, 65, 99, 34, 0,
-         65, 127, 127, 65, 99, 62, 28, 0,
-         65, 127, 127, 73, 93, 65, 99, 0,
-         65, 127, 127, 73, 29, 1, 3, 0,
-         28, 62, 99, 65, 81, 115, 114, 0,
-        127, 127, 8, 8, 127, 127, 0, 0,
-          0, 65, 127, 127, 65, 0, 0, 0,
-         48, 112, 64, 65, 127, 63, 1, 0,
-         65, 127, 127, 8, 28, 119, 99, 0,
-         65, 127, 127, 65, 64, 96, 112, 0,
-        127, 127, 14, 28, 14, 127, 127, 0,
-        127, 127, 6, 12, 24, 127, 127, 0,
-         28, 62, 99, 65, 99, 62, 28, 0,
-         65, 127, 127, 73, 9, 15, 6, 0,
-         30, 63, 33, 113, 127, 94, 0, 0,
-         65, 127, 127, 9, 25, 127, 102, 0,
-         38, 111, 77, 89, 115, 50, 0, 0,
-          3, 65, 127, 127, 65, 3, 0, 0,
-        127, 127, 64, 64, 127, 127, 0, 0,
-         31, 63, 96, 96, 63, 31, 0, 0,
-        127, 127, 48, 24, 48, 127, 127, 0,
-         67, 103, 60, 24, 60, 103, 67, 0,
-          7, 79, 120, 120, 79, 7, 0, 0,
-         71, 99, 113, 89, 77, 103, 115, 0,
-          0, 127, 127, 65, 65, 0, 0, 0,
-          1, 3, 6, 12, 24, 48, 96, 0,
-          0, 65, 65, 127, 127, 0, 0, 0,
-          8, 12, 6, 3, 6, 12, 8, 0,
-        128, 128, 128, 128, 128, 128, 128, 128,
-          0, 0, 3, 7, 4, 0, 0, 0,
-         32, 116, 84, 84, 60, 120, 64, 0,
-         65, 127, 63, 72, 72, 120, 48, 0,
-         56, 124, 68, 68, 108, 40, 0, 0,
-         48, 120, 72, 73, 63, 127, 64, 0,
-         56, 124, 84, 84, 92, 24, 0, 0,
-         72, 126, 127, 73, 3, 2, 0, 0,
-        152, 188, 164, 164, 248, 124, 4, 0,
-         65, 127, 127, 8, 4, 124, 120, 0,
-          0, 68, 125, 125, 64, 0, 0, 0,
-         96, 224, 128, 128, 253, 125, 0, 0,
-         65, 127, 127, 16, 56, 108, 68, 0,
-          0, 65, 127, 127, 64, 0, 0, 0,
-        124, 124, 24, 56, 28, 124, 120, 0,
-        124, 124, 4, 4, 124, 120, 0, 0,
-         56, 124, 68, 68, 124, 56, 0, 0,
-        132, 252, 248, 164, 36, 60, 24, 0,
-         24, 60, 36, 164, 248, 252, 132, 0,
-         68, 124, 120, 76, 4, 28, 24, 0,
-         72, 92, 84, 84, 116, 36, 0, 0,
-          0, 4, 62, 127, 68, 36, 0, 0,
-         60, 124, 64, 64, 60, 124, 64, 0,
-         28, 60, 96, 96, 60, 28, 0, 0,
-         60, 124, 112, 56, 112, 124, 60, 0,
-         68, 108, 56, 16, 56, 108, 68, 0,
-        156, 188, 160, 160, 252, 124, 0, 0,
-         76, 100, 116, 92, 76, 100, 0, 0,
-          8, 8, 62, 119, 65, 65, 0, 0,
-          0, 0, 0, 119, 119, 0, 0, 0,
-         65, 65, 119, 62, 8, 8, 0, 0,
-          2, 3, 1, 3, 2, 3, 1, 0,
-        112, 120, 76, 70, 76, 120, 112, 0,
-         14, 159, 145, 177, 251, 74, 0, 0,
-         58, 122, 64, 64, 122, 122, 64, 0,
-         56, 124, 84, 85, 93, 25, 0, 0,
-          2, 35, 117, 85, 85, 125, 123, 66,
-         33, 117, 84, 84, 125, 121, 64, 0,
-         33, 117, 85, 84, 124, 120, 64, 0,
-         32, 116, 87, 87, 124, 120, 64, 0,
-         24, 60, 164, 164, 228, 64, 0, 0,
-          2, 59, 125, 85, 85, 93, 27, 2,
-         57, 125, 84, 84, 93, 25, 0, 0,
-         57, 125, 85, 84, 92, 24, 0, 0,
-          1, 69, 124, 124, 65, 1, 0, 0,
-          2, 3, 69, 125, 125, 67, 2, 0,
-          1, 69, 125, 124, 64, 0, 0, 0,
-        121, 125, 22, 18, 22, 125, 121, 0,
-        112, 120, 43, 43, 120, 112, 0, 0,
-         68, 124, 124, 85, 85, 69, 0, 0,
-         32, 116, 84, 84, 124, 124, 84, 84,
-        124, 126, 11, 9, 127, 127, 73, 0,
-         50, 123, 73, 73, 123, 50, 0, 0,
-         50, 122, 72, 72, 122, 50, 0, 0,
-         50, 122, 74, 72, 120, 48, 0, 0,
-         58, 123, 65, 65, 123, 122, 64, 0,
-         58, 122, 66, 64, 120, 120, 64, 0,
-        154, 186, 160, 160, 250, 122, 0, 0,
-          1, 25, 60, 102, 102, 60, 25, 1,
-         61, 125, 64, 64, 125, 61, 0, 0,
-         24, 60, 36, 231, 231, 36, 36, 0,
-        104, 126, 127, 73, 67, 102, 32, 0,
-         43, 47, 252, 252, 47, 43, 0, 0,
-        255, 255, 9, 9, 47, 246, 248, 160,
-         64, 192, 136, 254, 127, 9, 3, 2,
-         32, 116, 84, 85, 125, 121, 64, 0,
-          0, 68, 125, 125, 65, 0, 0, 0,
-         48, 120, 72, 74, 122, 50, 0, 0,
-         56, 120, 64, 66, 122, 122, 64, 0,
-        122, 122, 10, 10, 122, 112, 0, 0,
-        125, 125, 25, 49, 125, 125, 0, 0,
-          0, 38, 47, 41, 47, 47, 40, 0,
-          0, 38, 47, 41, 47, 38, 0, 0,
-         48, 120, 77, 69, 96, 32, 0, 0,
-         56, 56, 8, 8, 8, 8, 0, 0,
-          8, 8, 8, 8, 56, 56, 0, 0,
-         79, 111, 48, 24, 204, 238, 187, 145,
-         79, 111, 48, 24, 108, 118, 251, 249,
-          0, 0, 0, 123, 123, 0, 0, 0,
-          8, 28, 54, 34, 8, 28, 54, 34,
-         34, 54, 28, 8, 34, 54, 28, 8,
-        170, 0, 85, 0, 170, 0, 85, 0,
-        170, 85, 170, 85, 170, 85, 170, 85,
-        221, 255, 170, 119, 221, 170, 255, 119,
-          0, 0, 0, 255, 255, 0, 0, 0,
-         16, 16, 16, 255, 255, 0, 0, 0,
-         20, 20, 20, 255, 255, 0, 0, 0,
-         16, 16, 255, 255, 0, 255, 255, 0,
-         16, 16, 240, 240, 16, 240, 240, 0,
-         20, 20, 20, 252, 252, 0, 0, 0,
-         20, 20, 247, 247, 0, 255, 255, 0,
-          0, 0, 255, 255, 0, 255, 255, 0,
-         20, 20, 244, 244, 4, 252, 252, 0,
-         20, 20, 23, 23, 16, 31, 31, 0,
-         16, 16, 31, 31, 16, 31, 31, 0,
-         20, 20, 20, 31, 31, 0, 0, 0,
-         16, 16, 16, 240, 240, 0, 0, 0,
-          0, 0, 0, 31, 31, 16, 16, 16,
-         16, 16, 16, 31, 31, 16, 16, 16,
-         16, 16, 16, 240, 240, 16, 16, 16,
-          0, 0, 0, 255, 255, 16, 16, 16,
-         16, 16, 16, 16, 16, 16, 16, 16,
-         16, 16, 16, 255, 255, 16, 16, 16,
-          0, 0, 0, 255, 255, 20, 20, 20,
-          0, 0, 255, 255, 0, 255, 255, 16,
-          0, 0, 31, 31, 16, 23, 23, 20,
-          0, 0, 252, 252, 4, 244, 244, 20,
-         20, 20, 23, 23, 16, 23, 23, 20,
-         20, 20, 244, 244, 4, 244, 244, 20,
-          0, 0, 255, 255, 0, 247, 247, 20,
-         20, 20, 20, 20, 20, 20, 20, 20,
-         20, 20, 247, 247, 0, 247, 247, 20,
-         20, 20, 20, 23, 23, 20, 20, 20,
-         16, 16, 31, 31, 16, 31, 31, 16,
-         20, 20, 20, 244, 244, 20, 20, 20,
-         16, 16, 240, 240, 16, 240, 240, 16,
-          0, 0, 31, 31, 16, 31, 31, 16,
-          0, 0, 0, 31, 31, 20, 20, 20,
-          0, 0, 0, 252, 252, 20, 20, 20,
-          0, 0, 240, 240, 16, 240, 240, 16,
-         16, 16, 255, 255, 16, 255, 255, 16,
-         20, 20, 20, 255, 255, 20, 20, 20,
-         16, 16, 16, 31, 31, 0, 0, 0,
-          0, 0, 0, 240, 240, 16, 16, 16,
-        255, 255, 255, 255, 255, 255, 255, 255,
-        240, 240, 240, 240, 240, 240, 240, 240,
-        255, 255, 255, 255, 0, 0, 0, 0,
-          0, 0, 0, 0, 255, 255, 255, 255,
-         15, 15, 15, 15, 15, 15, 15, 15,
-         56, 124, 68, 108, 56, 108, 68, 0,
-        252, 254, 42, 42, 62, 20, 0, 0,
-        126, 126, 2, 2, 6, 6, 0, 0,
-          2, 126, 126, 2, 126, 126, 2, 0,
-         99, 119, 93, 73, 99, 99, 0, 0,
-         56, 124, 68, 124, 60, 4, 4, 0,
-        128, 254, 126, 32, 32, 62, 30, 0,
-          4, 6, 2, 126, 124, 6, 2, 0,
-        153, 189, 231, 231, 189, 153, 0, 0,
-         28, 62, 107, 73, 107, 62, 28, 0,
-         76, 126, 115, 1, 115, 126, 76, 0,
-         48, 120, 74, 79, 125, 57, 0, 0,
-         24, 60, 36, 60, 60, 36, 60, 24,
-        152, 252, 100, 60, 62, 39, 61, 24,
+   0, 6, 95, 95, 6, 0, 0, 0,
+   0, 7, 7, 0, 7, 7, 0, 0,
+   20, 127, 127, 20, 127, 127, 20, 0,
+   36, 46, 107, 107, 58, 18, 0, 0,
+   70, 102, 48, 24, 12, 102, 98, 0,
+   48, 122, 79, 93, 55, 122, 72, 0,
+   4, 7, 3, 0, 0, 0, 0, 0,
+   0, 28, 62, 99, 65, 0, 0, 0,
+   0, 65, 99, 62, 28, 0, 0, 0,
+   8, 42, 62, 28, 28, 62, 42, 8,
+   8, 8, 62, 62, 8, 8, 0, 0,
+   0, 128, 224, 96, 0, 0, 0, 0,
+   8, 8, 8, 8, 8, 8, 0, 0,
+   0, 0, 96, 96, 0, 0, 0, 0,
+   96, 48, 24, 12, 6, 3, 1, 0,
+   62, 127, 113, 89, 77, 127, 62, 0,
+   64, 66, 127, 127, 64, 64, 0, 0,
+   98, 115, 89, 73, 111, 102, 0, 0,
+   34, 99, 73, 73, 127, 54, 0, 0,
+   24, 28, 22, 83, 127, 127, 80, 0,
+   39, 103, 69, 69, 125, 57, 0, 0,
+   60, 126, 75, 73, 121, 48, 0, 0,
+   3, 3, 113, 121, 15, 7, 0, 0,
+   54, 127, 73, 73, 127, 54, 0, 0,
+   6, 79, 73, 105, 63, 30, 0, 0,
+   0, 0, 102, 102, 0, 0, 0, 0,
+   0, 128, 230, 102, 0, 0, 0, 0,
+   8, 28, 54, 99, 65, 0, 0, 0,
+   36, 36, 36, 36, 36, 36, 0, 0,
+   0, 65, 99, 54, 28, 8, 0, 0,
+   2, 3, 81, 89, 15, 6, 0, 0,
+   62, 127, 65, 93, 93, 31, 30, 0,
+   124, 126, 19, 19, 126, 124, 0, 0,
+   65, 127, 127, 73, 73, 127, 54, 0,
+   28, 62, 99, 65, 65, 99, 34, 0,
+   65, 127, 127, 65, 99, 62, 28, 0,
+   65, 127, 127, 73, 93, 65, 99, 0,
+   65, 127, 127, 73, 29, 1, 3, 0,
+   28, 62, 99, 65, 81, 115, 114, 0,
+   127, 127, 8, 8, 127, 127, 0, 0,
+   0, 65, 127, 127, 65, 0, 0, 0,
+   48, 112, 64, 65, 127, 63, 1, 0,
+   65, 127, 127, 8, 28, 119, 99, 0,
+   65, 127, 127, 65, 64, 96, 112, 0,
+   127, 127, 14, 28, 14, 127, 127, 0,
+   127, 127, 6, 12, 24, 127, 127, 0,
+   28, 62, 99, 65, 99, 62, 28, 0,
+   65, 127, 127, 73, 9, 15, 6, 0,
+   30, 63, 33, 113, 127, 94, 0, 0,
+   65, 127, 127, 9, 25, 127, 102, 0,
+   38, 111, 77, 89, 115, 50, 0, 0,
+   3, 65, 127, 127, 65, 3, 0, 0,
+   127, 127, 64, 64, 127, 127, 0, 0,
+   31, 63, 96, 96, 63, 31, 0, 0,
+   127, 127, 48, 24, 48, 127, 127, 0,
+   67, 103, 60, 24, 60, 103, 67, 0,
+   7, 79, 120, 120, 79, 7, 0, 0,
+   71, 99, 113, 89, 77, 103, 115, 0,
+   0, 127, 127, 65, 65, 0, 0, 0,
+   1, 3, 6, 12, 24, 48, 96, 0,
+   0, 65, 65, 127, 127, 0, 0, 0,
+   8, 12, 6, 3, 6, 12, 8, 0,
+   128, 128, 128, 128, 128, 128, 128, 128,
+   0, 0, 3, 7, 4, 0, 0, 0,
+   32, 116, 84, 84, 60, 120, 64, 0,
+   65, 127, 63, 72, 72, 120, 48, 0,
+   56, 124, 68, 68, 108, 40, 0, 0,
+   48, 120, 72, 73, 63, 127, 64, 0,
+   56, 124, 84, 84, 92, 24, 0, 0,
+   72, 126, 127, 73, 3, 2, 0, 0,
+   152, 188, 164, 164, 248, 124, 4, 0,
+   65, 127, 127, 8, 4, 124, 120, 0,
+   0, 68, 125, 125, 64, 0, 0, 0,
+   96, 224, 128, 128, 253, 125, 0, 0,
+   65, 127, 127, 16, 56, 108, 68, 0,
+   0, 65, 127, 127, 64, 0, 0, 0,
+   124, 124, 24, 56, 28, 124, 120, 0,
+   124, 124, 4, 4, 124, 120, 0, 0,
+   56, 124, 68, 68, 124, 56, 0, 0,
+   132, 252, 248, 164, 36, 60, 24, 0,
+   24, 60, 36, 164, 248, 252, 132, 0,
+   68, 124, 120, 76, 4, 28, 24, 0,
+   72, 92, 84, 84, 116, 36, 0, 0,
+   0, 4, 62, 127, 68, 36, 0, 0,
+   60, 124, 64, 64, 60, 124, 64, 0,
+   28, 60, 96, 96, 60, 28, 0, 0,
+   60, 124, 112, 56, 112, 124, 60, 0,
+   68, 108, 56, 16, 56, 108, 68, 0,
+   156, 188, 160, 160, 252, 124, 0, 0,
+   76, 100, 116, 92, 76, 100, 0, 0,
+   8, 8, 62, 119, 65, 65, 0, 0,
+   0, 0, 0, 119, 119, 0, 0, 0,
+   65, 65, 119, 62, 8, 8, 0, 0,
+   2, 3, 1, 3, 2, 3, 1, 0,
+   112, 120, 76, 70, 76, 120, 112, 0,
+   14, 159, 145, 177, 251, 74, 0, 0,
+   58, 122, 64, 64, 122, 122, 64, 0,
+   56, 124, 84, 85, 93, 25, 0, 0,
+   2, 35, 117, 85, 85, 125, 123, 66,
+   33, 117, 84, 84, 125, 121, 64, 0,
+   33, 117, 85, 84, 124, 120, 64, 0,
+   32, 116, 87, 87, 124, 120, 64, 0,
+   24, 60, 164, 164, 228, 64, 0, 0,
+   2, 59, 125, 85, 85, 93, 27, 2,
+   57, 125, 84, 84, 93, 25, 0, 0,
+   57, 125, 85, 84, 92, 24, 0, 0,
+   1, 69, 124, 124, 65, 1, 0, 0,
+   2, 3, 69, 125, 125, 67, 2, 0,
+   1, 69, 125, 124, 64, 0, 0, 0,
+   121, 125, 22, 18, 22, 125, 121, 0,
+   112, 120, 43, 43, 120, 112, 0, 0,
+   68, 124, 124, 85, 85, 69, 0, 0,
+   32, 116, 84, 84, 124, 124, 84, 84,
+   124, 126, 11, 9, 127, 127, 73, 0,
+   50, 123, 73, 73, 123, 50, 0, 0,
+   50, 122, 72, 72, 122, 50, 0, 0,
+   50, 122, 74, 72, 120, 48, 0, 0,
+   58, 123, 65, 65, 123, 122, 64, 0,
+   58, 122, 66, 64, 120, 120, 64, 0,
+   154, 186, 160, 160, 250, 122, 0, 0,
+   1, 25, 60, 102, 102, 60, 25, 1,
+   61, 125, 64, 64, 125, 61, 0, 0,
+   24, 60, 36, 231, 231, 36, 36, 0,
+   104, 126, 127, 73, 67, 102, 32, 0,
+   43, 47, 252, 252, 47, 43, 0, 0,
+   255, 255, 9, 9, 47, 246, 248, 160,
+   64, 192, 136, 254, 127, 9, 3, 2,
+   32, 116, 84, 85, 125, 121, 64, 0,
+   0, 68, 125, 125, 65, 0, 0, 0,
+   48, 120, 72, 74, 122, 50, 0, 0,
+   56, 120, 64, 66, 122, 122, 64, 0,
+   122, 122, 10, 10, 122, 112, 0, 0,
+   125, 125, 25, 49, 125, 125, 0, 0,
+   0, 38, 47, 41, 47, 47, 40, 0,
+   0, 38, 47, 41, 47, 38, 0, 0,
+   48, 120, 77, 69, 96, 32, 0, 0,
+   56, 56, 8, 8, 8, 8, 0, 0,
+   8, 8, 8, 8, 56, 56, 0, 0,
+   79, 111, 48, 24, 204, 238, 187, 145,
+   79, 111, 48, 24, 108, 118, 251, 249,
+   0, 0, 0, 123, 123, 0, 0, 0,
+   8, 28, 54, 34, 8, 28, 54, 34,
+   34, 54, 28, 8, 34, 54, 28, 8,
+   170, 0, 85, 0, 170, 0, 85, 0,
+   170, 85, 170, 85, 170, 85, 170, 85,
+   221, 255, 170, 119, 221, 170, 255, 119,
+   0, 0, 0, 255, 255, 0, 0, 0,
+   16, 16, 16, 255, 255, 0, 0, 0,
+   20, 20, 20, 255, 255, 0, 0, 0,
+   16, 16, 255, 255, 0, 255, 255, 0,
+   16, 16, 240, 240, 16, 240, 240, 0,
+   20, 20, 20, 252, 252, 0, 0, 0,
+   20, 20, 247, 247, 0, 255, 255, 0,
+   0, 0, 255, 255, 0, 255, 255, 0,
+   20, 20, 244, 244, 4, 252, 252, 0,
+   20, 20, 23, 23, 16, 31, 31, 0,
+   16, 16, 31, 31, 16, 31, 31, 0,
+   20, 20, 20, 31, 31, 0, 0, 0,
+   16, 16, 16, 240, 240, 0, 0, 0,
+   0, 0, 0, 31, 31, 16, 16, 16,
+   16, 16, 16, 31, 31, 16, 16, 16,
+   16, 16, 16, 240, 240, 16, 16, 16,
+   0, 0, 0, 255, 255, 16, 16, 16,
+   16, 16, 16, 16, 16, 16, 16, 16,
+   16, 16, 16, 255, 255, 16, 16, 16,
+   0, 0, 0, 255, 255, 20, 20, 20,
+   0, 0, 255, 255, 0, 255, 255, 16,
+   0, 0, 31, 31, 16, 23, 23, 20,
+   0, 0, 252, 252, 4, 244, 244, 20,
+   20, 20, 23, 23, 16, 23, 23, 20,
+   20, 20, 244, 244, 4, 244, 244, 20,
+   0, 0, 255, 255, 0, 247, 247, 20,
+   20, 20, 20, 20, 20, 20, 20, 20,
+   20, 20, 247, 247, 0, 247, 247, 20,
+   20, 20, 20, 23, 23, 20, 20, 20,
+   16, 16, 31, 31, 16, 31, 31, 16,
+   20, 20, 20, 244, 244, 20, 20, 20,
+   16, 16, 240, 240, 16, 240, 240, 16,
+   0, 0, 31, 31, 16, 31, 31, 16,
+   0, 0, 0, 31, 31, 20, 20, 20,
+   0, 0, 0, 252, 252, 20, 20, 20,
+   0, 0, 240, 240, 16, 240, 240, 16,
+   16, 16, 255, 255, 16, 255, 255, 16,
+   20, 20, 20, 255, 255, 20, 20, 20,
+   16, 16, 16, 31, 31, 0, 0, 0,
+   0, 0, 0, 240, 240, 16, 16, 16,
+   255, 255, 255, 255, 255, 255, 255, 255,
+   240, 240, 240, 240, 240, 240, 240, 240,
+   255, 255, 255, 255, 0, 0, 0, 0,
+   0, 0, 0, 0, 255, 255, 255, 255,
+   15, 15, 15, 15, 15, 15, 15, 15,
+   56, 124, 68, 108, 56, 108, 68, 0,
+   252, 254, 42, 42, 62, 20, 0, 0,
+   126, 126, 2, 2, 6, 6, 0, 0,
+   2, 126, 126, 2, 126, 126, 2, 0,
+   99, 119, 93, 73, 99, 99, 0, 0,
+   56, 124, 68, 124, 60, 4, 4, 0,
+   128, 254, 126, 32, 32, 62, 30, 0,
+   4, 6, 2, 126, 124, 6, 2, 0,
+   153, 189, 231, 231, 189, 153, 0, 0,
+   28, 62, 107, 73, 107, 62, 28, 0,
+   76, 126, 115, 1, 115, 126, 76, 0,
+   48, 120, 74, 79, 125, 57, 0, 0,
+   24, 60, 36, 60, 60, 36, 60, 24,
+   152, 252, 100, 60, 62, 39, 61, 24,
 
-};
+   };
 
 
 
 
 unsigned char x,y;
+
+void wait_for_release(void) {
+while(PORTEbits.RE0){};
+}
 
 
 
@@ -6035,39 +6718,53 @@ unsigned char x,y;
 
 void glcd_Init(unsigned char mode)
 {
+   TRISA = 0xFF;
+   PORTA = 0x00;
+   ADCON1 = 0x0F;
+
+   TRISB = 0x00;
+   PORTB = 0x00;
+
+   TRISD = 0x00;
+   PORTD = 0x00;
+
+   unsigned char i, j, k;
 
 
- PORTD = 0x00;
- LATBbits.LATB5 = 0;
- _delay((unsigned long)((50)*(8000000/4000000.0)));
- LATBbits.LATB5 = 1;
+   PORTD = 0x00;
+   LATBbits.LATB5 = 0;
 
- LATBbits.LATB4=0;
- LATBbits.LATB0=0;
- LATBbits.LATB1=0;
- LATBbits.LATB2=0;
- _delay((unsigned long)((1)*(8000000/4000000.0)));
+   _delay((unsigned long)((1500)*(100000/4000.0)));
+   LATBbits.LATB5 = 1;
 
-  glcd_WriteByte(0, 0xC0);
+   LATBbits.LATB4=0;
+   LATBbits.LATB0=0;
+   LATBbits.LATB1=0;
+   LATBbits.LATB2=0;
+
+
+   _delay((unsigned long)((10)*(100000/4000.0)));
+   glcd_WriteByte(0, 0xC0);
    glcd_WriteByte(1, 0xC0);
-    glcd_WriteByte(0, 0x40);
-    glcd_WriteByte(1, 0x40);
-    glcd_WriteByte(0, 0xB8);
-    glcd_WriteByte(1, 0xB8);
+   glcd_WriteByte(0, 0x40);
+   glcd_WriteByte(1, 0x40);
+   glcd_WriteByte(0, 0xB8);
+   glcd_WriteByte(1, 0xB8);
 
- if(mode == 1)
-  {
-      glcd_WriteByte(0, 0x3F);
-      glcd_WriteByte(1, 0x3F);
-  }
+   if(mode == 1)
+     {
+       TRISA = 0x00;
+       PORTA = 0xFF;
+        glcd_WriteByte(0, 0x3F);
+        glcd_WriteByte(1, 0x3F);
+     }
    else
-  {
-      glcd_WriteByte(0, 0x3E);
-      glcd_WriteByte(1, 0x3E);
-   }
+     {
+        glcd_WriteByte(0, 0x3E);
+        glcd_WriteByte(1, 0x3E);
+     }
 
- glcd_FillScreen(0);
-
+   glcd_FillScreen(0);
 }
 
 
@@ -6075,128 +6772,72 @@ void glcd_Init(unsigned char mode)
 
 void glcd_WriteByte(unsigned char side, unsigned char data)
 {
- if(side)
- {
-      LATBbits.LATB0 = 1;
-  LATBbits.LATB1 = 0;
- }
-    else
- {
-  LATBbits.LATB1 = 0;
-       LATBbits.LATB1 = 1;
- }
+   if(side)
+     {
+        LATBbits.LATB0 = 1;
+        LATBbits.LATB1 = 0;
+     }
+   else
+     {
+        LATBbits.LATB1 = 0;
+        LATBbits.LATB1 = 1;
+     }
 
- TRISD=0;
- LATBbits.LATB3=0;
+   TRISD=0;
+   LATBbits.LATB3=0;
 
- LATD = data;
-
-
-
- LATBbits.LATB4 = 1;
- _delay((unsigned long)((1)*(8000000/4000000.0)));
- LATBbits.LATB4 = 0;
- _delay((unsigned long)((1)*(8000000/4000000.0)));
+   LATD = data;
 
 
- LATBbits.LATB0 = 0;
- LATBbits.LATB1 = 0;
+
+   LATBbits.LATB4 = 1;
+
+   _delay((unsigned long)((1)*(100000/4000.0)));
+   LATBbits.LATB4 = 0;
+
+   _delay((unsigned long)((1)*(100000/4000.0)));
+
+
+   LATBbits.LATB0 = 0;
+   LATBbits.LATB1 = 0;
 }
 
-
-
-
-
-void glcd_FillScreen(unsigned char color)
-{
-unsigned char i, j;
-
- for(i = 0; i < 8; i ++)
- {
-  LATBbits.LATB2=0;
-       glcd_WriteByte(0, 0b01000000);
-       glcd_WriteByte(1, 0b01000000);
-       glcd_WriteByte(0, i | 0b10111000);
-       glcd_WriteByte(1, i | 0b10111000);
-       LATBbits.LATB2=1;
-
-   for(j = 0; j < 64; j++)
-   {
-    glcd_WriteByte(0, 0xFF*color);
-           glcd_WriteByte(1, 0xFF*color);
-   }
-
- }
-}
-
-
-
-void glcd_Image()
-{
-  unsigned char cs;
- int ptr=0;
-
- unsigned char i, j;
-
-
- for(i = 0; i < 8; ++i)
- {
-
-  for(cs=0;cs<=1;cs++)
-  {
-   LATBbits.LATB2=0;
-      glcd_WriteByte(cs, 0x40);
-    glcd_WriteByte(cs, i | 0xB8);
-      LATBbits.LATB2=1;
-
-
-   for(j = 0; j < 64; ++j)
-   {
-
-    glcd_WriteByte(cs, acceuil[ptr]);
-    ptr+=1;
-   }
-  }
- }
-
-     LATBbits.LATB0=0;
-     LATBbits.LATB1=0;
-}
 
 
 
 
 unsigned char glcd_ReadByte(unsigned char side)
 {
-unsigned char data;
+   unsigned char data;
 
- if(side)
- {
-      LATBbits.LATB0 = 1;
-  LATBbits.LATB1 = 0;
- }
-    else
- {
-  LATBbits.LATB1 = 0;
-       LATBbits.LATB1 = 1;
- }
+   if(side)
+     {
+        LATBbits.LATB0 = 1;
+        LATBbits.LATB1 = 0;
+     }
+   else
+     {
+        LATBbits.LATB1 = 0;
+        LATBbits.LATB1 = 1;
+     }
 
- TRISD = 0xFF;
- LATBbits.LATB3 = 1;
+   TRISD = 0xFF;
+   LATBbits.LATB3 = 1;
 
 
 
- LATBbits.LATB4 = 1;
- _delay((unsigned long)((1)*(8000000/4000000.0)));
+   LATBbits.LATB4 = 1;
 
- data = PORTD;
- LATBbits.LATB4 = 0;
- _delay((unsigned long)((1)*(8000000/4000000.0)));
+   _delay((unsigned long)((1)*(100000/4000.0)));
 
- LATBbits.LATB0 = 0;
- LATBbits.LATB1 = 0;
+   data = PORTD;
+   LATBbits.LATB4 = 0;
 
- return data;
+   _delay((unsigned long)((1)*(100000/4000.0)));
+   LATBbits.LATB0 = 0;
+   LATBbits.LATB1 = 0;
+
+   return data;
 }
 
 
@@ -6204,38 +6845,82 @@ unsigned char data;
 
 void glcd_PlotPixel(unsigned char xpos, unsigned char ypos, unsigned char color)
 {
-    unsigned char data;
-    unsigned char side = 0;
+   unsigned char data;
+   unsigned char side = 0;
 
-    if(xpos > 63)
-    {
-       xpos -= 64;
-       side = 1;
-    }
-    LATBbits.LATB2=0;
+   if(xpos > 63)
+     {
+        xpos -= 64;
+        side = 1;
+     }
+   LATBbits.LATB2=0;
 
- xpos &=0b01111111;
- xpos |=0b01000000;
- glcd_WriteByte(side, (xpos));
- glcd_WriteByte(side, (((ypos/8)) & 0xBF) | 0xB8);
+   xpos &=0b01111111;
+   xpos |=0b01000000;
+   glcd_WriteByte(side, (xpos));
+   glcd_WriteByte(side, (((ypos/8)) & 0xBF) | 0xB8);
 
- LATBbits.LATB2=1;
+   LATBbits.LATB2=1;
 
- glcd_ReadByte(side);
- data = glcd_ReadByte(side);
+   glcd_ReadByte(side);
+   data = glcd_ReadByte(side);
 
- LATBbits.LATB2=0;
+   LATBbits.LATB2=0;
 
- glcd_WriteByte(side, xpos);
+   glcd_WriteByte(side, xpos);
 
- if(color)
-  data=(data)|(1<<(ypos%8));
- else
-  data =(data)&(~(1<<(ypos%8)));
+   if(color)
+     data=(data)|(1<<(ypos%8));
+   else
+     data =(data)&(~(1<<(ypos%8)));
 
- LATBbits.LATB2=1;
+   LATBbits.LATB2=1;
 
- glcd_WriteByte(side, data);
+   glcd_WriteByte(side, data);
+}
+
+
+
+
+
+void glcd_Rect(unsigned char xs, unsigned char ys, unsigned char xe ,unsigned char ye,unsigned char color)
+{
+   unsigned char i,j;
+   if (ys>ye) return;
+   if (xs>xe) return;
+
+   for(i=xs;i<=xe;i++)
+     {
+        for(j=ys;j<=ye;j++)
+          {
+             if( i == xs || i ==xe || j == ye || j == ys )
+               glcd_PlotPixel(i,j,color);
+          }
+     }
+}
+
+
+
+
+void glcd_FillScreen(unsigned char color)
+{
+   unsigned char i, j;
+
+   for(i = 0; i < 8; i ++)
+     {
+        LATBbits.LATB2=0;
+        glcd_WriteByte(0, 0b01000000);
+        glcd_WriteByte(1, 0b01000000);
+        glcd_WriteByte(0, i | 0b10111000);
+        glcd_WriteByte(1, i | 0b10111000);
+        LATBbits.LATB2=1;
+
+        for(j = 0; j < 64; j++)
+          {
+             glcd_WriteByte(0, 0xFF*color);
+             glcd_WriteByte(1, 0xFF*color);
+          }
+     }
 }
 
 
@@ -6243,72 +6928,71 @@ void glcd_PlotPixel(unsigned char xpos, unsigned char ypos, unsigned char color)
 
 void glcd_SetCursor(unsigned char xpos,unsigned char ypos)
 {
- unsigned char side = 0;
+   unsigned char side = 0;
 
- if(xpos > 127 | ypos > 7)
-  return;
+   if(xpos > 127 | ypos > 7)
+     return;
 
- x = xpos;
- y = ypos;
+   x = xpos;
+   y = ypos;
 
-    if(xpos > 63)
-    {
-      xpos -= 64;
-      side = 1;
-    }
+   if(xpos > 63)
+     {
+        xpos -= 64;
+        side = 1;
+     }
 
- LATBbits.LATB2=0;
-  glcd_WriteByte(side, 0x40 | xpos);
-  glcd_WriteByte(side, 0xB8 | ypos);
- LATBbits.LATB2=1;
+   LATBbits.LATB2=0;
+   glcd_WriteByte(side, 0x40 | xpos);
+   glcd_WriteByte(side, 0xB8 | ypos);
+   LATBbits.LATB2=1;
 }
-
 
 
 
 
 void glcd_WriteChar8X8(unsigned char ch, unsigned char color)
 {
- unsigned char i,xpos;
- unsigned char side = 0;
- unsigned int chr;
+   unsigned char i,xpos;
+   unsigned char side = 0;
+   unsigned int chr;
 
- if (ch=='\n')
- {
-  x=0;
-  y++;
-  return;
- }
+   if (ch=='\n')
+     {
+        x=0;
+        y++;
+        return;
+     }
 
- if(x > 63)
-        {
-  side = 1;
-  xpos=x-64;
-  }
- else
+   if(x > 63)
+     {
+        side = 1;
+        xpos=x-64;
+     }
+   else
      xpos=x;
 
- chr = (int)ch*8;
+   chr = (int)ch*8;
 
- for(i = 0; i < 8; i++)
- {
+   for(i = 0; i < 8; i++)
+     {
 
- if(xpos > 63)
-  {
-       xpos -= 64;
-       side = 1;
-    LATBbits.LATB2=0;
-    glcd_WriteByte(side, 0x40 | xpos);
-    glcd_WriteByte(side, 0xB8 | y);
-    LATBbits.LATB2=1;
+        if(xpos > 63)
+          {
+             xpos -= 64;
+             side = 1;
+             LATBbits.LATB2=0;
+             glcd_WriteByte(side, 0x40 | xpos);
+             glcd_WriteByte(side, 0xB8 | y);
+             LATBbits.LATB2=1;
+          }
+        if(color)
+          glcd_WriteByte(side,Font8x8[chr+i]);
+        else
+          glcd_WriteByte(side,~(Font8x8[chr+i]));
+        xpos++;
      }
- if(color)
-  glcd_WriteByte(side,Font8x8[chr+i]);
- else
-  glcd_WriteByte(side,~(Font8x8[chr+i]));
- xpos++;
- }
- x+=8;
+   x+=8;
 }
 
 
@@ -6317,57 +7001,65 @@ void glcd_WriteChar8X8(unsigned char ch, unsigned char color)
 
 void glcd_WriteChar3x6(unsigned char ch, unsigned char color)
 {
- unsigned char i,xpos;
- unsigned char side = 0;
+   unsigned char i,xpos;
+   unsigned char side = 0;
 
- if (ch=='\n')
- {
-  x=0;
-  y++;
-  return;
- }
+   if (ch=='\n')
+     {
+        x=0;
+        y++;
+        return;
+     }
 
- if(x > 63)
-        {
-  side = 1;
-  xpos=x-64;
-  }
- else
+   if(x > 63)
+     {
+        side = 1;
+        xpos=x-64;
+     }
+   else
      xpos=x;
 
- ch -= 32;
+   ch -= 32;
 
- for(i = 0; i < 3; i++)
- {
-  if(xpos > 63)
-  {
-   xpos -= 64;
-   side = 1;
-   LATBbits.LATB2=0;
-   glcd_WriteByte(side, 0x40 | xpos);
-   glcd_WriteByte(side, 0xB8 | y);
-   LATBbits.LATB2=1;
-  }
-  if(color)
-   glcd_WriteByte(side,Font3x6[ch][i]);
-  else
-   glcd_WriteByte(side,~(Font3x6[ch][i]));
-  xpos++;
- }
- x+=5;
+   for(i = 0; i < 3; i++)
+     {
+        if(xpos > 63)
+          {
+             xpos -= 64;
+             side = 1;
+             LATBbits.LATB2=0;
+             glcd_WriteByte(side, 0x40 | xpos);
+             glcd_WriteByte(side, 0xB8 | y);
+             LATBbits.LATB2=1;
+          }
+        if(color)
+          glcd_WriteByte(side,Font3x6[ch][i]);
+        else
+          glcd_WriteByte(side,~(Font3x6[ch][i]));
+        xpos++;
+     }
+   x+=5;
 }
 
 
 
 
-void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color)
+
+void glcd_WriteString(const char str[],unsigned char font,unsigned char color)
 {
- while(*str)
- {
-  if(font)
-   glcd_WriteChar8X8(*str, color);
-  else
-   glcd_WriteChar3x6(*str, color);
-  str++;
- }
+   while(*str)
+     {
+        if(font)
+          glcd_WriteChar8X8(*str, color);
+        else
+          glcd_WriteChar3x6(*str, color);
+        str++;
+     }
+}
+
+void glcd_text_write(const char str[], unsigned char x, unsigned char y)
+{
+
+   glcd_SetCursor(x, y);
+   glcd_WriteString(str, 1, 1);
 }

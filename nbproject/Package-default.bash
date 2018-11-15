@@ -10,8 +10,8 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/MCU_projet_tamagogo_.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=MCU_projet_tamagogo_.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/MCU_projet_tamagogo.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=MCU_projet_tamagogo.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 PACKAGE_TOP_DIR=mcuprojettamagogo.x/
 
 # Functions

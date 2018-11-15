@@ -21,22 +21,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2453
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2453: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
 [v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
-"39 ./glcd.h
-[; ;./glcd.h: 39: extern void glcd_Init(unsigned char mode);
-[v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
 "13 ./microgochi.h
 [; ;./microgochi.h: 13: struct Microgochi{
-[s S365 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S365 Microgochi age satiete energie proprete vivant ]
-"25
+[s S371 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S371 Microgochi age satiete energie proprete vivant ]
+"43 ./glcd.h
+[; ;./glcd.h: 43: extern void glcd_Init(unsigned char mode);
+[v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
+"25 ./microgochi.h
 [; ;./microgochi.h: 25: void microgochi_init(Microgochi *m);
-[v _microgochi_init `(v ~T0 @X0 0 ef1`*S365 ]
+[v _microgochi_init `(v ~T0 @X0 0 ef1`*S371 ]
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
 "13 ./game.h
 [; ;./game.h: 13: void game_play(Microgochi *m);
-[v _game_play `(v ~T0 @X0 0 ef1`*S365 ]
+[v _game_play `(v ~T0 @X0 0 ef1`*S371 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -548,88 +548,88 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"29 main.c
-[; ;main.c: 29: int main(int argc, char** argv) {
+"32 main.c
+[; ;main.c: 32: int main(int argc, char** argv) {
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"31
-[; ;main.c: 31:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
 "34
-[; ;main.c: 34:     TRISA=0b00000111;
-[e = _TRISA -> -> 7 `i `uc ]
-"35
-[; ;main.c: 35:     PORTA=0b00000111;
-[e = _PORTA -> -> 7 `i `uc ]
+[; ;main.c: 34:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
 "37
-[; ;main.c: 37:     TRISD = 0xff;
-[e = _TRISD -> -> 255 `i `uc ]
+[; ;main.c: 37:     TRISA=0b00000111;
+[e = _TRISA -> -> 7 `i `uc ]
 "38
-[; ;main.c: 38:  PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 38:     PORTA=0b00000111;
+[e = _PORTA -> -> 7 `i `uc ]
 "40
-[; ;main.c: 40:  TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 40:     TRISD = 0xff;
+[e = _TRISD -> -> 255 `i `uc ]
 "41
-[; ;main.c: 41:  PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 41:  PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"43
+[; ;main.c: 43:  TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "44
-[; ;main.c: 44:     glcd_Init(1);
-[e ( _glcd_Init (1 -> -> 1 `i `uc ]
+[; ;main.c: 44:  PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "46
 [; ;main.c: 46:     Microgochi *mGogo=((void*)0);
-[v _mGogo `*S365 ~T0 @X0 1 a ]
-[e = _mGogo -> -> -> 0 `i `*v `*S365 ]
+[v _mGogo `*S371 ~T0 @X0 1 a ]
+[e = _mGogo -> -> -> 0 `i `*v `*S371 ]
 "47
 [; ;main.c: 47:     int bool_jeu=1;
 [v _bool_jeu `i ~T0 @X0 1 a ]
 [e = _bool_jeu -> 1 `i ]
 "49
-[; ;main.c: 49:     while (bool_jeu==1)
-[e $U 373  ]
-[e :U 374 ]
-"50
-[; ;main.c: 50:     {
-{
+[; ;main.c: 49:     glcd_Init(1);
+[e ( _glcd_Init (1 -> -> 1 `i `uc ]
 "51
-[; ;main.c: 51:         microgochi_init(mGogo);
-[e ( _microgochi_init (1 _mGogo ]
-"54
-[; ;main.c: 54:         screen_credits();
-[e ( _screen_credits ..  ]
-"59
-[; ;main.c: 59:         game_play(mGogo);
-[e ( _game_play (1 _mGogo ]
-"64
-[; ;main.c: 64:         if (mGogo->vivant==0)
-[e $ ! == -> . *U _mGogo 4 `i -> 0 `i 376  ]
-"65
-[; ;main.c: 65:         {
-{
-"70
-[; ;main.c: 70:             bool_jeu=0;
-[e = _bool_jeu -> 0 `i ]
-"72
-[; ;main.c: 72:         }
-}
-[e :U 376 ]
-"75
-[; ;main.c: 75:     }
-}
-[e :U 373 ]
-"49
-[; ;main.c: 49:     while (bool_jeu==1)
-[e $ == _bool_jeu -> 1 `i 374  ]
+[; ;main.c: 51:     while (bool_jeu==1)
+[e $U 374  ]
 [e :U 375 ]
+"52
+[; ;main.c: 52:     {
+{
+"53
+[; ;main.c: 53:         microgochi_init(mGogo);
+[e ( _microgochi_init (1 _mGogo ]
+"56
+[; ;main.c: 56:         screen_credits();
+[e ( _screen_credits ..  ]
+"61
+[; ;main.c: 61:         game_play(mGogo);
+[e ( _game_play (1 _mGogo ]
+"66
+[; ;main.c: 66:         if (mGogo->vivant==0)
+[e $ ! == -> . *U _mGogo 4 `i -> 0 `i 377  ]
+"67
+[; ;main.c: 67:         {
+{
+"72
+[; ;main.c: 72:             bool_jeu=0;
+[e = _bool_jeu -> 0 `i ]
+"74
+[; ;main.c: 74:         }
+}
+[e :U 377 ]
 "77
-[; ;main.c: 77:     return (0);
+[; ;main.c: 77:     }
+}
+[e :U 374 ]
+"51
+[; ;main.c: 51:     while (bool_jeu==1)
+[e $ == _bool_jeu -> 1 `i 375  ]
+[e :U 376 ]
+"79
+[; ;main.c: 79:     return (0);
 [e ) -> 0 `i ]
-[e $UE 372  ]
-"78
-[; ;main.c: 78: }
-[e :UE 372 ]
+[e $UE 373  ]
+"80
+[; ;main.c: 80: }
+[e :UE 373 ]
 }

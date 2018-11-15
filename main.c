@@ -16,19 +16,22 @@
 
 //lib pic
 #include <pic18f4550.h>
+#include <xc.h>
 
 #include "main.h" 
 
-//include files
-#include "microgochi.h" 
+
 #include "glcd.h"
+
+// includes fichier
+#include "microgochi.h" 
 #include "game.h"
 #include "screen.h"
 
 
 int main(int argc, char** argv) {
     
-    ADCON1 = 0x0F;
+    ADCON1 = 0x0F; //on desactive les entrees analogiques
     
     // ** init easypic -----------
     TRISA=0b00000111;
@@ -39,13 +42,12 @@ int main(int argc, char** argv) {
 
 	TRISB = 0;				//PORTB output
 	PORTB = 0; 				//Reset PORTB
-
-    
-    glcd_Init(GLCD_ON);// ** initialisation ecran
     
     Microgochi *mGogo=NULL;    //creation structure Microgochi
     int bool_jeu=1; //boolean pour l'etat du jeu
-    
+
+    glcd_Init(GLCD_ON); //init glcd
+   
     while (bool_jeu==1) //boucle de jeu
     {
         microgochi_init(mGogo); //on reinitialise les parametres du microgochi

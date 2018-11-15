@@ -1,17 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"44 ./glcd.h
-[; ;./glcd.h: 44: extern void glcd_FillScreen(unsigned char color);
+"49 ./glcd.h
+[; ;./glcd.h: 49: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
-"43
-[; ;./glcd.h: 43: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
-[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
 "47
-[; ;./glcd.h: 47: extern void glcd_WriteString(unsigned char str[],unsigned char font,unsigned char color);
-[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
-[v F3151 `(v ~T0 @X0 1 tf1`ul ]
-"183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18.h
-[v __delay `JF3151 ~T0 @X0 0 e ]
-[p i __delay ]
+[; ;./glcd.h: 47: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"52
+[; ;./glcd.h: 52: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
+[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -522,23 +518,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"12 screen.c
-[; ;screen.c: 12: void screen_credits()
+"20 screen.c
+[; ;screen.c: 20: void screen_credits()
 [v _screen_credits `(v ~T0 @X0 1 ef ]
-"13
-[; ;screen.c: 13: {
+"21
+[; ;screen.c: 21: {
 {
 [e :U _screen_credits ]
 [f ]
-"15
-[; ;screen.c: 15:  glcd_FillScreen(0);
+"22
+[; ;screen.c: 22:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-[v F3187 `uc ~T0 @X0 -> 7 `i s ]
-[i F3187
+[v F4061 `uc ~T0 @X0 -> 7 `i s ]
+[i F4061
 :U ..
-"19
-[; ;screen.c: 19:  unsigned char str_nom1[] = "Projet";
--> 80 `c
+"26
+[; ;screen.c: 26:  unsigned char str_nom1[] = "projet";
+-> 112 `c
 -> 114 `c
 -> 111 `c
 -> 106 `c
@@ -548,28 +544,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_nom1 `uc ~T0 @X0 -> 7 `i a ]
-[e = _str_nom1 F3187 ]
-[v F3189 `uc ~T0 @X0 -> 7 `i s ]
-[i F3189
+[e = _str_nom1 F4061 ]
+[v F4063 `uc ~T0 @X0 -> 6 `i s ]
+[i F4063
 :U ..
-"20
-[; ;screen.c: 20:     unsigned char str_nom2[] = "Microg";
--> 77 `c
+"27
+[; ;screen.c: 27:     unsigned char str_nom2[] = "micro";
+-> 109 `c
 -> 105 `c
 -> 99 `c
 -> 114 `c
 -> 111 `c
--> 103 `c
 -> 0 `c
 ..
 ]
-[v _str_nom2 `uc ~T0 @X0 -> 7 `i a ]
-[e = _str_nom2 F3189 ]
-[v F3191 `uc ~T0 @X0 -> 5 `i s ]
-[i F3191
+[v _str_nom2 `uc ~T0 @X0 -> 6 `i a ]
+[e = _str_nom2 F4063 ]
+[v F4065 `uc ~T0 @X0 -> 5 `i s ]
+[i F4065
 :U ..
-"21
-[; ;screen.c: 21:     unsigned char str_nom3[] = "ochi";
+"28
+[; ;screen.c: 28:     unsigned char str_nom3[] = "ochi";
 -> 111 `c
 -> 99 `c
 -> 104 `c
@@ -578,12 +573,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_nom3 `uc ~T0 @X0 -> 5 `i a ]
-[e = _str_nom3 F3191 ]
-[v F3193 `uc ~T0 @X0 -> 7 `i s ]
-[i F3193
+[e = _str_nom3 F4065 ]
+[v F4067 `uc ~T0 @X0 -> 7 `i s ]
+[i F4067
 :U ..
-"22
-[; ;screen.c: 22:  unsigned char str_a[] ="ARENDA";
+"29
+[; ;screen.c: 29:  unsigned char str_a[] ="ARENDA";
 -> 65 `c
 -> 82 `c
 -> 69 `c
@@ -594,12 +589,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_a `uc ~T0 @X0 -> 7 `i a ]
-[e = _str_a F3193 ]
-[v F3195 `uc ~T0 @X0 -> 5 `i s ]
-[i F3195
+[e = _str_a F4067 ]
+[v F4069 `uc ~T0 @X0 -> 5 `i s ]
+[i F4069
 :U ..
-"23
-[; ;screen.c: 23:     unsigned char str_a2[] ="RSKI";
+"30
+[; ;screen.c: 30:     unsigned char str_a2[] ="RSKI";
 -> 82 `c
 -> 83 `c
 -> 75 `c
@@ -608,12 +603,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_a2 `uc ~T0 @X0 -> 5 `i a ]
-[e = _str_a2 F3195 ]
-[v F3197 `uc ~T0 @X0 -> 6 `i s ]
-[i F3197
+[e = _str_a2 F4069 ]
+[v F4071 `uc ~T0 @X0 -> 6 `i s ]
+[i F4071
 :U ..
-"24
-[; ;screen.c: 24:     unsigned char str_p[] ="PAGES";
+"31
+[; ;screen.c: 31:     unsigned char str_p[] ="PAGES";
 -> 80 `c
 -> 65 `c
 -> 71 `c
@@ -623,12 +618,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_p `uc ~T0 @X0 -> 6 `i a ]
-[e = _str_p F3197 ]
-[v F3199 `uc ~T0 @X0 -> 4 `i s ]
-[i F3199
+[e = _str_p F4071 ]
+[v F4073 `uc ~T0 @X0 -> 4 `i s ]
+[i F4073
 :U ..
-"25
-[; ;screen.c: 25:     unsigned char str_t[] ="TAO";
+"32
+[; ;screen.c: 32:     unsigned char str_t[] ="TAO";
 -> 84 `c
 -> 65 `c
 -> 79 `c
@@ -636,53 +631,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _str_t `uc ~T0 @X0 -> 4 `i a ]
-[e = _str_t F3199 ]
-"29
-[; ;screen.c: 29:  glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"30
-[; ;screen.c: 30:  glcd_WriteString(str_nom1,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_nom1 -> -> 1 `i `uc -> -> 1 `i `uc ]
-"31
-[; ;screen.c: 31:     glcd_SetCursor(0,1);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"32
-[; ;screen.c: 32:  glcd_WriteString(str_nom2,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_nom2 -> -> 1 `i `uc -> -> 1 `i `uc ]
-"33
-[; ;screen.c: 33:     glcd_SetCursor(50,1);
-[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 1 `i `uc ]
-"34
-[; ;screen.c: 34:  glcd_WriteString(str_nom3,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_nom3 -> -> 1 `i `uc -> -> 1 `i `uc ]
+[e = _str_t F4073 ]
 "36
-[; ;screen.c: 36:  glcd_SetCursor(0,3);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;screen.c: 36:  glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "37
-[; ;screen.c: 37:  glcd_WriteString(str_a,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_a -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 37:  glcd_WriteString(str_nom1, 1, 1);
+[e ( _glcd_WriteString (3 , , -> &U _str_nom1 `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
 "38
-[; ;screen.c: 38:     glcd_SetCursor(49,3);
-[e ( _glcd_SetCursor (2 , -> -> 49 `i `uc -> -> 3 `i `uc ]
+[; ;screen.c: 38:     glcd_SetCursor(0,1);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "39
-[; ;screen.c: 39:  glcd_WriteString(str_a2,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_a2 -> -> 1 `i `uc -> -> 1 `i `uc ]
-"40
-[; ;screen.c: 40:     glcd_SetCursor(0,4);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
-"41
-[; ;screen.c: 41:  glcd_WriteString(str_p,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_p -> -> 1 `i `uc -> -> 1 `i `uc ]
-"42
-[; ;screen.c: 42:     glcd_SetCursor(0,5);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
-"43
-[; ;screen.c: 43:  glcd_WriteString(str_t,1,1);
-[e ( _glcd_WriteString (3 , , &U _str_t -> -> 1 `i `uc -> -> 1 `i `uc ]
-"45
-[; ;screen.c: 45:     _delay((unsigned long)((600)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 600 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"46
-[; ;screen.c: 46: }
-[e :UE 367 ]
+[; ;screen.c: 39:  glcd_WriteString(str_nom2, 1, 1);
+[e ( _glcd_WriteString (3 , , -> &U _str_nom2 `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"52
+[; ;screen.c: 52: }
+[e :UE 373 ]
 }
