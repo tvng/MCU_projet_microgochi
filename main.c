@@ -54,7 +54,6 @@ int main(int argc, char** argv) {
      
         
         screen_credits(); //pour afficher les credits cf screen.c : A FAIRE !!!!!!!!!!!!!!!!
-        
         //un truc qui dit que notre microgochi vient de naitre
         
         //affichage de notre notre lapin de base et avec le menu      

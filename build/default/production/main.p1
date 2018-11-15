@@ -601,35 +601,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;main.c: 56:         screen_credits();
 [e ( _screen_credits ..  ]
-"61
-[; ;main.c: 61:         game_play(mGogo);
+"60
+[; ;main.c: 60:         game_play(mGogo);
 [e ( _game_play (1 _mGogo ]
-"66
-[; ;main.c: 66:         if (mGogo->vivant==0)
+"65
+[; ;main.c: 65:         if (mGogo->vivant==0)
 [e $ ! == -> . *U _mGogo 4 `i -> 0 `i 377  ]
-"67
-[; ;main.c: 67:         {
+"66
+[; ;main.c: 66:         {
 {
-"72
-[; ;main.c: 72:             bool_jeu=0;
+"71
+[; ;main.c: 71:             bool_jeu=0;
 [e = _bool_jeu -> 0 `i ]
-"74
-[; ;main.c: 74:         }
+"73
+[; ;main.c: 73:         }
 }
 [e :U 377 ]
-"77
-[; ;main.c: 77:     }
+"76
+[; ;main.c: 76:     }
 }
 [e :U 374 ]
 "51
 [; ;main.c: 51:     while (bool_jeu==1)
 [e $ == _bool_jeu -> 1 `i 375  ]
 [e :U 376 ]
-"79
-[; ;main.c: 79:     return (0);
+"78
+[; ;main.c: 78:     return (0);
 [e ) -> 0 `i ]
 [e $UE 373  ]
-"80
-[; ;main.c: 80: }
+"79
+[; ;main.c: 79: }
 [e :UE 373 ]
 }

@@ -8,6 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52
 [; ;./glcd.h: 52: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 [v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
+[v F3150 `(v ~T0 @X0 1 tf1`ul ]
+"183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18.h
+[v __delay `JF3150 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -529,122 +533,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;screen.c: 22:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-[v F4061 `uc ~T0 @X0 -> 7 `i s ]
-[i F4061
-:U ..
-"26
-[; ;screen.c: 26:  unsigned char str_nom1[] = "projet";
--> 112 `c
--> 114 `c
--> 111 `c
--> 106 `c
--> 101 `c
--> 116 `c
--> 0 `c
-..
-]
-[v _str_nom1 `uc ~T0 @X0 -> 7 `i a ]
-[e = _str_nom1 F4061 ]
-[v F4063 `uc ~T0 @X0 -> 6 `i s ]
-[i F4063
-:U ..
-"27
-[; ;screen.c: 27:     unsigned char str_nom2[] = "micro";
--> 109 `c
--> 105 `c
--> 99 `c
--> 114 `c
--> 111 `c
--> 0 `c
-..
-]
-[v _str_nom2 `uc ~T0 @X0 -> 6 `i a ]
-[e = _str_nom2 F4063 ]
-[v F4065 `uc ~T0 @X0 -> 5 `i s ]
-[i F4065
-:U ..
 "28
-[; ;screen.c: 28:     unsigned char str_nom3[] = "ochi";
--> 111 `c
--> 99 `c
--> 104 `c
--> 105 `c
--> 0 `c
-..
-]
-[v _str_nom3 `uc ~T0 @X0 -> 5 `i a ]
-[e = _str_nom3 F4065 ]
-[v F4067 `uc ~T0 @X0 -> 7 `i s ]
-[i F4067
-:U ..
-"29
-[; ;screen.c: 29:  unsigned char str_a[] ="ARENDA";
--> 65 `c
--> 82 `c
--> 69 `c
--> 78 `c
--> 68 `c
--> 65 `c
--> 0 `c
-..
-]
-[v _str_a `uc ~T0 @X0 -> 7 `i a ]
-[e = _str_a F4067 ]
-[v F4069 `uc ~T0 @X0 -> 5 `i s ]
-[i F4069
-:U ..
-"30
-[; ;screen.c: 30:     unsigned char str_a2[] ="RSKI";
--> 82 `c
--> 83 `c
--> 75 `c
--> 73 `c
--> 0 `c
-..
-]
-[v _str_a2 `uc ~T0 @X0 -> 5 `i a ]
-[e = _str_a2 F4069 ]
-[v F4071 `uc ~T0 @X0 -> 6 `i s ]
-[i F4071
-:U ..
-"31
-[; ;screen.c: 31:     unsigned char str_p[] ="PAGES";
--> 80 `c
--> 65 `c
--> 71 `c
--> 69 `c
--> 83 `c
--> 0 `c
-..
-]
-[v _str_p `uc ~T0 @X0 -> 6 `i a ]
-[e = _str_p F4071 ]
-[v F4073 `uc ~T0 @X0 -> 4 `i s ]
-[i F4073
-:U ..
-"32
-[; ;screen.c: 32:     unsigned char str_t[] ="TAO";
--> 84 `c
--> 65 `c
--> 79 `c
--> 0 `c
-..
-]
-[v _str_t `uc ~T0 @X0 -> 4 `i a ]
-[e = _str_t F4073 ]
-"36
-[; ;screen.c: 36:  glcd_SetCursor(0,0);
+[; ;screen.c: 28:  glcd_SetCursor(0,0);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"37
-[; ;screen.c: 37:  glcd_WriteString(str_nom1, 1, 1);
-[e ( _glcd_WriteString (3 , , -> &U _str_nom1 `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"38
-[; ;screen.c: 38:     glcd_SetCursor(0,1);
+"29
+[; ;screen.c: 29:  glcd_WriteString("Projet", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"30
+[; ;screen.c: 30:     glcd_SetCursor(0,1);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"31
+[; ;screen.c: 31:  glcd_WriteString("Micro", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"32
+[; ;screen.c: 32:     glcd_SetCursor(50,1);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 1 `i `uc ]
+"33
+[; ;screen.c: 33:  glcd_WriteString("gochi",1,1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"35
+[; ;screen.c: 35:  glcd_SetCursor(0,3);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
+"36
+[; ;screen.c: 36:  glcd_WriteString("ARENDARSKI",1,1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "39
-[; ;screen.c: 39:  glcd_WriteString(str_nom2, 1, 1);
-[e ( _glcd_WriteString (3 , , -> &U _str_nom2 `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"52
-[; ;screen.c: 52: }
+[; ;screen.c: 39:     glcd_SetCursor(0,4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"40
+[; ;screen.c: 40:  glcd_WriteString("PAGES",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"41
+[; ;screen.c: 41:     glcd_SetCursor(0,5);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
+"42
+[; ;screen.c: 42:  glcd_WriteString("TAO",1,1);
+[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"44
+[; ;screen.c: 44:     _delay(1000);
+[e ( __delay (1 -> -> -> 1000 `i `l `ul ]
+"45
+[; ;screen.c: 45: }
 [e :UE 373 ]
 }
+[a 1C 80 114 111 106 101 116 0 ]
+[a 2C 77 105 99 114 111 0 ]
+[a 3C 103 111 99 104 105 0 ]
+[a 5C 80 65 71 69 83 0 ]
+[a 6C 84 65 79 0 ]
+[a 4C 65 82 69 78 68 65 82 83 75 73 0 ]

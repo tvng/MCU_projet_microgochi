@@ -6438,19 +6438,23 @@ void screen_credits()
 
 
 
- unsigned char str_nom1[] = "projet";
-    unsigned char str_nom2[] = "micro";
-    unsigned char str_nom3[] = "ochi";
- unsigned char str_a[] ="ARENDA";
-    unsigned char str_a2[] ="RSKI";
-    unsigned char str_p[] ="PAGES";
-    unsigned char str_t[] ="TAO";
-
 
 
  glcd_SetCursor(0,0);
- glcd_WriteString(str_nom1, 1, 1);
+ glcd_WriteString("Projet", 1, 1);
     glcd_SetCursor(0,1);
- glcd_WriteString(str_nom2, 1, 1);
-# 52 "screen.c"
+ glcd_WriteString("Micro", 1, 1);
+    glcd_SetCursor(50,1);
+ glcd_WriteString("gochi",1,1);
+
+ glcd_SetCursor(0,3);
+ glcd_WriteString("ARENDARSKI",1,1);
+
+
+    glcd_SetCursor(0,4);
+ glcd_WriteString("PAGES",1,1);
+    glcd_SetCursor(0,5);
+ glcd_WriteString("TAO",1,1);
+
+    _delay(1000);
 }
