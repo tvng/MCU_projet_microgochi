@@ -15,7 +15,7 @@
 */
 
 //lib pic
-#include <pic18f4550.h>
+//#include <pic18f4550.h>
 #include <xc.h>
 
 #include "main.h"    // !!!!!!!!!!!!!!!!!!!!!!!!!! ICI on declare des variables globales

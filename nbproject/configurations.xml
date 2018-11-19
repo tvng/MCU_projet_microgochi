@@ -9,6 +9,7 @@
       <itemPath>game.h</itemPath>
       <itemPath>screen.h</itemPath>
       <itemPath>menu.h</itemPath>
+      <itemPath>glcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -29,7 +30,6 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>glcd.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>

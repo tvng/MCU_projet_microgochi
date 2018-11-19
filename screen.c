@@ -19,6 +19,9 @@
 #include "screen.h"
 
 
+const unsigned char ou[8]=
+{0x0F, 0x0C, 0xFF, 0x0C, 0x0F, 0x00, 0xFF, 0x1E};
+
 void screen_credits()
 {
     glcd_FillScreen(0); //efface l'ecran
@@ -42,7 +45,15 @@ void screen_credits()
 	glcd_WriteString("PAGES",f8X8,1);	
     glcd_SetCursor(0,5);		
 	glcd_WriteString("TAO",f8X8,1);	
-    
+
     
     __delay_ms(1000);
+    glcd_FillScreen(0);
+        glcd_SetCursor(0,0);		
+	//glcd_icon8X8(&ou,1);	
+    glcd_Image();
+    
+    __delay_ms(1000);
+
+
 }

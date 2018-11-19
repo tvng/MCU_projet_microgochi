@@ -53,6 +53,8 @@ extern void glcd_WriteString(const char str[],unsigned char font,unsigned char c
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
 
+void glcd_icon8X8(const unsigned char ch[], unsigned char color);
+
 #endif /* ! _GLCD_H_ */
 
 

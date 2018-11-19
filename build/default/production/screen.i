@@ -6389,6 +6389,8 @@ extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
 extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
+
+void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 # 12 "screen.c" 2
 
 
@@ -6437,6 +6439,9 @@ void screen_credits(void);
 
 
 
+const unsigned char ou[8]=
+{0x0F, 0x0C, 0xFF, 0x0C, 0x0F, 0x00, 0xFF, 0x1E};
+
 void screen_credits()
 {
     glcd_FillScreen(0);
@@ -6463,4 +6468,12 @@ void screen_credits()
 
 
     _delay((unsigned long)((1000)*(8000000/4000.0)));
+    glcd_FillScreen(0);
+        glcd_SetCursor(0,0);
+
+    glcd_Image();
+
+    _delay((unsigned long)((1000)*(8000000/4000.0)));
+
+
 }

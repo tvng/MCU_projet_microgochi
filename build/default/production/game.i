@@ -6413,6 +6413,8 @@ extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
 extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
+
+void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 # 10 "game.c" 2
 
 # 1 "./game.h" 1
