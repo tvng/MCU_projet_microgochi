@@ -18,12 +18,8 @@
 #include <pic18f4550.h>
 #include <xc.h>
 
-#include "main.h" 
-
-
+#include "main.h"    // !!!!!!!!!!!!!!!!!!!!!!!!!! ICI on declare des variables globales
 #include "glcd.h"
-
-// includes fichier
 #include "microgochi.h" 
 #include "game.h"
 #include "screen.h"
@@ -33,15 +29,12 @@ int main(int argc, char** argv) {
     
     ADCON1 = 0x0F; //on desactive les entrees analogiques
     
-    // ** init easypic -----------
-    TRISA=0b00000111;
-    PORTA=0b00000111;
-    
+    // ** init easypic -----------    
     TRISD = 0xff;			//PORTD input
 	PORTD = 0x00; 				//Reset PORTD
 
-	TRISB = 0;				//PORTB output
-	PORTB = 0; 				//Reset PORTB
+	TRISC = 0b00000111;				//PORTB output
+	PORTC =0b00000000;					//Reset PORTB
     
     Microgochi *mGogo=NULL;    //creation structure Microgochi
     int bool_jeu=1; //boolean pour l'etat du jeu
@@ -50,21 +43,40 @@ int main(int argc, char** argv) {
    
     while (bool_jeu==1) //boucle de jeu
     {
-        microgochi_init(mGogo); //on reinitialise les parametres du microgochi
-     
+        if (PORTCbits.RC0 == 1)
+        {
+            glcd_SetCursor(0,6);		
+            glcd_WriteString("WEWE",f8X8,1);	
+        }
+    
+        if (PORTCbits.RC1 == 1)
+        {
+            glcd_SetCursor(0,6);		
+            glcd_WriteString("O",f8X8,1);	
+        }
         
-        screen_credits(); //pour afficher les credits cf screen.c : A FAIRE !!!!!!!!!!!!!!!!
+        if (PORTCbits.RC2 == 1)
+        {
+            glcd_SetCursor(0,6);		
+            glcd_WriteString("xxxxxxx",f8X8,1);	
+        }
+        //on reinitialise les parametres du microgochi
+        microgochi_init(mGogo); 
+     
+        //on affiche les credits (cf screen.c)
+        screen_credits();
+        
         //un truc qui dit que notre microgochi vient de naitre
         
-        //affichage de notre notre lapin de base et avec le menu      
+        //on lance notre jeu     
         game_play(mGogo);
         
+        //si on arrive juste là, notre microgochi est mort
         
         //si notre microgochi est mort on quitte la bouche ou alors
-        //il faudra revenir sur l'écran d'accueil
+        //il faudra revenir sur l'écran d'accueil, à voir
         if (mGogo->vivant==0)
         {
-            
             //soit on recommence
             
             //soit on quitte
@@ -72,7 +84,6 @@ int main(int argc, char** argv) {
             
         }
         
-        //un truc qui dit que notre microgochi meurt
     }
 
     return (EXIT_SUCCESS);

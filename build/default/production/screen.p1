@@ -522,64 +522,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"20 screen.c
-[; ;screen.c: 20: void screen_credits()
+"22 screen.c
+[; ;screen.c: 22: void screen_credits()
 [v _screen_credits `(v ~T0 @X0 1 ef ]
-"21
-[; ;screen.c: 21: {
+"23
+[; ;screen.c: 23: {
 {
 [e :U _screen_credits ]
 [f ]
-"22
-[; ;screen.c: 22:     glcd_FillScreen(0);
+"24
+[; ;screen.c: 24:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"28
-[; ;screen.c: 28:  glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"29
-[; ;screen.c: 29:  glcd_WriteString("Projet", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "30
-[; ;screen.c: 30:     glcd_SetCursor(0,1);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 30:  glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "31
-[; ;screen.c: 31:  glcd_WriteString("Micro", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 31:  glcd_WriteString("Projet", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "32
-[; ;screen.c: 32:     glcd_SetCursor(50,1);
-[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 32:     glcd_SetCursor(0,1);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "33
-[; ;screen.c: 33:  glcd_WriteString("gochi",1,1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 33:  glcd_WriteString("Micro", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"34
+[; ;screen.c: 34:     glcd_SetCursor(50,1);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 1 `i `uc ]
 "35
-[; ;screen.c: 35:  glcd_SetCursor(0,3);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
-"36
-[; ;screen.c: 36:  glcd_WriteString("ARENDA",1,1);
-[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 35:  glcd_WriteString("gochi",1,1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "37
-[; ;screen.c: 37:     glcd_SetCursor(65,3);
-[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
+[; ;screen.c: 37:  glcd_SetCursor(0,3);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
 "38
-[; ;screen.c: 38:  glcd_WriteString("RSKI",1,1);
-[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 38:  glcd_WriteString("ARENDA",1,1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "39
-[; ;screen.c: 39:     glcd_SetCursor(0,4);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+[; ;screen.c: 39:     glcd_SetCursor(55,3);
+[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 3 `i `uc ]
 "40
-[; ;screen.c: 40:  glcd_WriteString("PAGES",1,1);
-[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 40:  glcd_WriteString("RSKI",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "41
-[; ;screen.c: 41:     glcd_SetCursor(0,5);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
+[; ;screen.c: 41:     glcd_SetCursor(0,4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
 "42
-[; ;screen.c: 42:  glcd_WriteString("TAO",1,1);
-[e ( _glcd_WriteString (3 , , :s 7C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;screen.c: 42:  glcd_WriteString("PAGES",1,1);
+[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"43
+[; ;screen.c: 43:     glcd_SetCursor(0,5);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
 "44
-[; ;screen.c: 44:     _delay(1000);
-[e ( __delay (1 -> -> -> 1000 `i `l `ul ]
-"45
-[; ;screen.c: 45: }
+[; ;screen.c: 44:  glcd_WriteString("TAO",1,1);
+[e ( _glcd_WriteString (3 , , :s 7C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"47
+[; ;screen.c: 47:     _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"48
+[; ;screen.c: 48: }
 [e :UE 373 ]
 }
 [a 1C 80 114 111 106 101 116 0 ]

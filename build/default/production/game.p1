@@ -3,6 +3,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./microgochi.h: 13: struct Microgochi{
 [s S363 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S363 Microgochi age satiete energie proprete vivant ]
+"49 ./glcd.h
+[; ;./glcd.h: 49: extern void glcd_FillScreen(unsigned char color);
+[v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
+"13 ./menu.h
+[; ;./menu.h: 13: int menu();
+[v _menu `(i ~T0 @X0 0 e? ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -513,38 +519,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"13 game.c
-[; ;game.c: 13: void game_play(Microgochi *m)
+"15 game.c
+[; ;game.c: 15: void game_play(Microgochi *m)
 [v _game_play `(v ~T0 @X0 1 ef1`*S363 ]
-"14
-[; ;game.c: 14: {
+"16
+[; ;game.c: 16: {
 {
 [e :U _game_play ]
-"13
-[; ;game.c: 13: void game_play(Microgochi *m)
+"15
+[; ;game.c: 15: void game_play(Microgochi *m)
 [v _m `*S363 ~T0 @X0 1 r1 ]
-"14
-[; ;game.c: 14: {
-[f ]
-"15
-[; ;game.c: 15:     while (m->vivant==1)
-[e $U 366  ]
-[e :U 367 ]
 "16
-[; ;game.c: 16:     {
-{
+[; ;game.c: 16: {
+[f ]
+"19
+[; ;game.c: 19:     glcd_FillScreen(0);
+[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
 "23
-[; ;game.c: 23:         m->vivant=0;
-[e = . *U _m 4 -> -> 0 `i `uc ]
+[; ;game.c: 23:     int action=-1;
+[v _action `i ~T0 @X0 1 a ]
+[e = _action -U -> 1 `i ]
 "25
-[; ;game.c: 25:     }
-}
-[e :U 366 ]
-"15
-[; ;game.c: 15:     while (m->vivant==1)
-[e $ == -> . *U _m 4 `i -> 1 `i 367  ]
-[e :U 368 ]
+[; ;game.c: 25:     while (m->vivant==1)
+[e $U 374  ]
+[e :U 375 ]
 "26
-[; ;game.c: 26: }
-[e :UE 365 ]
+[; ;game.c: 26:     {
+{
+"31
+[; ;game.c: 31:         action=menu();
+[e = _action ( _menu ..  ]
+"40
+[; ;game.c: 40:     }
+}
+[e :U 374 ]
+"25
+[; ;game.c: 25:     while (m->vivant==1)
+[e $ == -> . *U _m 4 `i -> 1 `i 375  ]
+[e :U 376 ]
+"41
+[; ;game.c: 41: }
+[e :UE 373 ]
 }

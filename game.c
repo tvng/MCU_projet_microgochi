@@ -7,23 +7,43 @@
 #include <pic18f4550.h>
 
 #include "microgochi.h"
+#include "glcd.h"
 #include "game.h"
+#include "menu.h"
 
-
+//fonction de jeu
 void game_play(Microgochi *m)
 {
+    //initialisation des variables
+    
+    glcd_FillScreen(0); 
+    
+    //on affiche notre menu de base
+    
+    int action=-1; //pour le menu
+    
     while (m->vivant==1) //tant que le microgochi est vivant
     {
-        //si on appuie sur 
         
+        //on affiche notre microgochi et son animation
+
+        //on prend l'emplacement du curseur en appelant menu()
+        action=menu();
         
+        //on declance l'action si on appuie sur BUTTON_MID
+       //switch sur chaque action, on appelle une fonction correspondante
         
+       
+        //fin du switch
         
-        //quand il meurt
-        m->vivant=0;
         
     }
 }
+
+
+//dans ces fonctions là, on blinde l'augmentation!
+//Au niveau de la décrémentation !! si ca depasse en négatif ou en 0, le microgo meurt : m->vivant == 0;
+
 
   // ********** STATUT : jauges du Microgogo qui diminuent au fil du temps
         

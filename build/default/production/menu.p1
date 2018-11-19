@@ -1,0 +1,45 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"17 menu.c
+[; ;menu.c: 17: int menu()
+[v _menu `(i ~T0 @X0 1 ef ]
+"18
+[; ;menu.c: 18: {
+{
+[e :U _menu ]
+[f ]
+"19
+[; ;menu.c: 19:    int selection=0;
+[v _selection `i ~T0 @X0 1 a ]
+[e = _selection -> 0 `i ]
+"25
+[; ;menu.c: 25:    return selection;
+[e ) _selection ]
+[e $UE 8  ]
+"26
+[; ;menu.c: 26: }
+[e :UE 8 ]
+}
+"29
+[; ;menu.c: 29: void menu_base()
+[v _menu_base `(v ~T0 @X0 1 ef ]
+"30
+[; ;menu.c: 30: {
+{
+[e :U _menu_base ]
+[f ]
+"32
+[; ;menu.c: 32: }
+[e :UE 9 ]
+}
+"35
+[; ;menu.c: 35: void menu_cursor()
+[v _menu_cursor `(v ~T0 @X0 1 ef ]
+"36
+[; ;menu.c: 36: {
+{
+[e :U _menu_cursor ]
+[f ]
+"38
+[; ;menu.c: 38: }
+[e :UE 10 ]
+}

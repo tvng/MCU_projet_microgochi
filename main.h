@@ -13,8 +13,11 @@
 
 
 // DEFINE !!!!!!!! ----------------------- pour les port etc
-#define BUTTON_LEFT RB2
-#define BUTTON_MID RB1
-#define BUTTON_RIGHT RB0
+
+#define BUTTON_LEFT PORTCbits.RC2
+#define BUTTON_MID PORTCbits.RC1
+#define BUTTON_RIGHT PORTCbits.RC0
+
+#define _XTAL_FREQ 8000000
 
 #endif	/* MAIN_H */

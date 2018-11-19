@@ -5762,8 +5762,6 @@ char *tempnam(const char *, const char *);
 # 12 "./main.h" 2
 # 21 "main.c" 2
 
-
-
 # 1 "./glcd.h" 1
 
 
@@ -6387,9 +6385,7 @@ extern void glcd_WriteChar3x6( unsigned char ch, unsigned char color);
 extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
-# 24 "main.c" 2
-
-
+# 22 "main.c" 2
 
 # 1 "./microgochi.h" 1
 
@@ -6417,17 +6413,17 @@ struct Microgochi{
 };
 
 void microgochi_init(Microgochi *m);
-# 27 "main.c" 2
+# 23 "main.c" 2
 
 # 1 "./game.h" 1
 # 13 "./game.h"
 void game_play(Microgochi *m);
-# 28 "main.c" 2
+# 24 "main.c" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
 void screen_credits(void);
-# 29 "main.c" 2
+# 25 "main.c" 2
 
 
 
@@ -6436,14 +6432,11 @@ int main(int argc, char** argv) {
     ADCON1 = 0x0F;
 
 
-    TRISA=0b00000111;
-    PORTA=0b00000111;
-
     TRISD = 0xff;
  PORTD = 0x00;
 
- TRISB = 0;
- PORTB = 0;
+ TRISC = 0b00000111;
+ PORTC =0b00000000;
 
     Microgochi *mGogo=((void*)0);
     int bool_jeu=1;
@@ -6452,6 +6445,24 @@ int main(int argc, char** argv) {
 
     while (bool_jeu==1)
     {
+        if (PORTCbits.RC0 == 1)
+        {
+            glcd_SetCursor(0,6);
+            glcd_WriteString("WEWE",1,1);
+        }
+
+        if (PORTCbits.RC1 == 1)
+        {
+            glcd_SetCursor(0,6);
+            glcd_WriteString("O",1,1);
+        }
+
+        if (PORTCbits.RC2 == 1)
+        {
+            glcd_SetCursor(0,6);
+            glcd_WriteString("xxxxxxx",1,1);
+        }
+
         microgochi_init(mGogo);
 
 
@@ -6459,7 +6470,9 @@ int main(int argc, char** argv) {
 
 
 
+
         game_play(mGogo);
+
 
 
 
@@ -6469,11 +6482,9 @@ int main(int argc, char** argv) {
 
 
 
-
             bool_jeu=0;
 
         }
-
 
     }
 
