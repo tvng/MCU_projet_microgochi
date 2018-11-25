@@ -6390,6 +6390,10 @@ extern void glcd_WriteString(const char str[],unsigned char font,unsigned char c
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
 
+
+
+
+
 void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 # 12 "screen.c" 2
 
@@ -6424,7 +6428,7 @@ struct Microgochi{
 
 };
 
-void microgochi_init(Microgochi *m);
+Microgochi * microgochi_init(Microgochi *m);
 # 17 "screen.c" 2
 
 # 1 "./game.h" 1
@@ -6449,7 +6453,6 @@ void screen_credits()
 
 
 
-
  glcd_SetCursor(0,0);
  glcd_WriteString("Projet", 1, 1);
     glcd_SetCursor(0,1);
@@ -6466,14 +6469,6 @@ void screen_credits()
     glcd_SetCursor(0,5);
  glcd_WriteString("TAO",1,1);
 
-
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-    glcd_FillScreen(0);
-        glcd_SetCursor(0,0);
-
-    glcd_Image();
-
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
 
 }

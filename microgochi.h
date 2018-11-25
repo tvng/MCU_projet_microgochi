@@ -22,4 +22,4 @@ struct Microgochi{
   
 };
 
-void microgochi_init(Microgochi *m);
+Microgochi * microgochi_init(Microgochi *m);

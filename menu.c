@@ -8,8 +8,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
+#include "myglcd.h"
 #include "main.h"
 
+#define MENU_INIT_X 10
+#define MENU_Y_TOP 10
+#define MENU_Y_BOTTOM 50
+#define MENU_JUMP 15
 /*
  * 
  */
@@ -32,7 +37,14 @@ void menu_base()
 }
 
 //pour afficher le curseur
-void menu_cursor()
+void menu_cursor(int action, int write)
 {
+  //write = 0 : effacer --- write = 1 : ecrire
+   // action 1 = 1ere icone, etc..
+    
+    if (action == 0) //initialisation
+    {
+        displayObject (cursor, MENU_INIT_X, MENU_Y_TOP, CURSOR_X, CURSOR_Y, write);
+    }
     
 }

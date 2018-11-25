@@ -9,7 +9,7 @@
 #define	MENU_H
 
 
-
+void menu_cursor(int action, int write);
 int menu();
 
 #endif	/* MENU_H */

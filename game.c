@@ -8,23 +8,72 @@
 
 #include "microgochi.h"
 #include "glcd.h"
+#include "myglcd.h"
 #include "game.h"
 #include "menu.h"
+
+#define NB_ACTIVITE_MAX 4
 
 //fonction de jeu
 void game_play(Microgochi *m)
 {
     //initialisation des variables
-    
     glcd_FillScreen(0); 
     
-    //on affiche notre menu de base
     
-    int action=-1; //pour le menu
+    // ETAPE 1: on affiche notre menu de base
+    glcd_SetCursor(0,0);	
+    glcd_Image();
+   
+    int action=1; //pour le menu
+    menu_cursor (0, 1); //0 pour initialiser
+    int write=0;
+    int button_pressed=0;
     
+   // ETAPE 2: gni
     while (m->vivant==1) //tant que le microgochi est vivant
     {
-        
+            //si on appuie sur le bouton de gauche
+            if (PORTCbits.RC0 == 1)
+            {
+               button_pressed=1;
+               
+               menu_cursor (action, 0);
+               action--; //on decremente le menu
+               if (action <= 0) //blindage
+               {action=1;
+               }
+                menu_cursor (action, 1);
+               
+               glcd_SetCursor(0,6);		
+               glcd_WriteString("WEWE",f8X8,1);	
+           }
+            //ou si on appuie sur le bouton de droite
+            else if (PORTCbits.RC2 == 1)
+           {
+               action++; //on incremente le menu
+               
+               if (action > NB_ACTIVITE_MAX) //blindage
+               {
+                   action= NB_ACTIVITE_MAX;
+               }
+               
+               button_pressed=1;
+               glcd_SetCursor(0,6);		
+               glcd_WriteString("xxxxxxx",f8X8,1);	
+           }
+             //si on appuie sur le bouton valider
+            else if (PORTCbits.RC1 == 1)
+           {
+                
+                glcd_SetCursor(0,6);		
+                glcd_WriteString("O",f8X8,1);	
+           }
+            
+         
+                
+    
+         
         //on affiche notre microgochi et son animation
 
         //on prend l'emplacement du curseur en appelant menu()
@@ -36,6 +85,8 @@ void game_play(Microgochi *m)
        
         //fin du switch
         
+        
+      
         
     }
 }

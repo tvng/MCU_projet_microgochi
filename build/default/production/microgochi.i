@@ -5495,18 +5495,20 @@ struct Microgochi{
 
 };
 
-void microgochi_init(Microgochi *m);
+Microgochi * microgochi_init(Microgochi *m);
 # 8 "microgochi.c" 2
 
 
 
 
-void microgochi_init(Microgochi *m)
+Microgochi * microgochi_init(Microgochi *m)
 {
     m->age=0;
     m->satiete=100;
     m->energie=100;
     m->proprete=100;
     m->vivant=1;
+
+    return m;
 
 }

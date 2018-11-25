@@ -29,43 +29,53 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"15 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
+"18 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
-"410 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+"342 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
-"464
+"396
 [v _glcd_WriteByte glcd_WriteByte `(v  1 e 1 0 ]
-"500
+"432
 [v _glcd_ReadByte glcd_ReadByte `(uc  1 e 1 0 ]
-"537
+"469
 [v _glcd_PlotPixel glcd_PlotPixel `(v  1 e 1 0 ]
-"596
+"528
 [v _glcd_FillScreen glcd_FillScreen `(v  1 e 1 0 ]
-"620
+"552
 [v _glcd_SetCursor glcd_SetCursor `(v  1 e 1 0 ]
-"645
+"577
 [v _glcd_WriteChar8X8 glcd_WriteChar8X8 `(v  1 e 1 0 ]
-"693
+"625
 [v _glcd_WriteChar3x6 glcd_WriteChar3x6 `(v  1 e 1 0 ]
-"739
+"671
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
-"766
+"698
 [v _glcd_Image glcd_Image `(v  1 e 1 0 ]
 "28 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"17 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+"22 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 [v _menu menu `(i  1 e 2 0 ]
+"40
+[v _menu_cursor menu_cursor `(v  1 e 1 0 ]
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X/microgochi.h
+[s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 "12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-[v _microgochi_init microgochi_init `(v  1 e 1 0 ]
+[v _microgochi_init microgochi_init `(*.2S24  1 e 2 0 ]
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+[v _displayObject displayObject `(v  1 e 1 0 ]
 "25 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
+"19 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X/myglcd.h
+[v _cursor cursor `[30]uc  1 e 30 0 ]
+"34
+[v _test test `C[1024]uc  1 e 1024 0 ]
 "2314 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "2453
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S53 . 1 `uc 1 RC0 1 0 :1:0 
+[s S113 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -75,32 +85,32 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S62 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S122 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S69 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S129 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S76 . 1 `uc 1 . 1 0 :1:0 
+[s S136 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S80 . 1 `uc 1 . 1 0 :1:0 
+[s S140 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S83 . 1 `S53 1 . 1 0 `S62 1 . 1 0 `S69 1 . 1 0 `S76 1 . 1 0 `S80 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES83  1 e 1 @3970 ]
+[u S143 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S129 1 . 1 0 `S136 1 . 1 0 `S140 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES143  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S215 . 1 `uc 1 RE0 1 0 :1:0 
+[s S232 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
@@ -108,32 +118,32 @@
 `uc 1 RDPU 1 0 :1:7 
 ]
 "2868
-[s S222 . 1 `uc 1 CK1SPP 1 0 :1:0 
+[s S239 . 1 `uc 1 CK1SPP 1 0 :1:0 
 `uc 1 CK2SPP 1 0 :1:1 
 `uc 1 OESPP 1 0 :1:2 
 ]
-[s S226 . 1 `uc 1 PD2 1 0 :1:0 
+[s S243 . 1 `uc 1 PD2 1 0 :1:0 
 `uc 1 PC2 1 0 :1:1 
 `uc 1 CCP10 1 0 :1:2 
 `uc 1 CCP9E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 CCP2E 1 0 :1:7 
 ]
-[s S233 . 1 `uc 1 RDE 1 0 :1:0 
+[s S250 . 1 `uc 1 RDE 1 0 :1:0 
 `uc 1 WRE 1 0 :1:1 
 `uc 1 CS 1 0 :1:2 
 `uc 1 PC3E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 PA2E 1 0 :1:7 
 ]
-[s S240 . 1 `uc 1 . 1 0 :2:0 
+[s S257 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PB2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RE7 1 0 :1:7 
 ]
-[u S245 . 1 `S215 1 . 1 0 `S222 1 . 1 0 `S226 1 . 1 0 `S233 1 . 1 0 `S240 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES245  1 e 1 @3972 ]
-[s S289 . 1 `uc 1 LATB0 1 0 :1:0 
+[u S262 . 1 `S232 1 . 1 0 `S239 1 . 1 0 `S243 1 . 1 0 `S250 1 . 1 0 `S257 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES262  1 e 1 @3972 ]
+[s S306 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -143,7 +153,7 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3100
-[s S298 . 1 `uc 1 LB0 1 0 :1:0 
+[s S315 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -152,8 +162,8 @@
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S307 . 1 `S289 1 . 1 0 `S298 1 . 1 0 ]
-[v _LATBbits LATBbits `VES307  1 e 1 @3978 ]
+[u S324 . 1 `S306 1 . 1 0 `S315 1 . 1 0 ]
+[v _LATBbits LATBbits `VES324  1 e 1 @3978 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
@@ -166,13 +176,11 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "6581
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-[v _test test `C[1024]uc  1 e 1024 0 ]
-"82
+"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _Font3x6 Font3x6 `C[65][3]uc  1 e 195 0 ]
-"154
+"86
 [v _Font8x8 Font8x8 `C[2048]uc  1 e 2048 0 ]
-"400
+"332
 [v _x x `uc  1 e 1 0 ]
 [v _y y `uc  1 e 1 0 ]
 "28 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
@@ -180,136 +188,207 @@
 {
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 "39
-[v main@mGogo mGogo `*.2S24  1 a 2 24 ]
+[v main@mGogo mGogo `*.2S24  1 a 2 58 ]
 "40
-[v main@bool_jeu bool_jeu `i  1 a 2 22 ]
-"90
+[v main@bool_jeu bool_jeu `i  1 a 2 56 ]
+"74
 } 0
 "25 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
 {
-"59
+"50
 } 0
-"739 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-[v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
-{
-[v glcd_WriteString@str str `*.25Cuc  1 p 2 11 ]
-[v glcd_WriteString@font font `uc  1 p 1 13 ]
-[v glcd_WriteString@color color `uc  1 p 1 14 ]
-"749
-} 0
-"645
-[v _glcd_WriteChar8X8 glcd_WriteChar8X8 `(v  1 e 1 0 ]
-{
-[v glcd_WriteChar8X8@ch ch `uc  1 a 1 wreg ]
-"649
-[v glcd_WriteChar8X8@chr chr `ui  1 a 2 5 ]
-"648
-[v glcd_WriteChar8X8@side side `uc  1 a 1 10 ]
-"647
-[v glcd_WriteChar8X8@i i `uc  1 a 1 9 ]
-[v glcd_WriteChar8X8@xpos xpos `uc  1 a 1 8 ]
-"645
-[v glcd_WriteChar8X8@ch ch `uc  1 a 1 wreg ]
-[v glcd_WriteChar8X8@color color `uc  1 p 1 2 ]
-"648
-[v glcd_WriteChar8X8@ch ch `uc  1 a 1 7 ]
-"687
-} 0
-"693
-[v _glcd_WriteChar3x6 glcd_WriteChar3x6 `(v  1 e 1 0 ]
-{
-[v glcd_WriteChar3x6@ch ch `uc  1 a 1 wreg ]
-"696
-[v glcd_WriteChar3x6@side side `uc  1 a 1 8 ]
-"695
-[v glcd_WriteChar3x6@i i `uc  1 a 1 7 ]
-[v glcd_WriteChar3x6@xpos xpos `uc  1 a 1 5 ]
-"693
-[v glcd_WriteChar3x6@ch ch `uc  1 a 1 wreg ]
-[v glcd_WriteChar3x6@color color `uc  1 p 1 2 ]
-"696
-[v glcd_WriteChar3x6@ch ch `uc  1 a 1 6 ]
-"733
-} 0
-"620
-[v _glcd_SetCursor glcd_SetCursor `(v  1 e 1 0 ]
-{
-[v glcd_SetCursor@xpos xpos `uc  1 a 1 wreg ]
-"622
-[v glcd_SetCursor@side side `uc  1 a 1 3 ]
-"620
-[v glcd_SetCursor@xpos xpos `uc  1 a 1 wreg ]
-[v glcd_SetCursor@ypos ypos `uc  1 p 1 2 ]
-"622
-[v glcd_SetCursor@xpos xpos `uc  1 a 1 4 ]
-"640
-} 0
-"766
-[v _glcd_Image glcd_Image `(v  1 e 1 0 ]
-{
-"769
-[v glcd_Image@ptr ptr `i  1 a 2 2 ]
-"768
-[v glcd_Image@cs cs `uc  1 a 1 6 ]
-"771
-[v glcd_Image@i i `uc  1 a 1 5 ]
-[v glcd_Image@j j `uc  1 a 1 4 ]
-"796
-} 0
-"12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-[v _microgochi_init microgochi_init `(v  1 e 1 0 ]
-{
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X/microgochi.h
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
+"12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+[v _microgochi_init microgochi_init `(*.2S24  1 e 2 0 ]
+{
 [v microgochi_init@m m `*.2S24  1 p 2 0 ]
-"20
+"22
 } 0
-"410 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+"342 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
 {
 [v glcd_Init@mode mode `uc  1 a 1 wreg ]
 [v glcd_Init@mode mode `uc  1 a 1 wreg ]
-"412
-[v glcd_Init@mode mode `uc  1 a 1 6 ]
-"459
+"344
+[v glcd_Init@mode mode `uc  1 a 1 14 ]
+"391
 } 0
-"15 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
+"18 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 {
-"23
-[v game_play@action action `i  1 a 2 8 ]
+"28
+[v game_play@action action `i  1 a 2 49 ]
+"31
+[v game_play@button_pressed button_pressed `i  1 a 2 47 ]
+"30
+[v game_play@write write `i  1 a 2 45 ]
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
+"18
+[v game_play@m m `*.2S24  1 p 2 42 ]
+"92
+} 0
+"40 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+[v _menu_cursor menu_cursor `(v  1 e 1 0 ]
+{
+[v menu_cursor@action action `i  1 p 2 38 ]
+[v menu_cursor@write write `i  1 p 2 40 ]
+"50
+} 0
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+[v _displayObject displayObject `(v  1 e 1 0 ]
+{
+"14
+[v displayObject@j j `i  1 a 2 36 ]
+"13
+[v displayObject@i i `i  1 a 2 34 ]
 "15
-[v game_play@m m `*.2S24  1 p 2 5 ]
+[v displayObject@nb nb `i  1 a 2 32 ]
+"10
+[v displayObject@tab tab `*.39uc  1 p 2 17 ]
+[v displayObject@x x `i  1 p 2 19 ]
+[v displayObject@y y `i  1 p 2 21 ]
+[v displayObject@height height `i  1 p 2 23 ]
+[v displayObject@width width `i  1 p 2 25 ]
+[v displayObject@write write `i  1 p 2 27 ]
+"29
+} 0
+"469 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+[v _glcd_PlotPixel glcd_PlotPixel `(v  1 e 1 0 ]
+{
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
+"472
+[v glcd_PlotPixel@side side `uc  1 a 1 16 ]
+"471
+[v glcd_PlotPixel@data data `uc  1 a 1 15 ]
+"469
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
+[v glcd_PlotPixel@ypos ypos `uc  1 p 1 10 ]
+[v glcd_PlotPixel@color color `uc  1 p 1 11 ]
+"472
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 14 ]
+"503
+} 0
+"432
+[v _glcd_ReadByte glcd_ReadByte `(uc  1 e 1 0 ]
+{
+[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
+"434
+[v glcd_ReadByte@data data `uc  1 a 1 1 ]
+"432
+[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
+"436
+[v glcd_ReadByte@side side `uc  1 a 1 0 ]
+"464
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
 "41
 } 0
-"17 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+"22 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 [v _menu menu `(i  1 e 2 0 ]
 {
-"19
+"24
 [v menu@selection selection `i  1 a 2 2 ]
-"26
+"31
 } 0
-"596 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+"671 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+[v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
+{
+[v glcd_WriteString@str str `*.25Cuc  1 p 2 19 ]
+[v glcd_WriteString@font font `uc  1 p 1 21 ]
+[v glcd_WriteString@color color `uc  1 p 1 22 ]
+"681
+} 0
+"577
+[v _glcd_WriteChar8X8 glcd_WriteChar8X8 `(v  1 e 1 0 ]
+{
+[v glcd_WriteChar8X8@ch ch `uc  1 a 1 wreg ]
+"581
+[v glcd_WriteChar8X8@chr chr `ui  1 a 2 13 ]
+"580
+[v glcd_WriteChar8X8@side side `uc  1 a 1 18 ]
+"579
+[v glcd_WriteChar8X8@i i `uc  1 a 1 17 ]
+[v glcd_WriteChar8X8@xpos xpos `uc  1 a 1 16 ]
+"577
+[v glcd_WriteChar8X8@ch ch `uc  1 a 1 wreg ]
+[v glcd_WriteChar8X8@color color `uc  1 p 1 10 ]
+"580
+[v glcd_WriteChar8X8@ch ch `uc  1 a 1 15 ]
+"619
+} 0
+"625
+[v _glcd_WriteChar3x6 glcd_WriteChar3x6 `(v  1 e 1 0 ]
+{
+[v glcd_WriteChar3x6@ch ch `uc  1 a 1 wreg ]
+"628
+[v glcd_WriteChar3x6@side side `uc  1 a 1 16 ]
+"627
+[v glcd_WriteChar3x6@i i `uc  1 a 1 15 ]
+[v glcd_WriteChar3x6@xpos xpos `uc  1 a 1 13 ]
+"625
+[v glcd_WriteChar3x6@ch ch `uc  1 a 1 wreg ]
+[v glcd_WriteChar3x6@color color `uc  1 p 1 10 ]
+"628
+[v glcd_WriteChar3x6@ch ch `uc  1 a 1 14 ]
+"665
+} 0
+"552
+[v _glcd_SetCursor glcd_SetCursor `(v  1 e 1 0 ]
+{
+[v glcd_SetCursor@xpos xpos `uc  1 a 1 wreg ]
+"554
+[v glcd_SetCursor@side side `uc  1 a 1 11 ]
+"552
+[v glcd_SetCursor@xpos xpos `uc  1 a 1 wreg ]
+[v glcd_SetCursor@ypos ypos `uc  1 p 1 10 ]
+"554
+[v glcd_SetCursor@xpos xpos `uc  1 a 1 12 ]
+"572
+} 0
+"698
+[v _glcd_Image glcd_Image `(v  1 e 1 0 ]
+{
+"701
+[v glcd_Image@ptr ptr `i  1 a 2 10 ]
+"700
+[v glcd_Image@cs cs `uc  1 a 1 14 ]
+"703
+[v glcd_Image@i i `uc  1 a 1 13 ]
+[v glcd_Image@j j `uc  1 a 1 12 ]
+"728
+} 0
+"528
 [v _glcd_FillScreen glcd_FillScreen `(v  1 e 1 0 ]
 {
 [v glcd_FillScreen@color color `uc  1 a 1 wreg ]
-"598
-[v glcd_FillScreen@i i `uc  1 a 1 4 ]
-[v glcd_FillScreen@j j `uc  1 a 1 3 ]
-"596
+"530
+[v glcd_FillScreen@i i `uc  1 a 1 12 ]
+[v glcd_FillScreen@j j `uc  1 a 1 11 ]
+"528
 [v glcd_FillScreen@color color `uc  1 a 1 wreg ]
-"600
-[v glcd_FillScreen@color color `uc  1 a 1 2 ]
-"615
+"532
+[v glcd_FillScreen@color color `uc  1 a 1 10 ]
+"547
 } 0
-"464
+"396
 [v _glcd_WriteByte glcd_WriteByte `(v  1 e 1 0 ]
 {
 [v glcd_WriteByte@side side `uc  1 a 1 wreg ]
 [v glcd_WriteByte@side side `uc  1 a 1 wreg ]
-[v glcd_WriteByte@data data `uc  1 p 1 0 ]
-"466
-[v glcd_WriteByte@side side `uc  1 a 1 1 ]
-"494
+[v glcd_WriteByte@data data `uc  1 p 1 8 ]
+"398
+[v glcd_WriteByte@side side `uc  1 a 1 9 ]
+"426
 } 0

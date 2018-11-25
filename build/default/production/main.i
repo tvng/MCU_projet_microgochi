@@ -6386,6 +6386,10 @@ extern void glcd_WriteString(const char str[],unsigned char font,unsigned char c
 extern void glcd_Image(void);
 void glcd_text_write(const char str[], unsigned char x, unsigned char y);
 
+
+
+
+
 void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 # 22 "main.c" 2
 
@@ -6414,7 +6418,7 @@ struct Microgochi{
 
 };
 
-void microgochi_init(Microgochi *m);
+Microgochi * microgochi_init(Microgochi *m);
 # 23 "main.c" 2
 
 # 1 "./game.h" 1
@@ -6447,25 +6451,9 @@ int main(int argc, char** argv) {
 
     while (bool_jeu==1)
     {
-        if (PORTCbits.RC0 == 1)
-        {
-            glcd_SetCursor(0,6);
-            glcd_WriteString("WEWE",1,1);
-        }
 
-        if (PORTCbits.RC1 == 1)
-        {
-            glcd_SetCursor(0,6);
-            glcd_WriteString("O",1,1);
-        }
 
-        if (PORTCbits.RC2 == 1)
-        {
-            glcd_SetCursor(0,6);
-            glcd_WriteString("xxxxxxx",1,1);
-        }
-
-        microgochi_init(mGogo);
+        mGogo=microgochi_init(mGogo);
 
 
         screen_credits();

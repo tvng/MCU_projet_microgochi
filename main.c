@@ -43,25 +43,9 @@ int main(int argc, char** argv) {
    
     while (bool_jeu==1) //boucle de jeu
     {
-        if (PORTCbits.RC0 == 1)
-        {
-            glcd_SetCursor(0,6);		
-            glcd_WriteString("WEWE",f8X8,1);	
-        }
-    
-        if (PORTCbits.RC1 == 1)
-        {
-            glcd_SetCursor(0,6);		
-            glcd_WriteString("O",f8X8,1);	
-        }
-        
-        if (PORTCbits.RC2 == 1)
-        {
-            glcd_SetCursor(0,6);		
-            glcd_WriteString("xxxxxxx",f8X8,1);	
-        }
+       
         //on reinitialise les parametres du microgochi
-        microgochi_init(mGogo); 
+        mGogo=microgochi_init(mGogo); 
      
         //on affiche les credits (cf screen.c)
         screen_credits();

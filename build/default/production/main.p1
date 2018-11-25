@@ -22,42 +22,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "43 ./glcd.h
 [; ;./glcd.h: 43: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
-"2569 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2569:     struct {
-[s S111 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S111 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
-"2579
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2579:     struct {
-[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S112 . T1OSO T1OSI CCP1 . TX RX ]
-"2587
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2587:     struct {
-[s S113 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S113 . T13CKI . P1A . CK DT ]
-"2595
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2595:     struct {
-[s S114 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S114 . . CCP2 PA1 ]
-"2600
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2600:     struct {
-[s S115 :1 `uc 1 :1 `uc 1 ]
-[n S115 . . PA2 ]
-"2568
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2568: typedef union {
-[u S110 `S111 1 `S112 1 `S113 1 `S114 1 `S115 1 ]
-[n S110 . . . . . . ]
-"2605
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
-[v _PORTCbits `VS110 ~T0 @X0 0 e@3970 ]
-"47 ./glcd.h
-[; ;./glcd.h: 47: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
-[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"52
-[; ;./glcd.h: 52: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
-[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
 "25 ./microgochi.h
-[; ;./microgochi.h: 25: void microgochi_init(Microgochi *m);
-[v _microgochi_init `(v ~T0 @X0 0 ef1`*S371 ]
+[; ;./microgochi.h: 25: Microgochi * microgochi_init(Microgochi *m);
+[v _microgochi_init `(*S371 ~T0 @X0 0 ef1`*S371 ]
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
@@ -616,92 +583,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45
 [; ;main.c: 45:     {
 {
-"46
-[; ;main.c: 46:         if (PORTCbits.RC0 == 1)
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 377  ]
-"47
-[; ;main.c: 47:         {
-{
 "48
-[; ;main.c: 48:             glcd_SetCursor(0,6);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
-"49
-[; ;main.c: 49:             glcd_WriteString("WEWE",1,1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"50
-[; ;main.c: 50:         }
+[; ;main.c: 48:         mGogo=microgochi_init(mGogo);
+[e = _mGogo ( _microgochi_init (1 _mGogo ]
+"51
+[; ;main.c: 51:         screen_credits();
+[e ( _screen_credits ..  ]
+"56
+[; ;main.c: 56:         game_play(mGogo);
+[e ( _game_play (1 _mGogo ]
+"62
+[; ;main.c: 62:         if (mGogo->vivant==0)
+[e $ ! == -> . *U _mGogo 4 `i -> 0 `i 377  ]
+"63
+[; ;main.c: 63:         {
+{
+"67
+[; ;main.c: 67:             bool_jeu=0;
+[e = _bool_jeu -> 0 `i ]
+"69
+[; ;main.c: 69:         }
 }
 [e :U 377 ]
-"52
-[; ;main.c: 52:         if (PORTCbits.RC1 == 1)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 378  ]
-"53
-[; ;main.c: 53:         {
-{
-"54
-[; ;main.c: 54:             glcd_SetCursor(0,6);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
-"55
-[; ;main.c: 55:             glcd_WriteString("O",1,1);
-[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"56
-[; ;main.c: 56:         }
-}
-[e :U 378 ]
-"58
-[; ;main.c: 58:         if (PORTCbits.RC2 == 1)
-[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 379  ]
-"59
-[; ;main.c: 59:         {
-{
-"60
-[; ;main.c: 60:             glcd_SetCursor(0,6);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
-"61
-[; ;main.c: 61:             glcd_WriteString("xxxxxxx",1,1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"62
-[; ;main.c: 62:         }
-}
-[e :U 379 ]
-"64
-[; ;main.c: 64:         microgochi_init(mGogo);
-[e ( _microgochi_init (1 _mGogo ]
-"67
-[; ;main.c: 67:         screen_credits();
-[e ( _screen_credits ..  ]
-"72
-[; ;main.c: 72:         game_play(mGogo);
-[e ( _game_play (1 _mGogo ]
-"78
-[; ;main.c: 78:         if (mGogo->vivant==0)
-[e $ ! == -> . *U _mGogo 4 `i -> 0 `i 380  ]
-"79
-[; ;main.c: 79:         {
-{
-"83
-[; ;main.c: 83:             bool_jeu=0;
-[e = _bool_jeu -> 0 `i ]
-"85
-[; ;main.c: 85:         }
-}
-[e :U 380 ]
-"87
-[; ;main.c: 87:     }
+"71
+[; ;main.c: 71:     }
 }
 [e :U 374 ]
 "44
 [; ;main.c: 44:     while (bool_jeu==1)
 [e $ == _bool_jeu -> 1 `i 375  ]
 [e :U 376 ]
-"89
-[; ;main.c: 89:     return (0);
+"73
+[; ;main.c: 73:     return (0);
 [e ) -> 0 `i ]
 [e $UE 373  ]
-"90
-[; ;main.c: 90: }
+"74
+[; ;main.c: 74: }
 [e :UE 373 ]
 }
-[a 3C 120 120 120 120 120 120 120 0 ]
-[a 2C 79 0 ]
-[a 1C 87 69 87 69 0 ]

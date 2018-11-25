@@ -27,8 +27,7 @@ void screen_credits()
     glcd_FillScreen(0); //efface l'ecran
     //Jeu fait par ...
     
-	
-	//GLCD ecran d'acceuil pendant 2s
+	//GLCD ecran d'accueil pendant 2s
 
 	glcd_SetCursor(0,0);				//place le curseur
 	glcd_WriteString("Projet", f8X8, 1);	//ecrit 
@@ -46,14 +45,10 @@ void screen_credits()
     glcd_SetCursor(0,5);		
 	glcd_WriteString("TAO",f8X8,1);	
 
-    
-    __delay_ms(1000);
-    glcd_FillScreen(0);
-        glcd_SetCursor(0,0);		
-	//glcd_icon8X8(&ou,1);	
-    glcd_Image();
-    
-    __delay_ms(1000);
-
+    __delay_ms(2000);
 
 }
+
+
+
+//void glcd_erase ;

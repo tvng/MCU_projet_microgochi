@@ -514,14 +514,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "12 microgochi.c
-[; ;microgochi.c: 12: void microgochi_init(Microgochi *m)
-[v _microgochi_init `(v ~T0 @X0 1 ef1`*S363 ]
+[; ;microgochi.c: 12: Microgochi * microgochi_init(Microgochi *m)
+[v _microgochi_init `(*S363 ~T0 @X0 1 ef1`*S363 ]
 "13
 [; ;microgochi.c: 13: {
 {
 [e :U _microgochi_init ]
 "12
-[; ;microgochi.c: 12: void microgochi_init(Microgochi *m)
+[; ;microgochi.c: 12: Microgochi * microgochi_init(Microgochi *m)
 [v _m `*S363 ~T0 @X0 1 r1 ]
 "13
 [; ;microgochi.c: 13: {
@@ -542,6 +542,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;microgochi.c: 18:     m->vivant=1;
 [e = . *U _m 4 -> -> 1 `i `uc ]
 "20
-[; ;microgochi.c: 20: }
+[; ;microgochi.c: 20:     return m;
+[e ) _m ]
+[e $UE 365  ]
+"22
+[; ;microgochi.c: 22: }
 [e :UE 365 ]
 }
