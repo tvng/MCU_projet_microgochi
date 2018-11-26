@@ -1675,8 +1675,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 39:         {
 {
 "40
-[; ;game.c: 40:             if (PORTCbits.RC2 == 1)
-[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 378  ]
+[; ;game.c: 40:             if (PORTCbits.RC0 == 1)
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 378  ]
 "41
 [; ;game.c: 41:             {
 {
@@ -1710,9 +1710,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 380  ]
 "54
-[; ;game.c: 54:             else if (PORTCbits.RC0 == 1)
+[; ;game.c: 54:             else if (PORTCbits.RC2 == 1)
 [e :U 378 ]
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 381  ]
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 381  ]
 "55
 [; ;game.c: 55:            {
 {
@@ -1769,8 +1769,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 377 ]
 "75
-[; ;game.c: 75:         if (PORTCbits.RC2 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC0 == 0)
-[e $ ! && && == -> . . _PORTCbits 0 2 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 0 `i -> 0 `i 385  ]
+[; ;game.c: 75:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0)
+[e $ ! && && == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i 385  ]
 "76
 [; ;game.c: 76:         {
 {

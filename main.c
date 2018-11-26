@@ -35,6 +35,13 @@ int main(int argc, char** argv) {
 	TRISC = 0b00000111;				//PORTB output
 	PORTC =0b00000000;					//Reset PORTB
     
+    ///__**_____________
+    //timer
+    
+    
+    // ******
+    
+    
     int bool_jeu=1; //boolean pour l'etat du jeu
 
     glcd_Init(GLCD_ON); //init glcd

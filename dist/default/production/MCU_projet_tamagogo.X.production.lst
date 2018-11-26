@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V2.00 build -1524193055 
-                                                                                               Mon Nov 26 16:02:44 2018
+                                                                                               Mon Nov 26 16:07:41 2018
 
 Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
      1  0000                     
@@ -6049,7 +6049,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   5955  007FFB  41                 	db	79	;'O'
   5956  007FFC  4F                 	db	0
   5957  007FFD  00                 ; #config settings
-  5958                           	file	"C:\Users\acajo\AppData\Local\Temp\sc1c."
+  5958                           	file	"C:\Users\acajo\AppData\Local\Temp\s1po."
   5959                           	line	#
   5960                           psect	cinit,class=CODE,delta=1,reloc=2
   5961                           global __pcinit
@@ -6079,7 +6079,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   5985                           	global	_cursor
   5986                           _cursor:
   5987  00003B                            ds      30
-  5988  00003B                     	file	"C:\Users\acajo\AppData\Local\Temp\sc1c."
+  5988  00003B                     	file	"C:\Users\acajo\AppData\Local\Temp\s1po."
   5989                           	line	#
   5990                           psect	cinit
   5991                           ; Initialize objects allocated to COMRAM (30 bytes)
@@ -7533,9 +7533,9 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   7437  0071A4                     	line	40
   7438                           	
   7439                           l2017:
-  7440  0071A4                     ;game.c: 39:         {;game.c: 40:             if (PORTCbits.RC2 == 1)
-  7441                           	btfss	((c:3970)),c,2	;volatile
-  7442  0071A4  A482               	goto	u1251
+  7440  0071A4                     ;game.c: 39:         {;game.c: 40:             if (PORTCbits.RC0 == 1)
+  7441                           	btfss	((c:3970)),c,0	;volatile
+  7442  0071A4  A082               	goto	u1251
   7443  0071A6  EFD7  F038         	goto	u1250
   7444  0071AA  EFD9  F038         u1251:
   7445  0071AE                     	goto	l65
@@ -7605,11 +7605,11 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   7509                           ;game.c: 52:            }
   7510                           	goto	l2047
   7511  007202  EF53  F039         	line	54
-  7512                           ;game.c: 54:             else if (PORTCbits.RC0 == 1)
+  7512                           ;game.c: 54:             else if (PORTCbits.RC2 == 1)
   7513                           	
   7514                           l65:
-  7515  007206                     	btfss	((c:3970)),c,0	;volatile
-  7516  007206  A082               	goto	u1271
+  7515  007206                     	btfss	((c:3970)),c,2	;volatile
+  7516  007206  A482               	goto	u1271
   7517  007208  EF08  F039         	goto	u1270
   7518  00720C  EF0A  F039         u1271:
   7519  007210                     	goto	l68
@@ -7727,10 +7727,10 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   7631  0072A6                     	line	75
   7632                           	
   7633                           l2047:
-  7634  0072A6                     ;game.c: 75:         if (PORTCbits.RC2 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC0 == 0)
+  7634  0072A6                     ;game.c: 75:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0)
 
-  7635                           	btfsc	((c:3970)),c,2	;volatile
-  7636  0072A6  B482               	goto	u1301
+  7635                           	btfsc	((c:3970)),c,0	;volatile
+  7636  0072A6  B082               	goto	u1301
   7637  0072A8  EF58  F039         	goto	u1300
   7638  0072AC  EF5A  F039         u1301:
   7639  0072B0                     	goto	l2055
@@ -7745,8 +7745,8 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   7648  0072BE  EF70  F039         u1310:
   7649  0072C2                     	
   7650                           l2051:
-  7651  0072C2                     	btfsc	((c:3970)),c,0	;volatile
-  7652  0072C2  B082               	goto	u1321
+  7651  0072C2                     	btfsc	((c:3970)),c,2	;volatile
+  7652  0072C2  B482               	goto	u1321
   7653  0072C4  EF66  F039         	goto	u1320
   7654  0072C8  EF68  F039         u1321:
   7655  0072CC                     	goto	l2055
@@ -10897,7 +10897,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.00 build -1524193055 
-Symbol Table                                                                                   Mon Nov 26 16:02:44 2018
+Symbol Table                                                                                   Mon Nov 26 16:07:41 2018
 
                          l5 66A0                           l8 6530                           _x 005C  
                          _y 005B                          l40 6802                          l41 6802  

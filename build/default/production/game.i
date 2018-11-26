@@ -6561,7 +6561,7 @@ void game_play()
 
         if (button_pressed==0)
         {
-            if (PORTCbits.RC2 == 1)
+            if (PORTCbits.RC0 == 1)
             {
                button_pressed=1;
 
@@ -6575,7 +6575,7 @@ void game_play()
 
            }
 
-            else if (PORTCbits.RC0 == 1)
+            else if (PORTCbits.RC2 == 1)
            {
                button_pressed=1;
                menu_cursor (action, 0);
@@ -6596,7 +6596,7 @@ void game_play()
            }
         }
 
-        if (PORTCbits.RC2 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC0 == 0)
+        if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0)
         {
             button_pressed=0;
         }
