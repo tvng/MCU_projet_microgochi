@@ -11,30 +11,26 @@
 #include "myglcd.h"
 #include "main.h"
 
-#define MENU_INIT_X 10
+#define MENU_INIT_X 12
 #define MENU_Y_TOP 10
 #define MENU_Y_BOTTOM 50
-#define MENU_JUMP 15
+#define MENU_JUMP 32
 /*
  * 
  */
 
-int menu()
+void menu_actions(int action)
 {
-   int selection=0;
-   
-   //afficher menu de base
-   
-   //tant qu'on appuie pas sur 
-   
-   return selection;
+    //action = 0 : miam
+    // 1 = calins
+    // 2 = dormir
+    // 3 = mini jeu!
+    
+   //on appelle nos jeux et nos animations
+    glcd_SetCursor(0,6);				
+	glcd_WriteString("ACTION", f8X8, 1);	
 }
 
-//pour afficher les icones de base
-void menu_base()
-{
-    
-}
 
 //pour afficher le curseur
 void menu_cursor(int action, int write)
@@ -42,9 +38,14 @@ void menu_cursor(int action, int write)
   //write = 0 : effacer --- write = 1 : ecrire
    // action 1 = 1ere icone, etc..
     
-    if (action == 0) //initialisation
+    if (action == -1) //initialisation
     {
         displayObject (cursor, MENU_INIT_X, MENU_Y_TOP, CURSOR_X, CURSOR_Y, write);
+    } 
+    else
+    {
+        displayObject (cursor, MENU_INIT_X+ MENU_JUMP*action, MENU_Y_TOP, CURSOR_X, CURSOR_Y, write);
     }
+    
     
 }

@@ -10,7 +10,8 @@
 
 
 void menu_cursor(int action, int write);
-int menu();
+
+void menu_actions(int action);
 
 #endif	/* MENU_H */
 

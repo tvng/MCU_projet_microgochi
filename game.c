@@ -12,21 +12,21 @@
 #include "game.h"
 #include "menu.h"
 
-#define NB_ACTIVITE_MAX 4
+#define NB_ACTIVITE_MAX 3 //3+0
 
 //fonction de jeu
 void game_play(Microgochi *m)
 {
     //initialisation des variables
     glcd_FillScreen(0); 
-    
-    
     // ETAPE 1: on affiche notre menu de base
     glcd_SetCursor(0,0);	
     glcd_Image();
    
-    int action=1; //pour le menu
-    menu_cursor (0, 1); //0 pour initialiser
+    menu_cursor (-1, 1); //0 pour initialiser
+    
+    
+    int action=0; //pour le menu
     int write=0;
     int button_pressed=0;
     
@@ -34,50 +34,54 @@ void game_play(Microgochi *m)
     while (m->vivant==1) //tant que le microgochi est vivant
     {
             //si on appuie sur le bouton de gauche
+        
+        if (button_pressed==0)
+        {
             if (PORTCbits.RC0 == 1)
             {
-               button_pressed=1;
+               button_pressed=1;//blindage pour pas que ça bouge 100 fois
                
-               menu_cursor (action, 0);
+               menu_cursor (action, 0); //on efface le curseur menu precedent
                action--; //on decremente le menu
-               if (action <= 0) //blindage
-               {action=1;
+               if (action < 0) //blindage
+               {
+                   action=0;
                }
-                menu_cursor (action, 1);
+                menu_cursor (action, 1); //on affiche le curseur bougé
                
-               glcd_SetCursor(0,6);		
-               glcd_WriteString("WEWE",f8X8,1);	
            }
             //ou si on appuie sur le bouton de droite
             else if (PORTCbits.RC2 == 1)
            {
+               button_pressed=1;
+               menu_cursor (action, 0);
+                
                action++; //on incremente le menu
                
                if (action > NB_ACTIVITE_MAX) //blindage
                {
                    action= NB_ACTIVITE_MAX;
                }
-               
-               button_pressed=1;
-               glcd_SetCursor(0,6);		
-               glcd_WriteString("xxxxxxx",f8X8,1);	
+                menu_cursor (action, 1);      
            }
-             //si on appuie sur le bouton valider
+             //si on appuie sur le bouton valider, on lance l'action
             else if (PORTCbits.RC1 == 1)
            {
-                
-                glcd_SetCursor(0,6);		
-                glcd_WriteString("O",f8X8,1);	
+                button_pressed=1;
+                menu_actions(action);
            }
             
+        }
          
-                
-    
+        if (PORTCbits.RC1 == 0 && PORTCbits.RC0 ==0 && PORTCbits.RC2 == 0)
+        {
+            button_pressed=0;
+        }
          
         //on affiche notre microgochi et son animation
 
         //on prend l'emplacement du curseur en appelant menu()
-        action=menu();
+      
         
         //on declance l'action si on appuie sur BUTTON_MID
        //switch sur chaque action, on appelle une fonction correspondante

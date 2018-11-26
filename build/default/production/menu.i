@@ -233,7 +233,8 @@ size_t __ctype_get_mb_cur_max(void);
 # 1 "./menu.h" 1
 # 12 "./menu.h"
 void menu_cursor(int action, int write);
-int menu();
+
+void menu_actions(int action);
 # 10 "menu.c" 2
 
 # 1 "./myglcd.h" 1
@@ -6488,22 +6489,18 @@ void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 1 "./main.h" 1
 # 12 "menu.c" 2
 # 22 "menu.c"
-int menu()
-{
-   int selection=0;
-
-
-
-
-
-   return selection;
-}
-
-
-void menu_base()
+void menu_actions(int action)
 {
 
+
+
+
+
+
+    glcd_SetCursor(0,6);
+ glcd_WriteString("ACTION", 1, 1);
 }
+
 
 
 void menu_cursor(int action, int write)
@@ -6511,9 +6508,14 @@ void menu_cursor(int action, int write)
 
 
 
-    if (action == 0)
+    if (action == -1)
     {
-        displayObject (cursor, 10, 10, 3, 10, write);
+        displayObject (cursor, 12, 10, 3, 10, write);
     }
+    else
+    {
+        displayObject (cursor, 12 + 32*action, 10, 3, 10, write);
+    }
+
 
 }

@@ -6527,7 +6527,8 @@ void game_play(Microgochi *m);
 # 1 "./menu.h" 1
 # 12 "./menu.h"
 void menu_cursor(int action, int write);
-int menu();
+
+void menu_actions(int action);
 # 13 "game.c" 2
 
 
@@ -6539,13 +6540,13 @@ void game_play(Microgochi *m)
 
     glcd_FillScreen(0);
 
-
-
     glcd_SetCursor(0,0);
     glcd_Image();
 
-    int action=1;
-    menu_cursor (0, 1);
+    menu_cursor (-1, 1);
+
+
+    int action=0;
     int write=0;
     int button_pressed=0;
 
@@ -6553,43 +6554,49 @@ void game_play(Microgochi *m)
     while (m->vivant==1)
     {
 
+
+        if (button_pressed==0)
+        {
             if (PORTCbits.RC0 == 1)
             {
                button_pressed=1;
 
                menu_cursor (action, 0);
                action--;
-               if (action <= 0)
-               {action=1;
+               if (action < 0)
+               {
+                   action=0;
                }
                 menu_cursor (action, 1);
 
-               glcd_SetCursor(0,6);
-               glcd_WriteString("WEWE",1,1);
            }
 
             else if (PORTCbits.RC2 == 1)
            {
+               button_pressed=1;
+               menu_cursor (action, 0);
+
                action++;
 
-               if (action > 4)
+               if (action > 3)
                {
-                   action= 4;
+                   action= 3;
                }
-
-               button_pressed=1;
-               glcd_SetCursor(0,6);
-               glcd_WriteString("xxxxxxx",1,1);
+                menu_cursor (action, 1);
            }
 
             else if (PORTCbits.RC1 == 1)
            {
-
-                glcd_SetCursor(0,6);
-                glcd_WriteString("O",1,1);
+                button_pressed=1;
+                menu_actions(action);
            }
-# 80 "game.c"
-        action=menu();
-# 91 "game.c"
+
+        }
+
+        if (PORTCbits.RC1 == 0 && PORTCbits.RC0 ==0 && PORTCbits.RC2 == 0)
+        {
+            button_pressed=0;
+        }
+# 95 "game.c"
     }
 }

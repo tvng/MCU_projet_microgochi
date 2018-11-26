@@ -54,8 +54,8 @@
 "28 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
 [v _main main `(i  1 e 2 0 ]
 "22 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-[v _menu menu `(i  1 e 2 0 ]
-"40
+[v _menu_actions menu_actions `(v  1 e 1 0 ]
+"36
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
 "13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X/microgochi.h
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
@@ -110,7 +110,7 @@
 [v _PORTCbits PORTCbits `VES143  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S232 . 1 `uc 1 RE0 1 0 :1:0 
+[s S229 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
@@ -118,32 +118,32 @@
 `uc 1 RDPU 1 0 :1:7 
 ]
 "2868
-[s S239 . 1 `uc 1 CK1SPP 1 0 :1:0 
+[s S236 . 1 `uc 1 CK1SPP 1 0 :1:0 
 `uc 1 CK2SPP 1 0 :1:1 
 `uc 1 OESPP 1 0 :1:2 
 ]
-[s S243 . 1 `uc 1 PD2 1 0 :1:0 
+[s S240 . 1 `uc 1 PD2 1 0 :1:0 
 `uc 1 PC2 1 0 :1:1 
 `uc 1 CCP10 1 0 :1:2 
 `uc 1 CCP9E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 CCP2E 1 0 :1:7 
 ]
-[s S250 . 1 `uc 1 RDE 1 0 :1:0 
+[s S247 . 1 `uc 1 RDE 1 0 :1:0 
 `uc 1 WRE 1 0 :1:1 
 `uc 1 CS 1 0 :1:2 
 `uc 1 PC3E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 PA2E 1 0 :1:7 
 ]
-[s S257 . 1 `uc 1 . 1 0 :2:0 
+[s S254 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PB2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RE7 1 0 :1:7 
 ]
-[u S262 . 1 `S232 1 . 1 0 `S239 1 . 1 0 `S243 1 . 1 0 `S250 1 . 1 0 `S257 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES262  1 e 1 @3972 ]
-[s S306 . 1 `uc 1 LATB0 1 0 :1:0 
+[u S259 . 1 `S229 1 . 1 0 `S236 1 . 1 0 `S240 1 . 1 0 `S247 1 . 1 0 `S254 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES259  1 e 1 @3972 ]
+[s S303 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -153,7 +153,7 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3100
-[s S315 . 1 `uc 1 LB0 1 0 :1:0 
+[s S312 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -162,8 +162,8 @@
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S324 . 1 `S306 1 . 1 0 `S315 1 . 1 0 ]
-[v _LATBbits LATBbits `VES324  1 e 1 @3978 ]
+[u S321 . 1 `S303 1 . 1 0 `S312 1 . 1 0 ]
+[v _LATBbits LATBbits `VES321  1 e 1 @3978 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
@@ -188,9 +188,9 @@
 {
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 "39
-[v main@mGogo mGogo `*.2S24  1 a 2 58 ]
+[v main@mGogo mGogo `*.2S24  1 a 2 60 ]
 "40
-[v main@bool_jeu bool_jeu `i  1 a 2 56 ]
+[v main@bool_jeu bool_jeu `i  1 a 2 58 ]
 "74
 } 0
 "25 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
@@ -218,23 +218,23 @@
 "18 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 {
-"28
-[v game_play@action action `i  1 a 2 49 ]
+"29
+[v game_play@action action `i  1 a 2 51 ]
 "31
-[v game_play@button_pressed button_pressed `i  1 a 2 47 ]
+[v game_play@button_pressed button_pressed `i  1 a 2 49 ]
 "30
-[v game_play@write write `i  1 a 2 45 ]
+[v game_play@write write `i  1 a 2 47 ]
 [s S24 Microgochi 5 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 proprete 1 3 `uc 1 vivant 1 4 ]
 "18
-[v game_play@m m `*.2S24  1 p 2 42 ]
-"92
+[v game_play@m m `*.2S24  1 p 2 44 ]
+"96
 } 0
-"40 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+"36 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
 {
 [v menu_cursor@action action `i  1 p 2 38 ]
 [v menu_cursor@write write `i  1 p 2 40 ]
-"50
+"51
 } 0
 "10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
 [v _displayObject displayObject `(v  1 e 1 0 ]
@@ -296,11 +296,10 @@
 "41
 } 0
 "22 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-[v _menu menu `(i  1 e 2 0 ]
+[v _menu_actions menu_actions `(v  1 e 1 0 ]
 {
-"24
-[v menu@selection selection `i  1 a 2 2 ]
-"31
+[v menu_actions@action action `i  1 p 2 23 ]
+"32
 } 0
 "671 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
