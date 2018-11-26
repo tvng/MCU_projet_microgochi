@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"13 ./microgochi.h
-[; ;./microgochi.h: 13: struct Microgochi{
-[s S363 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S363 Microgochi age satiete energie proprete vivant ]
+"10 ./microgochi.h
+[; ;./microgochi.h: 10: struct Microgochi{
+[s S362 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S362 Microgochi age satiete energie bonheur vivant ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -513,16 +513,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"21 ./main.h
+[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
+[v _mGogo `*S362 ~T0 @X0 1 e ]
+[i _mGogo
+-> -> -> 0 `i `*v `*S362
+]
 "12 microgochi.c
-[; ;microgochi.c: 12: Microgochi * microgochi_init(Microgochi *m)
-[v _microgochi_init `(*S363 ~T0 @X0 1 ef1`*S363 ]
+[; ;microgochi.c: 12: struct Microgochi * microgochi_init(struct Microgochi *m)
+[v _microgochi_init `(*S362 ~T0 @X0 1 ef1`*S362 ]
 "13
 [; ;microgochi.c: 13: {
 {
 [e :U _microgochi_init ]
 "12
-[; ;microgochi.c: 12: Microgochi * microgochi_init(Microgochi *m)
-[v _m `*S363 ~T0 @X0 1 r1 ]
+[; ;microgochi.c: 12: struct Microgochi * microgochi_init(struct Microgochi *m)
+[v _m `*S362 ~T0 @X0 1 r1 ]
 "13
 [; ;microgochi.c: 13: {
 [f ]
@@ -536,7 +542,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;microgochi.c: 16:     m->energie=100;
 [e = . *U _m 2 -> -> 100 `i `uc ]
 "17
-[; ;microgochi.c: 17:     m->proprete=100;
+[; ;microgochi.c: 17:     m->bonheur=100;
 [e = . *U _m 3 -> -> 100 `i `uc ]
 "18
 [; ;microgochi.c: 18:     m->vivant=1;
@@ -548,4 +554,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;microgochi.c: 22: }
 [e :UE 365 ]
+}
+"24
+[; ;microgochi.c: 24: void micro_manger ()
+[v _micro_manger `(v ~T0 @X0 1 ef ]
+"25
+[; ;microgochi.c: 25: {
+{
+[e :U _micro_manger ]
+[f ]
+"26
+[; ;microgochi.c: 26:     mGogo->satiete += 20;
+[e =+ . *U _mGogo 1 -> -> 20 `i `uc ]
+"27
+[; ;microgochi.c: 27: }
+[e :UE 366 ]
 }

@@ -231,11 +231,28 @@ size_t __ctype_get_mb_cur_max(void);
 # 9 "menu.c" 2
 
 # 1 "./menu.h" 1
-# 12 "./menu.h"
+# 18 "./menu.h"
 void menu_cursor(int action, int write);
-
 void menu_actions(int action);
 # 10 "menu.c" 2
+
+# 1 "./microgochi.h" 1
+# 10 "./microgochi.h"
+struct Microgochi{
+
+  unsigned char age;
+  unsigned char satiete;
+  unsigned char energie;
+
+  unsigned char bonheur;
+
+  unsigned char vivant;
+
+};
+
+struct Microgochi * microgochi_init(struct Microgochi *m);
+void micro_manger();
+# 11 "menu.c" 2
 
 # 1 "./myglcd.h" 1
 # 11 "./myglcd.h"
@@ -6372,7 +6389,11 @@ int toupper_l(int, locale_t);
 int isascii(int);
 int toascii(int);
 # 6 "./glcd.h" 2
-# 43 "./glcd.h"
+
+
+# 1 "./myglcd.h" 1
+# 8 "./glcd.h" 2
+# 45 "./glcd.h"
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);
@@ -6400,7 +6421,7 @@ void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 
 
 
-unsigned char cursor[]=
+ char cursor[]=
 {
     1,1,1,
     1,1,1,
@@ -6482,24 +6503,13 @@ const unsigned char test[]={
 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-# 172 "./myglcd.h"
 void displayObject (char *tab, int x, int y, int height, int width, int write);
-# 11 "menu.c" 2
+# 12 "menu.c" 2
 
 # 1 "./main.h" 1
-# 12 "menu.c" 2
-# 22 "menu.c"
-void menu_actions(int action)
-{
-
-
-
-
-
-
-    glcd_SetCursor(0,6);
- glcd_WriteString("ACTION", 1, 1);
-}
+# 21 "./main.h"
+struct Microgochi *mGogo=((void*)0);
+# 13 "menu.c" 2
 
 
 
@@ -6516,6 +6526,20 @@ void menu_cursor(int action, int write)
     {
         displayObject (cursor, 12 + 32*action, 10, 3, 10, write);
     }
+}
+
+void menu_actions(int action)
+{
 
 
+
+
+    if (action == 0)
+    {
+        micro_manger();
+    }
+
+
+    glcd_SetCursor(0,6);
+ glcd_WriteString("ACTION", 1, 1);
 }

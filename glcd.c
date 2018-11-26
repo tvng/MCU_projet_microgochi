@@ -5,7 +5,6 @@
  * Created on 22 novembre 2016, 14:09
  */
 #include "glcd.h"
-#include "myglcd.h"
 #define _XTAL_FREQ 100000
 #define XC_HEADER_TEMPLATE_H
 

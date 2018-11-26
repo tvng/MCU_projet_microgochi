@@ -6370,7 +6370,21 @@ int toupper_l(int, locale_t);
 int isascii(int);
 int toascii(int);
 # 6 "./glcd.h" 2
-# 43 "./glcd.h"
+
+
+# 1 "./myglcd.h" 1
+# 11 "./myglcd.h"
+# 1 "./glcd.h" 1
+
+
+
+
+
+
+
+# 1 "./myglcd.h" 1
+# 8 "./glcd.h" 2
+# 45 "./glcd.h"
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);
@@ -6389,11 +6403,6 @@ void glcd_text_write(const char str[], unsigned char x, unsigned char y);
 
 
 void glcd_icon8X8(const unsigned char ch[], unsigned char color);
-# 7 "glcd.c" 2
-
-# 1 "./myglcd.h" 1
-# 11 "./myglcd.h"
-# 1 "./glcd.h" 1
 # 11 "./myglcd.h" 2
 
 
@@ -6403,7 +6412,7 @@ void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 
 
 
-unsigned char cursor[]=
+ char cursor[]=
 {
     1,1,1,
     1,1,1,
@@ -6485,9 +6494,9 @@ const unsigned char test[]={
 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-# 172 "./myglcd.h"
 void displayObject (char *tab, int x, int y, int height, int width, int write);
-# 8 "glcd.c" 2
+# 8 "./glcd.h" 2
+# 7 "glcd.c" 2
 
 
 
@@ -7169,7 +7178,7 @@ void glcd_text_write(const char str[], unsigned char x, unsigned char y)
    glcd_SetCursor(x, y);
    glcd_WriteString(str, 1, 1);
 }
-# 698 "glcd.c"
+# 697 "glcd.c"
 void glcd_Image()
 {
   unsigned char cs;
@@ -7209,7 +7218,7 @@ void glcd_icon8X8(const unsigned char ch[], unsigned char color)
    unsigned char i,xpos;
    unsigned char side = 0;
    unsigned int chr;
-# 746 "glcd.c"
+# 745 "glcd.c"
    if(x > 63)
      {
         side = 1;

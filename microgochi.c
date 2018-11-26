@@ -6,17 +6,22 @@
  */
 #include <pic18f4550.h>
 #include "microgochi.h"
+#include "main.h"
 
 
-
-Microgochi * microgochi_init(Microgochi *m)
+struct Microgochi * microgochi_init(struct Microgochi *m)
 {
     m->age=0;
     m->satiete=100;
     m->energie=100;
-    m->proprete=100;
+    m->bonheur=100;
     m->vivant=1; //1 pour vivant, 0 pour mort
     
     return m;
 
+}
+
+void micro_manger ()
+{
+    mGogo->satiete += 20;
 }

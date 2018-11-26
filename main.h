@@ -18,6 +18,9 @@
 #define BUTTON_MID PORTCbits.RC1
 #define BUTTON_RIGHT PORTCbits.RC0
 
+struct Microgochi *mGogo=NULL;    //creation structure Microgochi
+
+
 #define _XTAL_FREQ 8000000
 
 #endif	/* MAIN_H */

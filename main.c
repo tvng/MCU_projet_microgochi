@@ -24,7 +24,6 @@
 #include "game.h"
 #include "screen.h"
 
-
 int main(int argc, char** argv) {
     
     ADCON1 = 0x0F; //on desactive les entrees analogiques
@@ -36,7 +35,6 @@ int main(int argc, char** argv) {
 	TRISC = 0b00000111;				//PORTB output
 	PORTC =0b00000000;					//Reset PORTB
     
-    Microgochi *mGogo=NULL;    //creation structure Microgochi
     int bool_jeu=1; //boolean pour l'etat du jeu
 
     glcd_Init(GLCD_ON); //init glcd
@@ -53,7 +51,7 @@ int main(int argc, char** argv) {
         //un truc qui dit que notre microgochi vient de naitre
         
         //on lance notre jeu     
-        game_play(mGogo);
+        game_play();
         
         //si on arrive juste là, notre microgochi est mort
         

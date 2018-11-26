@@ -1,2 +1,2 @@
-build/default/production\game.p1: game.c microgochi.h glcd.h myglcd.h \
-  game.h menu.h
+build/default/production\game.p1: game.c main.h microgochi.h glcd.h \
+  myglcd.h game.h menu.h

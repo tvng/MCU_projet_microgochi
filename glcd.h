@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
+#include "myglcd.h"
+
 #ifndef _GLCD_H_
 #define _GLCD_H_
 

@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"46 ./glcd.h
-[; ;./glcd.h: 46: extern void glcd_PlotPixel(unsigned char x, unsigned char y, unsigned char color);
+"48 ./glcd.h
+[; ;./glcd.h: 48: extern void glcd_PlotPixel(unsigned char x, unsigned char y, unsigned char color);
 [v _glcd_PlotPixel `(v ~T0 @X0 0 ef3`uc`uc`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -513,7 +513,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "19 ./myglcd.h
-[; ;./myglcd.h: 19: unsigned char cursor[]=
+[; ;./myglcd.h: 19:  char cursor[]=
 [v _cursor `uc ~T0 @X0 -> 30 `i e ]
 [i _cursor
 :U ..

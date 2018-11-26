@@ -6,9 +6,6 @@
  */
 
 
-typedef struct Microgochi Microgochi; //pour enlever le struc et ecrire que Microgochi a chaque fois
-
-
 //notre structure
 struct Microgochi{
     
@@ -16,10 +13,11 @@ struct Microgochi{
   unsigned char satiete;
   unsigned char energie;
   
-  unsigned char proprete;
+  unsigned char bonheur;
   
   unsigned char vivant; //boolean
   
 };
 
-Microgochi * microgochi_init(Microgochi *m);
+struct Microgochi * microgochi_init(struct Microgochi *m);
+void micro_manger();

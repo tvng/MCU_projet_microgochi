@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"13 ./microgochi.h
-[; ;./microgochi.h: 13: struct Microgochi{
-[s S363 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S363 Microgochi age satiete energie proprete vivant ]
-"49 ./glcd.h
-[; ;./glcd.h: 49: extern void glcd_FillScreen(unsigned char color);
+"10 ./microgochi.h
+[; ;./microgochi.h: 10: struct Microgochi{
+[s S365 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S365 Microgochi age satiete energie bonheur vivant ]
+"51 ./glcd.h
+[; ;./glcd.h: 51: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
-"47
-[; ;./glcd.h: 47: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+"49
+[; ;./glcd.h: 49: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
 [v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"53
-[; ;./glcd.h: 53: extern void glcd_Image(void);
+"55
+[; ;./glcd.h: 55: extern void glcd_Image(void);
 [v _glcd_Image `(v ~T0 @X0 0 ef ]
-"12 ./menu.h
-[; ;./menu.h: 12: void menu_cursor(int action, int write);
+"18 ./menu.h
+[; ;./menu.h: 18: void menu_cursor(int action, int write);
 [v _menu_cursor `(v ~T0 @X0 0 ef2`i`i ]
 "2569 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2569:     struct {
@@ -42,8 +42,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2605
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 [v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
-"14 ./menu.h
-[; ;./menu.h: 14: void menu_actions(int action);
+"19 ./menu.h
+[; ;./menu.h: 19: void menu_actions(int action);
 [v _menu_actions `(v ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -555,8 +555,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"21 ./main.h
+[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
+[v _mGogo `*S365 ~T0 @X0 1 e ]
+[i _mGogo
+-> -> -> 0 `i `*v `*S365
+]
 "19 ./myglcd.h
-[; ;./myglcd.h: 19: unsigned char cursor[]=
+[; ;./myglcd.h: 19:  char cursor[]=
 [v _cursor `uc ~T0 @X0 -> 30 `i e ]
 [i _cursor
 :U ..
@@ -1624,17 +1630,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "18 game.c
-[; ;game.c: 18: void game_play(Microgochi *m)
-[v _game_play `(v ~T0 @X0 1 ef1`*S363 ]
+[; ;game.c: 18: void game_play()
+[v _game_play `(v ~T0 @X0 1 ef ]
 "19
 [; ;game.c: 19: {
 {
 [e :U _game_play ]
-"18
-[; ;game.c: 18: void game_play(Microgochi *m)
-[v _m `*S363 ~T0 @X0 1 r1 ]
-"19
-[; ;game.c: 19: {
 [f ]
 "21
 [; ;game.c: 21:     glcd_FillScreen(0);
@@ -1661,7 +1662,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _button_pressed `i ~T0 @X0 1 a ]
 [e = _button_pressed -> 0 `i ]
 "34
-[; ;game.c: 34:     while (m->vivant==1)
+[; ;game.c: 34:     while (mGogo->vivant==1)
 [e $U 374  ]
 [e :U 375 ]
 "35
@@ -1674,8 +1675,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 39:         {
 {
 "40
-[; ;game.c: 40:             if (PORTCbits.RC0 == 1)
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 378  ]
+[; ;game.c: 40:             if (PORTCbits.RC2 == 1)
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 378  ]
 "41
 [; ;game.c: 41:             {
 {
@@ -1709,9 +1710,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 380  ]
 "54
-[; ;game.c: 54:             else if (PORTCbits.RC2 == 1)
+[; ;game.c: 54:             else if (PORTCbits.RC0 == 1)
 [e :U 378 ]
-[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 381  ]
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 381  ]
 "55
 [; ;game.c: 55:            {
 {
@@ -1763,32 +1764,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 384 ]
 [e :U 383 ]
 [e :U 380 ]
-"74
-[; ;game.c: 74:         }
+"73
+[; ;game.c: 73:         }
 }
 [e :U 377 ]
+"75
+[; ;game.c: 75:         if (PORTCbits.RC2 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC0 == 0)
+[e $ ! && && == -> . . _PORTCbits 0 2 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 0 `i -> 0 `i 385  ]
 "76
-[; ;game.c: 76:         if (PORTCbits.RC1 == 0 && PORTCbits.RC0 ==0 && PORTCbits.RC2 == 0)
-[e $ ! && && == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i 385  ]
-"77
-[; ;game.c: 77:         {
+[; ;game.c: 76:         {
 {
-"78
-[; ;game.c: 78:             button_pressed=0;
+"77
+[; ;game.c: 77:             button_pressed=0;
 [e = _button_pressed -> 0 `i ]
-"79
-[; ;game.c: 79:         }
+"78
+[; ;game.c: 78:         }
 }
 [e :U 385 ]
-"95
-[; ;game.c: 95:     }
+"79
+[; ;game.c: 79:     }
 }
 [e :U 374 ]
 "34
-[; ;game.c: 34:     while (m->vivant==1)
-[e $ == -> . *U _m 4 `i -> 1 `i 375  ]
+[; ;game.c: 34:     while (mGogo->vivant==1)
+[e $ == -> . *U _mGogo 4 `i -> 1 `i 375  ]
 [e :U 376 ]
-"96
-[; ;game.c: 96: }
+"80
+[; ;game.c: 80: }
 [e :UE 373 ]
 }

@@ -10,7 +10,7 @@
 
 
 
-void game_play(Microgochi *m);
+void game_play();
 
 #endif	/* GAME_H */
 

@@ -1,13 +1,20 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"47 ./glcd.h
-[; ;./glcd.h: 47: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
-[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"52
-[; ;./glcd.h: 52: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
-[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
-"172 ./myglcd.h
-[; ;./myglcd.h: 172: void displayObject (char *tab, int x, int y, int height, int width, int write);
+"10 ./microgochi.h
+[; ;./microgochi.h: 10: struct Microgochi{
+[s S8 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S8 Microgochi age satiete energie bonheur vivant ]
+"101 ./myglcd.h
+[; ;./myglcd.h: 101: void displayObject (char *tab, int x, int y, int height, int width, int write);
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
+"23 ./microgochi.h
+[; ;./microgochi.h: 23: void micro_manger();
+[v _micro_manger `(v ~T0 @X0 0 e? ]
+"49 ./glcd.h
+[; ;./glcd.h: 49: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"54
+[; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
+[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -519,7 +526,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "19 ./myglcd.h
-[; ;./myglcd.h: 19: unsigned char cursor[]=
+[; ;./myglcd.h: 19:  char cursor[]=
 [v _cursor `uc ~T0 @X0 -> 30 `i e ]
 [i _cursor
 :U ..
@@ -1586,71 +1593,90 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"22 menu.c
-[; ;menu.c: 22: void menu_actions(int action)
-[v _menu_actions `(v ~T0 @X0 1 ef1`i ]
-"23
-[; ;menu.c: 23: {
-{
-[e :U _menu_actions ]
-"22
-[; ;menu.c: 22: void menu_actions(int action)
-[v _action `i ~T0 @X0 1 r1 ]
-"23
-[; ;menu.c: 23: {
-[f ]
-"30
-[; ;menu.c: 30:     glcd_SetCursor(0,6);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
-"31
-[; ;menu.c: 31:  glcd_WriteString("ACTION", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"32
-[; ;menu.c: 32: }
-[e :UE 370 ]
-}
-"36
-[; ;menu.c: 36: void menu_cursor(int action, int write)
+"21 ./main.h
+[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
+[v _mGogo `*S8 ~T0 @X0 1 e ]
+[i _mGogo
+-> -> -> 0 `i `*v `*S8
+]
+"16 menu.c
+[; ;menu.c: 16: void menu_cursor(int action, int write)
 [v _menu_cursor `(v ~T0 @X0 1 ef2`i`i ]
-"37
-[; ;menu.c: 37: {
+"17
+[; ;menu.c: 17: {
 {
 [e :U _menu_cursor ]
-"36
-[; ;menu.c: 36: void menu_cursor(int action, int write)
+"16
+[; ;menu.c: 16: void menu_cursor(int action, int write)
 [v _action `i ~T0 @X0 1 r1 ]
 [v _write `i ~T0 @X0 1 r2 ]
-"37
-[; ;menu.c: 37: {
+"17
+[; ;menu.c: 17: {
 [f ]
-"41
-[; ;menu.c: 41:     if (action == -1)
+"21
+[; ;menu.c: 21:     if (action == -1)
 [e $ ! == _action -U -> 1 `i 372  ]
-"42
-[; ;menu.c: 42:     {
+"22
+[; ;menu.c: 22:     {
 {
-"43
-[; ;menu.c: 43:         displayObject (cursor, 12, 10, 3, 10, write);
-[e ( _displayObject (4 , , , , , -> &U _cursor `*uc -> 12 `i -> 10 `i -> 3 `i -> 10 `i _write ]
-"44
-[; ;menu.c: 44:     }
+"23
+[; ;menu.c: 23:         displayObject (cursor, 12, 10, 3, 10, write);
+[e ( _displayObject (4 , , , , , &U _cursor -> 12 `i -> 10 `i -> 3 `i -> 10 `i _write ]
+"24
+[; ;menu.c: 24:     }
 }
 [e $U 373  ]
-"45
-[; ;menu.c: 45:     else
+"25
+[; ;menu.c: 25:     else
 [e :U 372 ]
-"46
-[; ;menu.c: 46:     {
+"26
+[; ;menu.c: 26:     {
 {
-"47
-[; ;menu.c: 47:         displayObject (cursor, 12 + 32*action, 10, 3, 10, write);
-[e ( _displayObject (4 , , , , , -> &U _cursor `*uc + -> 12 `i * -> 32 `i _action -> 10 `i -> 3 `i -> 10 `i _write ]
-"48
-[; ;menu.c: 48:     }
+"27
+[; ;menu.c: 27:         displayObject (cursor, 12 + 32*action, 10, 3, 10, write);
+[e ( _displayObject (4 , , , , , &U _cursor + -> 12 `i * -> 32 `i _action -> 10 `i -> 3 `i -> 10 `i _write ]
+"28
+[; ;menu.c: 28:     }
 }
 [e :U 373 ]
-"51
-[; ;menu.c: 51: }
+"29
+[; ;menu.c: 29: }
 [e :UE 371 ]
+}
+"31
+[; ;menu.c: 31: void menu_actions(int action)
+[v _menu_actions `(v ~T0 @X0 1 ef1`i ]
+"32
+[; ;menu.c: 32: {
+{
+[e :U _menu_actions ]
+"31
+[; ;menu.c: 31: void menu_actions(int action)
+[v _action `i ~T0 @X0 1 r1 ]
+"32
+[; ;menu.c: 32: {
+[f ]
+"37
+[; ;menu.c: 37:     if (action == 0)
+[e $ ! == _action -> 0 `i 375  ]
+"38
+[; ;menu.c: 38:     {
+{
+"39
+[; ;menu.c: 39:         micro_manger();
+[e ( _micro_manger ..  ]
+"40
+[; ;menu.c: 40:     }
+}
+[e :U 375 ]
+"43
+[; ;menu.c: 43:     glcd_SetCursor(0,6);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
+"44
+[; ;menu.c: 44:  glcd_WriteString("ACTION", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"45
+[; ;menu.c: 45: }
+[e :UE 374 ]
 }
 [a 1C 65 67 84 73 79 78 0 ]

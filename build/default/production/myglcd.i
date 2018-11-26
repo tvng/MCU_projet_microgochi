@@ -6370,7 +6370,11 @@ int toupper_l(int, locale_t);
 int isascii(int);
 int toascii(int);
 # 6 "./glcd.h" 2
-# 43 "./glcd.h"
+
+
+# 1 "./myglcd.h" 1
+# 8 "./glcd.h" 2
+# 45 "./glcd.h"
 extern void glcd_Init(unsigned char mode);
 extern void glcd_WriteByte(unsigned char side, unsigned char data);
 extern unsigned char glcd_ReadByte(unsigned char side);
@@ -6398,7 +6402,7 @@ void glcd_icon8X8(const unsigned char ch[], unsigned char color);
 
 
 
-unsigned char cursor[]=
+ char cursor[]=
 {
     1,1,1,
     1,1,1,
@@ -6480,7 +6484,6 @@ const unsigned char test[]={
 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-# 172 "./myglcd.h"
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 5 "myglcd.c" 2
 
