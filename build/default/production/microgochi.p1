@@ -519,6 +519,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _mGogo
 -> -> -> 0 `i `*v `*S362
 ]
+"22
+[; ;./main.h: 22: unsigned int cpt=0;
+[v _cpt `ui ~T0 @X0 1 e ]
+[i _cpt
+-> -> 0 `i `ui
+]
 "12 microgochi.c
 [; ;microgochi.c: 12: struct Microgochi * microgochi_init(struct Microgochi *m)
 [v _microgochi_init `(*S362 ~T0 @X0 1 ef1`*S362 ]

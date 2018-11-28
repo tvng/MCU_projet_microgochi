@@ -1,7 +1,9 @@
 /* 
- * REPRINT FROM CAMPUS !!
+ * displayObject : REPRINT FROM CAMPUS !!
  *
- * Created on 25 novembre 2018, 22:24
+ * 
+ * .c pour gerer le fonctionnement de l'affichage
+ * 
  */#include "myglcd.h"
 
 /*

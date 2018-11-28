@@ -9,6 +9,7 @@
 #define	SCREEN_H
 
 void screen_credits(void);
+void screen_afficher_stats();
 
 #endif	/* SCREEN_H */
 

@@ -5644,6 +5644,7 @@ char *tempnam(const char *, const char *);
 # 12 "./main.h" 2
 # 21 "./main.h"
 struct Microgochi *mGogo=((void*)0);
+unsigned int cpt=0;
 # 9 "microgochi.c" 2
 
 

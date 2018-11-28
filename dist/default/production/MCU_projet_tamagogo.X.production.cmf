@@ -12,32 +12,33 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\MCU_projet_tamagogo.X.production.o
-cinit CODE 0 6550 6550 32 1
-text0 CODE 0 6780 6780 86 1
-text1 CODE 0 6CC8 6CC8 F2 1
-text2 CODE 0 6648 6648 5A 1
-text3 CODE 0 695E 695E CE 1
+cinit CODE 0 64BE 64BE 36 1
+text0 CODE 0 670E 670E 86 1
+text1 CODE 0 6BB6 6BB6 F2 1
+text2 CODE 0 65D6 65D6 5A 1
+text3 CODE 0 684C 684C CE 1
 text4 CODE 0 7150 7150 1B2 1
-text5 CODE 0 6806 6806 A0 1
+text5 CODE 0 6CA8 6CA8 112 1
 text6 CODE 0 6DBA 6DBA 126 1
-text7 CODE 0 6B02 6B02 DA 1
-text8 CODE 0 6602 6602 46 1
-text9 CODE 0 6BDC 6BDC EC 1
-text10 CODE 0 6582 6582 3A 1
-text11 CODE 0 6520 6520 12 1
-text12 CODE 0 66A2 66A2 6E 1
-text13 CODE 0 6EE0 6EE0 12C 1
-text14 CODE 0 700C 700C 144 1
-text15 CODE 0 6710 6710 70 1
-text16 CODE 0 6A2C 6A2C D6 1
-text17 CODE 0 68A6 68A6 B8 1
-text18 CODE 0 65BC 65BC 46 1
-idataCOMRAM CODE 0 6532 6532 1E 1
+text7 CODE 0 69F0 69F0 DA 1
+text8 CODE 0 653A 653A 46 1
+text9 CODE 0 6ACA 6ACA EC 1
+text10 CODE 0 6580 6580 56 1
+text11 CODE 0 648C 648C 2 1
+text12 CODE 0 648E 648E 12 1
+text13 CODE 0 6630 6630 6E 1
+text14 CODE 0 6EE0 6EE0 12C 1
+text15 CODE 0 700C 700C 144 1
+text16 CODE 0 669E 669E 70 1
+text17 CODE 0 691A 691A D6 1
+text18 CODE 0 6794 6794 B8 1
+text19 CODE 0 64F4 64F4 46 1
+idataCOMRAM CODE 0 64A0 64A0 1E 1
 cstackCOMRAM COMRAM 1 1 1 3A 1
 dataCOMRAM COMRAM 1 3B 3B 1E 1
-bssCOMRAM COMRAM 1 59 59 4 1
+bssCOMRAM COMRAM 1 59 59 6 1
 mediumconst MEDIUMCONST 0 7302 7302 CFE 1
-$C:\Users\acajo\AppData\Local\Temp\s1po.o
+$C:\Users\acajo\AppData\Local\Temp\st0.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -57,14 +58,14 @@ BANK4 400-4FF 1
 BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
-CONST 4-651F 1
+CONST 4-648B 1
 STACK 60-7FF 1
-SMALLCONST 800-651F 1
-CODE 4-651F 1
-BIGRAM 5D-7FF 1
-COMRAM 5D-5F 1
+SMALLCONST 800-648B 1
+CODE 4-648B 1
+BIGRAM 5F-7FF 1
+COMRAM 5F-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 800-651F 1
+MEDIUMCONST 800-648B 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -79,251 +80,259 @@ MEDIUMCONST 800-651F 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MCU_projet_tamagogo.X.production.o
-65BC text18 CODE >395:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65BE text18 CODE >397:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65CE text18 CODE >399:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65D0 text18 CODE >400:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65D2 text18 CODE >401:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65D6 text18 CODE >402:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65D6 text18 CODE >404:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65D8 text18 CODE >405:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65DE text18 CODE >406:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65DE text18 CODE >408:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65E2 text18 CODE >409:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65E4 text18 CODE >411:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65E8 text18 CODE >415:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65EA text18 CODE >417:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65F2 text18 CODE >418:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65F4 text18 CODE >420:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65FC text18 CODE >423:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-65FE text18 CODE >424:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6600 text18 CODE >425:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68A6 text17 CODE >527:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68A8 text17 CODE >531:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68C4 text17 CODE >533:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68C6 text17 CODE >534:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68D0 text17 CODE >535:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68DA text17 CODE >536:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68E6 text17 CODE >537:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68F2 text17 CODE >538:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-68F4 text17 CODE >540:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6910 text17 CODE >542:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6920 text17 CODE >543:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6930 text17 CODE >544:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6946 text17 CODE >545:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-695C text17 CODE >546:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A2C text16 CODE >697:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A2C text16 CODE >700:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A34 text16 CODE >705:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A50 text16 CODE >708:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A6C text16 CODE >710:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A6E text16 CODE >711:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A78 text16 CODE >712:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A84 text16 CODE >713:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A86 text16 CODE >716:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6AA2 text16 CODE >719:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6ABA text16 CODE >720:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6ABE text16 CODE >721:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6AD4 text16 CODE >722:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6AEA text16 CODE >723:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6AFC text16 CODE >725:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6AFE text16 CODE >726:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B00 text16 CODE >727:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6710 text15 CODE >551:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6712 text15 CODE >553:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6716 text15 CODE >555:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-673A text15 CODE >556:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-673E text15 CODE >558:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6742 text15 CODE >559:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6746 text15 CODE >561:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6756 text15 CODE >563:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-675A text15 CODE >564:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6762 text15 CODE >565:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6762 text15 CODE >567:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6764 text15 CODE >568:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6770 text15 CODE >569:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-677C text15 CODE >570:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-677E text15 CODE >571:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-700C text14 CODE >624:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-700E text14 CODE >627:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7012 text14 CODE >629:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7024 text14 CODE >631:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7028 text14 CODE >632:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-702E text14 CODE >633:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7032 text14 CODE >634:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7032 text14 CODE >636:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7042 text14 CODE >638:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7046 text14 CODE >639:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-704C text14 CODE >640:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7050 text14 CODE >641:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7050 text14 CODE >642:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7058 text14 CODE >644:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-705C text14 CODE >646:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7078 text14 CODE >648:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7088 text14 CODE >650:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-708C text14 CODE >651:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7090 text14 CODE >652:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7092 text14 CODE >653:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-709E text14 CODE >654:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70AA text14 CODE >655:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70B0 text14 CODE >656:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70B0 text14 CODE >657:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70C0 text14 CODE >658:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70F8 text14 CODE >659:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-70F8 text14 CODE >660:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7132 text14 CODE >661:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7134 text14 CODE >662:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-714A text14 CODE >663:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-714E text14 CODE >664:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6EE0 text13 CODE >576:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6EE2 text13 CODE >579:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6EE6 text13 CODE >582:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6EF8 text13 CODE >584:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6EFC text13 CODE >585:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F02 text13 CODE >586:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F06 text13 CODE >587:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F06 text13 CODE >589:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F16 text13 CODE >591:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F1A text13 CODE >592:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F20 text13 CODE >593:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F24 text13 CODE >594:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F24 text13 CODE >595:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F2C text13 CODE >597:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F38 text13 CODE >599:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F54 text13 CODE >602:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F64 text13 CODE >604:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F68 text13 CODE >605:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F6C text13 CODE >606:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F6E text13 CODE >607:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F7A text13 CODE >608:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F86 text13 CODE >609:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F8C text13 CODE >610:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F8C text13 CODE >611:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6F9C text13 CODE >612:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6FC4 text13 CODE >613:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6FC4 text13 CODE >614:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6FEE text13 CODE >615:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6FF0 text13 CODE >616:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-7006 text13 CODE >617:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-700A text13 CODE >618:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66A2 text12 CODE >670:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66A2 text12 CODE >672:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66A6 text12 CODE >674:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66B6 text12 CODE >675:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66CE text12 CODE >676:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66CE text12 CODE >677:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66E6 text12 CODE >678:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66EE text12 CODE >672:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-66EE text12 CODE >679:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-670E text12 CODE >680:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6520 text11 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6520 text11 CODE >26:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6530 text11 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6582 text10 CODE >31:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6582 text10 CODE >37:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6594 text10 CODE >39:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-659C text10 CODE >40:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-659C text10 CODE >43:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-65A6 text10 CODE >44:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-65BA text10 CODE >45:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6BDC text9 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BDC text9 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BE0 text9 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BEE text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BF6 text9 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BFE text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6BFE text9 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C0C text9 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C14 text9 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C1C text9 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C1C text9 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C24 text9 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C36 text9 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C3A text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C3E text9 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C44 text9 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C4A text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C4A text9 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C60 text9 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C60 text9 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C66 text9 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C7C text9 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C84 text9 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C8A text9 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C8A text9 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C90 text9 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C9E text9 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6C9E text9 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6CAE text9 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6CBA text9 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6CC6 text9 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-6602 text8 CODE >431:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6604 text8 CODE >435:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6614 text8 CODE >437:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6616 text8 CODE >438:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6618 text8 CODE >439:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-661C text8 CODE >440:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-661C text8 CODE >442:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-661E text8 CODE >443:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6620 text8 CODE >444:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6620 text8 CODE >446:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6622 text8 CODE >447:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6624 text8 CODE >451:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6626 text8 CODE >453:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-662E text8 CODE >455:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6632 text8 CODE >456:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6634 text8 CODE >458:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-663C text8 CODE >459:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-663E text8 CODE >460:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6640 text8 CODE >462:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6646 text8 CODE >463:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B02 text7 CODE >468:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B04 text7 CODE >471:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B08 text7 CODE >473:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B18 text7 CODE >475:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B1C text7 CODE >476:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B24 text7 CODE >477:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B24 text7 CODE >478:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B26 text7 CODE >480:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B28 text7 CODE >481:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B2A text7 CODE >482:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B34 text7 CODE >483:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B54 text7 CODE >485:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B56 text7 CODE >487:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B5C text7 CODE >488:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B64 text7 CODE >490:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B66 text7 CODE >492:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B70 text7 CODE >494:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6B80 text7 CODE >495:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6BA6 text7 CODE >496:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6BA6 text7 CODE >497:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6BCE text7 CODE >499:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6BD0 text7 CODE >501:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6BDA text7 CODE >502:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6DBA text6 CODE >10:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DBA text6 CODE >13:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DC2 text6 CODE >14:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DCA text6 CODE >15:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DD2 text6 CODE >17:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DDE text6 CODE >19:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6DEA text6 CODE >20:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E18 text6 CODE >21:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E26 text6 CODE >22:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E2A text6 CODE >23:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E58 text6 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E6A text6 CODE >25:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E6E text6 CODE >26:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6E72 text6 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6EA8 text6 CODE >28:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6EDE text6 CODE >29:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
-6806 text5 CODE >16:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6806 text5 CODE >21:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-681A text5 CODE >23:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-684E text5 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6852 text5 CODE >25:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-6852 text5 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-68A4 text5 CODE >28:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
-68A4 text5 CODE >29:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+64F4 text19 CODE >395:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+64F6 text19 CODE >397:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6506 text19 CODE >399:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6508 text19 CODE >400:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+650A text19 CODE >401:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+650E text19 CODE >402:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+650E text19 CODE >404:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6510 text19 CODE >405:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6516 text19 CODE >406:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6516 text19 CODE >408:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+651A text19 CODE >409:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+651C text19 CODE >411:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6520 text19 CODE >415:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6522 text19 CODE >417:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+652A text19 CODE >418:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+652C text19 CODE >420:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6534 text19 CODE >423:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6536 text19 CODE >424:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6538 text19 CODE >425:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6794 text18 CODE >527:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6796 text18 CODE >531:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67B2 text18 CODE >533:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67B4 text18 CODE >534:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67BE text18 CODE >535:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67C8 text18 CODE >536:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67D4 text18 CODE >537:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67E0 text18 CODE >538:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67E2 text18 CODE >540:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+67FE text18 CODE >542:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+680E text18 CODE >543:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+681E text18 CODE >544:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6834 text18 CODE >545:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+684A text18 CODE >546:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+691A text17 CODE >697:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+691A text17 CODE >700:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6922 text17 CODE >705:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+693E text17 CODE >708:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+695A text17 CODE >710:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+695C text17 CODE >711:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6966 text17 CODE >712:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6972 text17 CODE >713:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6974 text17 CODE >716:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6990 text17 CODE >719:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69A8 text17 CODE >720:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69AC text17 CODE >721:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69C2 text17 CODE >722:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69D8 text17 CODE >723:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69EA text17 CODE >725:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69EC text17 CODE >726:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69EE text17 CODE >727:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+669E text16 CODE >551:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66A0 text16 CODE >553:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66A4 text16 CODE >555:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66C8 text16 CODE >556:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66CC text16 CODE >558:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66D0 text16 CODE >559:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66D4 text16 CODE >561:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66E4 text16 CODE >563:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66E8 text16 CODE >564:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66F0 text16 CODE >565:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66F0 text16 CODE >567:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66F2 text16 CODE >568:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+66FE text16 CODE >569:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+670A text16 CODE >570:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+670C text16 CODE >571:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+700C text15 CODE >624:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+700E text15 CODE >627:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7012 text15 CODE >629:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7024 text15 CODE >631:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7028 text15 CODE >632:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+702E text15 CODE >633:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7032 text15 CODE >634:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7032 text15 CODE >636:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7042 text15 CODE >638:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7046 text15 CODE >639:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+704C text15 CODE >640:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7050 text15 CODE >641:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7050 text15 CODE >642:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7058 text15 CODE >644:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+705C text15 CODE >646:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7078 text15 CODE >648:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7088 text15 CODE >650:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+708C text15 CODE >651:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7090 text15 CODE >652:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7092 text15 CODE >653:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+709E text15 CODE >654:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70AA text15 CODE >655:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70B0 text15 CODE >656:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70B0 text15 CODE >657:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70C0 text15 CODE >658:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70F8 text15 CODE >659:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+70F8 text15 CODE >660:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7132 text15 CODE >661:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7134 text15 CODE >662:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+714A text15 CODE >663:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+714E text15 CODE >664:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6EE0 text14 CODE >576:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6EE2 text14 CODE >579:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6EE6 text14 CODE >582:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6EF8 text14 CODE >584:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6EFC text14 CODE >585:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F02 text14 CODE >586:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F06 text14 CODE >587:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F06 text14 CODE >589:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F16 text14 CODE >591:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F1A text14 CODE >592:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F20 text14 CODE >593:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F24 text14 CODE >594:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F24 text14 CODE >595:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F2C text14 CODE >597:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F38 text14 CODE >599:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F54 text14 CODE >602:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F64 text14 CODE >604:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F68 text14 CODE >605:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F6C text14 CODE >606:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F6E text14 CODE >607:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F7A text14 CODE >608:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F86 text14 CODE >609:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F8C text14 CODE >610:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F8C text14 CODE >611:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6F9C text14 CODE >612:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6FC4 text14 CODE >613:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6FC4 text14 CODE >614:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6FEE text14 CODE >615:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6FF0 text14 CODE >616:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+7006 text14 CODE >617:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+700A text14 CODE >618:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6630 text13 CODE >670:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6630 text13 CODE >672:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6634 text13 CODE >674:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6644 text13 CODE >675:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+665C text13 CODE >676:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+665C text13 CODE >677:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6674 text13 CODE >678:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+667C text13 CODE >672:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+667C text13 CODE >679:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+669C text13 CODE >680:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+648E text12 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+648E text12 CODE >26:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+649E text12 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+648C text11 CODE >53:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+648C text11 CODE >55:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6580 text10 CODE >38:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6580 text10 CODE >43:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6592 text10 CODE >45:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+659A text10 CODE >46:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+659A text10 CODE >47:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+65AE text10 CODE >49:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+65B6 text10 CODE >50:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+65B6 text10 CODE >53:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+65C0 text10 CODE >54:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+65D4 text10 CODE >55:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6ACA text9 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6ACA text9 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6ACE text9 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6ADC text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6AE4 text9 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6AEC text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6AEC text9 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6AFA text9 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B02 text9 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B0A text9 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B0A text9 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B12 text9 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B24 text9 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B28 text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B2C text9 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B32 text9 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B38 text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B38 text9 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B4E text9 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B4E text9 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B54 text9 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B6A text9 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B72 text9 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B78 text9 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B78 text9 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B7E text9 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B8C text9 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B8C text9 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6B9C text9 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6BA8 text9 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+6BB4 text9 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+653A text8 CODE >431:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+653C text8 CODE >435:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+654C text8 CODE >437:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+654E text8 CODE >438:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6550 text8 CODE >439:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6554 text8 CODE >440:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6554 text8 CODE >442:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6556 text8 CODE >443:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6558 text8 CODE >444:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6558 text8 CODE >446:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+655A text8 CODE >447:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+655C text8 CODE >451:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+655E text8 CODE >453:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6566 text8 CODE >455:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+656A text8 CODE >456:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+656C text8 CODE >458:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6574 text8 CODE >459:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6576 text8 CODE >460:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6578 text8 CODE >462:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+657E text8 CODE >463:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69F0 text7 CODE >468:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69F2 text7 CODE >471:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+69F6 text7 CODE >473:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A06 text7 CODE >475:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A0A text7 CODE >476:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A12 text7 CODE >477:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A12 text7 CODE >478:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A14 text7 CODE >480:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A16 text7 CODE >481:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A18 text7 CODE >482:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A22 text7 CODE >483:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A42 text7 CODE >485:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A44 text7 CODE >487:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A4A text7 CODE >488:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A52 text7 CODE >490:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A54 text7 CODE >492:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A5E text7 CODE >494:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A6E text7 CODE >495:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A94 text7 CODE >496:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6A94 text7 CODE >497:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6ABC text7 CODE >499:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6ABE text7 CODE >501:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6AC8 text7 CODE >502:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6DBA text6 CODE >12:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DBA text6 CODE >15:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DC2 text6 CODE >16:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DCA text6 CODE >17:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DD2 text6 CODE >19:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DDE text6 CODE >21:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6DEA text6 CODE >22:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E18 text6 CODE >23:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E26 text6 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E2A text6 CODE >25:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E58 text6 CODE >26:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E6A text6 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E6E text6 CODE >28:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6E72 text6 CODE >29:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6EA8 text6 CODE >30:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6EDE text6 CODE >31:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
+6CA8 text5 CODE >17:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6CA8 text5 CODE >24:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6CBC text5 CODE >26:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6CF0 text5 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6CF4 text5 CODE >28:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6D10 text5 CODE >30:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6D5E text5 CODE >31:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6D62 text5 CODE >32:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6D62 text5 CODE >34:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6DB4 text5 CODE >35:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
+6DB8 text5 CODE >36:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 7150 text4 CODE >18:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 7150 text4 CODE >21:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 7156 text4 CODE >23:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
@@ -363,111 +372,113 @@ $dist/default/production\MCU_projet_tamagogo.X.production.o
 72E0 text4 CODE >34:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 72E0 text4 CODE >79:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 7300 text4 CODE >80:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
-695E text3 CODE >341:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6960 text3 CODE >343:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6962 text3 CODE >344:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6966 text3 CODE >345:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-696A text3 CODE >347:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-696E text3 CODE >348:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6972 text3 CODE >350:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6976 text3 CODE >351:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-697A text3 CODE >356:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-697E text3 CODE >357:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6980 text3 CODE >359:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6990 text3 CODE >360:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6992 text3 CODE >362:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6994 text3 CODE >363:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6996 text3 CODE >364:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6998 text3 CODE >365:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-699A text3 CODE >368:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69A2 text3 CODE >369:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69AC text3 CODE >370:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69B6 text3 CODE >371:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69C0 text3 CODE >372:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69CA text3 CODE >373:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69D4 text3 CODE >374:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69DE text3 CODE >376:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69EE text3 CODE >378:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69F2 text3 CODE >379:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69F4 text3 CODE >380:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-69FE text3 CODE >381:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A08 text3 CODE >382:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A0C text3 CODE >383:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A0C text3 CODE >385:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A16 text3 CODE >386:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A24 text3 CODE >387:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A24 text3 CODE >389:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6A2A text3 CODE >390:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
-6648 text2 CODE >12:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6648 text2 CODE >14:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6654 text2 CODE >15:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6664 text2 CODE >16:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6674 text2 CODE >17:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6684 text2 CODE >18:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6694 text2 CODE >20:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-66A0 text2 CODE >22:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
-6CC8 text1 CODE >25:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6CC8 text1 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6CCE text1 CODE >32:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6CD8 text1 CODE >33:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6CEC text1 CODE >34:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6CF6 text1 CODE >35:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D0A text1 CODE >36:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D14 text1 CODE >37:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D28 text1 CODE >39:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D32 text1 CODE >40:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D46 text1 CODE >41:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D50 text1 CODE >42:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D64 text1 CODE >43:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D6E text1 CODE >44:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D82 text1 CODE >45:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6D8C text1 CODE >46:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6DA0 text1 CODE >48:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6DB8 text1 CODE >50:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
-6780 text0 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6780 text0 CODE >29:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6784 text0 CODE >32:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6786 text0 CODE >33:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-678A text0 CODE >35:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-678E text0 CODE >36:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6792 text0 CODE >38:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-679A text0 CODE >40:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67A0 text0 CODE >42:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67A4 text0 CODE >46:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67B8 text0 CODE >49:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67BC text0 CODE >54:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67C0 text0 CODE >60:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67DC text0 CODE >65:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67E8 text0 CODE >67:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67EC text0 CODE >42:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-67EC text0 CODE >69:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6802 text0 CODE >72:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
-6550 cinit CODE >5963:C:\Users\acajo\AppData\Local\Temp\s1po.
-6550 cinit CODE >5965:C:\Users\acajo\AppData\Local\Temp\s1po.
-6550 cinit CODE >5968:C:\Users\acajo\AppData\Local\Temp\s1po.
-6550 cinit CODE >5995:C:\Users\acajo\AppData\Local\Temp\s1po.
-6552 cinit CODE >5996:C:\Users\acajo\AppData\Local\Temp\s1po.
-6554 cinit CODE >5997:C:\Users\acajo\AppData\Local\Temp\s1po.
-6556 cinit CODE >5998:C:\Users\acajo\AppData\Local\Temp\s1po.
-6558 cinit CODE >5999:C:\Users\acajo\AppData\Local\Temp\s1po.
-655A cinit CODE >6000:C:\Users\acajo\AppData\Local\Temp\s1po.
-655C cinit CODE >6001:C:\Users\acajo\AppData\Local\Temp\s1po.
-6560 cinit CODE >6002:C:\Users\acajo\AppData\Local\Temp\s1po.
-6564 cinit CODE >6003:C:\Users\acajo\AppData\Local\Temp\s1po.
-6564 cinit CODE >6004:C:\Users\acajo\AppData\Local\Temp\s1po.
-6566 cinit CODE >6005:C:\Users\acajo\AppData\Local\Temp\s1po.
-656A cinit CODE >6006:C:\Users\acajo\AppData\Local\Temp\s1po.
-656C cinit CODE >6007:C:\Users\acajo\AppData\Local\Temp\s1po.
-656E cinit CODE >6008:C:\Users\acajo\AppData\Local\Temp\s1po.
-6570 cinit CODE >6012:C:\Users\acajo\AppData\Local\Temp\s1po.
-6572 cinit CODE >6013:C:\Users\acajo\AppData\Local\Temp\s1po.
-6574 cinit CODE >6014:C:\Users\acajo\AppData\Local\Temp\s1po.
-6576 cinit CODE >6015:C:\Users\acajo\AppData\Local\Temp\s1po.
-6578 cinit CODE >6021:C:\Users\acajo\AppData\Local\Temp\s1po.
-6578 cinit CODE >6024:C:\Users\acajo\AppData\Local\Temp\s1po.
-657A cinit CODE >6025:C:\Users\acajo\AppData\Local\Temp\s1po.
-657C cinit CODE >6026:C:\Users\acajo\AppData\Local\Temp\s1po.
-657E cinit CODE >6027:C:\Users\acajo\AppData\Local\Temp\s1po.
+684C text3 CODE >341:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+684E text3 CODE >343:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6850 text3 CODE >344:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6854 text3 CODE >345:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6858 text3 CODE >347:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+685C text3 CODE >348:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6860 text3 CODE >350:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6864 text3 CODE >351:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6868 text3 CODE >356:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+686C text3 CODE >357:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+686E text3 CODE >359:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+687E text3 CODE >360:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6880 text3 CODE >362:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6882 text3 CODE >363:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6884 text3 CODE >364:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6886 text3 CODE >365:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6888 text3 CODE >368:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6890 text3 CODE >369:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+689A text3 CODE >370:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68A4 text3 CODE >371:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68AE text3 CODE >372:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68B8 text3 CODE >373:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68C2 text3 CODE >374:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68CC text3 CODE >376:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68DC text3 CODE >378:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68E0 text3 CODE >379:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68E2 text3 CODE >380:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68EC text3 CODE >381:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68F6 text3 CODE >382:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68FA text3 CODE >383:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+68FA text3 CODE >385:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6904 text3 CODE >386:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6912 text3 CODE >387:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6912 text3 CODE >389:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+6918 text3 CODE >390:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
+65D6 text2 CODE >12:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+65D6 text2 CODE >14:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+65E2 text2 CODE >15:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+65F2 text2 CODE >16:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+6602 text2 CODE >17:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+6612 text2 CODE >18:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+6622 text2 CODE >20:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+662E text2 CODE >22:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
+6BB6 text1 CODE >25:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BB6 text1 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BBC text1 CODE >32:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BC6 text1 CODE >33:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BDA text1 CODE >34:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BE4 text1 CODE >35:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6BF8 text1 CODE >36:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C02 text1 CODE >37:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C16 text1 CODE >39:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C20 text1 CODE >40:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C34 text1 CODE >41:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C3E text1 CODE >42:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C52 text1 CODE >43:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C5C text1 CODE >44:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C70 text1 CODE >45:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C7A text1 CODE >46:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6C8E text1 CODE >48:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+6CA6 text1 CODE >50:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
+670E text0 CODE >27:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+670E text0 CODE >29:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6712 text0 CODE >32:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6714 text0 CODE >33:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6718 text0 CODE >35:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+671C text0 CODE >36:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6720 text0 CODE >45:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6728 text0 CODE >47:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+672E text0 CODE >49:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6732 text0 CODE >53:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6746 text0 CODE >56:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+674A text0 CODE >61:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+674E text0 CODE >67:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+676A text0 CODE >72:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6776 text0 CODE >74:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+677A text0 CODE >49:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+677A text0 CODE >76:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+6790 text0 CODE >79:D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
+64BE cinit CODE >5964:C:\Users\acajo\AppData\Local\Temp\st0.
+64BE cinit CODE >5966:C:\Users\acajo\AppData\Local\Temp\st0.
+64BE cinit CODE >5969:C:\Users\acajo\AppData\Local\Temp\st0.
+64BE cinit CODE >6000:C:\Users\acajo\AppData\Local\Temp\st0.
+64C0 cinit CODE >6001:C:\Users\acajo\AppData\Local\Temp\st0.
+64C2 cinit CODE >6002:C:\Users\acajo\AppData\Local\Temp\st0.
+64C4 cinit CODE >6003:C:\Users\acajo\AppData\Local\Temp\st0.
+64C6 cinit CODE >6004:C:\Users\acajo\AppData\Local\Temp\st0.
+64C8 cinit CODE >6005:C:\Users\acajo\AppData\Local\Temp\st0.
+64CA cinit CODE >6006:C:\Users\acajo\AppData\Local\Temp\st0.
+64CE cinit CODE >6007:C:\Users\acajo\AppData\Local\Temp\st0.
+64D2 cinit CODE >6008:C:\Users\acajo\AppData\Local\Temp\st0.
+64D2 cinit CODE >6009:C:\Users\acajo\AppData\Local\Temp\st0.
+64D4 cinit CODE >6010:C:\Users\acajo\AppData\Local\Temp\st0.
+64D8 cinit CODE >6011:C:\Users\acajo\AppData\Local\Temp\st0.
+64DA cinit CODE >6012:C:\Users\acajo\AppData\Local\Temp\st0.
+64DC cinit CODE >6013:C:\Users\acajo\AppData\Local\Temp\st0.
+64DE cinit CODE >6017:C:\Users\acajo\AppData\Local\Temp\st0.
+64E0 cinit CODE >6018:C:\Users\acajo\AppData\Local\Temp\st0.
+64E2 cinit CODE >6019:C:\Users\acajo\AppData\Local\Temp\st0.
+64E4 cinit CODE >6020:C:\Users\acajo\AppData\Local\Temp\st0.
+64E6 cinit CODE >6021:C:\Users\acajo\AppData\Local\Temp\st0.
+64E8 cinit CODE >6022:C:\Users\acajo\AppData\Local\Temp\st0.
+64EA cinit CODE >6028:C:\Users\acajo\AppData\Local\Temp\st0.
+64EA cinit CODE >6031:C:\Users\acajo\AppData\Local\Temp\st0.
+64EC cinit CODE >6032:C:\Users\acajo\AppData\Local\Temp\st0.
+64EE cinit CODE >6033:C:\Users\acajo\AppData\Local\Temp\st0.
+64F0 cinit CODE >6034:C:\Users\acajo\AppData\Local\Temp\st0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -480,83 +491,85 @@ $dist/default/production\MCU_projet_tamagogo.X.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_x 5C 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-_y 5B 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
+_x 5E 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
+_y 5D 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 ___awdiv@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lmediumconst 7302 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hspace_0 30000E 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__Hspace_1 5D 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
+__Hspace_1 5F 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_Image@i E 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_Image@j D 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\MCU_projet_tamagogo.X.production.o
-__mediumconst 7302 0 MEDIUMCONST 0 mediumconst C:\Users\acajo\AppData\Local\Temp\s1po.o
+__mediumconst 7302 0 MEDIUMCONST 0 mediumconst C:\Users\acajo\AppData\Local\Temp\st0.o
 ?_microgochi_init 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_WriteByte 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_micro_manger 6532 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_micro_manger 64A0 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
 _ou 7FC6 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_microgochi_init 66A2 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_microgochi_init 6630 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteByte@data 9 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteByte@side A 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\MCU_projet_tamagogo.X.production.o
 _LATD F8C 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\s1po.o
-_main 6780 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\st0.o
+_main 670E 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
 _test 7B03 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
-start 0 0 CODE 0 init C:\Users\acajo\AppData\Local\Temp\s1po.o
+start 0 0 CODE 0 init C:\Users\acajo\AppData\Local\Temp\st0.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-_screen_credits 6CC8 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
+_screen_credits 6BB6 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_FillScreen 68A6 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_FillScreen 6794 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_WriteChar3x6 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_WriteChar8X8 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-_menu_actions 6582 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
+_menu_actions 6580 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_menu_cursor 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_SetCursor 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_PlotPixel 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 displayObject@nb 21 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_WriteString 6710 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\s1po.o
-intlevel0 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\s1po.o
-intlevel1 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\s1po.o
-intlevel2 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\s1po.o
-intlevel3 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\s1po.o
+__end_of_glcd_WriteString 669E 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\st0.o
+intlevel0 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\st0.o
+intlevel1 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\st0.o
+intlevel2 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\st0.o
+intlevel3 0 0 CODE 0 text C:\Users\acajo\AppData\Local\Temp\st0.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 displayObject@tab 12 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_WriteString 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_ReadByte 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\MCU_projet_tamagogo.X.production.o
-_microgochi_init 6648 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
+_microgochi_init 65D6 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
 ___awdiv@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\MCU_projet_tamagogo.X.production.o
-__pidataCOMRAM 6532 0 CODE 0 idataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
+__pidataCOMRAM 64A0 0 CODE 0 idataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_menu_actions 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_screen_afficher_stats 648E 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
 main@bool_jeu 39 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_screen_credits 6DBA 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_screen_credits 6CA8 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\s1po.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\s1po.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\st0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\acajo\AppData\Local\Temp\st0.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_PlotPixel@color C 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar3x6@i 10 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar8X8@i 12 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_ReadByte 6648 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_ReadByte 6580 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
+_screen_afficher_stats 648C 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
 game_play@action 32 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_menu_actions 65BC 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_menu_actions 65D6 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
 _Font3x6 7F03 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 _Font8x8 7303 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 ___awdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of___awdiv 6CC8 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of___awdiv 6BB6 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar3x6@ch F 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_FillScreen 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_Init@mode F 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -564,9 +577,9 @@ __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\MCU_projet_tamagogo
 glcd_WriteChar8X8@ch 10 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar3x6@color B 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_WriteChar3x6 7150 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_WriteChar8X8 700C 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
-start_initialization 6550 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_WriteChar3x6 7150 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_WriteChar8X8 700C 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
+start_initialization 64BE 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteString@font 16 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -600,8 +613,8 @@ __Htext8 0 0 ABS 0 text8 dist/default/production\MCU_projet_tamagogo.X.productio
 __Htext9 0 0 ABS 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\MCU_projet_tamagogo.X.production.o
-_menu_cursor 6806 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\acajo\AppData\Local\Temp\s1po.o
+_menu_cursor 6CA8 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\acajo\AppData\Local\Temp\st0.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -654,19 +667,20 @@ __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\MCU_projet_tamago
 __Hintret 0 0 ABS 0 intret dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\MCU_projet_tamagogo.X.production.o
 __S0 30000E 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__S1 5D 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
+__S1 5F 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_WriteByte 65BC 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
+_cpt 59 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_WriteByte 64F4 0 CODE 0 text19 dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteString@str 14 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_WriteChar3x6 700C 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_WriteChar8X8 6EE0 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_Image 6A2C 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_WriteChar3x6 700C 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_WriteChar8X8 6EE0 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_Image 691A 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
 _cursor 3B 0 COMRAM 1 dataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 displayObject@height 18 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_SetCursor 6710 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_SetCursor 669E 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar3x6@side 11 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar3x6@xpos E 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -674,7 +688,7 @@ __Hramtop 800 0 RAM 0 ramtop dist/default/production\MCU_projet_tamagogo.X.produ
 glcd_WriteChar8X8@side 13 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar8X8@xpos 11 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_PlotPixel 6B02 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_PlotPixel 69F0 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\MCU_projet_tamagogo.X.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -686,34 +700,37 @@ __Htext15 0 0 ABS 0 text15 dist/default/production\MCU_projet_tamagogo.X.product
 __Htext16 0 0 ABS 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Htext17 0 0 ABS 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Htext18 0 0 ABS 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\MCU_projet_tamagogo.X.production.o
 _displayObject 6DBA 0 CODE 0 text6 dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_WriteByte 6602 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext10 6582 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext11 6520 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext12 66A2 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext13 6EE0 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext14 700C 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext15 6710 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext16 6A2C 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext17 68A6 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext18 65BC 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
-___awdiv 6BDC 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_WriteByte 653A 0 CODE 0 text19 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext10 6580 0 CODE 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext11 648C 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext12 648E 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext13 6630 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext14 6EE0 0 CODE 0 text14 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext15 700C 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext16 669E 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext17 691A 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext18 6794 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext19 64F4 0 CODE 0 text19 dist/default/production\MCU_projet_tamagogo.X.production.o
+___awdiv 6ACA 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_screen_credits 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_Image 6B02 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_Image 69F0 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\MCU_projet_tamagogo.X.production.o
 _LATBbits F8A 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
+__size_of_screen_afficher_stats 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_WriteChar8X8@color B 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_SetCursor 6780 0 CODE 0 text15 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_SetCursor 670E 0 CODE 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\MCU_projet_tamagogo.X.production.o
 menu_cursor@action 27 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\s1po.o
-stacklo 60 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\s1po.o
+stackhi 7FF 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\st0.o
+stacklo 60 0 ABS 0 - C:\Users\acajo\AppData\Local\Temp\st0.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_PlotPixel 6BDC 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_PlotPixel 6ACA 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -721,7 +738,7 @@ __Lspace_1 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.
 __Lspace_2 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __pbssCOMRAM 59 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-end_of_initialization 6578 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
+end_of_initialization 64EA 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\MCU_projet_tamagogo.X.production.o
 ___awdiv@quotient 7 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -737,18 +754,18 @@ glcd_PlotPixel@ypos B 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\MCU_projet_tamagogo.X.production.o
 game_play@write 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__pcinit 6550 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
+__pcinit 64BE 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_game_play 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext0 6780 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext1 6CC8 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext2 6648 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext3 695E 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext0 670E 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext1 6BB6 0 CODE 0 text1 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext2 65D6 0 CODE 0 text2 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext3 684C 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
 __ptext4 7150 0 CODE 0 text4 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext5 6806 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext5 6CA8 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
 __ptext6 6DBA 0 CODE 0 text6 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext7 6B02 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext8 6602 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
-__ptext9 6BDC 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext7 69F0 0 CODE 0 text7 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext8 653A 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
+__ptext9 6ACA 0 CODE 0 text9 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\MCU_projet_tamagogo.X.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -759,20 +776,21 @@ __Ltext15 0 0 ABS 0 text15 dist/default/production\MCU_projet_tamagogo.X.product
 __Ltext16 0 0 ABS 0 text16 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Ltext17 0 0 ABS 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
 __Ltext18 0 0 ABS 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_displayObject 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\acajo\AppData\Local\Temp\s1po.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\acajo\AppData\Local\Temp\st0.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\MCU_projet_tamagogo.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\MCU_projet_tamagogo.X.production.o
 microgochi_init@m 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_FillScreen@i D 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_FillScreen@j C 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_menu_cursor 68A6 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_menu_cursor 6DBA 0 CODE 0 text5 dist/default/production\MCU_projet_tamagogo.X.production.o
 _game_play 7150 0 CODE 0 text4 dist/default/production\MCU_projet_tamagogo.X.production.o
 menu_actions@action 18 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of__initialization 6578 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of__initialization 64EA 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_Image@ptr B 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_SetCursor@side C 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_SetCursor@xpos D 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -783,13 +801,13 @@ __Lclrtext 0 0 ABS 0 clrtext dist/default/production\MCU_projet_tamagogo.X.produ
 __end_of_displayObject 6EE0 0 CODE 0 text6 dist/default/production\MCU_projet_tamagogo.X.production.o
 game_play@button_pressed 30 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-_micro_manger 6520 0 CODE 0 text11 dist/default/production\MCU_projet_tamagogo.X.production.o
+_micro_manger 648E 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
 __end_of_Font3x6 7FC6 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 __end_of_Font8x8 7B03 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_FillScreen@color B 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __pmediumconst 7302 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_Init 6A2C 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_main 6806 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_Init 691A 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_main 6794 0 CODE 0 text0 dist/default/production\MCU_projet_tamagogo.X.production.o
 __end_of_test 7F03 0 MEDIUMCONST 0 mediumconst dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_Init 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 _PORTA F80 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -808,14 +826,14 @@ __LRAM 1 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\MCU_projet_tamagogo.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\MCU_projet_tamagogo.X.production.o
-_mGogo 59 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
+_mGogo 5B 0 COMRAM 1 bssCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __size_of_glcd_Image 0 0 ABS 0 - dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_WriteString 66A2 0 CODE 0 text12 dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_Init 695E 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
-__initialization 6550 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
-_glcd_ReadByte 6602 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_WriteString 6630 0 CODE 0 text13 dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_Init 684C 0 CODE 0 text3 dist/default/production\MCU_projet_tamagogo.X.production.o
+__initialization 64BE 0 CODE 0 cinit dist/default/production\MCU_projet_tamagogo.X.production.o
+_glcd_ReadByte 653A 0 CODE 0 text8 dist/default/production\MCU_projet_tamagogo.X.production.o
 __pdataCOMRAM 3B 0 COMRAM 1 dataCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
-__end_of_glcd_FillScreen 695E 0 CODE 0 text17 dist/default/production\MCU_projet_tamagogo.X.production.o
+__end_of_glcd_FillScreen 684C 0 CODE 0 text18 dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_ReadByte@data 2 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 glcd_ReadByte@side 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MCU_projet_tamagogo.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\MCU_projet_tamagogo.X.production.o
@@ -853,29 +871,30 @@ __Hintcode 0 0 CODE 0 intcode dist/default/production\MCU_projet_tamagogo.X.prod
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 6550 6550 32 1
+cinit 0 64BE 64BE 36 1
 idloc 0 200000 200000 8 1
-text0 0 6780 6780 86 1
-text1 0 6CC8 6CC8 F2 1
-text2 0 6648 6648 5A 1
-text3 0 695E 695E CE 1
+text0 0 670E 670E 86 1
+text1 0 6BB6 6BB6 F2 1
+text2 0 65D6 65D6 5A 1
+text3 0 684C 684C CE 1
 text4 0 7150 7150 1B2 1
-text5 0 6806 6806 A0 1
+text5 0 6CA8 6CA8 112 1
 text6 0 6DBA 6DBA 126 1
-text7 0 6B02 6B02 DA 1
-text8 0 6602 6602 46 1
-text9 0 6BDC 6BDC EC 1
-text10 0 6582 6582 3A 1
-text11 0 6520 6520 12 1
-text12 0 66A2 66A2 6E 1
-text13 0 6EE0 6EE0 12C 1
-text14 0 700C 700C 144 1
-text15 0 6710 6710 70 1
-text16 0 6A2C 6A2C D6 1
-text17 0 68A6 68A6 B8 1
-text18 0 65BC 65BC 46 1
-idataCOMRAM 0 6532 6532 1E 1
-cstackCOMRAM 1 1 1 5C 1
+text7 0 69F0 69F0 DA 1
+text8 0 653A 653A 46 1
+text9 0 6ACA 6ACA EC 1
+text10 0 6580 6580 56 1
+text11 0 648C 648C 2 1
+text12 0 648E 648E 12 1
+text13 0 6630 6630 6E 1
+text14 0 6EE0 6EE0 12C 1
+text15 0 700C 700C 144 1
+text16 0 669E 669E 70 1
+text17 0 691A 691A D6 1
+text18 0 6794 6794 B8 1
+text19 0 64F4 64F4 46 1
+idataCOMRAM 0 64A0 64A0 1E 1
+cstackCOMRAM 1 1 1 5E 1
 reset_vec 0 0 0 4 1
 mediumconst 0 7302 7302 CFE 1
 config 0 300000 300000 E 1

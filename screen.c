@@ -2,7 +2,7 @@
  * File:   screen.c
  * Author: Tuong Vi
  *
- * Created on 23 octobre 2018, 17:25
+ * LES FONCTIONS D'AFFICHAGE 
  */
 
 //#include <pic18f4550.h>
@@ -50,5 +50,8 @@ void screen_credits()
 }
 
 
+void screen_afficher_stats()
+{
+}
 
 //void glcd_erase ;
