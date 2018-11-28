@@ -67,17 +67,47 @@ void game_play()
              //si on appuie sur le bouton valider, on lance l'action
             else if (BUTTON_MID == 1)
            {
-                button_pressed=1;
-                menu_actions(action);
+                button_pressed=2;
            } 
         }
          
-        if (BUTTON_LEFT == 0 && BUTTON_MID ==0 && BUTTON_RIGHT == 0)
+        if (BUTTON_LEFT == 0 && BUTTON_MID ==0 && BUTTON_RIGHT == 0 && button_pressed!=0)
         {
+            if (button_pressed==2)
+            {     
+                menu_actions(action);
+                glcd_SetCursor(0,0);	
+                glcd_Image();
+                menu_cursor (action, GLCD_WRITE);  
+            }
             button_pressed=0;
         }         
     }
 }
 
 
+void game_stats()
+{
+    glcd_FillScreen(0); //efface l'ecran
+    glcd_SetCursor(0,0);				//place le curseur
+	glcd_WriteString("Stats:", f8X8, 1);	//ecrit 
+
+    glcd_SetCursor(0,9);		
+	glcd_WriteString("RC2=exit",f8X8,1);
+
+  
+    glcd_SetCursor(80,9);		
+	glcd_WriteString("gni",f8X8,1);
+    int sortie_enable=0;
+    
+    do 
+    {
+        if (BUTTON_MID==1)
+        {
+            sortie_enable=1;
+        }
+    }while(sortie_enable != 1 && BUTTON_MID!=1);
+    
+    glcd_FillScreen(0); //efface l'ecran
+}
 

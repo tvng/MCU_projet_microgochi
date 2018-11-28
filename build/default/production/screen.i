@@ -6534,12 +6534,12 @@ void micro_manger();
 # 1 "./game.h" 1
 # 13 "./game.h"
 void game_play();
+void game_stats();
 # 18 "screen.c" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
 void screen_credits(void);
-void screen_afficher_stats();
 # 19 "screen.c" 2
 
 
@@ -6553,28 +6553,19 @@ void screen_credits()
 
 
 
-
  glcd_SetCursor(0,0);
  glcd_WriteString("Projet", 1, 1);
     glcd_SetCursor(0,1);
  glcd_WriteString("Micro", 1, 1);
-    glcd_SetCursor(50,1);
+    glcd_SetCursor(41,1);
  glcd_WriteString("gochi",1,1);
 
  glcd_SetCursor(0,3);
  glcd_WriteString("ARENDA",1,1);
-    glcd_SetCursor(55,3);
+    glcd_SetCursor(47,3);
  glcd_WriteString("RSKI",1,1);
     glcd_SetCursor(0,4);
  glcd_WriteString("PAGES",1,1);
     glcd_SetCursor(0,5);
  glcd_WriteString("TAO",1,1);
-
-    _delay((unsigned long)((2000)*(8000000/4000.0)));
-
-}
-
-
-void screen_afficher_stats()
-{
 }

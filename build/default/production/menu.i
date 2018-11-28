@@ -236,10 +236,10 @@ void menu_cursor(int action, int write);
 void menu_actions(int action);
 # 10 "menu.c" 2
 
-# 1 "./screen.h" 1
-# 11 "./screen.h"
-void screen_credits(void);
-void screen_afficher_stats();
+# 1 "./game.h" 1
+# 13 "./game.h"
+void game_play();
+void game_stats();
 # 11 "menu.c" 2
 
 # 1 "./microgochi.h" 1
@@ -6546,16 +6546,22 @@ void menu_actions(int action)
 
 
 
+
+    do{
+
+    }while(PORTCbits.RC1!=0);
+
+
     if (action == 0)
     {
         micro_manger();
     }
     if (action == 7)
     {
-        screen_afficher_stats();
+        game_stats();
     }
 
+      do{
 
-    glcd_SetCursor(0,6);
- glcd_WriteString("ACTION", 1, 1);
+    }while(PORTCbits.RC1!=0);
 }

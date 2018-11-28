@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
-#include "screen.h"
+#include "game.h"
 #include "microgochi.h"
 #include "myglcd.h"
 #include "main.h"
@@ -40,16 +40,22 @@ void menu_actions(int action)
     //action = 0 : miam
     // 1 = calins
     //etc. ALLEZ VOIR  menu.H pour les  #DEFINE
+ 
+    do{
+        //pour attendre qu'on enleve son doigt du bouton
+    }while(BUTTON_MID!=0);
+    
+    
     if (action == ACTION_MANGER) //manger
     {
         micro_manger();
     }
     if (action == ACTION_STATS) //manger
     {
-        screen_afficher_stats();
+        game_stats();
     }
     
-   //on appelle nos jeux et nos animations
-    glcd_SetCursor(0,6);				
-	glcd_WriteString("ACTION", f8X8, 1);	
+      do{
+        //pour attendre qu'on enleve son doigt du bouton
+    }while(BUTTON_MID!=0);
 }

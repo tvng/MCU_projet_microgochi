@@ -28,6 +28,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
+[v F3150 `(v ~T0 @X0 1 tf1`ul ]
+"183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18.h
+[v __delay `JF3150 ~T0 @X0 0 e ]
+[p i __delay ]
 "13 ./game.h
 [; ;./game.h: 13: void game_play();
 [v _game_play `(v ~T0 @X0 0 e? ]
@@ -1665,35 +1669,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;main.c: 56:         screen_credits();
 [e ( _screen_credits ..  ]
-"61
-[; ;main.c: 61:         game_play();
+"58
+[; ;main.c: 58:          _delay((unsigned long)((2000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"63
+[; ;main.c: 63:         game_play();
 [e ( _game_play ..  ]
-"67
-[; ;main.c: 67:         if (mGogo->vivant==0)
+"69
+[; ;main.c: 69:         if (mGogo->vivant==0)
 [e $ ! == -> . *U _mGogo 4 `i -> 0 `i 377  ]
-"68
-[; ;main.c: 68:         {
+"70
+[; ;main.c: 70:         {
 {
-"72
-[; ;main.c: 72:             bool_jeu=0;
-[e = _bool_jeu -> 0 `i ]
 "74
-[; ;main.c: 74:         }
+[; ;main.c: 74:             bool_jeu=0;
+[e = _bool_jeu -> 0 `i ]
+"76
+[; ;main.c: 76:         }
 }
 [e :U 377 ]
-"76
-[; ;main.c: 76:     }
+"78
+[; ;main.c: 78:     }
 }
 [e :U 374 ]
 "49
 [; ;main.c: 49:     while (bool_jeu==1)
 [e $ == _bool_jeu -> 1 `i 375  ]
 [e :U 376 ]
-"78
-[; ;main.c: 78:     return (0);
+"80
+[; ;main.c: 80:     return (0);
 [e ) -> 0 `i ]
 [e $UE 373  ]
-"79
-[; ;main.c: 79: }
+"81
+[; ;main.c: 81: }
 [e :UE 373 ]
 }

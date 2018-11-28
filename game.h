@@ -11,6 +11,7 @@
 
 
 void game_play();
+void game_stats();
 
 #endif	/* GAME_H */
 

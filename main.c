@@ -55,6 +55,8 @@ int main(int argc, char** argv) {
         //on affiche les credits (cf screen.c)
         screen_credits();
         
+         __delay_ms(2000);
+
         //un truc qui dit que notre microgochi vient de naitre
         
         //on lance notre jeu     

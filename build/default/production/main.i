@@ -6524,12 +6524,12 @@ void micro_manger();
 # 1 "./game.h" 1
 # 13 "./game.h"
 void game_play();
+void game_stats();
 # 24 "main.c" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
 void screen_credits(void);
-void screen_afficher_stats();
 # 25 "main.c" 2
 
 
@@ -6556,6 +6556,8 @@ int main(int argc, char** argv) {
 
 
         screen_credits();
+
+         _delay((unsigned long)((2000)*(8000000/4000.0)));
 
 
 

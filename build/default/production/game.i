@@ -6529,6 +6529,7 @@ void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 1 "./game.h" 1
 # 13 "./game.h"
 void game_play();
+void game_stats();
 # 13 "game.c" 2
 
 # 1 "./menu.h" 1
@@ -6592,14 +6593,46 @@ void game_play()
 
             else if (PORTCbits.RC1 == 1)
            {
-                button_pressed=1;
-                menu_actions(action);
+                button_pressed=2;
            }
         }
 
-        if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0)
+        if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0 && button_pressed!=0)
         {
+            if (button_pressed==2)
+            {
+                menu_actions(action);
+                glcd_SetCursor(0,0);
+                glcd_Image();
+                menu_cursor (action, 1);
+            }
             button_pressed=0;
         }
     }
+}
+
+
+void game_stats()
+{
+    glcd_FillScreen(0);
+    glcd_SetCursor(0,0);
+ glcd_WriteString("Stats:", 1, 1);
+
+    glcd_SetCursor(0,9);
+ glcd_WriteString("RC2=exit",1,1);
+
+
+    glcd_SetCursor(80,9);
+ glcd_WriteString("gni",1,1);
+    int sortie_enable=0;
+
+    do
+    {
+        if (PORTCbits.RC1==1)
+        {
+            sortie_enable=1;
+        }
+    }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+
+    glcd_FillScreen(0);
 }
