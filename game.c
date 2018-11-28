@@ -45,7 +45,7 @@ void game_play()
                action--; //on decremente le menu
                if (action < 0) //blindage
                {
-                   action=0;
+                   action=NB_ACTIVITE_MAX;
                }
                 menu_cursor (action, GLCD_WRITE); //on affiche le curseur bougé
                
@@ -60,7 +60,7 @@ void game_play()
                
                if (action > NB_ACTIVITE_MAX) //blindage
                {
-                   action= NB_ACTIVITE_MAX;
+                   action= 0;
                }
                 menu_cursor (action, GLCD_WRITE);      
            }
@@ -92,12 +92,9 @@ void game_stats()
     glcd_SetCursor(0,0);				//place le curseur
 	glcd_WriteString("Stats:", f8X8, 1);	//ecrit 
 
-    glcd_SetCursor(0,9);		
+    glcd_SetCursor(0,1);		
 	glcd_WriteString("RC2=exit",f8X8,1);
 
-  
-    glcd_SetCursor(80,9);		
-	glcd_WriteString("gni",f8X8,1);
     int sortie_enable=0;
     
     do 

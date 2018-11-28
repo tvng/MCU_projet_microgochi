@@ -6571,7 +6571,7 @@ void game_play()
                action--;
                if (action < 0)
                {
-                   action=0;
+                   action=7;
                }
                 menu_cursor (action, 1);
 
@@ -6586,7 +6586,7 @@ void game_play()
 
                if (action > 7)
                {
-                   action= 7;
+                   action= 0;
                }
                 menu_cursor (action, 1);
            }
@@ -6618,12 +6618,9 @@ void game_stats()
     glcd_SetCursor(0,0);
  glcd_WriteString("Stats:", 1, 1);
 
-    glcd_SetCursor(0,9);
+    glcd_SetCursor(0,1);
  glcd_WriteString("RC2=exit",1,1);
 
-
-    glcd_SetCursor(80,9);
- glcd_WriteString("gni",1,1);
     int sortie_enable=0;
 
     do

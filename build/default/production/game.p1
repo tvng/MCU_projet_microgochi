@@ -1705,8 +1705,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 47:                {
 {
 "48
-[; ;game.c: 48:                    action=0;
-[e = _action -> 0 `i ]
+[; ;game.c: 48:                    action=7;
+[e = _action -> 7 `i ]
 "49
 [; ;game.c: 49:                }
 }
@@ -1741,8 +1741,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 62:                {
 {
 "63
-[; ;game.c: 63:                    action= 7;
-[e = _action -> 7 `i ]
+[; ;game.c: 63:                    action= 0;
+[e = _action -> 0 `i ]
 "64
 [; ;game.c: 64:                }
 }
@@ -1839,52 +1839,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 93:  glcd_WriteString("Stats:", 1, 1);
 [e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "95
-[; ;game.c: 95:     glcd_SetCursor(0,9);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 9 `i `uc ]
+[; ;game.c: 95:     glcd_SetCursor(0,1);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "96
 [; ;game.c: 96:  glcd_WriteString("RC2=exit",1,1);
 [e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"99
-[; ;game.c: 99:     glcd_SetCursor(80,9);
-[e ( _glcd_SetCursor (2 , -> -> 80 `i `uc -> -> 9 `i `uc ]
-"100
-[; ;game.c: 100:  glcd_WriteString("gni",1,1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"101
-[; ;game.c: 101:     int sortie_enable=0;
+"98
+[; ;game.c: 98:     int sortie_enable=0;
 [v _sortie_enable `i ~T0 @X0 1 a ]
 [e = _sortie_enable -> 0 `i ]
-"103
-[; ;game.c: 103:     do
+"100
+[; ;game.c: 100:     do
 [e :U 390 ]
-"104
-[; ;game.c: 104:     {
+"101
+[; ;game.c: 101:     {
 {
-"105
-[; ;game.c: 105:         if (PORTCbits.RC1==1)
+"102
+[; ;game.c: 102:         if (PORTCbits.RC1==1)
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 391  ]
-"106
-[; ;game.c: 106:         {
+"103
+[; ;game.c: 103:         {
 {
-"107
-[; ;game.c: 107:             sortie_enable=1;
+"104
+[; ;game.c: 104:             sortie_enable=1;
 [e = _sortie_enable -> 1 `i ]
-"108
-[; ;game.c: 108:         }
+"105
+[; ;game.c: 105:         }
 }
 [e :U 391 ]
-"109
-[; ;game.c: 109:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+"106
+[; ;game.c: 106:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
 }
 [e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 390  ]
 [e :U 389 ]
-"111
-[; ;game.c: 111:     glcd_FillScreen(0);
+"108
+[; ;game.c: 108:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"112
-[; ;game.c: 112: }
+"109
+[; ;game.c: 109: }
 [e :UE 387 ]
 }
 [a 2C 82 67 50 61 101 120 105 116 0 ]
-[a 3C 103 110 105 0 ]
 [a 1C 83 116 97 116 115 58 0 ]
