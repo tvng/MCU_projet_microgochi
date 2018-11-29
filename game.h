@@ -8,7 +8,7 @@
 #ifndef GAME_H
 #define	GAME_H
 
-
+extern int cpt;
 
 void game_play();
 void game_stats();

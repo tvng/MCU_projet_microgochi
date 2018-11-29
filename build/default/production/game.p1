@@ -1,8 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"10 ./microgochi.h
-[; ;./microgochi.h: 10: struct Microgochi{
-[s S365 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S365 Microgochi age satiete energie bonheur vivant ]
 "51 ./glcd.h
 [; ;./glcd.h: 51: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
@@ -45,9 +41,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25 ./menu.h
 [; ;./menu.h: 25: void menu_actions(int action);
 [v _menu_actions `(v ~T0 @X0 0 ef1`i ]
+"10 ./microgochi.h
+[; ;./microgochi.h: 10: struct Microgochi{
+[s S362 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S362 Microgochi age satiete energie bonheur vivant ]
+"22
+[; ;./microgochi.h: 22: extern struct Microgochi mGogo;
+[v _mGogo `S362 ~T0 @X0 0 e ]
 "54 ./glcd.h
 [; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 [v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
+"13 ./itoa.h
+[; ;./itoa.h: 13:  void itoa(int n, char s[]);
+[v _itoa `(v ~T0 @X0 0 ef2`i`*uc ]
+"29 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -558,18 +567,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"21 ./main.h
-[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
-[v _mGogo `*S365 ~T0 @X0 1 e ]
-[i _mGogo
--> -> -> 0 `i `*v `*S365
-]
-"22
-[; ;./main.h: 22: unsigned int cpt=0;
-[v _cpt `ui ~T0 @X0 1 e ]
-[i _cpt
--> -> 0 `i `ui
-]
 "19 ./myglcd.h
 [; ;./myglcd.h: 19:  char cursor[]=
 [v _cursor `uc ~T0 @X0 -> 30 `i e ]
@@ -1639,245 +1636,311 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "18 game.c
-[; ;game.c: 18: void game_play()
-[v _game_play `(v ~T0 @X0 1 ef ]
+[; ;game.c: 18: char buffer[3];
+[v _buffer `uc ~T0 @X0 -> 3 `i e ]
 "19
-[; ;game.c: 19: {
+[; ;game.c: 19: int cpt=0;
+[v _cpt `i ~T0 @X0 1 e ]
+[i _cpt
+-> 0 `i
+]
+"22
+[; ;game.c: 22: void game_play()
+[v _game_play `(v ~T0 @X0 1 ef ]
+"23
+[; ;game.c: 23: {
 {
 [e :U _game_play ]
 [f ]
-"21
-[; ;game.c: 21:     glcd_FillScreen(0);
+"25
+[; ;game.c: 25:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"23
-[; ;game.c: 23:     glcd_SetCursor(0,0);
+"27
+[; ;game.c: 27:     glcd_SetCursor(0,0);
 [e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"24
-[; ;game.c: 24:     glcd_Image();
+"28
+[; ;game.c: 28:     glcd_Image();
 [e ( _glcd_Image ..  ]
-"26
-[; ;game.c: 26:     menu_cursor (-1, 1);
+"30
+[; ;game.c: 30:     menu_cursor (-1, 1);
 [e ( _menu_cursor (2 , -U -> 1 `i -> 1 `i ]
-"29
-[; ;game.c: 29:     int action=0;
+"33
+[; ;game.c: 33:     int action=0;
 [v _action `i ~T0 @X0 1 a ]
 [e = _action -> 0 `i ]
-"30
-[; ;game.c: 30:     int write=0;
+"34
+[; ;game.c: 34:     int write=0;
 [v _write `i ~T0 @X0 1 a ]
 [e = _write -> 0 `i ]
-"31
-[; ;game.c: 31:     int button_pressed=0;
+"35
+[; ;game.c: 35:     int button_pressed=0;
 [v _button_pressed `i ~T0 @X0 1 a ]
 [e = _button_pressed -> 0 `i ]
-"34
-[; ;game.c: 34:     while (mGogo->vivant==1)
-[e $U 374  ]
-[e :U 375 ]
-"35
-[; ;game.c: 35:     {
-{
 "38
-[; ;game.c: 38:         if (button_pressed==0)
-[e $ ! == _button_pressed -> 0 `i 377  ]
+[; ;game.c: 38:     while (mGogo.vivant==1)
+[e $U 372  ]
+[e :U 373 ]
 "39
-[; ;game.c: 39:         {
-{
-"40
-[; ;game.c: 40:             if (PORTCbits.RC0 == 1)
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 378  ]
-"41
-[; ;game.c: 41:             {
+[; ;game.c: 39:     {
 {
 "42
-[; ;game.c: 42:                button_pressed=1;
-[e = _button_pressed -> 1 `i ]
+[; ;game.c: 42:         if (button_pressed==0)
+[e $ ! == _button_pressed -> 0 `i 375  ]
+"43
+[; ;game.c: 43:         {
+{
 "44
-[; ;game.c: 44:                menu_cursor (action, 0);
-[e ( _menu_cursor (2 , _action -> 0 `i ]
+[; ;game.c: 44:             if (PORTCbits.RC0 == 1)
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 376  ]
 "45
-[; ;game.c: 45:                action--;
-[e -- _action -> 1 `i ]
+[; ;game.c: 45:             {
+{
 "46
-[; ;game.c: 46:                if (action < 0)
-[e $ ! < _action -> 0 `i 379  ]
-"47
-[; ;game.c: 47:                {
-{
-"48
-[; ;game.c: 48:                    action=7;
-[e = _action -> 7 `i ]
-"49
-[; ;game.c: 49:                }
-}
-[e :U 379 ]
-"50
-[; ;game.c: 50:                 menu_cursor (action, 1);
-[e ( _menu_cursor (2 , _action -> 1 `i ]
-"52
-[; ;game.c: 52:            }
-}
-[e $U 380  ]
-"54
-[; ;game.c: 54:             else if (PORTCbits.RC2 == 1)
-[e :U 378 ]
-[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 381  ]
-"55
-[; ;game.c: 55:            {
-{
-"56
-[; ;game.c: 56:                button_pressed=1;
+[; ;game.c: 46:                button_pressed=1;
 [e = _button_pressed -> 1 `i ]
-"57
-[; ;game.c: 57:                menu_cursor (action, 0);
+"48
+[; ;game.c: 48:                menu_cursor (action, 0);
 [e ( _menu_cursor (2 , _action -> 0 `i ]
-"59
-[; ;game.c: 59:                action++;
-[e ++ _action -> 1 `i ]
-"61
-[; ;game.c: 61:                if (action > 7)
-[e $ ! > _action -> 7 `i 382  ]
-"62
-[; ;game.c: 62:                {
+"49
+[; ;game.c: 49:                action--;
+[e -- _action -> 1 `i ]
+"50
+[; ;game.c: 50:                if (action < 0)
+[e $ ! < _action -> 0 `i 377  ]
+"51
+[; ;game.c: 51:                {
 {
-"63
-[; ;game.c: 63:                    action= 0;
-[e = _action -> 0 `i ]
-"64
-[; ;game.c: 64:                }
-}
-[e :U 382 ]
-"65
-[; ;game.c: 65:                 menu_cursor (action, 1);
-[e ( _menu_cursor (2 , _action -> 1 `i ]
-"66
-[; ;game.c: 66:            }
-}
-[e $U 383  ]
-"68
-[; ;game.c: 68:             else if (PORTCbits.RC1 == 1)
-[e :U 381 ]
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 384  ]
-"69
-[; ;game.c: 69:            {
-{
-"70
-[; ;game.c: 70:                 button_pressed=2;
-[e = _button_pressed -> 2 `i ]
-"71
-[; ;game.c: 71:            }
-}
-[e :U 384 ]
-[e :U 383 ]
-[e :U 380 ]
-"72
-[; ;game.c: 72:         }
+"52
+[; ;game.c: 52:                    action=7;
+[e = _action -> 7 `i ]
+"53
+[; ;game.c: 53:                }
 }
 [e :U 377 ]
-"74
-[; ;game.c: 74:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0 && button_pressed!=0)
-[e $ ! && && && == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i != _button_pressed -> 0 `i 385  ]
-"75
-[; ;game.c: 75:         {
-{
-"76
-[; ;game.c: 76:             if (button_pressed==2)
-[e $ ! == _button_pressed -> 2 `i 386  ]
-"77
-[; ;game.c: 77:             {
-{
-"78
-[; ;game.c: 78:                 menu_actions(action);
-[e ( _menu_actions (1 _action ]
-"79
-[; ;game.c: 79:                 glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"80
-[; ;game.c: 80:                 glcd_Image();
-[e ( _glcd_Image ..  ]
-"81
-[; ;game.c: 81:                 menu_cursor (action, 1);
+"54
+[; ;game.c: 54:                 menu_cursor (action, 1);
 [e ( _menu_cursor (2 , _action -> 1 `i ]
-"82
-[; ;game.c: 82:             }
+"56
+[; ;game.c: 56:            }
 }
-[e :U 386 ]
-"83
-[; ;game.c: 83:             button_pressed=0;
-[e = _button_pressed -> 0 `i ]
-"84
-[; ;game.c: 84:         }
-}
-[e :U 385 ]
-"85
-[; ;game.c: 85:     }
-}
-[e :U 374 ]
-"34
-[; ;game.c: 34:     while (mGogo->vivant==1)
-[e $ == -> . *U _mGogo 4 `i -> 1 `i 375  ]
+[e $U 378  ]
+"58
+[; ;game.c: 58:             else if (PORTCbits.RC2 == 1)
 [e :U 376 ]
-"86
-[; ;game.c: 86: }
-[e :UE 373 ]
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 379  ]
+"59
+[; ;game.c: 59:            {
+{
+"60
+[; ;game.c: 60:                button_pressed=1;
+[e = _button_pressed -> 1 `i ]
+"61
+[; ;game.c: 61:                menu_cursor (action, 0);
+[e ( _menu_cursor (2 , _action -> 0 `i ]
+"63
+[; ;game.c: 63:                action++;
+[e ++ _action -> 1 `i ]
+"65
+[; ;game.c: 65:                if (action > 7)
+[e $ ! > _action -> 7 `i 380  ]
+"66
+[; ;game.c: 66:                {
+{
+"67
+[; ;game.c: 67:                    action= 0;
+[e = _action -> 0 `i ]
+"68
+[; ;game.c: 68:                }
 }
+[e :U 380 ]
+"69
+[; ;game.c: 69:                 menu_cursor (action, 1);
+[e ( _menu_cursor (2 , _action -> 1 `i ]
+"70
+[; ;game.c: 70:            }
+}
+[e $U 381  ]
+"72
+[; ;game.c: 72:             else if (PORTCbits.RC1 == 1)
+[e :U 379 ]
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 382  ]
+"73
+[; ;game.c: 73:            {
+{
+"74
+[; ;game.c: 74:                 button_pressed=2;
+[e = _button_pressed -> 2 `i ]
+"75
+[; ;game.c: 75:            }
+}
+[e :U 382 ]
+[e :U 381 ]
+[e :U 378 ]
+"76
+[; ;game.c: 76:         }
+}
+[e :U 375 ]
+"78
+[; ;game.c: 78:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0 && button_pressed!=0)
+[e $ ! && && && == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i != _button_pressed -> 0 `i 383  ]
+"79
+[; ;game.c: 79:         {
+{
+"80
+[; ;game.c: 80:             if (button_pressed==2)
+[e $ ! == _button_pressed -> 2 `i 384  ]
+"81
+[; ;game.c: 81:             {
+{
+"82
+[; ;game.c: 82:                 menu_actions(action);
+[e ( _menu_actions (1 _action ]
+"83
+[; ;game.c: 83:                 glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"84
+[; ;game.c: 84:                 glcd_Image();
+[e ( _glcd_Image ..  ]
+"85
+[; ;game.c: 85:                 menu_cursor (action, 1);
+[e ( _menu_cursor (2 , _action -> 1 `i ]
+"86
+[; ;game.c: 86:             }
+}
+[e :U 384 ]
+"87
+[; ;game.c: 87:             button_pressed=0;
+[e = _button_pressed -> 0 `i ]
+"88
+[; ;game.c: 88:         }
+}
+[e :U 383 ]
 "89
-[; ;game.c: 89: void game_stats()
-[v _game_stats `(v ~T0 @X0 1 ef ]
+[; ;game.c: 89:     }
+}
+[e :U 372 ]
+"38
+[; ;game.c: 38:     while (mGogo.vivant==1)
+[e $ == -> . _mGogo 4 `i -> 1 `i 373  ]
+[e :U 374 ]
 "90
-[; ;game.c: 90: {
+[; ;game.c: 90: }
+[e :UE 371 ]
+}
+"93
+[; ;game.c: 93: void game_stats()
+[v _game_stats `(v ~T0 @X0 1 ef ]
+"94
+[; ;game.c: 94: {
 {
 [e :U _game_stats ]
 [f ]
-"91
-[; ;game.c: 91:     glcd_FillScreen(0);
-[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"92
-[; ;game.c: 92:     glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"93
-[; ;game.c: 93:  glcd_WriteString("Stats:", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "95
-[; ;game.c: 95:     glcd_SetCursor(0,1);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;game.c: 95:     glcd_FillScreen(0);
+[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
 "96
-[; ;game.c: 96:  glcd_WriteString("RC2=exit",1,1);
+[; ;game.c: 96:     glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"97
+[; ;game.c: 97:  glcd_WriteString("Stats:", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"99
+[; ;game.c: 99:     glcd_SetCursor(50,0);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 0 `i `uc ]
+"100
+[; ;game.c: 100:  glcd_WriteString("RC2=exit",1,1);
 [e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"98
-[; ;game.c: 98:     int sortie_enable=0;
+"102
+[; ;game.c: 102:     int sortie_enable=0;
 [v _sortie_enable `i ~T0 @X0 1 a ]
 [e = _sortie_enable -> 0 `i ]
-"100
-[; ;game.c: 100:     do
-[e :U 390 ]
-"101
-[; ;game.c: 101:     {
-{
-"102
-[; ;game.c: 102:         if (PORTCbits.RC1==1)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 391  ]
-"103
-[; ;game.c: 103:         {
-{
 "104
-[; ;game.c: 104:             sortie_enable=1;
-[e = _sortie_enable -> 1 `i ]
+[; ;game.c: 104:     do
+[e :U 388 ]
 "105
-[; ;game.c: 105:         }
-}
-[e :U 391 ]
+[; ;game.c: 105:     {
+{
 "106
-[; ;game.c: 106:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
-}
-[e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 390  ]
-[e :U 389 ]
+[; ;game.c: 106:         glcd_SetCursor(0,2);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"107
+[; ;game.c: 107:         glcd_WriteString("Faim:",1,1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "108
-[; ;game.c: 108:     glcd_FillScreen(0);
-[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
+[; ;game.c: 108:         glcd_SetCursor(50,2);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 2 `i `uc ]
 "109
-[; ;game.c: 109: }
-[e :UE 387 ]
+[; ;game.c: 109:         itoa(mGogo.satiete, buffer);
+[e ( _itoa (2 , -> . _mGogo 1 `i &U _buffer ]
+"110
+[; ;game.c: 110:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"111
+[; ;game.c: 111:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"113
+[; ;game.c: 113:         glcd_SetCursor(0,3);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
+"114
+[; ;game.c: 114:         glcd_WriteString("Energie:",1,1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"115
+[; ;game.c: 115:         glcd_SetCursor(65,3);
+[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
+"116
+[; ;game.c: 116:         itoa(mGogo.energie, buffer);
+[e ( _itoa (2 , -> . _mGogo 2 `i &U _buffer ]
+"117
+[; ;game.c: 117:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"118
+[; ;game.c: 118:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"120
+[; ;game.c: 120:         glcd_SetCursor(0,4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"121
+[; ;game.c: 121:         glcd_WriteString("Amour:",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"122
+[; ;game.c: 122:         glcd_SetCursor(55,4);
+[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 4 `i `uc ]
+"123
+[; ;game.c: 123:         itoa(mGogo.bonheur, buffer);
+[e ( _itoa (2 , -> . _mGogo 3 `i &U _buffer ]
+"124
+[; ;game.c: 124:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"125
+[; ;game.c: 125:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"128
+[; ;game.c: 128:         if (PORTCbits.RC1==1)
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 389  ]
+"129
+[; ;game.c: 129:         {
+{
+"130
+[; ;game.c: 130:             sortie_enable=1;
+[e = _sortie_enable -> 1 `i ]
+"131
+[; ;game.c: 131:         }
+}
+[e :U 389 ]
+"134
+[; ;game.c: 134:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+}
+[e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 388  ]
+[e :U 387 ]
+"136
+[; ;game.c: 136:     glcd_FillScreen(0);
+[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
+"137
+[; ;game.c: 137: }
+[e :UE 385 ]
 }
 [a 2C 82 67 50 61 101 120 105 116 0 ]
 [a 1C 83 116 97 116 115 58 0 ]
+[a 5C 65 109 111 117 114 58 0 ]
+[a 3C 70 97 105 109 58 0 ]
+[a 4C 69 110 101 114 103 105 101 58 0 ]

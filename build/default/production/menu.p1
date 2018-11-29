@@ -1,8 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"10 ./microgochi.h
-[; ;./microgochi.h: 10: struct Microgochi{
-[s S8 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S8 Microgochi age satiete energie bonheur vivant ]
 "101 ./myglcd.h
 [; ;./myglcd.h: 101: void displayObject (char *tab, int x, int y, int height, int width, int write);
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
@@ -33,9 +29,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2605
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 [v _PORTCbits `VS113 ~T0 @X0 0 e@3970 ]
-"23 ./microgochi.h
-[; ;./microgochi.h: 23: void micro_manger();
+"25 ./microgochi.h
+[; ;./microgochi.h: 25: void micro_manger();
 [v _micro_manger `(v ~T0 @X0 0 e? ]
+"27
+[; ;./microgochi.h: 27: void micro_calin();
+[v _micro_calin `(v ~T0 @X0 0 e? ]
+"26
+[; ;./microgochi.h: 26: void micro_dormir();
+[v _micro_dormir `(v ~T0 @X0 0 e? ]
 "14 ./game.h
 [; ;./game.h: 14: void game_stats();
 [v _game_stats `(v ~T0 @X0 0 e? ]
@@ -1617,18 +1619,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"21 ./main.h
-[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
-[v _mGogo `*S8 ~T0 @X0 1 e ]
-[i _mGogo
--> -> -> 0 `i `*v `*S8
-]
-"22
-[; ;./main.h: 22: unsigned int cpt=0;
-[v _cpt `ui ~T0 @X0 1 e ]
-[i _cpt
--> -> 0 `i `ui
-]
 "17 menu.c
 [; ;menu.c: 17: void menu_cursor(int action, int write)
 [v _menu_cursor `(v ~T0 @X0 1 ef2`i`i ]
@@ -1724,28 +1714,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 380 ]
 "53
-[; ;menu.c: 53:     if (action == 7)
-[e $ ! == _action -> 7 `i 381  ]
+[; ;menu.c: 53:     if (action == 1)
+[e $ ! == _action -> 1 `i 381  ]
 "54
 [; ;menu.c: 54:     {
 {
 "55
-[; ;menu.c: 55:         game_stats();
-[e ( _game_stats ..  ]
+[; ;menu.c: 55:         micro_calin();
+[e ( _micro_calin ..  ]
 "56
 [; ;menu.c: 56:     }
 }
 [e :U 381 ]
+"57
+[; ;menu.c: 57:     if (action == 2)
+[e $ ! == _action -> 2 `i 382  ]
 "58
-[; ;menu.c: 58:       do{
-[e :U 384 ]
+[; ;menu.c: 58:     {
 {
+"59
+[; ;menu.c: 59:         micro_dormir();
+[e ( _micro_dormir ..  ]
 "60
-[; ;menu.c: 60:     }while(PORTCbits.RC1!=0);
+[; ;menu.c: 60:     }
 }
-[e $ != -> . . _PORTCbits 0 1 `i -> 0 `i 384  ]
-[e :U 383 ]
+[e :U 382 ]
 "61
-[; ;menu.c: 61: }
+[; ;menu.c: 61:     if (action == 3)
+[e $ ! == _action -> 3 `i 383  ]
+"62
+[; ;menu.c: 62:     {
+{
+"64
+[; ;menu.c: 64:     }
+}
+[e :U 383 ]
+"65
+[; ;menu.c: 65:     if (action == 7)
+[e $ ! == _action -> 7 `i 384  ]
+"66
+[; ;menu.c: 66:     {
+{
+"67
+[; ;menu.c: 67:         game_stats();
+[e ( _game_stats ..  ]
+"68
+[; ;menu.c: 68:     }
+}
+[e :U 384 ]
+"70
+[; ;menu.c: 70:       do{
+[e :U 387 ]
+{
+"72
+[; ;menu.c: 72:     }while(PORTCbits.RC1!=0);
+}
+[e $ != -> . . _PORTCbits 0 1 `i -> 0 `i 387  ]
+[e :U 386 ]
+"73
+[; ;menu.c: 73: }
 [e :UE 376 ]
 }

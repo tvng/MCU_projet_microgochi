@@ -1,0 +1,112 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"15 ./itoa.h
+[; ;./itoa.h: 15:  void reverse(char s[]);
+[v _reverse `(v ~T0 @X0 0 ef1`*uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"14 itoa.c
+[; ;itoa.c: 14:  void itoa(int n, char s[])
+[v _itoa `(v ~T0 @X0 1 ef2`i`*uc ]
+"15
+[; ;itoa.c: 15:  {
+{
+[e :U _itoa ]
+"14
+[; ;itoa.c: 14:  void itoa(int n, char s[])
+[v _n `i ~T0 @X0 1 r1 ]
+[v _s `*uc ~T0 @X0 1 r2 ]
+"15
+[; ;itoa.c: 15:  {
+[f ]
+"16
+[; ;itoa.c: 16:      int i, sign;
+[v _i `i ~T0 @X0 1 a ]
+[v _sign `i ~T0 @X0 1 a ]
+"18
+[; ;itoa.c: 18:      if ((sign = n) < 0)
+[e $ ! < = _sign _n -> 0 `i 3  ]
+"19
+[; ;itoa.c: 19:          n = -n;
+[e = _n -U _n ]
+[e :U 3 ]
+"20
+[; ;itoa.c: 20:      i = 0;
+[e = _i -> 0 `i ]
+"21
+[; ;itoa.c: 21:      do {
+[e :U 6 ]
+{
+"22
+[; ;itoa.c: 22:          s[i++] = n % 10 + '0';
+[e = *U + _s * -> ++ _i -> 1 `i `x -> -> # *U _s `i `x -> + -> % _n -> 10 `i `ui -> 48 `ui `uc ]
+"23
+[; ;itoa.c: 23:      } while ((n /= 10) > 0);
+}
+[e $ > =/ _n -> 10 `i -> 0 `i 6  ]
+[e :U 5 ]
+"24
+[; ;itoa.c: 24:      if (sign < 0)
+[e $ ! < _sign -> 0 `i 7  ]
+"25
+[; ;itoa.c: 25:          s[i++] = '-';
+[e = *U + _s * -> ++ _i -> 1 `i `x -> -> # *U _s `i `x -> -> 45 `ui `uc ]
+[e :U 7 ]
+"26
+[; ;itoa.c: 26:      s[i] = '\0';
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> -> 0 `ui `uc ]
+"27
+[; ;itoa.c: 27:      reverse(s);
+[e ( _reverse (1 _s ]
+"28
+[; ;itoa.c: 28:  }
+[e :UE 2 ]
+}
+"31
+[; ;itoa.c: 31:  void reverse(char s[])
+[v _reverse `(v ~T0 @X0 1 ef1`*uc ]
+"32
+[; ;itoa.c: 32:  {
+{
+[e :U _reverse ]
+"31
+[; ;itoa.c: 31:  void reverse(char s[])
+[v _s `*uc ~T0 @X0 1 r1 ]
+"32
+[; ;itoa.c: 32:  {
+[f ]
+"33
+[; ;itoa.c: 33:      int i, j;
+[v _i `i ~T0 @X0 1 a ]
+[v _j `i ~T0 @X0 1 a ]
+"34
+[; ;itoa.c: 34:      char c;
+[v _c `uc ~T0 @X0 1 a ]
+"36
+[; ;itoa.c: 36:      for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+{
+[e ; = _i -> 0 `i = _j -> - ( _strlen (1 -> _s `*Cuc -> -> 1 `i `ui `i ]
+[e $U 12  ]
+[e :U 9 ]
+{
+"37
+[; ;itoa.c: 37:          c = s[i];
+[e = _c *U + _s * -> _i `x -> -> # *U _s `i `x ]
+"38
+[; ;itoa.c: 38:          s[i] = s[j];
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x *U + _s * -> _j `x -> -> # *U _s `i `x ]
+"39
+[; ;itoa.c: 39:          s[j] = c;
+[e = *U + _s * -> _j `x -> -> # *U _s `i `x _c ]
+"40
+[; ;itoa.c: 40:      }
+}
+[e ; ++ _i -> 1 `i -- _j -> 1 `i ]
+[e :U 12 ]
+[e $ < _i _j 9  ]
+[e :U 10 ]
+}
+"41
+[; ;itoa.c: 41:  }
+[e :UE 8 ]
+}

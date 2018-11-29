@@ -1,6 +1,7 @@
 /* 
  * displayObject : REPRINT FROM CAMPUS !!
- *
+ * (catégorie "Open Source")
+ * de M. CHEVRIER, FONTAINE, ESCLANGON, DENECE
  * 
  * .c pour gerer le fonctionnement de l'affichage
  * 

@@ -50,7 +50,19 @@ void menu_actions(int action)
     {
         micro_manger();
     }
-    if (action == ACTION_STATS) //manger
+    if (action == ACTION_CALIN)
+    {
+        micro_calin();
+    }
+    if (action == ACTION_DORMIR) 
+    {
+        micro_dormir();
+    }
+    if (action == ACTION_JEU)
+    {
+        //MINI JEU!!!!
+    }
+    if (action == ACTION_STATS) 
     {
         game_stats();
     }

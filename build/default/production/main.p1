@@ -1,8 +1,35 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T36 __interrupt ]
+"8588 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8588:     struct {
+[s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"8598
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8598:     struct {
+[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S361 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"8608
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8608:     struct {
+[s S362 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S362 . . GIEL GIEH ]
+"8587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8587: typedef union {
+[u S359 `S360 1 `S361 1 `S362 1 ]
+[n S359 . . . . ]
+"8614
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS359 ~T0 @X0 0 e@4082 ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
 [s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S370 Microgochi age satiete energie bonheur vivant ]
+"22
+[; ;./microgochi.h: 22: extern struct Microgochi mGogo;
+[v _mGogo `S370 ~T0 @X0 0 e ]
+"11 ./game.h
+[; ;./game.h: 11: extern int cpt;
+[v _cpt `i ~T0 @X0 0 e ]
 [p mainexit ]
 "6581 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 6581: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
@@ -19,12 +46,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2563
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2563: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
 [v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"8069
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8069: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
 "45 ./glcd.h
 [; ;./glcd.h: 45: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
-"22 ./microgochi.h
-[; ;./microgochi.h: 22: struct Microgochi * microgochi_init(struct Microgochi *m);
-[v _microgochi_init `(*S370 ~T0 @X0 0 ef1`*S370 ]
+"24 ./microgochi.h
+[; ;./microgochi.h: 24: void microgochi_init();
+[v _microgochi_init `(v ~T0 @X0 0 e? ]
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
 [v _screen_credits `(v ~T0 @X0 0 ef ]
@@ -545,18 +575,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"21 ./main.h
-[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
-[v _mGogo `*S370 ~T0 @X0 1 e ]
-[i _mGogo
--> -> -> 0 `i `*v `*S370
-]
-"22
-[; ;./main.h: 22: unsigned int cpt=0;
-[v _cpt `ui ~T0 @X0 1 e ]
-[i _cpt
--> -> 0 `i `ui
-]
 "19 ./myglcd.h
 [; ;./myglcd.h: 19:  char cursor[]=
 [v _cursor `uc ~T0 @X0 -> 30 `i e ]
@@ -1625,82 +1643,124 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"30 main.c
+[; ;main.c: 30: void __attribute__((picinterrupt(""))) isr(void)
+[v _isr `(v ~T36 @X0 1 ef ]
+"31
+[; ;main.c: 31: {
+{
+[e :U _isr ]
+[f ]
+"33
+[; ;main.c: 33:     if (INTCONbits.TMR0IE==1 && INTCONbits.TMR0IF==1)
+[e $ ! && == -> . . _INTCONbits 0 5 `i -> 1 `i == -> . . _INTCONbits 0 2 `i -> 1 `i 372  ]
+"34
+[; ;main.c: 34:     {
+{
+"35
+[; ;main.c: 35:          mGogo.satiete--;
+[e -- . _mGogo 1 -> -> 1 `i `uc ]
+"36
+[; ;main.c: 36:         cpt++;
+[e ++ _cpt -> 1 `i ]
+"37
+[; ;main.c: 37:      INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"39
+[; ;main.c: 39:     }
+}
+[e :U 372 ]
+"41
+[; ;main.c: 41: }
+[e :UE 371 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"27 main.c
-[; ;main.c: 27: int main(int argc, char** argv) {
+"43
+[; ;main.c: 43: int main(int argc, char** argv) {
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"29
-[; ;main.c: 29:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"32
-[; ;main.c: 32:     TRISD = 0xff;
-[e = _TRISD -> -> 255 `i `uc ]
-"33
-[; ;main.c: 33:  PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
-"35
-[; ;main.c: 35:  TRISC = 0b00000111;
-[e = _TRISC -> -> 7 `i `uc ]
-"36
-[; ;main.c: 36:  PORTC =0b00000000;
-[e = _PORTC -> -> 0 `i `uc ]
 "45
-[; ;main.c: 45:     int bool_jeu=1;
+[; ;main.c: 45:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
+"48
+[; ;main.c: 48:     TRISD = 0xff;
+[e = _TRISD -> -> 255 `i `uc ]
+"49
+[; ;main.c: 49:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"51
+[; ;main.c: 51:     TRISC = 0b00000111;
+[e = _TRISC -> -> 7 `i `uc ]
+"52
+[; ;main.c: 52:     PORTC = 0b00000000;
+[e = _PORTC -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:      T0CON=0x07;
+[e = _T0CON -> -> 7 `i `uc ]
+"57
+[; ;main.c: 57:      INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"58
+[; ;main.c: 58:  INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"59
+[; ;main.c: 59:  INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"63
+[; ;main.c: 63:     int bool_jeu = 1;
 [v _bool_jeu `i ~T0 @X0 1 a ]
 [e = _bool_jeu -> 1 `i ]
-"47
-[; ;main.c: 47:     glcd_Init(1);
+"65
+[; ;main.c: 65:     glcd_Init(1);
 [e ( _glcd_Init (1 -> -> 1 `i `uc ]
-"49
-[; ;main.c: 49:     while (bool_jeu==1)
+"67
+[; ;main.c: 67:     while (bool_jeu == 1)
 [e $U 374  ]
 [e :U 375 ]
-"50
-[; ;main.c: 50:     {
+"68
+[; ;main.c: 68:     {
 {
-"53
-[; ;main.c: 53:         mGogo=microgochi_init(mGogo);
-[e = _mGogo ( _microgochi_init (1 _mGogo ]
-"56
-[; ;main.c: 56:         screen_credits();
-[e ( _screen_credits ..  ]
-"58
-[; ;main.c: 58:          _delay((unsigned long)((2000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"63
-[; ;main.c: 63:         game_play();
-[e ( _game_play ..  ]
-"69
-[; ;main.c: 69:         if (mGogo->vivant==0)
-[e $ ! == -> . *U _mGogo 4 `i -> 0 `i 377  ]
-"70
-[; ;main.c: 70:         {
-{
+"71
+[; ;main.c: 71:         microgochi_init();
+[e ( _microgochi_init ..  ]
 "74
-[; ;main.c: 74:             bool_jeu=0;
-[e = _bool_jeu -> 0 `i ]
+[; ;main.c: 74:         screen_credits();
+[e ( _screen_credits ..  ]
 "76
-[; ;main.c: 76:         }
+[; ;main.c: 76:         _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"81
+[; ;main.c: 81:         game_play();
+[e ( _game_play ..  ]
+"87
+[; ;main.c: 87:         if (mGogo.vivant == 0) {
+[e $ ! == -> . _mGogo 4 `i -> 0 `i 377  ]
+{
+"91
+[; ;main.c: 91:             bool_jeu = 0;
+[e = _bool_jeu -> 0 `i ]
+"93
+[; ;main.c: 93:         }
 }
 [e :U 377 ]
-"78
-[; ;main.c: 78:     }
+"95
+[; ;main.c: 95:     }
 }
 [e :U 374 ]
-"49
-[; ;main.c: 49:     while (bool_jeu==1)
+"67
+[; ;main.c: 67:     while (bool_jeu == 1)
 [e $ == _bool_jeu -> 1 `i 375  ]
 [e :U 376 ]
-"80
-[; ;main.c: 80:     return (0);
+"97
+[; ;main.c: 97:     return (0);
 [e ) -> 0 `i ]
 [e $UE 373  ]
-"81
-[; ;main.c: 81: }
+"98
+[; ;main.c: 98: }
 [e :UE 373 ]
 }

@@ -13,6 +13,7 @@
 
 
 
+
 # 1 "./myglcd.h" 1
 # 11 "./myglcd.h"
 # 1 "./glcd.h" 1
@@ -6487,7 +6488,7 @@ const unsigned char test[]={
 0xFC, 0xFC, 0xFC, 0x80, 0xE0, 0xE0, 0xE0, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
-# 7 "myglcd.c" 2
+# 8 "myglcd.c" 2
 
 
 

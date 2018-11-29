@@ -5621,8 +5621,6 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 19 "main.c" 2
 
 
-# 1 "./main.h" 1
-# 12 "./main.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -5759,11 +5757,12 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 12 "./main.h" 2
-# 21 "./main.h"
-struct Microgochi *mGogo=((void*)0);
-unsigned int cpt=0;
 # 21 "main.c" 2
+
+
+
+# 1 "./main.h" 1
+# 24 "main.c" 2
 
 # 1 "./glcd.h" 1
 
@@ -6501,7 +6500,7 @@ const unsigned char test[]={
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 8 "./glcd.h" 2
-# 22 "main.c" 2
+# 25 "main.c" 2
 
 # 1 "./microgochi.h" 1
 # 10 "./microgochi.h"
@@ -6517,21 +6516,40 @@ struct Microgochi{
 
 };
 
-struct Microgochi * microgochi_init(struct Microgochi *m);
+extern struct Microgochi mGogo;
+
+void microgochi_init();
 void micro_manger();
-# 23 "main.c" 2
+void micro_dormir();
+void micro_calin();
+# 26 "main.c" 2
 
 # 1 "./game.h" 1
-# 13 "./game.h"
+# 11 "./game.h"
+extern int cpt;
+
 void game_play();
 void game_stats();
-# 24 "main.c" 2
+# 27 "main.c" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
 void screen_credits(void);
-# 25 "main.c" 2
+# 28 "main.c" 2
 
+
+void __attribute__((picinterrupt(""))) isr(void)
+{
+
+    if (INTCONbits.TMR0IE==1 && INTCONbits.TMR0IF==1)
+    {
+         mGogo.satiete--;
+        cpt++;
+     INTCONbits.TMR0IF = 0;
+
+    }
+
+}
 
 int main(int argc, char** argv) {
 
@@ -6539,25 +6557,34 @@ int main(int argc, char** argv) {
 
 
     TRISD = 0xff;
- PORTD = 0x00;
+    PORTD = 0x00;
 
- TRISC = 0b00000111;
- PORTC =0b00000000;
-# 45 "main.c"
-    int bool_jeu=1;
+    TRISC = 0b00000111;
+    PORTC = 0b00000000;
+
+
+
+     T0CON=0x07;
+     INTCONbits.TMR0IF = 0;
+ INTCONbits.TMR0IE = 1;
+ INTCONbits.GIE = 1;
+
+
+
+    int bool_jeu = 1;
 
     glcd_Init(1);
 
-    while (bool_jeu==1)
+    while (bool_jeu == 1)
     {
 
 
-        mGogo=microgochi_init(mGogo);
+        microgochi_init();
 
 
         screen_credits();
 
-         _delay((unsigned long)((2000)*(8000000/4000.0)));
+        _delay((unsigned long)((1000)*(8000000/4000.0)));
 
 
 
@@ -6568,12 +6595,11 @@ int main(int argc, char** argv) {
 
 
 
-        if (mGogo->vivant==0)
-        {
+        if (mGogo.vivant == 0) {
 
 
 
-            bool_jeu=0;
+            bool_jeu = 0;
 
         }
 

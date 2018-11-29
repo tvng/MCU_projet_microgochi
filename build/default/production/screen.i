@@ -6508,9 +6508,6 @@ void displayObject (char *tab, int x, int y, int height, int width, int write);
 
 
 # 1 "./main.h" 1
-# 21 "./main.h"
-struct Microgochi *mGogo=((void*)0);
-unsigned int cpt=0;
 # 16 "screen.c" 2
 
 # 1 "./microgochi.h" 1
@@ -6527,12 +6524,18 @@ struct Microgochi{
 
 };
 
-struct Microgochi * microgochi_init(struct Microgochi *m);
+extern struct Microgochi mGogo;
+
+void microgochi_init();
 void micro_manger();
+void micro_dormir();
+void micro_calin();
 # 17 "screen.c" 2
 
 # 1 "./game.h" 1
-# 13 "./game.h"
+# 11 "./game.h"
+extern int cpt;
+
 void game_play();
 void game_stats();
 # 18 "screen.c" 2

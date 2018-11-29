@@ -1,8 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"10 ./microgochi.h
-[; ;./microgochi.h: 10: struct Microgochi{
-[s S371 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S371 Microgochi age satiete energie bonheur vivant ]
 "51 ./glcd.h
 [; ;./glcd.h: 51: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
@@ -1590,18 +1586,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"21 ./main.h
-[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
-[v _mGogo `*S371 ~T0 @X0 1 e ]
-[i _mGogo
--> -> -> 0 `i `*v `*S371
-]
-"22
-[; ;./main.h: 22: unsigned int cpt=0;
-[v _cpt `ui ~T0 @X0 1 e ]
-[i _cpt
--> -> 0 `i `ui
-]
 "22 screen.c
 [; ;screen.c: 22: const unsigned char ou[8]=
 [v _ou `Cuc ~T0 @X0 -> 8 `i e ]
@@ -1672,7 +1656,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _glcd_WriteString (3 , , :s 7C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "46
 [; ;screen.c: 46: }
-[e :UE 373 ]
+[e :UE 371 ]
 }
 [a 1C 80 114 111 106 101 116 0 ]
 [a 2C 77 105 99 114 111 0 ]

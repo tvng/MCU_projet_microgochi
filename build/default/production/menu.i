@@ -237,7 +237,9 @@ void menu_actions(int action);
 # 10 "menu.c" 2
 
 # 1 "./game.h" 1
-# 13 "./game.h"
+# 11 "./game.h"
+extern int cpt;
+
 void game_play();
 void game_stats();
 # 11 "menu.c" 2
@@ -256,8 +258,12 @@ struct Microgochi{
 
 };
 
-struct Microgochi * microgochi_init(struct Microgochi *m);
+extern struct Microgochi mGogo;
+
+void microgochi_init();
 void micro_manger();
+void micro_dormir();
+void micro_calin();
 # 12 "menu.c" 2
 
 # 1 "./myglcd.h" 1
@@ -6513,9 +6519,6 @@ void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 13 "menu.c" 2
 
 # 1 "./main.h" 1
-# 21 "./main.h"
-struct Microgochi *mGogo=((void*)0);
-unsigned int cpt=0;
 # 14 "menu.c" 2
 
 
@@ -6555,6 +6558,18 @@ void menu_actions(int action)
     if (action == 0)
     {
         micro_manger();
+    }
+    if (action == 1)
+    {
+        micro_calin();
+    }
+    if (action == 2)
+    {
+        micro_dormir();
+    }
+    if (action == 3)
+    {
+
     }
     if (action == 7)
     {

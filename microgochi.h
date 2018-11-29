@@ -19,5 +19,9 @@ struct Microgochi{
   
 };
 
-struct Microgochi * microgochi_init(struct Microgochi *m);
+extern struct Microgochi mGogo;    //creation structure Microgochi
+
+void microgochi_init();
 void micro_manger();
+void micro_dormir();
+void micro_calin();

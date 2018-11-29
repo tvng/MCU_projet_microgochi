@@ -513,66 +513,106 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"21 ./main.h
-[; ;./main.h: 21: struct Microgochi *mGogo=((void*)0);
-[v _mGogo `*S362 ~T0 @X0 1 e ]
-[i _mGogo
--> -> -> 0 `i `*v `*S362
-]
-"22
-[; ;./main.h: 22: unsigned int cpt=0;
-[v _cpt `ui ~T0 @X0 1 e ]
-[i _cpt
--> -> 0 `i `ui
-]
 "12 microgochi.c
-[; ;microgochi.c: 12: struct Microgochi * microgochi_init(struct Microgochi *m)
-[v _microgochi_init `(*S362 ~T0 @X0 1 ef1`*S362 ]
-"13
-[; ;microgochi.c: 13: {
+[; ;microgochi.c: 12: struct Microgochi mGogo;
+[v _mGogo `S362 ~T0 @X0 1 e ]
+"14
+[; ;microgochi.c: 14: void microgochi_init()
+[v _microgochi_init `(v ~T0 @X0 1 ef ]
+"15
+[; ;microgochi.c: 15: {
 {
 [e :U _microgochi_init ]
-"12
-[; ;microgochi.c: 12: struct Microgochi * microgochi_init(struct Microgochi *m)
-[v _m `*S362 ~T0 @X0 1 r1 ]
-"13
-[; ;microgochi.c: 13: {
 [f ]
-"14
-[; ;microgochi.c: 14:     m->age=0;
-[e = . *U _m 0 -> -> 0 `i `uc ]
-"15
-[; ;microgochi.c: 15:     m->satiete=100;
-[e = . *U _m 1 -> -> 100 `i `uc ]
 "16
-[; ;microgochi.c: 16:     m->energie=100;
-[e = . *U _m 2 -> -> 100 `i `uc ]
+[; ;microgochi.c: 16:     mGogo.age=0;
+[e = . _mGogo 0 -> -> 0 `i `uc ]
 "17
-[; ;microgochi.c: 17:     m->bonheur=100;
-[e = . *U _m 3 -> -> 100 `i `uc ]
+[; ;microgochi.c: 17:     mGogo.satiete=80;
+[e = . _mGogo 1 -> -> 80 `i `uc ]
 "18
-[; ;microgochi.c: 18:     m->vivant=1;
-[e = . *U _m 4 -> -> 1 `i `uc ]
+[; ;microgochi.c: 18:     mGogo.energie=80;
+[e = . _mGogo 2 -> -> 80 `i `uc ]
+"19
+[; ;microgochi.c: 19:     mGogo.bonheur=80;
+[e = . _mGogo 3 -> -> 80 `i `uc ]
 "20
-[; ;microgochi.c: 20:     return m;
-[e ) _m ]
-[e $UE 365  ]
+[; ;microgochi.c: 20:     mGogo.vivant=1;
+[e = . _mGogo 4 -> -> 1 `i `uc ]
 "22
 [; ;microgochi.c: 22: }
-[e :UE 365 ]
+[e :UE 363 ]
 }
 "24
-[; ;microgochi.c: 24: void micro_manger ()
-[v _micro_manger `(v ~T0 @X0 1 ef ]
+[; ;microgochi.c: 24: void micro_vieillir()
+[v _micro_vieillir `(v ~T0 @X0 1 ef ]
 "25
 [; ;microgochi.c: 25: {
 {
-[e :U _micro_manger ]
+[e :U _micro_vieillir ]
 [f ]
 "26
-[; ;microgochi.c: 26:     mGogo->satiete += 20;
-[e =+ . *U _mGogo 1 -> -> 20 `i `uc ]
+[; ;microgochi.c: 26:     mGogo.age++;
+[e ++ . _mGogo 0 -> -> 1 `i `uc ]
 "27
-[; ;microgochi.c: 27: }
+[; ;microgochi.c: 27:     if (mGogo.age>=100)
+[e $ ! >= -> . _mGogo 0 `i -> 100 `i 365  ]
+"28
+[; ;microgochi.c: 28:     {
+{
+"29
+[; ;microgochi.c: 29:         mGogo.vivant=0;
+[e = . _mGogo 4 -> -> 0 `i `uc ]
+"30
+[; ;microgochi.c: 30:     }
+}
+[e :U 365 ]
+"31
+[; ;microgochi.c: 31: }
+[e :UE 364 ]
+}
+"33
+[; ;microgochi.c: 33: void micro_manger ()
+[v _micro_manger `(v ~T0 @X0 1 ef ]
+"34
+[; ;microgochi.c: 34: {
+{
+[e :U _micro_manger ]
+[f ]
+"35
+[; ;microgochi.c: 35:     mGogo.satiete += 20;
+[e =+ . _mGogo 1 -> -> 20 `i `uc ]
+"36
+[; ;microgochi.c: 36: }
 [e :UE 366 ]
+}
+"38
+[; ;microgochi.c: 38: void micro_calin ()
+[v _micro_calin `(v ~T0 @X0 1 ef ]
+"39
+[; ;microgochi.c: 39: {
+{
+[e :U _micro_calin ]
+[f ]
+"40
+[; ;microgochi.c: 40:     mGogo.bonheur += 20;
+[e =+ . _mGogo 3 -> -> 20 `i `uc ]
+"41
+[; ;microgochi.c: 41: }
+[e :UE 367 ]
+}
+"43
+[; ;microgochi.c: 43: void micro_dormir ()
+[v _micro_dormir `(v ~T0 @X0 1 ef ]
+"44
+[; ;microgochi.c: 44: {
+{
+[e :U _micro_dormir ]
+[f ]
+"45
+[; ;microgochi.c: 45:     mGogo.energie += 20;
+[e =+ . _mGogo 2 -> -> 20 `i `uc ]
+"46
+[; ;microgochi.c: 46: }
+[e :UE 368 ]
 }

@@ -2,6 +2,7 @@
  * File:   game.c
  * Author: Tuong Vi
  *
+ *
  * Created on 23 octobre 2018, 17:24
  */
 #include <pic18f4550.h>
@@ -12,7 +13,10 @@
 #include "myglcd.h"
 #include "game.h"
 #include "menu.h"
+#include "itoa.h"
 
+char buffer[3];
+int cpt=0;
 
 //fonction de jeu
 void game_play()
@@ -31,7 +35,7 @@ void game_play()
     int button_pressed=0;
     
    // ETAPE 2: gni
-    while (mGogo->vivant==1) //tant que le microgochi est vivant
+    while (mGogo.vivant==1) //tant que le microgochi est vivant
     {
             //si on appuie sur le bouton de gauche
         
@@ -92,19 +96,43 @@ void game_stats()
     glcd_SetCursor(0,0);				//place le curseur
 	glcd_WriteString("Stats:", f8X8, 1);	//ecrit 
 
-    glcd_SetCursor(0,1);		
+    glcd_SetCursor(50,0);		
 	glcd_WriteString("RC2=exit",f8X8,1);
 
     int sortie_enable=0;
     
     do 
     {
+        glcd_SetCursor(0,2);
+        glcd_WriteString("Faim:",f8X8,1);
+        glcd_SetCursor(50,2);
+        itoa(mGogo.satiete, buffer);
+        glcd_WriteString(buffer,f8X8,1);
+        memset(&buffer, 0, sizeof(buffer));
+        
+        glcd_SetCursor(0,3);
+        glcd_WriteString("Energie:",f8X8,1);
+        glcd_SetCursor(65,3);
+        itoa(mGogo.energie, buffer);
+        glcd_WriteString(buffer,f8X8,1);
+        memset(&buffer, 0, sizeof(buffer));
+        
+        glcd_SetCursor(0,4);
+        glcd_WriteString("Amour:",f8X8,1);
+        glcd_SetCursor(55,4);
+        itoa(mGogo.bonheur, buffer);
+        glcd_WriteString(buffer,f8X8,1);
+        memset(&buffer, 0, sizeof(buffer));
+        
+        
         if (BUTTON_MID==1)
         {
             sortie_enable=1;
         }
-    }while(sortie_enable != 1 && BUTTON_MID!=1);
-    
+        
+        
+    }while(sortie_enable != 1 && BUTTON_MID!=1); //une fois qu'on a appuyé sur RC2 et qu'on a relaché
+     
     glcd_FillScreen(0); //efface l'ecran
 }
 
