@@ -1588,8 +1588,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "102
-[; ;./myglcd.h: 102: const unsigned char champi [] = {
-[v _champi `Cuc ~T0 @X0 -> 126 `i e ]
+[; ;./myglcd.h: 102: char champi [] = {
+[v _champi `uc ~T0 @X0 -> 126 `i e ]
 [i _champi
 :U ..
 -> -> 0 `i `uc
@@ -1721,8 +1721,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "114
-[; ;./myglcd.h: 114: const unsigned char tamago [] = {
-[v _tamago `Cuc ~T0 @X0 -> 126 `i e ]
+[; ;./myglcd.h: 114: char tamago [] = {
+[v _tamago `uc ~T0 @X0 -> 126 `i e ]
 [i _tamago
 :U ..
 -> -> 0 `i `uc
@@ -1965,7 +1965,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "52
 [; ;minijeu.c: 52:         displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
-[e ( _displayObject (4 , , , , , -> &U _champi `*uc -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _champi -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 1 `i ]
 "54
 [; ;minijeu.c: 54:     }
 }
@@ -2001,7 +2001,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "64
 [; ;minijeu.c: 64:       displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , -> &U _champi `*uc -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 0 `i ]
+[e ( _displayObject (4 , , , , , &U _champi -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 0 `i ]
 "65
 [; ;minijeu.c: 65:     }
 }
@@ -2089,7 +2089,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _remplir_tableau ..  ]
 "96
 [; ;minijeu.c: 96:     displayObject (tamago, 10 ,40, 9, 14, 1);
-[e ( _displayObject (4 , , , , , -> &U _tamago `*uc -> 10 `i -> 40 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> 10 `i -> 40 `i -> 9 `i -> 14 `i -> 1 `i ]
 "100
 [; ;minijeu.c: 100:     while (1){
 [e :U 399 ]

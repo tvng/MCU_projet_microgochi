@@ -99,7 +99,7 @@ const unsigned char test[]={
 0xFC, 0xFC, 0xFC, 0x80, 0xE0, 0xE0, 0xE0, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-const unsigned char champi [] = {
+char champi [] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1,0,0,0,0,0,0,
 0,0,0,0,0,0,1,1,1,0,0,0,0,0,
@@ -111,7 +111,7 @@ const unsigned char champi [] = {
 0,0,1,1,1,1,0,0,0,1,1,1,1,0,
 };
 
-const unsigned char tamago [] = {
+char tamago [] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1,0,0,0,0,0,0,
 0,0,0,0,0,0,1,1,1,0,0,0,0,0,

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\MCU_projet_microgochi.production.hex">
+  <executable name="dist/default/production\MCU_projet_tamagogo.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>9876</used>
-      <free>22892</free>
+      <used>9844</used>
+      <free>22924</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>115</used>
-      <free>1933</free>
+      <used>367</used>
+      <free>1681</free>
     </memory>
   </executable>
 </project>
