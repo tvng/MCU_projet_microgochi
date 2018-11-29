@@ -1,4 +1,4 @@
-# 1 "myglcd.c"
+# 1 "minijeu.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,16 +6,12 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "myglcd.c" 2
+# 1 "minijeu.c" 2
+# 1 "./screen.h" 1
+# 11 "./screen.h"
+void screen_credits(void);
+# 1 "minijeu.c" 2
 
-
-
-
-
-
-
-# 1 "./myglcd.h" 1
-# 11 "./myglcd.h"
 # 1 "./glcd.h" 1
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\pic18f4550.h" 3
@@ -6376,6 +6372,16 @@ int toascii(int);
 
 
 # 1 "./myglcd.h" 1
+# 11 "./myglcd.h"
+# 1 "./glcd.h" 1
+
+
+
+
+
+
+
+# 1 "./myglcd.h" 1
 # 8 "./glcd.h" 2
 # 45 "./glcd.h"
 extern void glcd_Init(unsigned char mode);
@@ -6512,29 +6518,128 @@ const unsigned char tamago [] = {
 0,0,1,1,1,1,0,0,0,1,1,1,1,0,
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
-# 8 "myglcd.c" 2
+# 8 "./glcd.h" 2
+# 2 "minijeu.c" 2
+
+
+# 1 "./minijeu.h" 1
+# 15 "./minijeu.h"
+extern char pos_x, pos_y ;
+
+void lancer_minijeu();
+struct champi creer_champi(char x, char y);
+void afficher_sequence ();
+void bouger_sequence ();
+void effacer_sequence ();
+void remplir_tableau();
+void dessiner_arbre(char a, char b);
+# 4 "minijeu.c" 2
+
+# 1 "./main.h" 1
+# 5 "minijeu.c" 2
 
 
 
+int taille=1;
+int direction =0;
 
 
-void displayObject (char *tab, int x, int y, int height, int width, int write)
+struct champi
+{
+    char pos_x;
+    char pos_y;
+
+};
+struct tamagotchi
+{
+    char pos_x;
+    char pos_y;
+
+};
+
+
+struct champi tab[2];
+
+struct champi creer_champi(char x, char y)
+{
+    struct champi new_champi;
+    new_champi.pos_x = x;
+    new_champi.pos_y = y;
+    return new_champi;
+}
+
+void remplir_tableau()
+{
+    char x = 110;
+    int i=0;
+    for (i=0;i< taille ;i++)
+    {
+        tab[i]= creer_champi(x,40);
+        x= x+16;
+    }
+}
+void afficher_sequence ()
+{
+    int i=0;
+    for (i=0;i<taille;i++)
+    {
+
+        displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
+
+    }
+}
+
+void effacer_sequence ()
+{
+    int i=0;
+    for (i=0;i<taille;i++)
+    {
+
+
+      displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
+    }
+}
+
+void bouger_sequence ()
+{
+    effacer_sequence();
+    int i=0;
+    for (i=0;i<taille;i++)
+    {
+       tab[i].pos_x -=2;
+        if(tab[i].pos_x== 0 ) tab[i].pos_x= 110;
+   }
+
+    afficher_sequence();
+}
+
+void saut_tamago ()
 {
 
-    int i = 0;
-    int j = 0;
-    int nb = 0;
+}
 
-    for (i = y; i < y + height; i++)
-    {
-        for(j = x; j < x + width; j++){
-            if((tab[nb] != 0) && (write == 1)){
-                glcd_PlotPixel(j, i, 1);
-            }
-            else if((tab[nb] != 0) && (write == 0)){
-                glcd_PlotPixel(j, i, 0);
-            }
-            nb++;
-        }
+
+
+
+void lancer_minijeu()
+{
+
+    glcd_FillScreen(0);
+    remplir_tableau();
+
+
+    displayObject (tamago, 10 ,40, 9, 14, 1);
+
+
+
+    while (1){
+
+     bouger_sequence();
+
+
+
+
+
+
     }
 }

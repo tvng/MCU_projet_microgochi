@@ -6515,11 +6515,48 @@ const unsigned char test[]={
 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFC,
 0xFC, 0xFC, 0xFC, 0x80, 0xE0, 0xE0, 0xE0, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
+
+const unsigned char champi [] = {
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,0,0,0,0,0,
+0,0,0,0,0,1,1,1,1,1,0,0,0,0,
+0,0,0,0,1,1,1,1,1,1,1,0,0,0,
+0,0,0,1,1,0,1,1,1,0,1,1,0,0,
+0,0,0,1,1,0,0,1,0,0,1,1,0,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,0,
+0,0,1,1,1,1,0,0,0,1,1,1,1,0,
+};
+
+const unsigned char tamago [] = {
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,0,0,0,0,0,
+0,0,0,0,0,1,1,1,1,1,0,0,0,0,
+0,0,0,0,1,1,1,1,1,1,1,0,0,0,
+0,0,0,1,1,0,1,1,1,0,1,1,0,0,
+0,0,0,1,1,0,0,1,0,0,1,1,0,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,0,
+0,0,1,1,1,1,0,0,0,1,1,1,1,0,
+};
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 13 "menu.c" 2
 
 # 1 "./main.h" 1
 # 14 "menu.c" 2
+
+# 1 "./minijeu.h" 1
+# 15 "./minijeu.h"
+extern char pos_x, pos_y ;
+
+void lancer_minijeu();
+struct champi creer_champi(char x, char y);
+void afficher_sequence ();
+void bouger_sequence ();
+void effacer_sequence ();
+void remplir_tableau();
+void dessiner_arbre(char a, char b);
+# 15 "menu.c" 2
 
 
 
@@ -6569,7 +6606,7 @@ void menu_actions(int action)
     }
     if (action == 3)
     {
-
+        lancer_minijeu();
     }
     if (action == 7)
     {

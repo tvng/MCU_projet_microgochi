@@ -12,6 +12,7 @@
 #include "microgochi.h"
 #include "myglcd.h"
 #include "main.h"
+#include "minijeu.h"
 
 //pour afficher le curseur
 void menu_cursor(int action, int write)
@@ -60,7 +61,7 @@ void menu_actions(int action)
     }
     if (action == ACTION_JEU)
     {
-        //MINI JEU!!!!
+        lancer_minijeu();//MINI JEU!!!!
     }
     if (action == ACTION_STATS) 
     {
