@@ -8,6 +8,19 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 19 "main.c"
+#pragma config FOSC = HS
+#pragma config WDT = ON
+#pragma config PWRT = OFF
+#pragma config BOR = ON
+#pragma config LVP = OFF
+#pragma config CPD = OFF
+#pragma config WRTD = OFF
+#pragma config CPD = OFF
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5618,7 +5631,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 19 "main.c" 2
+# 31 "main.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
@@ -5757,12 +5770,12 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 21 "main.c" 2
+# 33 "main.c" 2
 
 
 
 # 1 "./main.h" 1
-# 24 "main.c" 2
+# 36 "main.c" 2
 
 # 1 "./glcd.h" 1
 
@@ -6524,7 +6537,7 @@ char tamago [] = {
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 8 "./glcd.h" 2
-# 25 "main.c" 2
+# 37 "main.c" 2
 
 # 1 "./microgochi.h" 1
 # 10 "./microgochi.h"
@@ -6546,7 +6559,7 @@ void microgochi_init();
 void micro_manger();
 void micro_dormir();
 void micro_calin();
-# 26 "main.c" 2
+# 38 "main.c" 2
 
 # 1 "./game.h" 1
 # 11 "./game.h"
@@ -6554,26 +6567,18 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-# 27 "main.c" 2
+# 39 "main.c" 2
 
 # 1 "./screen.h" 1
 # 11 "./screen.h"
 void screen_credits(void);
-# 28 "main.c" 2
+# 40 "main.c" 2
 
 
-void __attribute__((picinterrupt(""))) isr(void)
-{
 
-    if (INTCONbits.TMR0IE==1 && INTCONbits.TMR0IF==1)
-    {
-         mGogo.satiete--;
-        cpt++;
-     INTCONbits.TMR0IF = 0;
 
-    }
 
-}
+
 
 int main(int argc, char** argv) {
 
@@ -6585,13 +6590,20 @@ int main(int argc, char** argv) {
 
     TRISC = 0b00000111;
     PORTC = 0b00000000;
+# 79 "main.c"
+    T1CONbits.TMR1ON=1;
+    T1CONbits.TMR1CS=0;
+    T1CONbits.T1CKPS1=1;
+    T1CONbits.T1CKPS0=1;
 
 
+    INTCONbits.PEIE = 1;
+    PIE1bits.TMR1IE = 1;
+    PIR1bits.TMR1IF = 0;
 
-     T0CON=0x07;
-     INTCONbits.TMR0IF = 0;
- INTCONbits.TMR0IE = 1;
- INTCONbits.GIE = 1;
+    INTCONbits.GIE = 1;
+
+
 
 
 
@@ -6630,4 +6642,40 @@ int main(int argc, char** argv) {
     }
 
     return (0);
+}
+
+void __attribute__((picinterrupt(""))) mdr(void)
+{
+
+    if (PIR1bits.TMR1IF==1)
+    {
+
+        cpt++;
+     PIE1bits.TMR1IE = 1;
+        PIR1bits.TMR1IF = 0;
+
+    }
+
+        if (cpt==90)
+        {
+            mGogo.satiete -= 10;
+        }
+
+         if (cpt==30)
+        {
+            mGogo.energie--;
+
+            mGogo.bonheur--;
+        }
+
+         if (cpt==300)
+        {
+            mGogo.age++;
+            cpt=0;
+        }
+
+
+
+
+
 }
