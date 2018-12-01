@@ -3,11 +3,19 @@ Microchip MPLAB XC8 Compiler V2.00 ()
 Linker command line:
 
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
   -cs -h+dist/default/production\MCU_projet_microgochi.production.sym \
   --cmf=dist/default/production\MCU_projet_microgochi.production.cmf -z \
   -Q18F4550 -oC:\Users\X250\AppData\Local\Temp\s530.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MCU_projet_microgochi.production.map -E1 \
+=======
+  -cs -h+dist/default/production\MCU_projet_tamagogo.X.production.sym \
+  --cmf=dist/default/production\MCU_projet_tamagogo.X.production.cmf -z \
+  -Q18F4550 -oC:\Users\acajo\AppData\Local\Temp\satk.2 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/MCU_projet_tamagogo.X.production.map -E1 \
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
   -ver=XC8 --acfsm=1493 -ASTACK=017Eh-07ffh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
   -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
@@ -24,8 +32,13 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
   C:\Users\X250\AppData\Local\Temp\s530.o \
   dist/default/production\MCU_projet_microgochi.production.o 
+=======
+  C:\Users\acajo\AppData\Local\Temp\satk.o \
+  dist/default/production\MCU_projet_tamagogo.X.production.o 
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 Object code version is 3.11
 
@@ -37,13 +50,18 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 C:\Users\X250\AppData\Local\Temp\s530.o
+=======
+C:\Users\acajo\AppData\Local\Temp\satk.o
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/default/production\MCU_projet_microgochi.production.o
+dist/default/production\MCU_projet_tamagogo.X.production.o
                 intcode                               8        8        6        4       0
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
                 temp                                 5C       5C        1        1       1
                 mediumconst                        7254     7254      DAC     392A       0
                 intcode_body                       1E46     1E46       30        4       0
@@ -92,6 +110,53 @@ dist/default/production\MCU_projet_microgochi.production.o
                 idataBANK1                         1C7A     1C7A       7E        4       0
                 idataBANK0                         1E9E     1E9E       22        4       0
                 idataCOMRAM                        1EF8     1EF8        4        4       0
+=======
+                temp                                 55       55        1        1       1
+                mediumconst                        72E4     72E4      D1C     3972       0
+                intcode_body                       1674     1674       78        4       0
+                text32                             1924     1924       46        4       0
+                text31                              E8E      E8E       D6        4       0
+                text30                             1032     1032       B8        4       0
+                text29                             175E     175E       70        4       0
+                text28                              598      598      144        4       0
+                text27                              6DC      6DC      12C        4       0
+                text26                             12F4     12F4       AA        4       0
+                text25                              A40      A40       EC        4       0
+                text24                              CE0      CE0       D8        4       0
+                text23                             183C     183C       52        4       0
+                text22                             14D4     14D4       92        4       0
+                text21                              DB8      DB8       D6        4       0
+                text20                              3DA      3DA      1BE        4       0
+                text19                              204      204      1D6        4       0
+                text18                             18DE     18DE       46        4       0
+                text17                              C06      C06       DA        4       0
+                text16                              808      808      126        4       0
+                text15                             1248     1248       AC        4       0
+                text14                             119C     119C       AC        4       0
+                text13                             143A     143A       9A        4       0
+                text12                             196A     196A       18        4       0
+                text11                             17CE     17CE       6E        4       0
+                text10                             188E     188E       50        4       0
+                text9                              1998     1998        8        4       0
+                text8                              19A6     19A6        6        4       0
+                text7                              19A0     19A0        6        4       0
+                text6                              10EA     10EA       B2        4       0
+                text5                               92E      92E      112        4       0
+                text4                                12       12      1F2        4       0
+                text3                               F64      F64       CE        4       0
+                text2                              1982     1982       16        4       0
+                text1                               B2C      B2C       DA        4       0
+                text0                              1566     1566       90        4       0
+                cstackCOMRAM                          1        1       40        1       1
+                dataBANK1                           100      100       7E      100       1
+                dataBANK0                            60       60       9C       60       1
+                dataCOMRAM                           53       53        2        1       1
+                bssCOMRAM                            41       41       12        1       1
+                cinit                              16EC     16EC       72        4       0
+                idataBANK1                         15F6     15F6       7E        4       0
+                idataBANK0                         139E     139E       9C        4       0
+                idataCOMRAM                        19AC     19AC        2        4       0
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -100,6 +165,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
                 intcode_body                       1E46     1E46       30         0
                 text34                             1E00     1E00       46         0
                 text33                             1458     1458       D6         0
@@ -140,13 +206,57 @@ TOTAL           Name                               Link     Load   Length     Sp
                 idataBANK1                         1C7A     1C7A       7E         0
                 idataBANK0                         1E9E     1E9E       22         0
                 idataCOMRAM                        1EF8     1EF8        4         0
+=======
+                intcode_body                       1674     1674       78         0
+                text32                             1924     1924       46         0
+                text31                              E8E      E8E       D6         0
+                text30                             1032     1032       B8         0
+                text29                             175E     175E       70         0
+                text28                              598      598      144         0
+                text27                              6DC      6DC      12C         0
+                text26                             12F4     12F4       AA         0
+                text25                              A40      A40       EC         0
+                text24                              CE0      CE0       D8         0
+                text23                             183C     183C       52         0
+                text22                             14D4     14D4       92         0
+                text21                              DB8      DB8       D6         0
+                text20                              3DA      3DA      1BE         0
+                text19                              204      204      1D6         0
+                text18                             18DE     18DE       46         0
+                text17                              C06      C06       DA         0
+                text16                              808      808      126         0
+                text15                             1248     1248       AC         0
+                text14                             119C     119C       AC         0
+                text13                             143A     143A       9A         0
+                text12                             196A     196A       18         0
+                text11                             17CE     17CE       6E         0
+                text10                             188E     188E       50         0
+                text9                              1998     1998        8         0
+                text8                              19A6     19A6        6         0
+                text7                              19A0     19A0        6         0
+                text6                              10EA     10EA       B2         0
+                text5                               92E      92E      112         0
+                text4                                12       12      1F2         0
+                text3                               F64      F64       CE         0
+                text2                              1982     1982       16         0
+                text1                               B2C      B2C       DA         0
+                text0                              1566     1566       90         0
+                cinit                              16EC     16EC       72         0
+                idataBANK1                         15F6     15F6       7E         0
+                idataBANK0                         139E     139E       9C         0
+                idataCOMRAM                        19AC     19AC        2         0
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
 
         CLASS   MEDIUMCONST    
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
                 mediumconst                        7254     7254      DAC         0
+=======
+                mediumconst                        72E4     72E4      D1C         0
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
         CLASS   COMRAM         
                 temp                                 5C       5C        1         1
@@ -161,8 +271,12 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   RAM            
 
         CLASS   BANK0          
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
                 dataBANK0                            60       60       22         1
                 bssBANK0                             82       82       15         1
+=======
+                dataBANK0                            60       60       9C         1
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
         CLASS   BANK1          
                 dataBANK1                           100      100       7E         1
@@ -196,11 +310,19 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
                 cstackCOMRAM                   000001  00005C  00005D         1       1  COMRAM  
                 intcode                        000008  001EF4  001EFC         4       0  CODE    
                 dataBANK0                      000060  000037  000097        60       1  BANK0   
                 dataBANK1                      000100  00007E  00017E       100       1  BANK1   
                 mediumconst                    007254  000DAC  008000      392A       0  MEDIUMCO
+=======
+                cstackCOMRAM                   000001  000055  000056         1       1  COMRAM  
+                intcode                        000008  0019A6  0019AE         4       0  CODE    
+                dataBANK0                      000060  00009C  0000FC        60       1  BANK0   
+                dataBANK1                      000100  00007E  00017E       100       1  BANK1   
+                mediumconst                    0072E4  000D1C  008000      3972       0  MEDIUMCO
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -208,7 +330,11 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
         BANK0            000097-0000FF               69
+=======
+        BANK0            0000FC-0000FF                4
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
         BANK1            00017E-0001FF               82
         BANK2            000200-0002FF              100
         BANK3            000300-0003FF              100
@@ -216,6 +342,7 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
         BIGRAM           00005D-00005F                3
                          000097-0000FF               69
                          00017E-0007FF              682
@@ -230,6 +357,22 @@ UNUSED ADDRESS RANGES
                          00017E-0007FF              100
         SFR              000F60-000FFF               A0
         SMALLCONST       001EFC-007253              100
+=======
+        BIGRAM           000056-00005F                A
+                         0000FC-0000FF                4
+                         00017E-0007FF              682
+        CODE             000004-000007                4
+                         0019AE-0072E3             5936
+        COMRAM           000056-00005F                A
+        CONST            000004-000007                4
+                         0019AE-0072E3             5936
+        EEDATA           F00000-F000FF              100
+        MEDIUMCONST      0019AE-0072E3             5936
+        RAM              0000FC-0000FF                4
+                         00017E-0007FF              100
+        SFR              000F60-000FFF               A0
+        SMALLCONST       0019AE-0072E3              100
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
         STACK            00017E-0007FF              682
 
                                   Symbol Table
@@ -239,22 +382,36 @@ UNUSED ADDRESS RANGES
 ?_creer_champi              cstackCOMRAM 000001
 ?_strlen                    cstackCOMRAM 000001
 _ADCON1                     (abs)        000FC1
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 _Font3x6                    mediumconst  007E55
 _Font8x8                    mediumconst  007255
+=======
+_Font3x6                    mediumconst  007EE5
+_Font8x8                    mediumconst  0072E5
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 _INTCONbits                 (abs)        000FF2
 _LATBbits                   (abs)        000F8A
 _LATD                       (abs)        000F8C
+_PIE1bits                   (abs)        000F9D
+_PIR1bits                   (abs)        000F9E
 _PORTA                      (abs)        000F80
 _PORTB                      (abs)        000F81
 _PORTC                      (abs)        000F82
 _PORTCbits                  (abs)        000F82
 _PORTD                      (abs)        000F83
 _PORTEbits                  (abs)        000F84
-_T0CON                      (abs)        000FD5
+_T1CONbits                  (abs)        000FCD
 _TRISA                      (abs)        000F92
 _TRISB                      (abs)        000F93
 _TRISC                      (abs)        000F94
 _TRISD                      (abs)        000F95
+__CFG_BOR$ON                (abs)        000000
+__CFG_CPD$OFF               (abs)        000000
+__CFG_FOSC$HS               (abs)        000000
+__CFG_LVP$OFF               (abs)        000000
+__CFG_PWRT$OFF              (abs)        000000
+__CFG_WDT$ON                (abs)        000000
+__CFG_WRTD$OFF              (abs)        000000
 __HRAM                      (abs)        000000
 __Habs1                     abs1         000000
 __Hbank0                    bank0        000000
@@ -400,7 +557,11 @@ __Lintentry                 intentry     000000
 __Lintret                   intret       000000
 __Lintsave_regs             intsave_regs 000000
 __Lirdata                   irdata       000000
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 __Lmediumconst              mediumconst  007254
+=======
+__Lmediumconst              mediumconst  0072E4
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 __LnvFARRAM                 nvFARRAM     000000
 __Lnvbit                    nvbit        000000
 __Lnvrram                   nvrram       000000
@@ -460,13 +621,21 @@ __Ltext9                    text9        000000
 __S0                        (abs)        30000E
 __S1                        (abs)        00017E
 __S2                        (abs)        000000
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 ___awdiv                    text27       00100A
+=======
+___awdiv                    text25       000A40
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 ___awdiv@counter            cstackCOMRAM 000005
 ___awdiv@dividend           cstackCOMRAM 000001
 ___awdiv@divisor            cstackCOMRAM 000003
 ___awdiv@quotient           cstackCOMRAM 000007
 ___awdiv@sign               cstackCOMRAM 000006
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 ___awmod                    text26       0012AA
+=======
+___awmod                    text24       000CE0
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 ___awmod@counter            cstackCOMRAM 000005
 ___awmod@dividend           cstackCOMRAM 000001
 ___awmod@divisor            cstackCOMRAM 000003
@@ -478,6 +647,7 @@ ___rparam_used              (abs)        000001
 ___sp                       stack        000000
 __accesstop                 (abs)        000060
 __activetblptr              (abs)        000002
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 __end_of_Font3x6            mediumconst  007F18
 __end_of_Font8x8            mediumconst  007A55
 __end_of___awdiv            text27       0010F6
@@ -570,6 +740,94 @@ __ptext6                    text6        0018F8
 __ptext7                    text7        001EE0
 __ptext8                    text8        001EE8
 __ptext9                    text9        001EF0
+=======
+__end_of_Font3x6            mediumconst  007FA8
+__end_of_Font8x8            mediumconst  007AE5
+__end_of___awdiv            text25       000B2C
+__end_of___awmod            text24       000DB8
+__end_of__initialization    cinit        001750
+__end_of_afficher_sequence  text15       0012F4
+__end_of_bouger_sequence    text13       0014D4
+__end_of_creer_champi       text12       001982
+__end_of_displayObject      text16       00092E
+__end_of_effacer_sequence   text14       001248
+__end_of_game_play          text4        000204
+__end_of_game_stats         text19       0003DA
+__end_of_glcd_FillScreen    text30       0010EA
+__end_of_glcd_Image         text31       000F64
+__end_of_glcd_Init          text3        001032
+__end_of_glcd_PlotPixel     text17       000CE0
+__end_of_glcd_ReadByte      text18       001924
+__end_of_glcd_SetCursor     text29       0017CE
+__end_of_glcd_WriteByte     text32       00196A
+__end_of_glcd_WriteChar3x6  text28       0006DC
+__end_of_glcd_WriteChar8X8  text27       000808
+__end_of_glcd_WriteString   text26       00139E
+__end_of_itoa               text21       000E8E
+__end_of_lancer_minijeu     text10       0018DE
+__end_of_main               text0        0015F6
+__end_of_mdr                intcode_body 0016EC
+__end_of_memset             text20       000598
+__end_of_menu_actions       text6        00119C
+__end_of_menu_cursor        text5        000A40
+__end_of_micro_calin        text9        0019A0
+__end_of_micro_dormir       text8        0019AC
+__end_of_micro_manger       text7        0019A6
+__end_of_microgochi_init    text2        001998
+__end_of_ou                 mediumconst  007FB0
+__end_of_remplir_tableau    text11       00183C
+__end_of_reverse            text22       001566
+__end_of_screen_credits     text1        000C06
+__end_of_strlen             text23       00188E
+__end_of_test               mediumconst  007EE5
+__initialization            cinit        0016EC
+__mediumconst               mediumconst  0072E4
+__pbssCOMRAM                bssCOMRAM    000041
+__pcinit                    cinit        0016EC
+__pcstackCOMRAM             cstackCOMRAM 000001
+__pdataBANK0                dataBANK0    000060
+__pdataBANK1                dataBANK1    000100
+__pdataCOMRAM               dataCOMRAM   000053
+__pidataBANK0               idataBANK0   00139E
+__pidataBANK1               idataBANK1   0015F6
+__pidataCOMRAM              idataCOMRAM  0019AC
+__pintcode                  intcode      000008
+__pintcode_body             intcode_body 001674
+__pmediumconst              mediumconst  0072E4
+__ptext0                    text0        001566
+__ptext1                    text1        000B2C
+__ptext10                   text10       00188E
+__ptext11                   text11       0017CE
+__ptext12                   text12       00196A
+__ptext13                   text13       00143A
+__ptext14                   text14       00119C
+__ptext15                   text15       001248
+__ptext16                   text16       000808
+__ptext17                   text17       000C06
+__ptext18                   text18       0018DE
+__ptext19                   text19       000204
+__ptext2                    text2        001982
+__ptext20                   text20       0003DA
+__ptext21                   text21       000DB8
+__ptext22                   text22       0014D4
+__ptext23                   text23       00183C
+__ptext24                   text24       000CE0
+__ptext25                   text25       000A40
+__ptext26                   text26       0012F4
+__ptext27                   text27       0006DC
+__ptext28                   text28       000598
+__ptext29                   text29       00175E
+__ptext3                    text3        000F64
+__ptext30                   text30       001032
+__ptext31                   text31       000E8E
+__ptext32                   text32       001924
+__ptext4                    text4        000012
+__ptext5                    text5        00092E
+__ptext6                    text6        0010EA
+__ptext7                    text7        0019A0
+__ptext8                    text8        0019A6
+__ptext9                    text9        001998
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 __ramtop                    ramtop       000800
 __size_of___awdiv           (abs)        000000
 __size_of___awmod           (abs)        000000
@@ -591,10 +849,10 @@ __size_of_glcd_WriteByte    (abs)        000000
 __size_of_glcd_WriteChar3x6 (abs)        000000
 __size_of_glcd_WriteChar8X8 (abs)        000000
 __size_of_glcd_WriteString  (abs)        000000
-__size_of_isr               (abs)        000000
 __size_of_itoa              (abs)        000000
 __size_of_lancer_minijeu    (abs)        000000
 __size_of_main              (abs)        000000
+__size_of_mdr               (abs)        000000
 __size_of_memset            (abs)        000000
 __size_of_menu_actions      (abs)        000000
 __size_of_menu_cursor       (abs)        000000
@@ -608,6 +866,7 @@ __size_of_saut_tamago       (abs)        000000
 __size_of_screen_credits    (abs)        000000
 __size_of_strlen            (abs)        000000
 __smallconst                smallconst   000000
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 _afficher_sequence          text17       001780
 _bouger_sequence            text15       0015FC
 _buffer                     bssCOMRAM    000055
@@ -666,6 +925,58 @@ collision@i                 cstackCOMRAM 000040
 collision@i_726             cstackCOMRAM 00003E
 creer_champi@new_champi     cstackCOMRAM 000006
 creer_champi@x              cstackCOMRAM 000005
+=======
+_afficher_sequence          text15       001248
+_bouger_sequence            text13       00143A
+_buffer                     bssCOMRAM    000050
+_champi                     dataBANK0    000060
+_cpt                        bssCOMRAM    00004C
+_creer_champi               text12       00196A
+_cursor                     dataBANK0    0000DE
+_direction                  bssCOMRAM    00004A
+_displayObject              text16       000808
+_effacer_sequence           text14       00119C
+_game_play                  text4        000012
+_game_stats                 text19       000204
+_glcd_FillScreen            text30       001032
+_glcd_Image                 text31       000E8E
+_glcd_Init                  text3        000F64
+_glcd_PlotPixel             text17       000C06
+_glcd_ReadByte              text18       0018DE
+_glcd_SetCursor             text29       00175E
+_glcd_WriteByte             text32       001924
+_glcd_WriteChar3x6          text28       000598
+_glcd_WriteChar8X8          text27       0006DC
+_glcd_WriteString           text26       0012F4
+_itoa                       text21       000DB8
+_lancer_minijeu             text10       00188E
+_mGogo                      bssCOMRAM    000041
+_main                       text0        001566
+_mdr                        intcode      000008
+_memset                     text20       0003DA
+_menu_actions               text6        0010EA
+_menu_cursor                text5        00092E
+_micro_calin                text9        001998
+_micro_dormir               text8        0019A6
+_micro_manger               text7        0019A0
+_microgochi_init            text2        001982
+_ou                         mediumconst  007FA8
+_remplir_tableau            text11       0017CE
+_reverse                    text22       0014D4
+_screen_credits             text1        000B2C
+_strlen                     text23       00183C
+_tab                        bssCOMRAM    000046
+_taille                     dataCOMRAM   000053
+_tamago                     dataBANK1    000100
+_test                       mediumconst  007AE5
+_x                          bssCOMRAM    00004F
+_y                          bssCOMRAM    00004E
+afficher_sequence@i         cstackCOMRAM 00002B
+bouger_sequence@i           cstackCOMRAM 00002E
+btemp                       temp         000055
+creer_champi@new_champi     cstackCOMRAM 000004
+creer_champi@x              cstackCOMRAM 000003
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 creer_champi@y              cstackCOMRAM 000001
 displayObject@height        cstackCOMRAM 000018
 displayObject@i             cstackCOMRAM 000023
@@ -676,11 +987,19 @@ displayObject@width         cstackCOMRAM 00001A
 displayObject@write         cstackCOMRAM 00001C
 displayObject@x             cstackCOMRAM 000014
 displayObject@y             cstackCOMRAM 000016
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 effacer_sequence@i          cstackCOMRAM 00002D
 end_of_initialization       cinit        001BE8
 game_play@action            cstackCOMRAM 000048
 game_play@button_pressed    cstackCOMRAM 000046
 game_play@write             cstackCOMRAM 000044
+=======
+effacer_sequence@i          cstackCOMRAM 00002B
+end_of_initialization       cinit        001750
+game_play@action            cstackCOMRAM 000036
+game_play@button_pressed    cstackCOMRAM 000034
+game_play@write             cstackCOMRAM 000032
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 game_stats@sortie_enable    cstackCOMRAM 000018
 glcd_FillScreen@color       cstackCOMRAM 00000B
 glcd_FillScreen@i           cstackCOMRAM 00000D
@@ -716,8 +1035,13 @@ glcd_WriteChar8X8@xpos      cstackCOMRAM 000011
 glcd_WriteString@color      cstackCOMRAM 000017
 glcd_WriteString@font       cstackCOMRAM 000016
 glcd_WriteString@str        cstackCOMRAM 000014
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 int$flags                   temp         00005C
 int_func                    intcode_body 001E46
+=======
+int$flags                   temp         000055
+int_func                    intcode_body 001674
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 intlevel0                   text         000000
 intlevel1                   text         000000
 intlevel2                   text         000000
@@ -745,7 +1069,11 @@ saut_tamago@i               cstackCOMRAM 000034
 stackhi                     (abs)        0007FF
 stacklo                     (abs)        00017E
 start                       init         00000E
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 start_initialization        cinit        001B72
+=======
+start_initialization        cinit        0016EC
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 strlen@a                    cstackCOMRAM 000005
 strlen@s                    cstackCOMRAM 000001
 ttemp5                      temp         00005D
@@ -758,7 +1086,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 43 in file "main.c"
+		line 47 in file "main.c"
  Parameters:    Size  Location     Type
   argc            2   73[COMRAM] int 
   argv            3   75[COMRAM] PTR PTR unsigned char 
@@ -767,7 +1095,7 @@ FUNCTION INFORMATION:
  Return value:  Size  Location     Type
                   2   73[COMRAM] int 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -799,7 +1127,7 @@ Total ram usage:        9 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -897,7 +1225,7 @@ Total ram usage:        2 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -932,7 +1260,7 @@ Total ram usage:        6 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -962,7 +1290,7 @@ Total ram usage:        6 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1086,7 +1414,11 @@ Total ram usage:        0 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+=======
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1251,7 +1583,7 @@ Total ram usage:       14 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1284,7 +1616,7 @@ Total ram usage:        5 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1314,7 +1646,7 @@ Total ram usage:        8 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1352,7 +1684,7 @@ Total ram usage:        8 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1455,7 +1787,7 @@ Total ram usage:        2 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1698,7 +2030,7 @@ Total ram usage:        8 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr1l, fsr1h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1934,9 +2266,9 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _isr *****************
+ *************** function _mdr *****************
  Defined at:
-		line 30 in file "main.c"
+		line 132 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1944,7 +2276,7 @@ Total ram usage:        2 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		status,2, status,0
+		wreg, status,2, status,0
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1968,6 +2300,7 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 minijeu.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_creer_champi  		CODE           	1E76	0000	41
 		_afficher_sequence		CODE           	1780	0000	193
 		_collision     		CODE           	0012	0000	791
@@ -1976,15 +2309,28 @@ minijeu.c
 		_remplir_tableau		CODE           	1BF6	0000	133
 		_lancer_minijeu		CODE           	0A16	0000	329
 		_bouger_sequence		CODE           	15FC	0000	197
+=======
+		_creer_champi  		CODE           	196A	0000	25
+		_afficher_sequence		CODE           	1248	0000	173
+		_effacer_sequence		CODE           	119C	0000	173
+		_remplir_tableau		CODE           	17CE	0000	111
+		_lancer_minijeu		CODE           	188E	0000	81
+		_bouger_sequence		CODE           	143A	0000	155
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 minijeu.c estimated size: 2176
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		___awmod       		CODE           	12AA	0000	217
+=======
+		___awmod       		CODE           	0CE0	0000	217
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c estimated size: 217
 
 microgochi.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_microgochi_init		CODE           	1EC0	0000	33
 		_micro_dormir  		CODE           	1EE8	0000	9
 		_micro_manger  		CODE           	1EE0	0000	9
@@ -1994,11 +2340,26 @@ microgochi.c estimated size: 60
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strlen.c
 		_strlen        		CODE           	1D68	0000	83
+=======
+		_microgochi_init		CODE           	1982	0000	23
+		_micro_dormir  		CODE           	19A6	0000	7
+		_micro_manger  		CODE           	19A0	0000	7
+		_micro_calin   		CODE           	1998	0000	9
+
+microgochi.c estimated size: 46
+
+C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strlen.c
+		_strlen        		CODE           	183C	0000	83
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strlen.c estimated size: 83
 
 screen.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_screen_credits		CODE           	10F6	0000	219
+=======
+		_screen_credits		CODE           	0B2C	0000	219
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 screen.c estimated size: 219
 
@@ -2008,11 +2369,16 @@ C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\memset.c
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\memset.c estimated size: 447
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		___awdiv       		CODE           	100A	0000	237
+=======
+		___awdiv       		CODE           	0A40	0000	237
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c estimated size: 237
 
 shared
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_Font3x6       		MEDIUMCONST    	7E55	0000	196
 		_champi        		MEDIUMCONST    	7F20	0000	127
 		_Font8x8       		MEDIUMCONST    	7255	0000	2049
@@ -2021,6 +2387,15 @@ shared
 		_ou            		MEDIUMCONST    	7F18	0000	9
 
 shared estimated size: 3525
+=======
+		_Font3x6       		MEDIUMCONST    	7EE5	0000	196
+		_Font8x8       		MEDIUMCONST    	72E5	0000	2049
+		_test          		MEDIUMCONST    	7AE5	0000	1025
+		__initialization		CODE           	16EC	0000	101
+		_ou            		MEDIUMCONST    	7FA8	0000	9
+
+shared estimated size: 3380
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 game.c
 		_game_stats    		CODE           	051C	0000	471
@@ -2029,6 +2404,7 @@ game.c
 game.c estimated size: 972
 
 glcd.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_glcd_SetCursor		CODE           	1CF8	0000	113
 		_glcd_WriteString		CODE           	19AA	0000	171
 		_glcd_WriteByte		CODE           	1E00	0000	71
@@ -2039,29 +2415,62 @@ glcd.c
 		_glcd_WriteChar3x6		CODE           	0B5E	0000	325
 		_glcd_PlotPixel		CODE           	11D0	0000	219
 		_glcd_Image    		CODE           	1458	0000	215
+=======
+		_glcd_SetCursor		CODE           	175E	0000	113
+		_glcd_WriteString		CODE           	12F4	0000	171
+		_glcd_WriteByte		CODE           	1924	0000	71
+		_glcd_Init     		CODE           	0F64	0000	207
+		_glcd_ReadByte 		CODE           	18DE	0000	71
+		_glcd_WriteChar8X8		CODE           	06DC	0000	301
+		_glcd_FillScreen		CODE           	1032	0000	185
+		_glcd_WriteChar3x6		CODE           	0598	0000	325
+		_glcd_PlotPixel		CODE           	0C06	0000	219
+		_glcd_Image    		CODE           	0E8E	0000	215
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 glcd.c estimated size: 1878
 
 myglcd.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_displayObject 		CODE           	08B0	0000	359
+=======
+		_displayObject 		CODE           	0808	0000	295
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
-myglcd.c estimated size: 359
+myglcd.c estimated size: 295
 
 menu.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_menu_actions  		CODE           	18F8	0000	179
 		_menu_cursor   		CODE           	0EF8	0000	275
+=======
+		_menu_actions  		CODE           	10EA	0000	179
+		_menu_cursor   		CODE           	092E	0000	275
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 menu.c estimated size: 454
 
 itoa.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_itoa          		CODE           	1382	0000	215
 		_reverse       		CODE           	1A54	0000	147
+=======
+		_itoa          		CODE           	0DB8	0000	215
+		_reverse       		CODE           	14D4	0000	147
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 
 itoa.c estimated size: 362
 
 main.c
+<<<<<<< HEAD:dist/default/production/MCU_projet_microgochi.production.map
 		_main          		CODE           	1AE6	0000	141
 		_isr           		CODE           	0008	0000	55
 
 main.c estimated size: 196
+=======
+		_mdr           		CODE           	0008	0000	127
+		_main          		CODE           	1566	0000	145
+
+main.c estimated size: 272
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8:dist/default/production/MCU_projet_tamagogo.X.production.map
 

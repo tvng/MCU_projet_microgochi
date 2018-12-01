@@ -13,6 +13,18 @@
  * un peu comme le découpage "modele - controleur - vue", game ca va être le controleur
 
  */
+     
+
+
+#pragma config FOSC = HS // Oscillator Selection bits (HS oscillator)
+#pragma config WDT = ON // Watchdog Timer Enable bit (WDT enabled)
+#pragma config PWRT = OFF // Power-up Timer Enable bit (PWRT disabled)
+#pragma config BOR = ON // Brown-out Reset Enable bit (BOR enabled)
+#pragma config LVP = OFF // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+#pragma config CPD = OFF // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+#pragma config WRTD = OFF // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+#pragma config CPD = OFF // Flash Program Memory Code Protection bit (Code protection off)
+//#pragma config DEBUG = ON 
 
 //lib pic
 //#include <pic18f4550.h>
@@ -27,18 +39,10 @@
 #include "game.h"
 #include "screen.h"
 
-void __interrupt() isr(void)
-{
-    
-    if (INTCONbits.TMR0IE==1 && INTCONbits.TMR0IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
-    { 
-         mGogo.satiete--;
-        cpt++;
-    	INTCONbits.TMR0IF = 0; //on baisse le flag
-    
-    }
-    
-}
+
+#define _XTAL_FREQ 8000000
+
+
 
 int main(int argc, char** argv) {
 
@@ -52,11 +56,39 @@ int main(int argc, char** argv) {
     PORTC = 0b00000000; //Reset PORTB
 
     ///__**_____________
+    
+    //T0CON permet de configurer le fonctionnement du timer0
     //timer
-     T0CON=0x07; //prescaler=1:256 - mode 16bit - clock interne
-     INTCONbits.TMR0IF = 0;
-	INTCONbits.TMR0IE = 1;
-	INTCONbits.GIE = 1;
+    
+    /* //CA FAIT BUGGER LE TRUC PUTAINNNNNNNNNNNNNNNNN
+    T0CONbits.T0CS = 0; //on choisit l'entree du timer0, 0= quartz interne du PIC
+    T0CONbits.PSA =1;
+    T0CONbits.T0SE=0;
+    T0CONbits.T0PS2=0; //2
+    T0CONbits.T0PS1=0; //4
+    T0CONbits.T0PS0=1; //256
+    
+    
+    INTCONbits.TMR0IF = 0; //baisse le flag
+  //  INTCONbits.PEIE = 1; //peripheral interrupt enable =
+	INTCONbits.TMR0IE = 1; //enable interrupt on overflow
+    INTCONbits.GIE = 1; //global interrupt Enable
+    */
+    
+    
+    T1CONbits.TMR1ON=1;
+    T1CONbits.TMR1CS=0; //internal clock
+    T1CONbits.T1CKPS1=1;
+    T1CONbits.T1CKPS0=1;
+    
+    
+    INTCONbits.PEIE = 1; //peripheral interrupt enable =
+    PIE1bits.TMR1IE = 1; //enable interrupt on overflow
+    PIR1bits.TMR1IF = 0; //baisse le flag
+    
+    INTCONbits.GIE = 1; //global interrupt Enable
+    
+    
     // ******
 
 
@@ -80,7 +112,7 @@ int main(int argc, char** argv) {
         //on lance notre jeu     
         game_play();
 
-        //si on arrive juste là, notre microgochi est mort
+        //si on arrive juste là, notre microgochi est mort&
 
         //si notre microgochi est mort on quitte la bouche ou alors
         //il faudra revenir sur l'écran d'accueil, à voir
@@ -95,4 +127,40 @@ int main(int argc, char** argv) {
     }
 
     return (EXIT_SUCCESS);
+}
+
+void __interrupt() mdr(void)
+{
+    
+    if (PIR1bits.TMR1IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
+    { 
+
+        cpt++;
+    	PIE1bits.TMR1IE = 1; 
+        PIR1bits.TMR1IF = 0; //on baisse le flag
+    
+    }
+
+        if (cpt==90)
+        {
+            mGogo.satiete -= 10;   
+        }
+         
+         if (cpt==30)
+        {
+            mGogo.energie--;   
+            
+            mGogo.bonheur--;
+        }
+        
+         if (cpt==300)
+        {
+            mGogo.age++; 
+            cpt=0;
+        }
+       
+        
+        
+        
+        
 }

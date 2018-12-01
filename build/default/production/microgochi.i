@@ -5531,7 +5531,7 @@ void micro_manger ()
 
 void micro_calin ()
 {
-    mGogo.bonheur += 20;
+    mGogo.bonheur = mGogo.bonheur + 20;
 }
 
 void micro_dormir ()

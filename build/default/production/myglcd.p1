@@ -1581,8 +1581,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "102
-[; ;./myglcd.h: 102: const unsigned char champi [] = {
-[v _champi `Cuc ~T0 @X0 -> 126 `i e ]
+[; ;./myglcd.h: 102: char champi [] = {
+[v _champi `uc ~T0 @X0 -> 126 `i e ]
 [i _champi
 :U ..
 -> -> 0 `i `uc

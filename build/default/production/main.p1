@@ -1,7 +1,44 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[t ~ __interrupt . k ]
-[t T36 __interrupt ]
-"8588 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[p mainexit ]
+"6581 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 6581: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"4001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"2705
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2705: extern volatile unsigned char PORTD __attribute__((address(0xF83)));
+[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
+"3847
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"2563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2563: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"7421
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7421:     struct {
+[s S317 :2 `uc 1 :1 `uc 1 ]
+[n S317 . . NOT_T1SYNC ]
+"7425
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7425:     struct {
+[s S318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S318 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"7434
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7434:     struct {
+[s S319 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S319 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"7441
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7441:     struct {
+[s S320 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S320 . . SOSCEN . T1RD16 ]
+"7420
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7420: typedef union {
+[u S316 `S317 1 `S318 1 `S319 1 `S320 1 ]
+[n S316 . . . . . ]
+"7448
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 7448: extern volatile T1CONbits_t T1CONbits __attribute__((address(0xFCD)));
+[v _T1CONbits `VS316 ~T0 @X0 0 e@4045 ]
+"8588
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8588:     struct {
 [s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -20,6 +57,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8614
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS359 ~T0 @X0 0 e@4082 ]
+<<<<<<< HEAD
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
 [s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -49,6 +87,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8069
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 8069: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
 [v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+=======
+"4390
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4390:     struct {
+[s S175 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S175 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
+"4400
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4400:     struct {
+[s S176 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S176 . . TX1IE RC1IE . PSPIE ]
+"4389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4389: typedef union {
+[u S174 `S175 1 `S176 1 ]
+[n S174 . . . ]
+"4408
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4408: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS174 ~T0 @X0 0 e@3997 ]
+"4474
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4474:     struct {
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4484
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4484:     struct {
+[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S179 . . TX1IF RC1IF . PSPIF ]
+"4473
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4473: typedef union {
+[u S177 `S178 1 `S179 1 ]
+[n S177 . . . ]
+"4492
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4492: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
 "45 ./glcd.h
 [; ;./glcd.h: 45: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
@@ -65,6 +135,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13 ./game.h
 [; ;./game.h: 13: void game_play();
 [v _game_play `(v ~T0 @X0 0 e? ]
+"10 ./microgochi.h
+[; ;./microgochi.h: 10: struct Microgochi{
+[s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S370 Microgochi age satiete energie bonheur vivant ]
+"22
+[; ;./microgochi.h: 22: extern struct Microgochi mGogo;
+[v _mGogo `S370 ~T0 @X0 0 e ]
+[t ~ __interrupt . k ]
+[t T36 __interrupt ]
+"11 ./game.h
+[; ;./game.h: 11: extern int cpt;
+[v _cpt `i ~T0 @X0 0 e ]
+"19 main.c
+[p x FOSC = HS ]
+"20
+[p x WDT = ON ]
+"21
+[p x PWRT = OFF ]
+"22
+[p x BOR = ON ]
+"23
+[p x LVP = OFF ]
+"24
+[p x CPD = OFF ]
+"25
+[p x WRTD = OFF ]
+"26
+[p x CPD = OFF ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -1644,8 +1742,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "102
-[; ;./myglcd.h: 102: const unsigned char champi [] = {
-[v _champi `Cuc ~T0 @X0 -> 126 `i e ]
+[; ;./myglcd.h: 102: char champi [] = {
+[v _champi `uc ~T0 @X0 -> 126 `i e ]
 [i _champi
 :U ..
 -> -> 0 `i `uc
@@ -1909,124 +2007,181 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-[v $root$_isr `(v ~T0 @X0 0 e ]
-"30 main.c
-[; ;main.c: 30: void __attribute__((picinterrupt(""))) isr(void)
-[v _isr `(v ~T36 @X0 1 ef ]
-"31
-[; ;main.c: 31: {
-{
-[e :U _isr ]
-[f ]
-"33
-[; ;main.c: 33:     if (INTCONbits.TMR0IE==1 && INTCONbits.TMR0IF==1)
-[e $ ! && == -> . . _INTCONbits 0 5 `i -> 1 `i == -> . . _INTCONbits 0 2 `i -> 1 `i 372  ]
-"34
-[; ;main.c: 34:     {
-{
-"35
-[; ;main.c: 35:          mGogo.satiete--;
-[e -- . _mGogo 1 -> -> 1 `i `uc ]
-"36
-[; ;main.c: 36:         cpt++;
-[e ++ _cpt -> 1 `i ]
-"37
-[; ;main.c: 37:      INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"39
-[; ;main.c: 39:     }
-}
-[e :U 372 ]
-"41
-[; ;main.c: 41: }
-[e :UE 371 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"43
-[; ;main.c: 43: int main(int argc, char** argv) {
+"47 main.c
+[; ;main.c: 47: int main(int argc, char** argv) {
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"45
-[; ;main.c: 45:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"48
-[; ;main.c: 48:     TRISD = 0xff;
-[e = _TRISD -> -> 255 `i `uc ]
 "49
-[; ;main.c: 49:     PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
-"51
-[; ;main.c: 51:     TRISC = 0b00000111;
-[e = _TRISC -> -> 7 `i `uc ]
+[; ;main.c: 49:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
 "52
-[; ;main.c: 52:     PORTC = 0b00000000;
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 52:     TRISD = 0xff;
+[e = _TRISD -> -> 255 `i `uc ]
+"53
+[; ;main.c: 53:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"55
+[; ;main.c: 55:     TRISC = 0b00000111;
+[e = _TRISC -> -> 7 `i `uc ]
 "56
-[; ;main.c: 56:      T0CON=0x07;
-[e = _T0CON -> -> 7 `i `uc ]
-"57
-[; ;main.c: 57:      INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"58
-[; ;main.c: 58:  INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"59
-[; ;main.c: 59:  INTCONbits.GIE = 1;
+[; ;main.c: 56:     PORTC = 0b00000000;
+[e = _PORTC -> -> 0 `i `uc ]
+"79
+[; ;main.c: 79:     T1CONbits.TMR1ON=1;
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+"80
+[; ;main.c: 80:     T1CONbits.TMR1CS=0;
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
+"81
+[; ;main.c: 81:     T1CONbits.T1CKPS1=1;
+[e = . . _T1CONbits 2 4 -> -> 1 `i `uc ]
+"82
+[; ;main.c: 82:     T1CONbits.T1CKPS0=1;
+[e = . . _T1CONbits 2 3 -> -> 1 `i `uc ]
+"85
+[; ;main.c: 85:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"86
+[; ;main.c: 86:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"87
+[; ;main.c: 87:     PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"63
-[; ;main.c: 63:     int bool_jeu = 1;
+"95
+[; ;main.c: 95:     int bool_jeu = 1;
 [v _bool_jeu `i ~T0 @X0 1 a ]
 [e = _bool_jeu -> 1 `i ]
-"65
-[; ;main.c: 65:     glcd_Init(1);
+"97
+[; ;main.c: 97:     glcd_Init(1);
 [e ( _glcd_Init (1 -> -> 1 `i `uc ]
-"67
-[; ;main.c: 67:     while (bool_jeu == 1)
-[e $U 374  ]
-[e :U 375 ]
-"68
-[; ;main.c: 68:     {
+"99
+[; ;main.c: 99:     while (bool_jeu == 1)
+[e $U 372  ]
+[e :U 373 ]
+"100
+[; ;main.c: 100:     {
 {
-"71
-[; ;main.c: 71:         microgochi_init();
+"103
+[; ;main.c: 103:         microgochi_init();
 [e ( _microgochi_init ..  ]
-"74
-[; ;main.c: 74:         screen_credits();
+"106
+[; ;main.c: 106:         screen_credits();
 [e ( _screen_credits ..  ]
-"76
-[; ;main.c: 76:         _delay((unsigned long)((1000)*(8000000/4000.0)));
+"108
+[; ;main.c: 108:         _delay((unsigned long)((1000)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"81
-[; ;main.c: 81:         game_play();
+"113
+[; ;main.c: 113:         game_play();
 [e ( _game_play ..  ]
-"87
-[; ;main.c: 87:         if (mGogo.vivant == 0) {
-[e $ ! == -> . _mGogo 4 `i -> 0 `i 377  ]
+"119
+[; ;main.c: 119:         if (mGogo.vivant == 0) {
+[e $ ! == -> . _mGogo 4 `i -> 0 `i 375  ]
 {
-"91
-[; ;main.c: 91:             bool_jeu = 0;
+"123
+[; ;main.c: 123:             bool_jeu = 0;
 [e = _bool_jeu -> 0 `i ]
-"93
-[; ;main.c: 93:         }
+"125
+[; ;main.c: 125:         }
+}
+[e :U 375 ]
+"127
+[; ;main.c: 127:     }
+}
+[e :U 372 ]
+"99
+[; ;main.c: 99:     while (bool_jeu == 1)
+[e $ == _bool_jeu -> 1 `i 373  ]
+[e :U 374 ]
+"129
+[; ;main.c: 129:     return (0);
+[e ) -> 0 `i ]
+[e $UE 371  ]
+"130
+[; ;main.c: 130: }
+[e :UE 371 ]
+}
+[v $root$_mdr `(v ~T0 @X0 0 e ]
+"132
+[; ;main.c: 132: void __attribute__((picinterrupt(""))) mdr(void)
+[v _mdr `(v ~T36 @X0 1 ef ]
+"133
+[; ;main.c: 133: {
+{
+[e :U _mdr ]
+[f ]
+"135
+[; ;main.c: 135:     if (PIR1bits.TMR1IF==1)
+[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 377  ]
+"136
+[; ;main.c: 136:     {
+{
+"138
+[; ;main.c: 138:         cpt++;
+[e ++ _cpt -> 1 `i ]
+"139
+[; ;main.c: 139:      PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"140
+[; ;main.c: 140:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"142
+[; ;main.c: 142:     }
 }
 [e :U 377 ]
-"95
-[; ;main.c: 95:     }
+"144
+[; ;main.c: 144:         if (cpt==90)
+[e $ ! == _cpt -> 90 `i 378  ]
+"145
+[; ;main.c: 145:         {
+{
+"146
+[; ;main.c: 146:             mGogo.satiete -= 10;
+[e =- . _mGogo 1 -> -> 10 `i `uc ]
+"147
+[; ;main.c: 147:         }
 }
-[e :U 374 ]
-"67
-[; ;main.c: 67:     while (bool_jeu == 1)
-[e $ == _bool_jeu -> 1 `i 375  ]
-[e :U 376 ]
-"97
-[; ;main.c: 97:     return (0);
-[e ) -> 0 `i ]
-[e $UE 373  ]
-"98
-[; ;main.c: 98: }
-[e :UE 373 ]
+[e :U 378 ]
+"149
+[; ;main.c: 149:          if (cpt==30)
+[e $ ! == _cpt -> 30 `i 379  ]
+"150
+[; ;main.c: 150:         {
+{
+"151
+[; ;main.c: 151:             mGogo.energie--;
+[e -- . _mGogo 2 -> -> 1 `i `uc ]
+"153
+[; ;main.c: 153:             mGogo.bonheur--;
+[e -- . _mGogo 3 -> -> 1 `i `uc ]
+"154
+[; ;main.c: 154:         }
+}
+[e :U 379 ]
+"156
+[; ;main.c: 156:          if (cpt==300)
+[e $ ! == _cpt -> 300 `i 380  ]
+"157
+[; ;main.c: 157:         {
+{
+"158
+[; ;main.c: 158:             mGogo.age++;
+[e ++ . _mGogo 0 -> -> 1 `i `uc ]
+"159
+[; ;main.c: 159:             cpt=0;
+[e = _cpt -> 0 `i ]
+"160
+[; ;main.c: 160:         }
+}
+[e :U 380 ]
+"166
+[; ;main.c: 166: }
+[e :UE 376 ]
 }

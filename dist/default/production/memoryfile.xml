@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\MCU_projet_microgochi.production.hex">
+  <executable name="dist/default/production\MCU_projet_tamagogo.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
+<<<<<<< HEAD
       <used>11428</used>
       <free>21340</free>
+=======
+      <used>9926</used>
+      <free>22842</free>
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
+<<<<<<< HEAD
       <used>273</used>
       <free>1775</free>
+=======
+      <used>367</used>
+      <free>1681</free>
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
     </memory>
   </executable>
 </project>

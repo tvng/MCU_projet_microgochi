@@ -1634,8 +1634,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "102
-[; ;./myglcd.h: 102: const unsigned char champi [] = {
-[v _champi `Cuc ~T0 @X0 -> 126 `i e ]
+[; ;./myglcd.h: 102: char champi [] = {
+[v _champi `uc ~T0 @X0 -> 126 `i e ]
 [i _champi
 :U ..
 -> -> 0 `i `uc
@@ -2042,11 +2042,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [; ;minijeu.c: 60:     {
 {
+<<<<<<< HEAD
 "62
 [; ;minijeu.c: 62:         displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
 [e ( _displayObject (4 , , , , , -> &U _champi `*uc -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 1 `i ]
 "64
 [; ;minijeu.c: 64:     }
+=======
+"52
+[; ;minijeu.c: 52:         displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
+[e ( _displayObject (4 , , , , , &U _champi -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 1 `i ]
+"54
+[; ;minijeu.c: 54:     }
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
 }
 [e ++ _i -> 1 `i ]
 [e :U 385 ]
@@ -2078,11 +2086,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;minijeu.c: 71:     {
 {
+<<<<<<< HEAD
 "74
 [; ;minijeu.c: 74:       displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
 [e ( _displayObject (4 , , , , , -> &U _champi `*uc -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 0 `i ]
 "75
 [; ;minijeu.c: 75:     }
+=======
+"64
+[; ;minijeu.c: 64:       displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
+[e ( _displayObject (4 , , , , , &U _champi -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> 9 `i -> 14 `i -> 0 `i ]
+"65
+[; ;minijeu.c: 65:     }
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
 }
 [e ++ _i -> 1 `i ]
 [e :U 390 ]
@@ -2352,6 +2368,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "200
 [; ;minijeu.c: 200:     remplir_tableau();
 [e ( _remplir_tableau ..  ]
+<<<<<<< HEAD
 "201
 [; ;minijeu.c: 201:     mGogo.pos_x = 30;
 [e = . _mGogo 5 -> -> 30 `i `uc ]
@@ -2364,6 +2381,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "205
 [; ;minijeu.c: 205:      do {
 [e :U 417 ]
+=======
+"96
+[; ;minijeu.c: 96:     displayObject (tamago, 10 ,40, 9, 14, 1);
+[e ( _displayObject (4 , , , , , &U _tamago -> 10 `i -> 40 `i -> 9 `i -> 14 `i -> 1 `i ]
+"100
+[; ;minijeu.c: 100:     while (1){
+[e :U 399 ]
+>>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
 {
 "206
 [; ;minijeu.c: 206:         bouger_sequence();

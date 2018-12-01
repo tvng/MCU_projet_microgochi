@@ -15,6 +15,5 @@
 #define BUTTON_MID PORTCbits.RC1
 #define BUTTON_RIGHT PORTCbits.RC2
 
-#define _XTAL_FREQ 8000000
 
 #endif	/* MAIN_H */
