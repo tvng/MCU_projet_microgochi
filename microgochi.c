@@ -18,6 +18,9 @@ void microgochi_init()
     mGogo.energie=80;
     mGogo.bonheur=80;
     mGogo.vivant=1; //1 pour vivant, 0 pour mort
+    mGogo.pos_x= 60;
+    mGogo.pos_y= 60;
+    
 
 }
 

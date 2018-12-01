@@ -5482,6 +5482,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char pos_x;
+  unsigned char pos_y;
+
 };
 
 extern struct Microgochi mGogo;
@@ -5506,6 +5509,9 @@ void microgochi_init()
     mGogo.energie=80;
     mGogo.bonheur=80;
     mGogo.vivant=1;
+    mGogo.pos_x= 60;
+    mGogo.pos_y= 60;
+
 
 }
 

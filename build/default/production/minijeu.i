@@ -6506,16 +6506,16 @@ const unsigned char champi [] = {
 0,0,1,1,1,1,0,0,0,1,1,1,1,0,
 };
 
-const unsigned char tamago [] = {
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,0,0,0,0,0,0,
-0,0,0,0,0,0,1,1,1,0,0,0,0,0,
-0,0,0,0,0,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,0,0,0,
-0,0,0,1,1,0,1,1,1,0,1,1,0,0,
-0,0,0,1,1,0,0,1,0,0,1,1,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,0,
-0,0,1,1,1,1,0,0,0,1,1,1,1,0,
+char tamago [] = {
+0,0,0,0,0,0,0,1,1,1,0,1,1,1,
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,
+0,0,0,1,1,1,1,1,0,1,1,1,0,1,
+0,0,0,1,0,0,0,0,0,0,0,0,0,1,
+0,0,0,1,0,0,0,0,0,1,0,1,0,1,
+0,1,1,1,0,0,0,0,0,1,0,1,0,1,
+0,1,0,0,0,0,0,0,0,0,0,0,0,1,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 8 "./glcd.h" 2
@@ -6533,21 +6533,118 @@ void bouger_sequence ();
 void effacer_sequence ();
 void remplir_tableau();
 void dessiner_arbre(char a, char b);
+void saut_tamago ();
+void collision ();
+void fin();
 # 4 "minijeu.c" 2
 
 # 1 "./main.h" 1
 # 5 "minijeu.c" 2
 
+# 1 "./microgochi.h" 1
+# 10 "./microgochi.h"
+struct Microgochi{
+
+  unsigned char age;
+  unsigned char satiete;
+  unsigned char energie;
+
+  unsigned char bonheur;
+
+  unsigned char vivant;
+
+  unsigned char pos_x;
+  unsigned char pos_y;
+
+};
+
+extern struct Microgochi mGogo;
+
+void microgochi_init();
+void micro_manger();
+void micro_dormir();
+void micro_calin();
+# 6 "minijeu.c" 2
+
+# 1 "./itoa.h" 1
+# 11 "./itoa.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\string.h" 2 3
 
 
-int taille=1;
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 11 "./itoa.h" 2
+
+
+ void itoa(int n, char s[]);
+
+ void reverse(char s[]);
+# 7 "minijeu.c" 2
+
+
+
+int taille=2;
 int direction =0;
-
+int tamago_largeur = 13;
+int tamago_hauteur = 8;
+int colli =0;
+int score = 3;
+char buffer[3];
 
 struct champi
 {
     char pos_x;
     char pos_y;
+    char champ_h;
+    char champ_l;
 
 };
 struct tamagotchi
@@ -6565,17 +6662,19 @@ struct champi creer_champi(char x, char y)
     struct champi new_champi;
     new_champi.pos_x = x;
     new_champi.pos_y = y;
+    new_champi.champ_h=9;
+    new_champi.champ_l=10;
     return new_champi;
 }
 
 void remplir_tableau()
 {
-    char x = 110;
+    char x = 100;
     int i=0;
     for (i=0;i< taille ;i++)
     {
         tab[i]= creer_champi(x,40);
-        x= x+16;
+        x= x+60;
     }
 }
 void afficher_sequence ()
@@ -6606,8 +6705,11 @@ void bouger_sequence ()
     int i=0;
     for (i=0;i<taille;i++)
     {
-       tab[i].pos_x -=2;
-        if(tab[i].pos_x== 0 ) tab[i].pos_x= 110;
+       tab[i].pos_x -=3;
+        if(tab[i].pos_x <= 4)
+        {
+            tab[i].pos_x= 110;
+        }
    }
 
     afficher_sequence();
@@ -6616,30 +6718,109 @@ void bouger_sequence ()
 void saut_tamago ()
 {
 
+
+
+    int i=0;
+
+    while (i!=5)
+    {
+     bouger_sequence();
+    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
+    mGogo.pos_y -=4;
+    displayObject (tamago, mGogo.pos_x , mGogo.pos_y,9, 14, 1);
+
+    i++;
+    }
+
+    while (i!=10)
+    {
+     bouger_sequence();
+    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
+    mGogo.pos_y +=4;
+    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 1);
+      bouger_sequence();
+      i++;
+     }
+
 }
 
-
-
-
-void lancer_minijeu()
+void collision ()
 {
+
+
+    int i=0;
+    for (i=0;i<taille;i++)
+    {
+# 157 "minijeu.c"
+         if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
+         ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y )&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h )))
+         {
+             colli=1;
+             score= score -1 ;
+             mGogo.pos_x =0;
+             mGogo.pos_y =0;
+             displayObject (tamago, 30 , 40, 9, 14, 0);
+
+
+         }
+# 176 "minijeu.c"
+    }
+
+    if (colli == 1) {
+            int i = 0;
+            mGogo.pos_x = 30;
+            mGogo.pos_y = 0;
+            while (i != 4) {
+                bouger_sequence();
+                bouger_sequence();
+                bouger_sequence();
+                displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
+                mGogo.pos_y += 10;
+                displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
+                i++;
+            }
+            colli = 0;
+        }
+
+
+}
+
+void lancer_minijeu() {
 
     glcd_FillScreen(0);
     remplir_tableau();
+    mGogo.pos_x = 30;
+    mGogo.pos_y = 40;
+    displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
 
+     do {
+        bouger_sequence();
+        collision();
 
-    displayObject (tamago, 10 ,40, 9, 14, 1);
+         if (PORTCbits.RC1 == 1) {
+            saut_tamago();
 
+        }
 
+        glcd_SetCursor(100, 0);
+        itoa(score, buffer);
+        glcd_WriteString(buffer, 1, 1);
+        memset(&buffer, 0, sizeof (buffer));
 
-    while (1){
+    } while (score != 0) ;
+    do {
 
-     bouger_sequence();
+        glcd_SetCursor(0, 0);
+        glcd_WriteString("FAIL", 1, 1);
+        glcd_SetCursor(0, 4);
+        glcd_WriteString("exit  ", 1, 1);
+        glcd_SetCursor(0, 6);
+        glcd_WriteString("RC0 ", 1, 1);
+        if (PORTCbits.RC0 == 1) {
+            score = 3;
+            break;
+        }
 
+    } while (1);
 
-
-
-
-
-    }
 }

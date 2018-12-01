@@ -256,6 +256,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char pos_x;
+  unsigned char pos_y;
+
 };
 
 extern struct Microgochi mGogo;
@@ -6528,16 +6531,16 @@ const unsigned char champi [] = {
 0,0,1,1,1,1,0,0,0,1,1,1,1,0,
 };
 
-const unsigned char tamago [] = {
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,0,0,0,0,0,0,
-0,0,0,0,0,0,1,1,1,0,0,0,0,0,
-0,0,0,0,0,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,0,0,0,
-0,0,0,1,1,0,1,1,1,0,1,1,0,0,
-0,0,0,1,1,0,0,1,0,0,1,1,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,0,
-0,0,1,1,1,1,0,0,0,1,1,1,1,0,
+char tamago [] = {
+0,0,0,0,0,0,0,1,1,1,0,1,1,1,
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,
+0,0,0,1,1,1,1,1,0,1,1,1,0,1,
+0,0,0,1,0,0,0,0,0,0,0,0,0,1,
+0,0,0,1,0,0,0,0,0,1,0,1,0,1,
+0,1,1,1,0,0,0,0,0,1,0,1,0,1,
+0,1,0,0,0,0,0,0,0,0,0,0,0,1,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,
 };
 void displayObject (char *tab, int x, int y, int height, int width, int write);
 # 13 "menu.c" 2
@@ -6556,6 +6559,9 @@ void bouger_sequence ();
 void effacer_sequence ();
 void remplir_tableau();
 void dessiner_arbre(char a, char b);
+void saut_tamago ();
+void collision ();
+void fin();
 # 15 "menu.c" 2
 
 

@@ -21,6 +21,9 @@ void bouger_sequence ();
 void effacer_sequence ();
 void remplir_tableau();
 void dessiner_arbre(char a, char b);
+void saut_tamago ();
+void collision ();
+void fin();
 
 
 #ifdef	__cplusplus

@@ -17,6 +17,9 @@ struct Microgochi{
   
   unsigned char vivant; //boolean
   
+  unsigned char pos_x;
+  unsigned char pos_y;
+  
 };
 
 extern struct Microgochi mGogo;    //creation structure Microgochi
