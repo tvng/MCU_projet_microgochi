@@ -242,7 +242,12 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-void anim();
+
+void animation();
+void animationDead();
+void animationCaca();
+void animationDodo();
+void animationPasContent();
 # 11 "menu.c" 2
 
 # 1 "./microgochi.h" 1

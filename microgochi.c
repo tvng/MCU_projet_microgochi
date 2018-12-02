@@ -21,6 +21,7 @@ void microgochi_init()
     mGogo.pos_x= 60;
     mGogo.pos_y= 60;
     
+    //mGogo.dodo=0;
 
 }
 
@@ -37,9 +38,6 @@ void micro_vieillir()
 void micro_manger ()
 {
     mGogo.satiete += 20;
-    if(mGogo.satiete < 50){
-       // animationPasContent();
-    }
 }
 
 void micro_calin ()
@@ -50,5 +48,5 @@ void micro_calin ()
 void micro_dormir ()
 {
     mGogo.energie += 20;
-    //animationDodo();
+    //mGogo.dodo=1;
 }

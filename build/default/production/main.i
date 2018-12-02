@@ -6665,7 +6665,12 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-void anim();
+
+void animation();
+void animationDead();
+void animationCaca();
+void animationDodo();
+void animationPasContent();
 # 39 "main.c" 2
 
 # 1 "./screen.h" 1
@@ -6692,16 +6697,17 @@ int main(int argc, char** argv) {
 # 79 "main.c"
     T1CONbits.TMR1ON=1;
     T1CONbits.TMR1CS=0;
-    T1CONbits.T1CKPS1=1;
-    T1CONbits.T1CKPS0=1;
 
+
+    T1CONbits.T1CKPS1=0;
+    T1CONbits.T1CKPS0=0;
 
     INTCONbits.PEIE = 1;
     PIE1bits.TMR1IE = 1;
     PIR1bits.TMR1IF = 0;
 
     INTCONbits.GIE = 1;
-# 104 "main.c"
+# 105 "main.c"
     int bool_jeu = 1;
 
     glcd_Init(1);
@@ -6755,6 +6761,9 @@ void __attribute__((picinterrupt(""))) mdr(void)
 
 
 
+
+
+
         if (cpt==90)
         {
             mGogo.satiete -= 10;
@@ -6772,7 +6781,6 @@ void __attribute__((picinterrupt(""))) mdr(void)
             mGogo.age++;
             cpt=0;
         }
-
 
 
 

@@ -3583,151 +3583,151 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;main.c: 80:     T1CONbits.TMR1CS=0;
 [e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
-"81
-[; ;main.c: 81:     T1CONbits.T1CKPS1=1;
-[e = . . _T1CONbits 2 4 -> -> 1 `i `uc ]
-"82
-[; ;main.c: 82:     T1CONbits.T1CKPS0=1;
-[e = . . _T1CONbits 2 3 -> -> 1 `i `uc ]
-"85
-[; ;main.c: 85:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"83
+[; ;main.c: 83:     T1CONbits.T1CKPS1=0;
+[e = . . _T1CONbits 2 4 -> -> 0 `i `uc ]
+"84
+[; ;main.c: 84:     T1CONbits.T1CKPS0=0;
+[e = . . _T1CONbits 2 3 -> -> 0 `i `uc ]
 "86
-[; ;main.c: 86:     PIE1bits.TMR1IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 86:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "87
-[; ;main.c: 87:     PIR1bits.TMR1IF = 0;
+[; ;main.c: 87:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"88
+[; ;main.c: 88:     PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:     INTCONbits.GIE = 1;
+"90
+[; ;main.c: 90:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"104
-[; ;main.c: 104:     int bool_jeu = 1;
+"105
+[; ;main.c: 105:     int bool_jeu = 1;
 [v _bool_jeu `i ~T0 @X0 1 a ]
 [e = _bool_jeu -> 1 `i ]
-"106
-[; ;main.c: 106:     glcd_Init(1);
+"107
+[; ;main.c: 107:     glcd_Init(1);
 [e ( _glcd_Init (1 -> -> 1 `i `uc ]
-"108
-[; ;main.c: 108:     while (bool_jeu == 1)
+"109
+[; ;main.c: 109:     while (bool_jeu == 1)
 [e $U 372  ]
 [e :U 373 ]
-"109
-[; ;main.c: 109:     {
+"110
+[; ;main.c: 110:     {
 {
-"112
-[; ;main.c: 112:         microgochi_init();
+"113
+[; ;main.c: 113:         microgochi_init();
 [e ( _microgochi_init ..  ]
-"115
-[; ;main.c: 115:         screen_credits();
+"116
+[; ;main.c: 116:         screen_credits();
 [e ( _screen_credits ..  ]
-"117
-[; ;main.c: 117:         _delay((unsigned long)((1000)*(8000000/4000.0)));
+"118
+[; ;main.c: 118:         _delay((unsigned long)((1000)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"122
-[; ;main.c: 122:         game_play();
+"123
+[; ;main.c: 123:         game_play();
 [e ( _game_play ..  ]
-"128
-[; ;main.c: 128:         if (mGogo.vivant == 0) {
+"129
+[; ;main.c: 129:         if (mGogo.vivant == 0) {
 [e $ ! == -> . _mGogo 4 `i -> 0 `i 375  ]
 {
-"132
-[; ;main.c: 132:             bool_jeu = 0;
+"133
+[; ;main.c: 133:             bool_jeu = 0;
 [e = _bool_jeu -> 0 `i ]
-"134
-[; ;main.c: 134:         }
+"135
+[; ;main.c: 135:         }
 }
 [e :U 375 ]
-"136
-[; ;main.c: 136:     }
+"137
+[; ;main.c: 137:     }
 }
 [e :U 372 ]
-"108
-[; ;main.c: 108:     while (bool_jeu == 1)
+"109
+[; ;main.c: 109:     while (bool_jeu == 1)
 [e $ == _bool_jeu -> 1 `i 373  ]
 [e :U 374 ]
-"138
-[; ;main.c: 138:     return (0);
+"139
+[; ;main.c: 139:     return (0);
 [e ) -> 0 `i ]
 [e $UE 371  ]
-"139
-[; ;main.c: 139: }
+"140
+[; ;main.c: 140: }
 [e :UE 371 ]
 }
 [v $root$_mdr `(v ~T0 @X0 0 e ]
-"141
-[; ;main.c: 141: void __attribute__((picinterrupt(""))) mdr(void)
-[v _mdr `(v ~T36 @X0 1 ef ]
 "142
-[; ;main.c: 142: {
+[; ;main.c: 142: void __attribute__((picinterrupt(""))) mdr(void)
+[v _mdr `(v ~T36 @X0 1 ef ]
+"143
+[; ;main.c: 143: {
 {
 [e :U _mdr ]
 [f ]
-"144
-[; ;main.c: 144:     if (PIR1bits.TMR1IF==1)
-[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 377  ]
 "145
-[; ;main.c: 145:     {
+[; ;main.c: 145:     if (PIR1bits.TMR1IF==1)
+[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 377  ]
+"146
+[; ;main.c: 146:     {
 {
-"147
-[; ;main.c: 147:         cpt++;
+"148
+[; ;main.c: 148:         cpt++;
 [e ++ _cpt -> 1 `i ]
-"149
-[; ;main.c: 149:      PIE1bits.TMR1IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
 "150
-[; ;main.c: 150:         PIR1bits.TMR1IF = 0;
+[; ;main.c: 150:      PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"151
+[; ;main.c: 151:         PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"152
-[; ;main.c: 152:     }
+"153
+[; ;main.c: 153:     }
 }
 [e :U 377 ]
-"157
-[; ;main.c: 157:         if (cpt==90)
+"161
+[; ;main.c: 161:         if (cpt==90)
 [e $ ! == _cpt -> 90 `i 378  ]
-"158
-[; ;main.c: 158:         {
+"162
+[; ;main.c: 162:         {
 {
-"159
-[; ;main.c: 159:             mGogo.satiete -= 10;
+"163
+[; ;main.c: 163:             mGogo.satiete -= 10;
 [e =- . _mGogo 1 -> -> 10 `i `uc ]
-"160
-[; ;main.c: 160:         }
+"164
+[; ;main.c: 164:         }
 }
 [e :U 378 ]
-"162
-[; ;main.c: 162:          if (cpt==30)
-[e $ ! == _cpt -> 30 `i 379  ]
-"163
-[; ;main.c: 163:         {
-{
-"164
-[; ;main.c: 164:             mGogo.energie--;
-[e -- . _mGogo 2 -> -> 1 `i `uc ]
 "166
-[; ;main.c: 166:             mGogo.bonheur--;
-[e -- . _mGogo 3 -> -> 1 `i `uc ]
+[; ;main.c: 166:          if (cpt==30)
+[e $ ! == _cpt -> 30 `i 379  ]
 "167
-[; ;main.c: 167:         }
+[; ;main.c: 167:         {
+{
+"168
+[; ;main.c: 168:             mGogo.energie--;
+[e -- . _mGogo 2 -> -> 1 `i `uc ]
+"170
+[; ;main.c: 170:             mGogo.bonheur--;
+[e -- . _mGogo 3 -> -> 1 `i `uc ]
+"171
+[; ;main.c: 171:         }
 }
 [e :U 379 ]
-"169
-[; ;main.c: 169:          if (cpt==300)
-[e $ ! == _cpt -> 300 `i 380  ]
-"170
-[; ;main.c: 170:         {
-{
-"171
-[; ;main.c: 171:             mGogo.age++;
-[e ++ . _mGogo 0 -> -> 1 `i `uc ]
-"172
-[; ;main.c: 172:             cpt=0;
-[e = _cpt -> 0 `i ]
 "173
-[; ;main.c: 173:         }
+[; ;main.c: 173:          if (cpt==300)
+[e $ ! == _cpt -> 300 `i 380  ]
+"174
+[; ;main.c: 174:         {
+{
+"175
+[; ;main.c: 175:             mGogo.age++;
+[e ++ . _mGogo 0 -> -> 1 `i `uc ]
+"176
+[; ;main.c: 176:             cpt=0;
+[e = _cpt -> 0 `i ]
+"177
+[; ;main.c: 177:         }
 }
 [e :U 380 ]
-"179
-[; ;main.c: 179: }
+"182
+[; ;main.c: 182: }
 [e :UE 376 ]
 }

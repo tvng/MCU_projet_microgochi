@@ -6655,7 +6655,12 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-void anim();
+
+void animation();
+void animationDead();
+void animationCaca();
+void animationDodo();
+void animationPasContent();
 # 14 "game.c" 2
 
 # 1 "./menu.h" 1
@@ -6730,7 +6735,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 char buffer[3];
 int cpt=0;
-int cpt_anim=0;
+
 
 
 void game_play()
@@ -6743,7 +6748,7 @@ void game_play()
 
     menu_cursor (-1, 1);
 
-
+    animation();
     int action=0;
     int write=0;
     int button_pressed=0;
@@ -6801,7 +6806,23 @@ void game_play()
             }
             button_pressed=0;
         }
+
+        if(mGogo.satiete < 50){
+            animationPasContent();
+        }else{
+            animation();
+        }
+
+        if(mGogo.satiete == 100){
+            animationCaca();
+        }
+
+
+
+
     }
+
+
 }
 
 
@@ -6849,4 +6870,57 @@ void game_stats()
     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
 
     glcd_FillScreen(0);
+}
+# 185 "game.c"
+void animation()
+{
+
+
+
+
+
+
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
+# 217 "game.c"
+}
+
+void animationDodo(){
+
+
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochiDodo, 75, 35, 2, 8, 1);
+    displayObject (Z1, 88, 20, 6, 6, 1);
+    displayObject (Z2, 95, 18, 4, 4, 1);
+# 241 "game.c"
+}
+
+void animationCaca(){
+    displayObject (champi, 30, 37, 9, 14, 1);
+    displayObject (mouche, 32, 32, 4, 6, 1);
+# 261 "game.c"
+}
+
+void animationDead(){
+
+
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochiMort, 75, 33, 3, 8, 1);
+
+
+
+
+
+}
+
+void animationPasContent(){
+
+
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochiPasContent, 75, 33, 4, 8, 1);
+# 295 "game.c"
 }

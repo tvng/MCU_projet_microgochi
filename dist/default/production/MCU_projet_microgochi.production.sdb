@@ -37,8 +37,14 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "23 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
-"95
+"111
 [v _game_stats game_stats `(v  1 e 1 0 ]
+"185
+[v _animation animation `(v  1 e 1 0 ]
+"243
+[v _animationCaca animationCaca `(v  1 e 1 0 ]
+"275
+[v _animationPasContent animationPasContent `(v  1 e 1 0 ]
 "341 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
 "395
@@ -65,7 +71,7 @@
 [v _reverse reverse `(v  1 e 1 0 ]
 "47 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
 [v _main main `(i  1 e 2 0 ]
-"141
+"142
 [v _mdr mdr `IIH(v  1 e 1 0 ]
 "18 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\menu.c
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
@@ -73,16 +79,16 @@
 [v _menu_actions menu_actions `(v  1 e 1 0 ]
 "14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
 [v _microgochi_init microgochi_init `(v  1 e 1 0 ]
-"37
+"38
 [v _micro_manger micro_manger `(v  1 e 1 0 ]
-"45
+"43
 [v _micro_calin micro_calin `(v  1 e 1 0 ]
-"50
+"48
 [v _micro_dormir micro_dormir `(v  1 e 1 0 ]
 "19 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\minijeu.c
-[s S826 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+[s S843 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "36
-[v _creer_champi creer_champi `(S826  1 e 4 0 ]
+[v _creer_champi creer_champi `(S843  1 e 4 0 ]
 "46
 [v _remplir_tableau remplir_tableau `(v  1 e 1 0 ]
 "56
@@ -109,13 +115,33 @@
 [v _champi champi `[126]uc  1 e 126 0 ]
 "114
 [v _tamago tamago `[126]uc  1 e 126 0 ]
+"138
+[v _gochi_corps gochi_corps `[782]uc  1 e 782 0 ]
+"164
+[v _gochi_oreilles1 gochi_oreilles1 `[238]uc  1 e 238 0 ]
+"174
+[v _gochi_oreilles2 gochi_oreilles2 `[238]uc  1 e 238 0 ]
+"184
+[v _gochi_yeux1 gochi_yeux1 `[102]uc  1 e 102 0 ]
+"190
+[v _gochiPasContent gochiPasContent `[32]uc  1 e 32 0 ]
+"197
+[v _gochiMort gochiMort `[24]uc  1 e 24 0 ]
+"203
+[v _gochiDodo gochiDodo `[16]uc  1 e 16 0 ]
+"208
+[v _Z1 Z1 `[36]uc  1 e 36 0 ]
+"217
+[v _Z2 Z2 `[16]uc  1 e 16 0 ]
+"224
+[v _mouche mouche `[24]uc  1 e 24 0 ]
 "2314 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "2453
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S332 . 1 `uc 1 RC0 1 0 :1:0 
+[s S336 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -125,32 +151,32 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S341 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S345 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S348 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S352 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S355 . 1 `uc 1 . 1 0 :1:0 
+[s S359 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S359 . 1 `uc 1 . 1 0 :1:0 
+[s S363 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S362 . 1 `S332 1 . 1 0 `S341 1 . 1 0 `S348 1 . 1 0 `S355 1 . 1 0 `S359 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES362  1 e 1 @3970 ]
+[u S366 . 1 `S336 1 . 1 0 `S345 1 . 1 0 `S352 1 . 1 0 `S359 1 . 1 0 `S363 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES366  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S495 . 1 `uc 1 RE0 1 0 :1:0 
+[s S521 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
@@ -158,32 +184,32 @@
 `uc 1 RDPU 1 0 :1:7 
 ]
 "2868
-[s S502 . 1 `uc 1 CK1SPP 1 0 :1:0 
+[s S528 . 1 `uc 1 CK1SPP 1 0 :1:0 
 `uc 1 CK2SPP 1 0 :1:1 
 `uc 1 OESPP 1 0 :1:2 
 ]
-[s S506 . 1 `uc 1 PD2 1 0 :1:0 
+[s S532 . 1 `uc 1 PD2 1 0 :1:0 
 `uc 1 PC2 1 0 :1:1 
 `uc 1 CCP10 1 0 :1:2 
 `uc 1 CCP9E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 CCP2E 1 0 :1:7 
 ]
-[s S513 . 1 `uc 1 RDE 1 0 :1:0 
+[s S539 . 1 `uc 1 RDE 1 0 :1:0 
 `uc 1 WRE 1 0 :1:1 
 `uc 1 CS 1 0 :1:2 
 `uc 1 PC3E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 PA2E 1 0 :1:7 
 ]
-[s S520 . 1 `uc 1 . 1 0 :2:0 
+[s S546 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PB2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RE7 1 0 :1:7 
 ]
-[u S525 . 1 `S495 1 . 1 0 `S502 1 . 1 0 `S506 1 . 1 0 `S513 1 . 1 0 `S520 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES525  1 e 1 @3972 ]
-[s S569 . 1 `uc 1 LATB0 1 0 :1:0 
+[u S551 . 1 `S521 1 . 1 0 `S528 1 . 1 0 `S532 1 . 1 0 `S539 1 . 1 0 `S546 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES551  1 e 1 @3972 ]
+[s S595 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -193,7 +219,7 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3100
-[s S578 . 1 `uc 1 LB0 1 0 :1:0 
+[s S604 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -202,8 +228,8 @@
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S587 . 1 `S569 1 . 1 0 `S578 1 . 1 0 ]
-[v _LATBbits LATBbits `VES587  1 e 1 @3978 ]
+[u S613 . 1 `S595 1 . 1 0 `S604 1 . 1 0 ]
+[v _LATBbits LATBbits `VES613  1 e 1 @3978 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
@@ -326,15 +352,15 @@
 [v _score score `i  1 e 2 0 ]
 "16
 [v _buffer buffer `[3]uc  1 e 3 0 ]
-[s S826 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+[s S843 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "34
-[v _tab tab `[2]S826  1 e 8 0 ]
+[v _tab tab `[2]S843  1 e 8 0 ]
 "47 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"104
+"105
 [v main@bool_jeu bool_jeu `i  1 a 2 80 ]
-"139
+"140
 } 0
 "25 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
@@ -344,7 +370,7 @@
 "14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
 [v _microgochi_init microgochi_init `(v  1 e 1 0 ]
 {
-"25
+"26
 } 0
 "341 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
@@ -364,7 +390,7 @@
 [v game_play@button_pressed button_pressed `i  1 a 2 69 ]
 "35
 [v game_play@write write `i  1 a 2 67 ]
-"92
+"108
 } 0
 "18 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\menu.c
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
@@ -379,20 +405,20 @@
 [v menu_actions@action action `i  1 p 2 65 ]
 "74
 } 0
-"37 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
+"38 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
 [v _micro_manger micro_manger `(v  1 e 1 0 ]
 {
-"43
+"41
 } 0
-"50
+"48
 [v _micro_dormir micro_dormir `(v  1 e 1 0 ]
 {
-"54
+"52
 } 0
-"45
+"43
 [v _micro_calin micro_calin `(v  1 e 1 0 ]
 {
-"48
+"46
 } 0
 "197 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\minijeu.c
 [v _lancer_minijeu lancer_minijeu `(v  1 e 1 0 ]
@@ -416,13 +442,13 @@
 "55
 } 0
 "19
-[s S826 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+[s S843 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "36
-[v _creer_champi creer_champi `(S826  1 e 4 0 ]
+[v _creer_champi creer_champi `(S843  1 e 4 0 ]
 {
 [v creer_champi@x x `uc  1 a 1 wreg ]
 "38
-[v creer_champi@new_champi new_champi `S826  1 a 4 5 ]
+[v creer_champi@new_champi new_champi `S843  1 a 4 5 ]
 "36
 [v creer_champi@x x `uc  1 a 1 wreg ]
 [v creer_champi@y y `uc  1 p 1 0 ]
@@ -434,7 +460,7 @@
 [v _collision collision `(v  1 e 1 0 ]
 {
 "179
-[v collision@i_934 i `i  1 a 2 61 ]
+[v collision@i_951 i `i  1 a 2 61 ]
 "127
 [v collision@i i `i  1 a 2 63 ]
 "195
@@ -460,58 +486,12 @@
 [v afficher_sequence@i i `i  1 a 2 44 ]
 "65
 } 0
-"13 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\myglcd.c
-[v _displayObject displayObject `(v  1 e 1 0 ]
-{
-"17
-[v displayObject@j j `i  1 a 2 36 ]
-"16
-[v displayObject@i i `i  1 a 2 34 ]
-"18
-[v displayObject@nb nb `i  1 a 2 32 ]
-"13
-[v displayObject@tab tab `*.39uc  1 p 2 17 ]
-[v displayObject@x x `i  1 p 2 19 ]
-[v displayObject@y y `i  1 p 2 21 ]
-[v displayObject@height height `i  1 p 2 23 ]
-[v displayObject@width width `i  1 p 2 25 ]
-[v displayObject@write write `i  1 p 2 27 ]
-"32
-} 0
-"468 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
-[v _glcd_PlotPixel glcd_PlotPixel `(v  1 e 1 0 ]
-{
-[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
-"471
-[v glcd_PlotPixel@side side `uc  1 a 1 16 ]
-"470
-[v glcd_PlotPixel@data data `uc  1 a 1 15 ]
-"468
-[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
-[v glcd_PlotPixel@ypos ypos `uc  1 p 1 10 ]
-[v glcd_PlotPixel@color color `uc  1 p 1 11 ]
-"471
-[v glcd_PlotPixel@xpos xpos `uc  1 a 1 14 ]
-"502
-} 0
-"431
-[v _glcd_ReadByte glcd_ReadByte `(uc  1 e 1 0 ]
-{
-[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
-"433
-[v glcd_ReadByte@data data `uc  1 a 1 1 ]
-"431
-[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
-"435
-[v glcd_ReadByte@side side `uc  1 a 1 0 ]
-"463
-} 0
-"95 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+"111 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
 [v _game_stats game_stats `(v  1 e 1 0 ]
 {
-"104
+"120
 [v game_stats@sortie_enable sortie_enable `i  1 a 2 23 ]
-"139
+"155
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -568,19 +548,6 @@
 [v ___awmod@dividend dividend `i  1 p 2 0 ]
 [v ___awmod@divisor divisor `i  1 p 2 2 ]
 "34
-} 0
-"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"7
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"41
 } 0
 "670 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
@@ -662,6 +629,55 @@
 [v glcd_Image@j j `uc  1 a 1 12 ]
 "727
 } 0
+"275 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+[v _animationPasContent animationPasContent `(v  1 e 1 0 ]
+{
+"295
+} 0
+"243
+[v _animationCaca animationCaca `(v  1 e 1 0 ]
+{
+"261
+} 0
+"185
+[v _animation animation `(v  1 e 1 0 ]
+{
+"217
+} 0
+"13 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\myglcd.c
+[v _displayObject displayObject `(v  1 e 1 0 ]
+{
+"17
+[v displayObject@j j `i  1 a 2 36 ]
+"16
+[v displayObject@i i `i  1 a 2 34 ]
+"18
+[v displayObject@nb nb `i  1 a 2 32 ]
+"13
+[v displayObject@tab tab `*.39uc  1 p 2 17 ]
+[v displayObject@x x `i  1 p 2 19 ]
+[v displayObject@y y `i  1 p 2 21 ]
+[v displayObject@height height `i  1 p 2 23 ]
+[v displayObject@width width `i  1 p 2 25 ]
+[v displayObject@write write `i  1 p 2 27 ]
+"32
+} 0
+"468 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+[v _glcd_PlotPixel glcd_PlotPixel `(v  1 e 1 0 ]
+{
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
+"471
+[v glcd_PlotPixel@side side `uc  1 a 1 16 ]
+"470
+[v glcd_PlotPixel@data data `uc  1 a 1 15 ]
+"468
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
+[v glcd_PlotPixel@ypos ypos `uc  1 p 1 10 ]
+[v glcd_PlotPixel@color color `uc  1 p 1 11 ]
+"471
+[v glcd_PlotPixel@xpos xpos `uc  1 a 1 14 ]
+"502
+} 0
 "395
 [v _glcd_WriteByte glcd_WriteByte `(v  1 e 1 0 ]
 {
@@ -672,8 +688,33 @@
 [v glcd_WriteByte@side side `uc  1 a 1 9 ]
 "425
 } 0
-"141 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
+"431
+[v _glcd_ReadByte glcd_ReadByte `(uc  1 e 1 0 ]
+{
+[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
+"433
+[v glcd_ReadByte@data data `uc  1 a 1 1 ]
+"431
+[v glcd_ReadByte@side side `uc  1 a 1 wreg ]
+"435
+[v glcd_ReadByte@side side `uc  1 a 1 0 ]
+"463
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"142 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
 [v _mdr mdr `IIH(v  1 e 1 0 ]
 {
-"179
+"182
 } 0

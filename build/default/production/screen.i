@@ -6660,7 +6660,12 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-void anim();
+
+void animation();
+void animationDead();
+void animationCaca();
+void animationDodo();
+void animationPasContent();
 # 18 "screen.c" 2
 
 # 1 "./screen.h" 1

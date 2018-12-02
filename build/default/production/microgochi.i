@@ -5504,7 +5504,12 @@ extern int cpt;
 
 void game_play();
 void game_stats();
-void anim();
+
+void animation();
+void animationDead();
+void animationCaca();
+void animationDodo();
+void animationPasContent();
 # 10 "microgochi.c" 2
 
 
@@ -5519,6 +5524,7 @@ void microgochi_init()
     mGogo.vivant=1;
     mGogo.pos_x= 60;
     mGogo.pos_y= 60;
+
 
 
 }
@@ -5536,9 +5542,6 @@ void micro_vieillir()
 void micro_manger ()
 {
     mGogo.satiete += 20;
-    if(mGogo.satiete < 50){
-
-    }
 }
 
 void micro_calin ()

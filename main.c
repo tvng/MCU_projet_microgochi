@@ -78,9 +78,10 @@ int main(int argc, char** argv) {
     
     T1CONbits.TMR1ON=1;
     T1CONbits.TMR1CS=0; //internal clock
-    T1CONbits.T1CKPS1=1;
-    T1CONbits.T1CKPS0=1;
-    
+    //T1CONbits.T1CKPS1=1;
+    //T1CONbits.T1CKPS0=1;
+    T1CONbits.T1CKPS1=0;
+    T1CONbits.T1CKPS0=0;
     
     INTCONbits.PEIE = 1; //peripheral interrupt enable =
     PIE1bits.TMR1IE = 1; //enable interrupt on overflow
@@ -140,7 +141,7 @@ int main(int argc, char** argv) {
 
 void __interrupt() mdr(void)
 {
-    //displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    
     if (PIR1bits.TMR1IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
     { 
 
@@ -150,7 +151,10 @@ void __interrupt() mdr(void)
         PIR1bits.TMR1IF = 0; //on baisse le flag
     
     }
-        /*if(cpt_anim==5){
+        /*if(cpt==1){
+            displayObject (gochi_corps, 52, 23, 24, 34, 1);
+        }
+        if(cpt==3){
             displayObject (gochi_corps, 52, 23, 24, 34, 0);
         }*/
     
@@ -170,8 +174,7 @@ void __interrupt() mdr(void)
         {
             mGogo.age++; 
             cpt=0;
-        }
-       
+        }   
         
         
         
