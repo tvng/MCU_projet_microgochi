@@ -22,6 +22,7 @@ int cpt=0;
 //fonction de jeu
 void game_play()
 {
+    
     //initialisation des variables
     glcd_FillScreen(0); 
     // ETAPE 1: on affiche notre menu de base

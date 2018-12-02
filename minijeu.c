@@ -97,7 +97,12 @@ void saut_tamago ()
     mGogo.pos_y -=10;
     displayObject (tamago,  mGogo.pos_x ,  mGogo.pos_y, 9, 14, 1);*/
     int i=0;
-    //bouger_sequence();
+    int a=0;
+    score = score + 1;
+      glcd_SetCursor(100, 0); // affichage du score
+        itoa(score, buffer);
+        glcd_WriteString(buffer, f8X8, 1);
+        memset(&buffer, 0, sizeof (buffer));
     while (i!=5)
     {
      bouger_sequence();
@@ -117,6 +122,8 @@ void saut_tamago ()
       bouger_sequence();   
       i++;
      }
+    
+  
     
 }
 
@@ -150,19 +157,24 @@ void collision ()
        /*if (((mGogo.pos_x >= tab[i].pos_x )&&(mGogo.pos_x <= tab[i].pos_x + tab[i].champ_l  ))&&
          ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y )&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h )))
         colli=1;*/
-       
-       
-     
+
+         
+        
      
          if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l  ))&&
          ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y )&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h )))
          {
              colli=1; 
              score= score -1 ; 
+             itoa(score, buffer);
+             glcd_SetCursor(100, 0);
+        glcd_WriteString(buffer, f8X8, 1);
+        memset(&buffer, 0, sizeof (buffer));
              mGogo.pos_x =0;
              mGogo.pos_y =0;       
              displayObject (tamago, 30 , 40, 9, 14, 0);
-                   
+             glcd_SetCursor(100, 0); // affichage du score
+           
          
          }
          
@@ -191,11 +203,14 @@ void collision ()
             colli = 0;
         }
     
+    
+    
      
 }
 
 void lancer_minijeu() {
-    // 
+    //
+    PIE1bits.TMR1IE=0;
     glcd_FillScreen(0);
     remplir_tableau(); // initialisation des champis
     mGogo.pos_x = 30; // init positions du tamogotchi
@@ -211,25 +226,48 @@ void lancer_minijeu() {
 
         }
         
-        glcd_SetCursor(100, 0); // affichage du score
-        itoa(score, buffer);
+     itoa(score, buffer);
+             glcd_SetCursor(100, 0);
         glcd_WriteString(buffer, f8X8, 1);
-        memset(&buffer, 0, sizeof (buffer));
-
-    } while (score != 0) ;
-    do {
         
-        glcd_SetCursor(0, 0);
-        glcd_WriteString("FAIL", f8X8, 1);
-        glcd_SetCursor(0, 4);
-        glcd_WriteString("exit  ", f8X8, 1);
-        glcd_SetCursor(0, 6);
-        glcd_WriteString("RC0 ", f8X8, 1);
-        if (BUTTON_LEFT == 1) {
-            score = 3;
-            break;
-        }
+        
 
-    } while (1);
+    } while (score <=5 && score >0 ) ;
+    
+    if (score == 0) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("FAIL", f8X8, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", f8X8, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", f8X8, 1);
+            if (BUTTON_LEFT == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
+    
+    if (score == 6) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("WIN", f8X8, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", f8X8, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", f8X8, 1);
+            if (BUTTON_LEFT == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
 
 }
