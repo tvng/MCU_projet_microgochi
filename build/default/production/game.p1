@@ -46,10 +46,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _menu_actions `(v ~T0 @X0 0 ef1`i ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
-[s S362 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S362 Microgochi age satiete energie bonheur vivant pos_x pos_y ]
-"25
-[; ;./microgochi.h: 25: extern struct Microgochi mGogo;
+[s S362 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S362 Microgochi age satiete energie bonheur vivant dodo caca pos_x pos_y ]
+"28
+[; ;./microgochi.h: 28: extern struct Microgochi mGogo;
 [v _mGogo `S362 ~T0 @X0 0 e ]
 "20 ./game.h
 [; ;./game.h: 20: void animationPasContent();
@@ -57,6 +57,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;./game.h: 18: void animationCaca();
 [v _animationCaca `(v ~T0 @X0 0 e? ]
+"230 ./myglcd.h
+[; ;./myglcd.h: 230: void displayObject (char *tab, int x, int y, int height, int width, int write);
+[v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
 "54 ./glcd.h
 [; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 [v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
@@ -66,9 +69,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
-"230 ./myglcd.h
-[; ;./myglcd.h: 230: void displayObject (char *tab, int x, int y, int height, int width, int write);
-[v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -3695,239 +3695,251 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 386 ]
 "98
-[; ;game.c: 98:         if(mGogo.satiete == 100){
-[e $ ! == -> . _mGogo 1 `i -> 100 `i 387  ]
+[; ;game.c: 98:         if(mGogo.caca == 1){
+[e $ ! == -> . _mGogo 6 `i -> 1 `i 387  ]
 {
 "99
 [; ;game.c: 99:             animationCaca();
 [e ( _animationCaca ..  ]
 "100
-[; ;game.c: 100:         }
+[; ;game.c: 100:         }else{
 }
+[e $U 388  ]
 [e :U 387 ]
-"105
-[; ;game.c: 105:     }
+{
+"101
+[; ;game.c: 101:             displayObject (champi, 30, 37, 9, 14, 0);
+[e ( _displayObject (4 , , , , , &U _champi -> 30 `i -> 37 `i -> 9 `i -> 14 `i -> 0 `i ]
+"102
+[; ;game.c: 102:             displayObject (mouche, 32, 32, 4, 6, 0);
+[e ( _displayObject (4 , , , , , &U _mouche -> 32 `i -> 32 `i -> 4 `i -> 6 `i -> 0 `i ]
+"103
+[; ;game.c: 103:         }
+}
+[e :U 388 ]
+"108
+[; ;game.c: 108:     }
 }
 [e :U 372 ]
 "39
 [; ;game.c: 39:     while (mGogo.vivant==1)
 [e $ == -> . _mGogo 4 `i -> 1 `i 373  ]
 [e :U 374 ]
-"108
-[; ;game.c: 108: }
+"111
+[; ;game.c: 111: }
 [e :UE 371 ]
 }
-"111
-[; ;game.c: 111: void game_stats()
+"114
+[; ;game.c: 114: void game_stats()
 [v _game_stats `(v ~T0 @X0 1 ef ]
-"112
-[; ;game.c: 112: {
+"115
+[; ;game.c: 115: {
 {
 [e :U _game_stats ]
 [f ]
-"113
-[; ;game.c: 113:     glcd_FillScreen(0);
+"116
+[; ;game.c: 116:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"114
-[; ;game.c: 114:     glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"115
-[; ;game.c: 115:  glcd_WriteString("Stats:", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "117
-[; ;game.c: 117:     glcd_SetCursor(50,0);
-[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 0 `i `uc ]
+[; ;game.c: 117:     glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "118
-[; ;game.c: 118:  glcd_WriteString("RC2=exit",1,1);
-[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;game.c: 118:  glcd_WriteString("Stats:", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "120
-[; ;game.c: 120:     int sortie_enable=0;
+[; ;game.c: 120:     glcd_SetCursor(50,0);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 0 `i `uc ]
+"121
+[; ;game.c: 121:  glcd_WriteString("RC2=exit",1,1);
+[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"123
+[; ;game.c: 123:     int sortie_enable=0;
 [v _sortie_enable `i ~T0 @X0 1 a ]
 [e = _sortie_enable -> 0 `i ]
-"122
-[; ;game.c: 122:     do
-[e :U 391 ]
-"123
-[; ;game.c: 123:     {
-{
-"124
-[; ;game.c: 124:         glcd_SetCursor(0,2);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "125
-[; ;game.c: 125:         glcd_WriteString("Faim:",1,1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"126
-[; ;game.c: 126:         glcd_SetCursor(50,2);
-[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 2 `i `uc ]
-"127
-[; ;game.c: 127:         itoa(mGogo.satiete, buffer);
-[e ( _itoa (2 , -> . _mGogo 1 `i &U _buffer ]
-"128
-[; ;game.c: 128:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"129
-[; ;game.c: 129:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"131
-[; ;game.c: 131:         glcd_SetCursor(0,3);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
-"132
-[; ;game.c: 132:         glcd_WriteString("Energie:",1,1);
-[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"133
-[; ;game.c: 133:         glcd_SetCursor(65,3);
-[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
-"134
-[; ;game.c: 134:         itoa(mGogo.energie, buffer);
-[e ( _itoa (2 , -> . _mGogo 2 `i &U _buffer ]
-"135
-[; ;game.c: 135:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"136
-[; ;game.c: 136:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"138
-[; ;game.c: 138:         glcd_SetCursor(0,4);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
-"139
-[; ;game.c: 139:         glcd_WriteString("Amour:",1,1);
-[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"140
-[; ;game.c: 140:         glcd_SetCursor(55,4);
-[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 4 `i `uc ]
-"141
-[; ;game.c: 141:         itoa(mGogo.bonheur, buffer);
-[e ( _itoa (2 , -> . _mGogo 3 `i &U _buffer ]
-"142
-[; ;game.c: 142:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"143
-[; ;game.c: 143:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"146
-[; ;game.c: 146:         if (PORTCbits.RC1==1)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 392  ]
-"147
-[; ;game.c: 147:         {
-{
-"148
-[; ;game.c: 148:             sortie_enable=1;
-[e = _sortie_enable -> 1 `i ]
-"149
-[; ;game.c: 149:         }
-}
+[; ;game.c: 125:     do
 [e :U 392 ]
+"126
+[; ;game.c: 126:     {
+{
+"127
+[; ;game.c: 127:         glcd_SetCursor(0,2);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"128
+[; ;game.c: 128:         glcd_WriteString("Faim:",1,1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"129
+[; ;game.c: 129:         glcd_SetCursor(50,2);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 2 `i `uc ]
+"130
+[; ;game.c: 130:         itoa(mGogo.satiete, buffer);
+[e ( _itoa (2 , -> . _mGogo 1 `i &U _buffer ]
+"131
+[; ;game.c: 131:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"132
+[; ;game.c: 132:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"134
+[; ;game.c: 134:         glcd_SetCursor(0,3);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
+"135
+[; ;game.c: 135:         glcd_WriteString("Energie:",1,1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"136
+[; ;game.c: 136:         glcd_SetCursor(65,3);
+[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
+"137
+[; ;game.c: 137:         itoa(mGogo.energie, buffer);
+[e ( _itoa (2 , -> . _mGogo 2 `i &U _buffer ]
+"138
+[; ;game.c: 138:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"139
+[; ;game.c: 139:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"141
+[; ;game.c: 141:         glcd_SetCursor(0,4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"142
+[; ;game.c: 142:         glcd_WriteString("Amour:",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"143
+[; ;game.c: 143:         glcd_SetCursor(55,4);
+[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 4 `i `uc ]
+"144
+[; ;game.c: 144:         itoa(mGogo.bonheur, buffer);
+[e ( _itoa (2 , -> . _mGogo 3 `i &U _buffer ]
+"145
+[; ;game.c: 145:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"146
+[; ;game.c: 146:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"149
+[; ;game.c: 149:         if (PORTCbits.RC1==1)
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 393  ]
+"150
+[; ;game.c: 150:         {
+{
+"151
+[; ;game.c: 151:             sortie_enable=1;
+[e = _sortie_enable -> 1 `i ]
 "152
-[; ;game.c: 152:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+[; ;game.c: 152:         }
 }
-[e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 391  ]
-[e :U 390 ]
-"154
-[; ;game.c: 154:     glcd_FillScreen(0);
-[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
+[e :U 393 ]
 "155
-[; ;game.c: 155: }
-[e :UE 388 ]
+[; ;game.c: 155:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
 }
-"185
-[; ;game.c: 185: void animation()
+[e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 392  ]
+[e :U 391 ]
+"157
+[; ;game.c: 157:     glcd_FillScreen(0);
+[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
+"158
+[; ;game.c: 158: }
+[e :UE 389 ]
+}
+"188
+[; ;game.c: 188: void animation()
 [v _animation `(v ~T0 @X0 1 ef ]
-"186
-[; ;game.c: 186: {
+"189
+[; ;game.c: 189: {
 {
 [e :U _animation ]
 [f ]
-"193
-[; ;game.c: 193:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
-[e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
-"194
-[; ;game.c: 194:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
-[e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
-"195
-[; ;game.c: 195:     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
-[e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 1 `i ]
-"196
-[; ;game.c: 196:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
-[e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 0 `i ]
 "197
-[; ;game.c: 197:     displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
-[e ( _displayObject (4 , , , , , &U _gochi_oreilles2 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
+[; ;game.c: 197:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
 "198
-[; ;game.c: 198:     displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
+[; ;game.c: 198:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
+"199
+[; ;game.c: 199:     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 1 `i ]
+"200
+[; ;game.c: 200:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+[e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 0 `i ]
+"201
+[; ;game.c: 201:     displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_oreilles2 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
+"202
+[; ;game.c: 202:     displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
 [e ( _displayObject (4 , , , , , &U _gochi_oreilles2 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 0 `i ]
-"217
-[; ;game.c: 217: }
-[e :UE 393 ]
+"221
+[; ;game.c: 221: }
+[e :UE 394 ]
 }
-"219
-[; ;game.c: 219: void animationDodo(){
+"223
+[; ;game.c: 223: void animationDodo(){
 [v _animationDodo `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationDodo ]
 [f ]
-"222
-[; ;game.c: 222:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+"226
+[; ;game.c: 226:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
 [e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
-"223
-[; ;game.c: 223:     displayObject (gochiDodo, 75, 35, 2, 8, 1);
+"227
+[; ;game.c: 227:     displayObject (gochiDodo, 75, 35, 2, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiDodo -> 75 `i -> 35 `i -> 2 `i -> 8 `i -> 1 `i ]
-"224
-[; ;game.c: 224:     displayObject (Z1, 88, 20, 6, 6, 1);
+"228
+[; ;game.c: 228:     displayObject (Z1, 88, 20, 6, 6, 1);
 [e ( _displayObject (4 , , , , , &U _Z1 -> 88 `i -> 20 `i -> 6 `i -> 6 `i -> 1 `i ]
-"225
-[; ;game.c: 225:     displayObject (Z2, 95, 18, 4, 4, 1);
+"229
+[; ;game.c: 229:     displayObject (Z2, 95, 18, 4, 4, 1);
 [e ( _displayObject (4 , , , , , &U _Z2 -> 95 `i -> 18 `i -> 4 `i -> 4 `i -> 1 `i ]
-"241
-[; ;game.c: 241: }
-[e :UE 394 ]
+"245
+[; ;game.c: 245: }
+[e :UE 395 ]
 }
-"243
-[; ;game.c: 243: void animationCaca(){
+"247
+[; ;game.c: 247: void animationCaca(){
 [v _animationCaca `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationCaca ]
 [f ]
-"244
-[; ;game.c: 244:     displayObject (champi, 30, 37, 9, 14, 1);
+"248
+[; ;game.c: 248:     displayObject (champi, 30, 37, 9, 14, 1);
 [e ( _displayObject (4 , , , , , &U _champi -> 30 `i -> 37 `i -> 9 `i -> 14 `i -> 1 `i ]
-"245
-[; ;game.c: 245:     displayObject (mouche, 32, 32, 4, 6, 1);
+"249
+[; ;game.c: 249:     displayObject (mouche, 32, 32, 4, 6, 1);
 [e ( _displayObject (4 , , , , , &U _mouche -> 32 `i -> 32 `i -> 4 `i -> 6 `i -> 1 `i ]
-"261
-[; ;game.c: 261: }
-[e :UE 395 ]
+"265
+[; ;game.c: 265: }
+[e :UE 396 ]
 }
-"263
-[; ;game.c: 263: void animationDead(){
+"267
+[; ;game.c: 267: void animationDead(){
 [v _animationDead `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationDead ]
 [f ]
-"266
-[; ;game.c: 266:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+"270
+[; ;game.c: 270:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
 [e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
-"267
-[; ;game.c: 267:     displayObject (gochiMort, 75, 33, 3, 8, 1);
+"271
+[; ;game.c: 271:     displayObject (gochiMort, 75, 33, 3, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiMort -> 75 `i -> 33 `i -> 3 `i -> 8 `i -> 1 `i ]
-"273
-[; ;game.c: 273: }
-[e :UE 396 ]
+"277
+[; ;game.c: 277: }
+[e :UE 397 ]
 }
-"275
-[; ;game.c: 275: void animationPasContent(){
+"279
+[; ;game.c: 279: void animationPasContent(){
 [v _animationPasContent `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationPasContent ]
 [f ]
-"278
-[; ;game.c: 278:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+"282
+[; ;game.c: 282:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
 [e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
-"279
-[; ;game.c: 279:     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
+"283
+[; ;game.c: 283:     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiPasContent -> 75 `i -> 33 `i -> 4 `i -> 8 `i -> 1 `i ]
-"295
-[; ;game.c: 295: }
-[e :UE 397 ]
+"299
+[; ;game.c: 299: }
+[e :UE 398 ]
 }
 [a 2C 82 67 50 61 101 120 105 116 0 ]
 [a 1C 83 116 97 116 115 58 0 ]

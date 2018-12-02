@@ -29,14 +29,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2605
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 [v _PORTCbits `VS113 ~T0 @X0 0 e@3970 ]
-"28 ./microgochi.h
-[; ;./microgochi.h: 28: void micro_manger();
+"31 ./microgochi.h
+[; ;./microgochi.h: 31: void micro_manger();
 [v _micro_manger `(v ~T0 @X0 0 e? ]
-"30
-[; ;./microgochi.h: 30: void micro_calin();
+"33
+[; ;./microgochi.h: 33: void micro_calin();
 [v _micro_calin `(v ~T0 @X0 0 e? ]
-"29
-[; ;./microgochi.h: 29: void micro_dormir();
+"32
+[; ;./microgochi.h: 32: void micro_dormir();
 [v _micro_dormir `(v ~T0 @X0 0 e? ]
 "17 ./minijeu.h
 [; ;./minijeu.h: 17: void lancer_minijeu();

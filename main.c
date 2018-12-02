@@ -170,6 +170,10 @@ void __interrupt() mdr(void)
             mGogo.bonheur--;
         }
         
+        if (cpt == 200){
+            mGogo.caca++;
+        }
+        
          if (cpt==300)
         {
             mGogo.age++; 

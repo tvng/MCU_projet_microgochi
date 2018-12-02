@@ -5482,6 +5482,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char dodo;
+  unsigned char caca;
+
   unsigned char pos_x;
   unsigned char pos_y;
 
@@ -5525,7 +5528,8 @@ void microgochi_init()
     mGogo.pos_x= 60;
     mGogo.pos_y= 60;
 
-
+    mGogo.dodo=0;
+    mGogo.caca=0;
 
 }
 
@@ -5547,6 +5551,7 @@ void micro_manger ()
 void micro_calin ()
 {
     mGogo.bonheur = mGogo.bonheur + 20;
+    mGogo.caca = 0;
 }
 
 void micro_dormir ()

@@ -5487,6 +5487,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char dodo;
+  unsigned char caca;
+
   unsigned char pos_x;
   unsigned char pos_y;
 
@@ -6813,8 +6816,11 @@ void game_play()
             animation();
         }
 
-        if(mGogo.satiete == 100){
+        if(mGogo.caca == 1){
             animationCaca();
+        }else{
+            displayObject (champi, 30, 37, 9, 14, 0);
+            displayObject (mouche, 32, 32, 4, 6, 0);
         }
 
 
@@ -6871,9 +6877,10 @@ void game_stats()
 
     glcd_FillScreen(0);
 }
-# 185 "game.c"
+# 188 "game.c"
 void animation()
 {
+
 
 
 
@@ -6886,7 +6893,7 @@ void animation()
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
     displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
     displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
-# 217 "game.c"
+# 221 "game.c"
 }
 
 void animationDodo(){
@@ -6896,13 +6903,13 @@ void animationDodo(){
     displayObject (gochiDodo, 75, 35, 2, 8, 1);
     displayObject (Z1, 88, 20, 6, 6, 1);
     displayObject (Z2, 95, 18, 4, 4, 1);
-# 241 "game.c"
+# 245 "game.c"
 }
 
 void animationCaca(){
     displayObject (champi, 30, 37, 9, 14, 1);
     displayObject (mouche, 32, 32, 4, 6, 1);
-# 261 "game.c"
+# 265 "game.c"
 }
 
 void animationDead(){
@@ -6922,5 +6929,5 @@ void animationPasContent(){
 
     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
-# 295 "game.c"
+# 299 "game.c"
 }

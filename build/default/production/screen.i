@@ -6641,6 +6641,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char dodo;
+  unsigned char caca;
+
   unsigned char pos_x;
   unsigned char pos_y;
 

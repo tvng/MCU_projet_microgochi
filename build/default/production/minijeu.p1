@@ -8,10 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
-[s S372 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S372 Microgochi age satiete energie bonheur vivant pos_x pos_y ]
-"25
-[; ;./microgochi.h: 25: extern struct Microgochi mGogo;
+[s S372 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S372 Microgochi age satiete energie bonheur vivant dodo caca pos_x pos_y ]
+"28
+[; ;./microgochi.h: 28: extern struct Microgochi mGogo;
 [v _mGogo `S372 ~T0 @X0 0 e ]
 "51 ./glcd.h
 [; ;./glcd.h: 51: extern void glcd_FillScreen(unsigned char color);
@@ -3750,13 +3750,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _bouger_sequence ..  ]
 "104
 [; ;minijeu.c: 104:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 0 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
 "105
 [; ;minijeu.c: 105:     mGogo.pos_y -=4;
-[e =- . _mGogo 6 -> -> 4 `i `uc ]
+[e =- . _mGogo 8 -> -> 4 `i `uc ]
 "106
 [; ;minijeu.c: 106:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y,9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "108
 [; ;minijeu.c: 108:     i++;
 [e ++ _i -> 1 `i ]
@@ -3780,13 +3780,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _bouger_sequence ..  ]
 "114
 [; ;minijeu.c: 114:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 0 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
 "115
 [; ;minijeu.c: 115:     mGogo.pos_y +=4;
-[e =+ . _mGogo 6 -> -> 4 `i `uc ]
+[e =+ . _mGogo 8 -> -> 4 `i `uc ]
 "116
 [; ;minijeu.c: 116:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "117
 [; ;minijeu.c: 117:       bouger_sequence();
 [e ( _bouger_sequence ..  ]
@@ -3828,7 +3828,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "157
 [; ;minijeu.c: 157:          if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
-[e $ ! && && >= + -> . _mGogo 5 `i _tamago_largeur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i <= + -> . _mGogo 5 `i _tamago_largeur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 3 `i && >= + -> . _mGogo 6 `i _tamago_hauteur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i <= + -> . _mGogo 6 `i _tamago_hauteur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 2 `i 409  ]
+[e $ ! && && >= + -> . _mGogo 7 `i _tamago_largeur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i <= + -> . _mGogo 7 `i _tamago_largeur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 3 `i && >= + -> . _mGogo 8 `i _tamago_hauteur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i <= + -> . _mGogo 8 `i _tamago_hauteur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 2 `i 409  ]
 "159
 [; ;minijeu.c: 159:          {
 {
@@ -3840,10 +3840,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _score - _score -> 1 `i ]
 "162
 [; ;minijeu.c: 162:              mGogo.pos_x =0;
-[e = . _mGogo 5 -> -> 0 `i `uc ]
+[e = . _mGogo 7 -> -> 0 `i `uc ]
 "163
 [; ;minijeu.c: 163:              mGogo.pos_y =0;
-[e = . _mGogo 6 -> -> 0 `i `uc ]
+[e = . _mGogo 8 -> -> 0 `i `uc ]
 "164
 [; ;minijeu.c: 164:              displayObject (tamago, 30 , 40, 9, 14, 0);
 [e ( _displayObject (4 , , , , , &U _tamago -> 30 `i -> 40 `i -> 9 `i -> 14 `i -> 0 `i ]
@@ -3869,10 +3869,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _i -> 0 `i ]
 "180
 [; ;minijeu.c: 180:             mGogo.pos_x = 30;
-[e = . _mGogo 5 -> -> 30 `i `uc ]
+[e = . _mGogo 7 -> -> 30 `i `uc ]
 "181
 [; ;minijeu.c: 181:             mGogo.pos_y = 0;
-[e = . _mGogo 6 -> -> 0 `i `uc ]
+[e = . _mGogo 8 -> -> 0 `i `uc ]
 "182
 [; ;minijeu.c: 182:             while (i != 4) {
 [e $U 411  ]
@@ -3889,13 +3889,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _bouger_sequence ..  ]
 "186
 [; ;minijeu.c: 186:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 0 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
 "187
 [; ;minijeu.c: 187:                 mGogo.pos_y += 10;
-[e =+ . _mGogo 6 -> -> 10 `i `uc ]
+[e =+ . _mGogo 8 -> -> 10 `i `uc ]
 "188
 [; ;minijeu.c: 188:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "189
 [; ;minijeu.c: 189:                 i++;
 [e ++ _i -> 1 `i ]
@@ -3932,13 +3932,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _remplir_tableau ..  ]
 "201
 [; ;minijeu.c: 201:     mGogo.pos_x = 30;
-[e = . _mGogo 5 -> -> 30 `i `uc ]
+[e = . _mGogo 7 -> -> 30 `i `uc ]
 "202
 [; ;minijeu.c: 202:     mGogo.pos_y = 40;
-[e = . _mGogo 6 -> -> 40 `i `uc ]
+[e = . _mGogo 8 -> -> 40 `i `uc ]
 "203
 [; ;minijeu.c: 203:     displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 5 `i -> . _mGogo 6 `i -> 9 `i -> 14 `i -> 1 `i ]
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "205
 [; ;minijeu.c: 205:      do {
 [e :U 417 ]

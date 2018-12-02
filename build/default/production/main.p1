@@ -90,8 +90,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45 ./glcd.h
 [; ;./glcd.h: 45: extern void glcd_Init(unsigned char mode);
 [v _glcd_Init `(v ~T0 @X0 0 ef1`uc ]
-"27 ./microgochi.h
-[; ;./microgochi.h: 27: void microgochi_init();
+"30 ./microgochi.h
+[; ;./microgochi.h: 30: void microgochi_init();
 [v _microgochi_init `(v ~T0 @X0 0 e? ]
 "11 ./screen.h
 [; ;./screen.h: 11: void screen_credits(void);
@@ -105,10 +105,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _game_play `(v ~T0 @X0 0 e? ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
-[s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S370 Microgochi age satiete energie bonheur vivant pos_x pos_y ]
-"25
-[; ;./microgochi.h: 25: extern struct Microgochi mGogo;
+[s S370 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S370 Microgochi age satiete energie bonheur vivant dodo caca pos_x pos_y ]
+"28
+[; ;./microgochi.h: 28: extern struct Microgochi mGogo;
 [v _mGogo `S370 ~T0 @X0 0 e ]
 [t ~ __interrupt . k ]
 [t T36 __interrupt ]
@@ -3712,22 +3712,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 379 ]
 "173
-[; ;main.c: 173:          if (cpt==300)
-[e $ ! == _cpt -> 300 `i 380  ]
-"174
-[; ;main.c: 174:         {
+[; ;main.c: 173:         if (cpt == 200){
+[e $ ! == _cpt -> 200 `i 380  ]
 {
+"174
+[; ;main.c: 174:             mGogo.caca++;
+[e ++ . _mGogo 6 -> -> 1 `i `uc ]
 "175
-[; ;main.c: 175:             mGogo.age++;
-[e ++ . _mGogo 0 -> -> 1 `i `uc ]
-"176
-[; ;main.c: 176:             cpt=0;
-[e = _cpt -> 0 `i ]
-"177
-[; ;main.c: 177:         }
+[; ;main.c: 175:         }
 }
 [e :U 380 ]
-"182
-[; ;main.c: 182: }
+"177
+[; ;main.c: 177:          if (cpt==300)
+[e $ ! == _cpt -> 300 `i 381  ]
+"178
+[; ;main.c: 178:         {
+{
+"179
+[; ;main.c: 179:             mGogo.age++;
+[e ++ . _mGogo 0 -> -> 1 `i `uc ]
+"180
+[; ;main.c: 180:             cpt=0;
+[e = _cpt -> 0 `i ]
+"181
+[; ;main.c: 181:         }
+}
+[e :U 381 ]
+"186
+[; ;main.c: 186: }
 [e :UE 376 ]
 }

@@ -95,8 +95,11 @@ void game_play()
             animation();
         }
         
-        if(mGogo.satiete == 100){
+        if(mGogo.caca == 1){
             animationCaca();
+        }else{
+            displayObject (champi, 30, 37, 9, 14, 0);
+            displayObject (mouche, 32, 32, 4, 6, 0);
         }
         
        /* if(mGogo.dodo==1){//COMMENT ON LUI DIT DE SE REVEILLER ==>cment remettre le booleen a 0
@@ -189,6 +192,7 @@ void animation()
     displayObject (Z2, 95, 18, 4, 4, 0);
     
     displayObject (gochiPasContent, 75, 33, 4, 8, 0);*/
+    
     
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);

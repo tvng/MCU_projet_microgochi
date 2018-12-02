@@ -6646,6 +6646,9 @@ struct Microgochi{
 
   unsigned char vivant;
 
+  unsigned char dodo;
+  unsigned char caca;
+
   unsigned char pos_x;
   unsigned char pos_y;
 
@@ -6774,6 +6777,10 @@ void __attribute__((picinterrupt(""))) mdr(void)
             mGogo.energie--;
 
             mGogo.bonheur--;
+        }
+
+        if (cpt == 200){
+            mGogo.caca++;
         }
 
          if (cpt==300)
