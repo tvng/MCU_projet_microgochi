@@ -10,14 +10,14 @@
 
 extern int cpt;
 
-void game_play();
-void game_stats();
+void game_play(void);
+void game_stats(void);
 //void anim();
-void animation();
-void animationDead();
-void animationCaca();
-void animationDodo();
-void animationPasContent();
+void animation(void);
+void animationDead(void);
+void animationCaca(void);
+void animationDodo(void);
+void animationPasContent(void);
 
 #endif	/* GAME_H */
 

@@ -8,12 +8,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55
 [; ;./glcd.h: 55: extern void glcd_Image(void);
 [v _glcd_Image `(v ~T0 @X0 0 ef ]
-"24 ./menu.h
-[; ;./menu.h: 24: void menu_cursor(int action, int write);
+"25 ./menu.h
+[; ;./menu.h: 25: void menu_cursor(int action, int write);
 [v _menu_cursor `(v ~T0 @X0 0 ef2`i`i ]
 "16 ./game.h
-[; ;./game.h: 16: void animation();
-[v _animation `(v ~T0 @X0 0 e? ]
+[; ;./game.h: 16: void animation(void);
+[v _animation `(v ~T0 @X0 0 ef ]
 "2569 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2569:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -41,8 +41,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2605
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 [v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
-"25 ./menu.h
-[; ;./menu.h: 25: void menu_actions(int action);
+"26 ./menu.h
+[; ;./menu.h: 26: void menu_actions(int action);
 [v _menu_actions `(v ~T0 @X0 0 ef1`i ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
@@ -52,17 +52,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./microgochi.h: 28: extern struct Microgochi mGogo;
 [v _mGogo `S362 ~T0 @X0 0 e ]
 "20 ./game.h
-[; ;./game.h: 20: void animationPasContent();
-[v _animationPasContent `(v ~T0 @X0 0 e? ]
+[; ;./game.h: 20: void animationPasContent(void);
+[v _animationPasContent `(v ~T0 @X0 0 ef ]
 "18
-[; ;./game.h: 18: void animationCaca();
-[v _animationCaca `(v ~T0 @X0 0 e? ]
+[; ;./game.h: 18: void animationCaca(void);
+[v _animationCaca `(v ~T0 @X0 0 ef ]
 "234 ./myglcd.h
 [; ;./myglcd.h: 234: void displayObject (char *tab, int x, int y, int height, int width, int write);
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
 "19 ./game.h
-[; ;./game.h: 19: void animationDodo();
-[v _animationDodo `(v ~T0 @X0 0 e? ]
+[; ;./game.h: 19: void animationDodo(void);
+[v _animationDodo `(v ~T0 @X0 0 ef ]
 "54 ./glcd.h
 [; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 [v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
@@ -656,7 +656,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 195 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -688,7 +688,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 32 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -783,9 +783,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 2 `i `uc
--> -> 3 `i `uc
--> -> 2 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -800,69 +797,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 25 `i `uc
--> -> 2 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 7 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
@@ -894,6 +831,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -920,6 +862,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1418,173 +1364,185 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 226 `i `uc
 -> -> 224 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 192 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 192 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
 -> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 224 `i `uc
+-> -> 224 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1616,7 +1574,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -3706,8 +3706,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 386 ]
 "100
-[; ;game.c: 100:         if(mGogo.caca == 1){
-[e $ ! == -> . _mGogo 6 `i -> 1 `i 388  ]
+[; ;game.c: 100:         if(mGogo.caca <=50){
+[e $ ! <= -> . _mGogo 6 `i -> 50 `i 388  ]
 {
 "101
 [; ;game.c: 101:             animationCaca();
@@ -3850,130 +3850,149 @@ Version 4.0 HI-TECH Software Intermediate Code
 "151
 [; ;game.c: 151:         memset(&buffer, 0, sizeof(buffer));
 [e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"153
+[; ;game.c: 153:         glcd_SetCursor(0,5);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 5 `i `uc ]
 "154
-[; ;game.c: 154:         if (PORTCbits.RC1==1)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 396  ]
+[; ;game.c: 154:         glcd_WriteString("Propre:",1,1);
+[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "155
-[; ;game.c: 155:         {
-{
+[; ;game.c: 155:         glcd_SetCursor(60,5);
+[e ( _glcd_SetCursor (2 , -> -> 60 `i `uc -> -> 5 `i `uc ]
 "156
-[; ;game.c: 156:             sortie_enable=1;
-[e = _sortie_enable -> 1 `i ]
+[; ;game.c: 156:         itoa(mGogo.caca, buffer);
+[e ( _itoa (2 , -> . _mGogo 6 `i &U _buffer ]
 "157
-[; ;game.c: 157:         }
+[; ;game.c: 157:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"158
+[; ;game.c: 158:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"161
+[; ;game.c: 161:         if (PORTCbits.RC1==1)
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 396  ]
+"162
+[; ;game.c: 162:         {
+{
+"163
+[; ;game.c: 163:             sortie_enable=1;
+[e = _sortie_enable -> 1 `i ]
+"164
+[; ;game.c: 164:         }
 }
 [e :U 396 ]
-"160
-[; ;game.c: 160:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+"167
+[; ;game.c: 167:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
 }
 [e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 395  ]
 [e :U 394 ]
-"162
-[; ;game.c: 162:     glcd_FillScreen(0);
+"169
+[; ;game.c: 169:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"163
-[; ;game.c: 163: }
+"170
+[; ;game.c: 170: }
 [e :UE 392 ]
 }
-"193
-[; ;game.c: 193: void animation()
+"200
+[; ;game.c: 200: void animation()
 [v _animation `(v ~T0 @X0 1 ef ]
-"194
-[; ;game.c: 194: {
+"201
+[; ;game.c: 201: {
 {
 [e :U _animation ]
 [f ]
-"202
-[; ;game.c: 202:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
+"209
+[; ;game.c: 209:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
-"203
-[; ;game.c: 203:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+"210
+[; ;game.c: 210:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
-"204
-[; ;game.c: 204:     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
+"211
+[; ;game.c: 211:     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 1 `i ]
-"226
-[; ;game.c: 226: }
+"233
+[; ;game.c: 233: }
 [e :UE 397 ]
 }
-"228
-[; ;game.c: 228: void animationDodo(){
+"235
+[; ;game.c: 235: void animationDodo(){
 [v _animationDodo `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationDodo ]
 [f ]
-"229
-[; ;game.c: 229:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
+"236
+[; ;game.c: 236:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
-"230
-[; ;game.c: 230:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+"237
+[; ;game.c: 237:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
-"232
-[; ;game.c: 232:     displayObject (gochiDodo, 75, 35, 2, 8, 1);
+"239
+[; ;game.c: 239:     displayObject (gochiDodo, 75, 35, 2, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiDodo -> 75 `i -> 35 `i -> 2 `i -> 8 `i -> 1 `i ]
-"234
-[; ;game.c: 234:     displayObject (Z1, 88, 20, 6, 6, 1);
+"241
+[; ;game.c: 241:     displayObject (Z1, 88, 20, 6, 6, 1);
 [e ( _displayObject (4 , , , , , &U _Z1 -> 88 `i -> 20 `i -> 6 `i -> 6 `i -> 1 `i ]
-"235
-[; ;game.c: 235:     displayObject (Z2, 95, 18, 4, 4, 1);
+"242
+[; ;game.c: 242:     displayObject (Z2, 95, 18, 4, 4, 1);
 [e ( _displayObject (4 , , , , , &U _Z2 -> 95 `i -> 18 `i -> 4 `i -> 4 `i -> 1 `i ]
-"251
-[; ;game.c: 251: }
+"258
+[; ;game.c: 258: }
 [e :UE 398 ]
 }
-"253
-[; ;game.c: 253: void animationCaca(){
+"260
+[; ;game.c: 260: void animationCaca(){
 [v _animationCaca `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationCaca ]
 [f ]
-"254
-[; ;game.c: 254:     displayObject (champi, 30, 37, 9, 14, 1);
+"261
+[; ;game.c: 261:     displayObject (champi, 30, 37, 9, 14, 1);
 [e ( _displayObject (4 , , , , , &U _champi -> 30 `i -> 37 `i -> 9 `i -> 14 `i -> 1 `i ]
-"255
-[; ;game.c: 255:     displayObject (mouche, 32, 32, 4, 6, 1);
+"262
+[; ;game.c: 262:     displayObject (mouche, 32, 32, 4, 6, 1);
 [e ( _displayObject (4 , , , , , &U _mouche -> 32 `i -> 32 `i -> 4 `i -> 6 `i -> 1 `i ]
-"271
-[; ;game.c: 271: }
+"278
+[; ;game.c: 278: }
 [e :UE 399 ]
 }
-"273
-[; ;game.c: 273: void animationDead(){
+"280
+[; ;game.c: 280: void animationDead(){
 [v _animationDead `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationDead ]
 [f ]
-"276
-[; ;game.c: 276:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
-[e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
-"277
-[; ;game.c: 277:     displayObject (gochiMort, 75, 33, 3, 8, 1);
-[e ( _displayObject (4 , , , , , &U _gochiMort -> 75 `i -> 33 `i -> 3 `i -> 8 `i -> 1 `i ]
 "283
-[; ;game.c: 283: }
+[; ;game.c: 283:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+[e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
+"284
+[; ;game.c: 284:     displayObject (gochiMort, 75, 33, 3, 8, 1);
+[e ( _displayObject (4 , , , , , &U _gochiMort -> 75 `i -> 33 `i -> 3 `i -> 8 `i -> 1 `i ]
+"290
+[; ;game.c: 290: }
 [e :UE 400 ]
 }
-"285
-[; ;game.c: 285: void animationPasContent(){
+"292
+[; ;game.c: 292: void animationPasContent(){
 [v _animationPasContent `(v ~T0 @X0 1 ef ]
 {
 [e :U _animationPasContent ]
 [f ]
-"286
-[; ;game.c: 286:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
+"293
+[; ;game.c: 293:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
-"287
-[; ;game.c: 287:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+"294
+[; ;game.c: 294:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
-"289
-[; ;game.c: 289:     displayObject (gochiPasContent, 75, 32, 4, 8, 1);
+"296
+[; ;game.c: 296:     displayObject (gochiPasContent, 75, 32, 4, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiPasContent -> 75 `i -> 32 `i -> 4 `i -> 8 `i -> 1 `i ]
-"305
-[; ;game.c: 305: }
+"312
+[; ;game.c: 312: }
 [e :UE 401 ]
 }
 [a 2C 82 67 50 61 101 120 105 116 0 ]
 [a 1C 83 116 97 116 115 58 0 ]
 [a 5C 65 109 111 117 114 58 0 ]
 [a 3C 70 97 105 109 58 0 ]
+[a 6C 80 114 111 112 114 101 58 0 ]
 [a 4C 69 110 101 114 103 105 101 58 0 ]

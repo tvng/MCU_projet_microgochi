@@ -97,7 +97,7 @@ void game_play()
             }
         }
         
-        if(mGogo.caca == 1){
+        if(mGogo.caca <=50){
             animationCaca();
         }else{
             displayObject (champi, 30, 37, 9, 14, 0);
@@ -147,6 +147,13 @@ void game_stats()
         glcd_WriteString("Amour:",f8X8,1);
         glcd_SetCursor(55,4);
         itoa(mGogo.bonheur, buffer);
+        glcd_WriteString(buffer,f8X8,1);
+        memset(&buffer, 0, sizeof(buffer));
+        
+        glcd_SetCursor(0,5);
+        glcd_WriteString("Propre:",f8X8,1);
+        glcd_SetCursor(60,5);
+        itoa(mGogo.caca, buffer);
         glcd_WriteString(buffer,f8X8,1);
         memset(&buffer, 0, sizeof(buffer));
         

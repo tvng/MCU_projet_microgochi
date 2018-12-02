@@ -35,19 +35,19 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"23 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+"23 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 "119
 [v _game_stats game_stats `(v  1 e 1 0 ]
-"193
+"200
 [v _animation animation `(v  1 e 1 0 ]
-"228
+"235
 [v _animationDodo animationDodo `(v  1 e 1 0 ]
-"253
+"260
 [v _animationCaca animationCaca `(v  1 e 1 0 ]
-"285
+"292
 [v _animationPasContent animationPasContent `(v  1 e 1 0 ]
-"341 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+"341 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
 "395
 [v _glcd_WriteByte glcd_WriteByte `(v  1 e 1 0 ]
@@ -67,30 +67,32 @@
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
 "697
 [v _glcd_Image glcd_Image `(v  1 e 1 0 ]
-"14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\itoa.c
+"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\itoa.c
 [v _itoa itoa `(v  1 e 1 0 ]
 "31
 [v _reverse reverse `(v  1 e 1 0 ]
-"47 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
+"47 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
 [v _main main `(i  1 e 2 0 ]
 "142
 [v _mdr mdr `IIH(v  1 e 1 0 ]
-"18 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\menu.c
+"18 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
 "39
 [v _menu_actions menu_actions `(v  1 e 1 0 ]
-"14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
+"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
 [v _microgochi_init microgochi_init `(v  1 e 1 0 ]
 "39
 [v _micro_manger micro_manger `(v  1 e 1 0 ]
-"44
+"45
 [v _micro_calin micro_calin `(v  1 e 1 0 ]
 "50
+[v _micro_laver micro_laver `(v  1 e 1 0 ]
+"55
 [v _micro_dormir micro_dormir `(v  1 e 1 0 ]
-"19 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\minijeu.c
-[s S855 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+"19 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\minijeu.c
+[s S859 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "36
-[v _creer_champi creer_champi `(S855  1 e 4 0 ]
+[v _creer_champi creer_champi `(S859  1 e 4 0 ]
 "46
 [v _remplir_tableau remplir_tableau `(v  1 e 1 0 ]
 "56
@@ -105,11 +107,11 @@
 [v _collision collision `(v  1 e 1 0 ]
 "197
 [v _lancer_minijeu lancer_minijeu `(v  1 e 1 0 ]
-"13 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\myglcd.c
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
 [v _displayObject displayObject `(v  1 e 1 0 ]
-"25 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\screen.c
+"25 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
-"19 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi/myglcd.h
+"19 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X/myglcd.h
 [v _cursor cursor `[30]uc  1 e 30 0 ]
 "34
 [v _test test `C[1024]uc  1 e 1024 0 ]
@@ -141,7 +143,7 @@
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S342 . 1 `uc 1 RC0 1 0 :1:0 
+[s S343 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -151,32 +153,32 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S351 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S352 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S358 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S359 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S365 . 1 `uc 1 . 1 0 :1:0 
+[s S366 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S369 . 1 `uc 1 . 1 0 :1:0 
+[s S370 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S372 . 1 `S342 1 . 1 0 `S351 1 . 1 0 `S358 1 . 1 0 `S365 1 . 1 0 `S369 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES372  1 e 1 @3970 ]
+[u S373 . 1 `S343 1 . 1 0 `S352 1 . 1 0 `S359 1 . 1 0 `S366 1 . 1 0 `S370 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES373  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S533 . 1 `uc 1 RE0 1 0 :1:0 
+[s S535 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
@@ -184,32 +186,32 @@
 `uc 1 RDPU 1 0 :1:7 
 ]
 "2868
-[s S540 . 1 `uc 1 CK1SPP 1 0 :1:0 
+[s S542 . 1 `uc 1 CK1SPP 1 0 :1:0 
 `uc 1 CK2SPP 1 0 :1:1 
 `uc 1 OESPP 1 0 :1:2 
 ]
-[s S544 . 1 `uc 1 PD2 1 0 :1:0 
+[s S546 . 1 `uc 1 PD2 1 0 :1:0 
 `uc 1 PC2 1 0 :1:1 
 `uc 1 CCP10 1 0 :1:2 
 `uc 1 CCP9E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 CCP2E 1 0 :1:7 
 ]
-[s S551 . 1 `uc 1 RDE 1 0 :1:0 
+[s S553 . 1 `uc 1 RDE 1 0 :1:0 
 `uc 1 WRE 1 0 :1:1 
 `uc 1 CS 1 0 :1:2 
 `uc 1 PC3E 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 PA2E 1 0 :1:7 
 ]
-[s S558 . 1 `uc 1 . 1 0 :2:0 
+[s S560 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PB2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RE7 1 0 :1:7 
 ]
-[u S563 . 1 `S533 1 . 1 0 `S540 1 . 1 0 `S544 1 . 1 0 `S551 1 . 1 0 `S558 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES563  1 e 1 @3972 ]
-[s S607 . 1 `uc 1 LATB0 1 0 :1:0 
+[u S565 . 1 `S535 1 . 1 0 `S542 1 . 1 0 `S546 1 . 1 0 `S553 1 . 1 0 `S560 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES565  1 e 1 @3972 ]
+[s S609 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -219,7 +221,7 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3100
-[s S616 . 1 `uc 1 LB0 1 0 :1:0 
+[s S618 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -228,8 +230,8 @@
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S625 . 1 `S607 1 . 1 0 `S616 1 . 1 0 ]
-[v _LATBbits LATBbits `VES625  1 e 1 @3978 ]
+[u S627 . 1 `S609 1 . 1 0 `S618 1 . 1 0 ]
+[v _LATBbits LATBbits `VES627  1 e 1 @3978 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
@@ -240,7 +242,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S153 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S154 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -250,15 +252,15 @@
 `uc 1 SPPIE 1 0 :1:7 
 ]
 "4408
-[s S162 . 1 `uc 1 . 1 0 :4:0 
+[s S163 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S168 . 1 `S153 1 . 1 0 `S162 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES168  1 e 1 @3997 ]
-[s S187 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S169 . 1 `S154 1 . 1 0 `S163 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES169  1 e 1 @3997 ]
+[s S188 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -268,21 +270,21 @@
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S196 . 1 `uc 1 . 1 0 :4:0 
+[s S197 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S202 . 1 `S187 1 . 1 0 `S196 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES202  1 e 1 @3998 ]
+[u S203 . 1 `S188 1 . 1 0 `S197 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES203  1 e 1 @3998 ]
 "6581
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S54 . 1 `uc 1 . 1 0 :2:0 
+[s S55 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
 "7448
-[s S57 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S58 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -290,20 +292,20 @@
 `uc 1 T1RUN 1 0 :1:6 
 `uc 1 RD16 1 0 :1:7 
 ]
-[s S65 . 1 `uc 1 . 1 0 :2:0 
+[s S66 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S71 . 1 `uc 1 . 1 0 :3:0 
+[s S72 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SOSCEN 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 T1RD16 1 0 :1:7 
 ]
-[u S76 . 1 `S54 1 . 1 0 `S57 1 . 1 0 `S65 1 . 1 0 `S71 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES76  1 e 1 @4045 ]
-[s S104 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S77 . 1 `S55 1 . 1 0 `S58 1 . 1 0 `S66 1 . 1 0 `S72 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES77  1 e 1 @4045 ]
+[s S105 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -313,7 +315,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8614
-[s S113 . 1 `uc 1 . 1 0 :1:0 
+[s S114 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -322,15 +324,15 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S122 . 1 `uc 1 . 1 0 :6:0 
+[s S123 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S126 . 1 `S104 1 . 1 0 `S113 1 . 1 0 `S122 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES126  1 e 1 @4082 ]
-"19 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+[u S127 . 1 `S105 1 . 1 0 `S114 1 . 1 0 `S123 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES127  1 e 1 @4082 ]
+"19 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _cpt cpt `i  1 e 2 0 ]
-"13 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _Font3x6 Font3x6 `C[65][3]uc  1 e 195 0 ]
 "85
 [v _Font8x8 Font8x8 `C[2048]uc  1 e 2048 0 ]
@@ -338,9 +340,9 @@
 [v _x x `uc  1 e 1 0 ]
 [v _y y `uc  1 e 1 0 ]
 [s S24 Microgochi 9 `uc 1 age 1 0 `uc 1 satiete 1 1 `uc 1 energie 1 2 `uc 1 bonheur 1 3 `uc 1 vivant 1 4 `uc 1 dodo 1 5 `uc 1 caca 1 6 `uc 1 pos_x 1 7 `uc 1 pos_y 1 8 ]
-"12 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
+"12 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
 [v _mGogo mGogo `S24  1 e 9 0 ]
-"10 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\minijeu.c
+"10 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\minijeu.c
 [v _taille taille `i  1 e 2 0 ]
 "12
 [v _tamago_largeur tamago_largeur `i  1 e 2 0 ]
@@ -352,27 +354,27 @@
 [v _score score `i  1 e 2 0 ]
 "16
 [v _buffer buffer `[3]uc  1 e 3 0 ]
-[s S855 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+[s S859 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "34
-[v _tab tab `[2]S855  1 e 8 0 ]
-"47 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
+[v _tab tab `[2]S859  1 e 8 0 ]
+"47 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "105
 [v main@bool_jeu bool_jeu `i  1 a 2 80 ]
 "140
 } 0
-"25 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\screen.c
+"25 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\screen.c
 [v _screen_credits screen_credits `(v  1 e 1 0 ]
 {
 "46
 } 0
-"14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
+"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
 [v _microgochi_init microgochi_init `(v  1 e 1 0 ]
 {
 "27
 } 0
-"341 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+"341 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_Init glcd_Init `(v  1 e 1 0 ]
 {
 [v glcd_Init@mode mode `uc  1 a 1 wreg ]
@@ -381,7 +383,7 @@
 [v glcd_Init@mode mode `uc  1 a 1 14 ]
 "390
 } 0
-"23 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+"23 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_play game_play `(v  1 e 1 0 ]
 {
 "34
@@ -392,7 +394,7 @@
 [v game_play@write write `i  1 a 2 67 ]
 "116
 } 0
-"18 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\menu.c
+"18 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\menu.c
 [v _menu_cursor menu_cursor `(v  1 e 1 0 ]
 {
 [v menu_cursor@action action `i  1 p 2 38 ]
@@ -403,24 +405,29 @@
 [v _menu_actions menu_actions `(v  1 e 1 0 ]
 {
 [v menu_actions@action action `i  1 p 2 65 ]
-"74
+"78
 } 0
-"39 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\microgochi.c
+"39 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\microgochi.c
 [v _micro_manger micro_manger `(v  1 e 1 0 ]
 {
-"42
+"43
 } 0
 "50
+[v _micro_laver micro_laver `(v  1 e 1 0 ]
+{
+"53
+} 0
+"55
 [v _micro_dormir micro_dormir `(v  1 e 1 0 ]
 {
-"54
+"59
 } 0
-"44
+"45
 [v _micro_calin micro_calin `(v  1 e 1 0 ]
 {
 "48
 } 0
-"197 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\minijeu.c
+"197 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\minijeu.c
 [v _lancer_minijeu lancer_minijeu `(v  1 e 1 0 ]
 {
 "235
@@ -442,13 +449,13 @@
 "55
 } 0
 "19
-[s S855 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
+[s S859 champi 4 `uc 1 pos_x 1 0 `uc 1 pos_y 1 1 `uc 1 champ_h 1 2 `uc 1 champ_l 1 3 ]
 "36
-[v _creer_champi creer_champi `(S855  1 e 4 0 ]
+[v _creer_champi creer_champi `(S859  1 e 4 0 ]
 {
 [v creer_champi@x x `uc  1 a 1 wreg ]
 "38
-[v creer_champi@new_champi new_champi `S855  1 a 4 5 ]
+[v creer_champi@new_champi new_champi `S859  1 a 4 5 ]
 "36
 [v creer_champi@x x `uc  1 a 1 wreg ]
 [v creer_champi@y y `uc  1 p 1 0 ]
@@ -460,7 +467,7 @@
 [v _collision collision `(v  1 e 1 0 ]
 {
 "179
-[v collision@i_965 i `i  1 a 2 61 ]
+[v collision@i_969 i `i  1 a 2 61 ]
 "127
 [v collision@i i `i  1 a 2 63 ]
 "195
@@ -486,12 +493,12 @@
 [v afficher_sequence@i i `i  1 a 2 44 ]
 "65
 } 0
-"119 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+"119 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _game_stats game_stats `(v  1 e 1 0 ]
 {
 "128
 [v game_stats@sortie_enable sortie_enable `i  1 a 2 23 ]
-"163
+"170
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -506,7 +513,7 @@
 [v memset@n n `ui  1 p 2 4 ]
 "90
 } 0
-"14 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\itoa.c
+"14 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\itoa.c
 [v _itoa itoa `(v  1 e 1 0 ]
 {
 "16
@@ -549,7 +556,7 @@
 [v ___awmod@divisor divisor `i  1 p 2 2 ]
 "34
 } 0
-"670 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+"670 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_WriteString glcd_WriteString `(v  1 e 1 0 ]
 {
 [v glcd_WriteString@str str `*.35Cuc  1 p 2 19 ]
@@ -629,27 +636,27 @@
 [v glcd_Image@j j `uc  1 a 1 12 ]
 "727
 } 0
-"285 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\game.c
+"292 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\game.c
 [v _animationPasContent animationPasContent `(v  1 e 1 0 ]
 {
-"305
+"312
 } 0
-"228
+"235
 [v _animationDodo animationDodo `(v  1 e 1 0 ]
 {
-"251
+"258
 } 0
-"253
+"260
 [v _animationCaca animationCaca `(v  1 e 1 0 ]
 {
-"271
+"278
 } 0
-"193
+"200
 [v _animation animation `(v  1 e 1 0 ]
 {
-"226
+"233
 } 0
-"13 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\myglcd.c
+"13 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\myglcd.c
 [v _displayObject displayObject `(v  1 e 1 0 ]
 {
 "17
@@ -667,7 +674,7 @@
 [v displayObject@write write `i  1 p 2 27 ]
 "32
 } 0
-"468 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\glcd.c
+"468 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\glcd.c
 [v _glcd_PlotPixel glcd_PlotPixel `(v  1 e 1 0 ]
 {
 [v glcd_PlotPixel@xpos xpos `uc  1 a 1 wreg ]
@@ -718,8 +725,8 @@
 [v ___awdiv@divisor divisor `i  1 p 2 2 ]
 "41
 } 0
-"142 C:\Users\JARVIS\Documents\GitHub\MCU_projet_microgochi\main.c
+"142 D:\ECE_PARIS\ING4\Microcontroleur\projet\MCU_projet_tamagogo.X\main.c
 [v _mdr mdr `IIH(v  1 e 1 0 ]
 {
-"192
+"189
 } 0

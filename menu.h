@@ -19,6 +19,7 @@
 #define ACTION_CALIN 1
 #define ACTION_DORMIR 2
 #define ACTION_JEU 3
+#define ACTION_LAVER 4
 #define ACTION_STATS 7
 
 void menu_cursor(int action, int write);

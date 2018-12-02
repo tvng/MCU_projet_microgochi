@@ -63,6 +63,10 @@ void menu_actions(int action)
     {
         lancer_minijeu();//MINI JEU!!!!
     }
+    if (action == ACTION_LAVER) 
+    {
+        micro_laver();
+    }
     if (action == ACTION_STATS) 
     {
         game_stats();

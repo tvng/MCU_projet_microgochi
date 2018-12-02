@@ -22,7 +22,7 @@ void microgochi_init()
     mGogo.pos_y= 60;
     
     mGogo.dodo=0;
-    mGogo.caca=0;
+    mGogo.caca=100; //proprete
 
 }
 
@@ -39,12 +39,17 @@ void micro_vieillir()
 void micro_manger ()
 {
     mGogo.satiete += 20;
+    mGogo.caca-=40;
 }
 
 void micro_calin ()
 {
     mGogo.bonheur = mGogo.bonheur + 20;
-    mGogo.caca = 0;
+}
+
+void micro_laver()
+{
+    mGogo.caca=100;
 }
 
 void micro_dormir ()

@@ -166,13 +166,10 @@ void __interrupt() mdr(void)
          if (cpt==30)
         {
             mGogo.energie--;   
-            
+            mGogo.caca--;
             mGogo.bonheur--;
         }
         
-        if (cpt == 200){
-            mGogo.caca++;
-        }
         
         if (mGogo.dodo == 1){
             if(cpt==30){

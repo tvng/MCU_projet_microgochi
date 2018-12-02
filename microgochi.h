@@ -18,7 +18,7 @@ struct Microgochi{
   unsigned char vivant; //boolean
   
   unsigned char dodo;//boolean
-  unsigned char caca;//boolean
+  unsigned char caca;//proprete
   
   unsigned char pos_x;
   unsigned char pos_y;
@@ -27,7 +27,8 @@ struct Microgochi{
 
 extern struct Microgochi mGogo;    //creation structure Microgochi
 
-void microgochi_init();
-void micro_manger();
-void micro_dormir();
-void micro_calin();
+void microgochi_init(void);
+void micro_manger(void);
+void micro_dormir(void);
+void micro_calin(void);
+void micro_laver(void);

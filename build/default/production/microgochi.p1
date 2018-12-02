@@ -549,8 +549,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;microgochi.c: 24:     mGogo.dodo=0;
 [e = . _mGogo 5 -> -> 0 `i `uc ]
 "25
-[; ;microgochi.c: 25:     mGogo.caca=0;
-[e = . _mGogo 6 -> -> 0 `i `uc ]
+[; ;microgochi.c: 25:     mGogo.caca=100;
+[e = . _mGogo 6 -> -> 100 `i `uc ]
 "27
 [; ;microgochi.c: 27: }
 [e :UE 363 ]
@@ -595,42 +595,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;microgochi.c: 41:     mGogo.satiete += 20;
 [e =+ . _mGogo 1 -> -> 20 `i `uc ]
 "42
-[; ;microgochi.c: 42: }
+[; ;microgochi.c: 42:     mGogo.caca-=40;
+[e =- . _mGogo 6 -> -> 40 `i `uc ]
+"43
+[; ;microgochi.c: 43: }
 [e :UE 366 ]
 }
-"44
-[; ;microgochi.c: 44: void micro_calin ()
-[v _micro_calin `(v ~T0 @X0 1 ef ]
 "45
-[; ;microgochi.c: 45: {
+[; ;microgochi.c: 45: void micro_calin ()
+[v _micro_calin `(v ~T0 @X0 1 ef ]
+"46
+[; ;microgochi.c: 46: {
 {
 [e :U _micro_calin ]
 [f ]
-"46
-[; ;microgochi.c: 46:     mGogo.bonheur = mGogo.bonheur + 20;
-[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
 "47
-[; ;microgochi.c: 47:     mGogo.caca = 0;
-[e = . _mGogo 6 -> -> 0 `i `uc ]
+[; ;microgochi.c: 47:     mGogo.bonheur = mGogo.bonheur + 20;
+[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
 "48
 [; ;microgochi.c: 48: }
 [e :UE 367 ]
 }
 "50
-[; ;microgochi.c: 50: void micro_dormir ()
-[v _micro_dormir `(v ~T0 @X0 1 ef ]
+[; ;microgochi.c: 50: void micro_laver()
+[v _micro_laver `(v ~T0 @X0 1 ef ]
 "51
 [; ;microgochi.c: 51: {
 {
-[e :U _micro_dormir ]
+[e :U _micro_laver ]
 [f ]
 "52
-[; ;microgochi.c: 52:     mGogo.energie += 20;
-[e =+ . _mGogo 2 -> -> 20 `i `uc ]
+[; ;microgochi.c: 52:     mGogo.caca=100;
+[e = . _mGogo 6 -> -> 100 `i `uc ]
 "53
-[; ;microgochi.c: 53:     mGogo.dodo=1;
-[e = . _mGogo 5 -> -> 1 `i `uc ]
-"54
-[; ;microgochi.c: 54: }
+[; ;microgochi.c: 53: }
 [e :UE 368 ]
+}
+"55
+[; ;microgochi.c: 55: void micro_dormir ()
+[v _micro_dormir `(v ~T0 @X0 1 ef ]
+"56
+[; ;microgochi.c: 56: {
+{
+[e :U _micro_dormir ]
+[f ]
+"57
+[; ;microgochi.c: 57:     mGogo.energie += 20;
+[e =+ . _mGogo 2 -> -> 20 `i `uc ]
+"58
+[; ;microgochi.c: 58:     mGogo.dodo=1;
+[e = . _mGogo 5 -> -> 1 `i `uc ]
+"59
+[; ;microgochi.c: 59: }
+[e :UE 369 ]
 }

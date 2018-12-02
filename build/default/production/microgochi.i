@@ -5492,10 +5492,11 @@ struct Microgochi{
 
 extern struct Microgochi mGogo;
 
-void microgochi_init();
-void micro_manger();
-void micro_dormir();
-void micro_calin();
+void microgochi_init(void);
+void micro_manger(void);
+void micro_dormir(void);
+void micro_calin(void);
+void micro_laver(void);
 # 8 "microgochi.c" 2
 
 # 1 "./main.h" 1
@@ -5505,14 +5506,14 @@ void micro_calin();
 # 11 "./game.h"
 extern int cpt;
 
-void game_play();
-void game_stats();
+void game_play(void);
+void game_stats(void);
 
-void animation();
-void animationDead();
-void animationCaca();
-void animationDodo();
-void animationPasContent();
+void animation(void);
+void animationDead(void);
+void animationCaca(void);
+void animationDodo(void);
+void animationPasContent(void);
 # 10 "microgochi.c" 2
 
 
@@ -5529,7 +5530,7 @@ void microgochi_init()
     mGogo.pos_y= 60;
 
     mGogo.dodo=0;
-    mGogo.caca=0;
+    mGogo.caca=100;
 
 }
 
@@ -5546,12 +5547,17 @@ void micro_vieillir()
 void micro_manger ()
 {
     mGogo.satiete += 20;
+    mGogo.caca-=40;
 }
 
 void micro_calin ()
 {
     mGogo.bonheur = mGogo.bonheur + 20;
-    mGogo.caca = 0;
+}
+
+void micro_laver()
+{
+    mGogo.caca=100;
 }
 
 void micro_dormir ()
