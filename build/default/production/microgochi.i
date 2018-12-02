@@ -5497,6 +5497,7 @@ void micro_manger(void);
 void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
+void micro_vieillir(void);
 # 8 "microgochi.c" 2
 
 # 1 "./main.h" 1
@@ -5521,7 +5522,7 @@ struct Microgochi mGogo;
 
 void microgochi_init()
 {
-    mGogo.age=0;
+    mGogo.age=1;
     mGogo.satiete=80;
     mGogo.energie=80;
     mGogo.bonheur=80;
@@ -5530,7 +5531,7 @@ void microgochi_init()
     mGogo.pos_y= 60;
 
     mGogo.dodo=0;
-    mGogo.caca=100;
+    mGogo.caca=90;
 
 }
 
@@ -5547,12 +5548,20 @@ void micro_vieillir()
 void micro_manger ()
 {
     mGogo.satiete += 20;
+    if (mGogo.satiete>100)
+    {
+        mGogo.satiete=100;
+    }
     mGogo.caca-=40;
 }
 
 void micro_calin ()
 {
     mGogo.bonheur = mGogo.bonheur + 20;
+    if (mGogo.bonheur >100)
+    {
+        mGogo.bonheur=100;
+    }
 }
 
 void micro_laver()
@@ -5562,6 +5571,10 @@ void micro_laver()
 
 void micro_dormir ()
 {
-    mGogo.energie += 20;
+    mGogo.energie += 30;
+    if (mGogo.energie > 100)
+    {
+        mGogo.energie=100;
+    }
     mGogo.dodo=1;
 }

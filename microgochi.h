@@ -32,3 +32,4 @@ void micro_manger(void);
 void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
+void micro_vieillir(void);

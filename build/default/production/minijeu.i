@@ -6622,19 +6622,19 @@ void displayObject (char *tab, int x, int y, int height, int width, int write);
 
 
 # 1 "./minijeu.h" 1
-# 15 "./minijeu.h"
+# 12 "./minijeu.h"
 extern char pos_x, pos_y ;
 
-void lancer_minijeu();
+void lancer_minijeu(void);
 struct champi creer_champi(char x, char y);
-void afficher_sequence ();
-void bouger_sequence ();
-void effacer_sequence ();
-void remplir_tableau();
+void afficher_sequence (void);
+void bouger_sequence (void);
+void effacer_sequence (void);
+void remplir_tableau(void);
 void dessiner_arbre(char a, char b);
-void saut_tamago ();
-void collision ();
-void fin();
+void saut_tamago (void);
+void collision (void);
+void fin(void);
 # 4 "minijeu.c" 2
 
 # 1 "./main.h" 1
@@ -6667,6 +6667,7 @@ void micro_manger(void);
 void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
+void micro_vieillir(void);
 # 6 "minijeu.c" 2
 
 # 1 "./itoa.h" 1

@@ -38,9 +38,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;./microgochi.h: 32: void micro_dormir(void);
 [v _micro_dormir `(v ~T0 @X0 0 ef ]
-"17 ./minijeu.h
-[; ;./minijeu.h: 17: void lancer_minijeu();
-[v _lancer_minijeu `(v ~T0 @X0 0 e? ]
+"14 ./minijeu.h
+[; ;./minijeu.h: 14: void lancer_minijeu(void);
+[v _lancer_minijeu `(v ~T0 @X0 0 ef ]
 "34 ./microgochi.h
 [; ;./microgochi.h: 34: void micro_laver(void);
 [v _micro_laver `(v ~T0 @X0 0 ef ]

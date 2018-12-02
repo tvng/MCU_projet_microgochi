@@ -110,7 +110,15 @@ void game_play()
             displayObject (Z1, 88, 20, 6, 6, 0);
             displayObject (Z2, 95, 18, 4, 4, 0);
         }
-    }
+        
+    } //les conditions de mort sont dans les interrupt dans le main
+    
+    glcd_FillScreen(0); 
+   
+    glcd_SetCursor(0,0);
+    
+    glcd_WriteString("RIP", f8X8, 1);	//ecrit 
+
     //animationDead();
     
 }
@@ -154,6 +162,13 @@ void game_stats()
         glcd_WriteString("Propre:",f8X8,1);
         glcd_SetCursor(60,5);
         itoa(mGogo.caca, buffer);
+        glcd_WriteString(buffer,f8X8,1);
+        memset(&buffer, 0, sizeof(buffer));
+        
+        glcd_SetCursor(0,6);
+        glcd_WriteString("Age:",f8X8,1);
+        glcd_SetCursor(30,6);
+        itoa(mGogo.age, buffer);
         glcd_WriteString(buffer,f8X8,1);
         memset(&buffer, 0, sizeof(buffer));
         

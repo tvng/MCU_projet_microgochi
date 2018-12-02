@@ -123,7 +123,7 @@ int main(int argc, char** argv) {
         game_play();
 
         //si on arrive juste là, notre microgochi est mort&
-
+   __delay_ms(1000);
         //si notre microgochi est mort on quitte la bouche ou alors
         //il faudra revenir sur l'écran d'accueil, à voir
         if (mGogo.vivant == 0) {
@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
     return (EXIT_SUCCESS);
 }
 
-void __interrupt() mdr(void)
+void __interrupt() isr(void)
 {
     
     if (PIR1bits.TMR1IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
@@ -151,23 +151,28 @@ void __interrupt() mdr(void)
         PIR1bits.TMR1IF = 0; //on baisse le flag
     
     }
-        /*if(cpt==1){
-            displayObject (gochi_corps, 52, 23, 24, 34, 1);
-        }
-        if(cpt==3){
-            displayObject (gochi_corps, 52, 23, 24, 34, 0);
-        }*/
+   
     
-        if (cpt==90)
+        if ((cpt%100)==0)
         {
             mGogo.satiete -= 10;   
+            if (mGogo.satiete<=0)
+            {
+                mGogo.vivant=0;
+            }
         }
          
-         if (cpt==30)
+         if (cpt%150 == 0)
         {
             mGogo.energie--;   
             mGogo.caca--;
             mGogo.bonheur--;
+            
+            if (mGogo.energie<=0)
+            {
+                mGogo.vivant=0;
+            }
+            
         }
         
         
@@ -177,9 +182,9 @@ void __interrupt() mdr(void)
             }
         }
         
-         if (cpt==300)
+         if (cpt%500 == 0)
         {
-            mGogo.age++; 
+            micro_vieillir();
             cpt=0;
         }   
         

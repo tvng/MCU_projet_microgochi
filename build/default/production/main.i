@@ -6665,6 +6665,7 @@ void micro_manger(void);
 void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
+void micro_vieillir(void);
 # 38 "main.c" 2
 
 # 1 "./game.h" 1
@@ -6737,7 +6738,7 @@ int main(int argc, char** argv) {
         game_play();
 
 
-
+   _delay((unsigned long)((1000)*(8000000/4000.0)));
 
 
         if (mGogo.vivant == 0) {
@@ -6753,7 +6754,7 @@ int main(int argc, char** argv) {
     return (0);
 }
 
-void __attribute__((picinterrupt(""))) mdr(void)
+void __attribute__((picinterrupt(""))) isr(void)
 {
 
     if (PIR1bits.TMR1IF==1)
@@ -6767,21 +6768,26 @@ void __attribute__((picinterrupt(""))) mdr(void)
     }
 
 
-
-
-
-
-
-        if (cpt==90)
+        if ((cpt%100)==0)
         {
             mGogo.satiete -= 10;
+            if (mGogo.satiete<=0)
+            {
+                mGogo.vivant=0;
+            }
         }
 
-         if (cpt==30)
+         if (cpt%150 == 0)
         {
             mGogo.energie--;
             mGogo.caca--;
             mGogo.bonheur--;
+
+            if (mGogo.energie<=0)
+            {
+                mGogo.vivant=0;
+            }
+
         }
 
 
@@ -6791,9 +6797,9 @@ void __attribute__((picinterrupt(""))) mdr(void)
             }
         }
 
-         if (cpt==300)
+         if (cpt%500 == 0)
         {
-            mGogo.age++;
+            micro_vieillir();
             cpt=0;
         }
 

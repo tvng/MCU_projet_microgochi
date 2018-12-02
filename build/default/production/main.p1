@@ -115,6 +115,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./game.h
 [; ;./game.h: 11: extern int cpt;
 [v _cpt `i ~T0 @X0 0 e ]
+"35 ./microgochi.h
+[; ;./microgochi.h: 35: void micro_vieillir(void);
+[v _micro_vieillir `(v ~T0 @X0 0 ef ]
 "19 main.c
 [p x FOSC = HS ]
 "20
@@ -3627,6 +3630,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "123
 [; ;main.c: 123:         game_play();
 [e ( _game_play ..  ]
+"126
+[; ;main.c: 126:    _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "129
 [; ;main.c: 129:         if (mGogo.vivant == 0) {
 [e $ ! == -> . _mGogo 4 `i -> 0 `i 375  ]
@@ -3654,14 +3660,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 140: }
 [e :UE 371 ]
 }
-[v $root$_mdr `(v ~T0 @X0 0 e ]
+[v $root$_isr `(v ~T0 @X0 0 e ]
 "142
-[; ;main.c: 142: void __attribute__((picinterrupt(""))) mdr(void)
-[v _mdr `(v ~T36 @X0 1 ef ]
+[; ;main.c: 142: void __attribute__((picinterrupt(""))) isr(void)
+[v _isr `(v ~T36 @X0 1 ef ]
 "143
 [; ;main.c: 143: {
 {
-[e :U _mdr ]
+[e :U _isr ]
 [f ]
 "145
 [; ;main.c: 145:     if (PIR1bits.TMR1IF==1)
@@ -3682,74 +3688,100 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 153:     }
 }
 [e :U 377 ]
-"161
-[; ;main.c: 161:         if (cpt==90)
-[e $ ! == _cpt -> 90 `i 378  ]
-"162
-[; ;main.c: 162:         {
+"156
+[; ;main.c: 156:         if ((cpt%100)==0)
+[e $ ! == % _cpt -> 100 `i -> 0 `i 378  ]
+"157
+[; ;main.c: 157:         {
 {
-"163
-[; ;main.c: 163:             mGogo.satiete -= 10;
+"158
+[; ;main.c: 158:             mGogo.satiete -= 10;
 [e =- . _mGogo 1 -> -> 10 `i `uc ]
-"164
-[; ;main.c: 164:         }
-}
-[e :U 378 ]
-"166
-[; ;main.c: 166:          if (cpt==30)
-[e $ ! == _cpt -> 30 `i 379  ]
-"167
-[; ;main.c: 167:         {
+"159
+[; ;main.c: 159:             if (mGogo.satiete<=0)
+[e $ ! <= -> . _mGogo 1 `i -> 0 `i 379  ]
+"160
+[; ;main.c: 160:             {
 {
-"168
-[; ;main.c: 168:             mGogo.energie--;
-[e -- . _mGogo 2 -> -> 1 `i `uc ]
-"169
-[; ;main.c: 169:             mGogo.caca--;
-[e -- . _mGogo 6 -> -> 1 `i `uc ]
-"170
-[; ;main.c: 170:             mGogo.bonheur--;
-[e -- . _mGogo 3 -> -> 1 `i `uc ]
-"171
-[; ;main.c: 171:         }
+"161
+[; ;main.c: 161:                 mGogo.vivant=0;
+[e = . _mGogo 4 -> -> 0 `i `uc ]
+"162
+[; ;main.c: 162:             }
 }
 [e :U 379 ]
+"163
+[; ;main.c: 163:         }
+}
+[e :U 378 ]
+"165
+[; ;main.c: 165:          if (cpt%150 == 0)
+[e $ ! == % _cpt -> 150 `i -> 0 `i 380  ]
+"166
+[; ;main.c: 166:         {
+{
+"167
+[; ;main.c: 167:             mGogo.energie--;
+[e -- . _mGogo 2 -> -> 1 `i `uc ]
+"168
+[; ;main.c: 168:             mGogo.caca--;
+[e -- . _mGogo 6 -> -> 1 `i `uc ]
+"169
+[; ;main.c: 169:             mGogo.bonheur--;
+[e -- . _mGogo 3 -> -> 1 `i `uc ]
+"171
+[; ;main.c: 171:             if (mGogo.energie<=0)
+[e $ ! <= -> . _mGogo 2 `i -> 0 `i 381  ]
+"172
+[; ;main.c: 172:             {
+{
+"173
+[; ;main.c: 173:                 mGogo.vivant=0;
+[e = . _mGogo 4 -> -> 0 `i `uc ]
 "174
-[; ;main.c: 174:         if (mGogo.dodo == 1){
-[e $ ! == -> . _mGogo 5 `i -> 1 `i 380  ]
-{
-"175
-[; ;main.c: 175:             if(cpt==30){
-[e $ ! == _cpt -> 30 `i 381  ]
-{
-"176
-[; ;main.c: 176:                 mGogo.dodo=0;
-[e = . _mGogo 5 -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:             }
+[; ;main.c: 174:             }
 }
 [e :U 381 ]
-"178
-[; ;main.c: 178:         }
+"176
+[; ;main.c: 176:         }
 }
 [e :U 380 ]
-"180
-[; ;main.c: 180:          if (cpt==300)
-[e $ ! == _cpt -> 300 `i 382  ]
-"181
-[; ;main.c: 181:         {
+"179
+[; ;main.c: 179:         if (mGogo.dodo == 1){
+[e $ ! == -> . _mGogo 5 `i -> 1 `i 382  ]
 {
+"180
+[; ;main.c: 180:             if(cpt==30){
+[e $ ! == _cpt -> 30 `i 383  ]
+{
+"181
+[; ;main.c: 181:                 mGogo.dodo=0;
+[e = . _mGogo 5 -> -> 0 `i `uc ]
 "182
-[; ;main.c: 182:             mGogo.age++;
-[e ++ . _mGogo 0 -> -> 1 `i `uc ]
+[; ;main.c: 182:             }
+}
+[e :U 383 ]
 "183
-[; ;main.c: 183:             cpt=0;
-[e = _cpt -> 0 `i ]
-"184
-[; ;main.c: 184:         }
+[; ;main.c: 183:         }
 }
 [e :U 382 ]
+"185
+[; ;main.c: 185:          if (cpt%500 == 0)
+[e $ ! == % _cpt -> 500 `i -> 0 `i 384  ]
+"186
+[; ;main.c: 186:         {
+{
+"187
+[; ;main.c: 187:             micro_vieillir();
+[e ( _micro_vieillir ..  ]
+"188
+[; ;main.c: 188:             cpt=0;
+[e = _cpt -> 0 `i ]
 "189
-[; ;main.c: 189: }
+[; ;main.c: 189:         }
+}
+[e :U 384 ]
+"194
+[; ;main.c: 194: }
 [e :UE 376 ]
 }

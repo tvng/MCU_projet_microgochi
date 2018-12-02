@@ -8,27 +8,21 @@
 #ifndef MINIJEU_H
 #define	MINIJEU_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
 extern char pos_x, pos_y ;
 
-void lancer_minijeu();
+void lancer_minijeu(void);
 struct champi creer_champi(char x, char y);
-void afficher_sequence ();
-void bouger_sequence ();
-void effacer_sequence ();
-void remplir_tableau();
+void afficher_sequence (void);
+void bouger_sequence (void);
+void effacer_sequence (void);
+void remplir_tableau(void);
 void dessiner_arbre(char a, char b);
-void saut_tamago ();
-void collision ();
-void fin();
+void saut_tamago (void);
+void collision (void);
+void fin(void);
 
 
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* MINIJEU_H */
 
