@@ -569,64 +569,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;microgochi.c: 32:         mGogo.vivant=0;
 [e = . _mGogo 4 -> -> 0 `i `uc ]
-"33
-[; ;microgochi.c: 33:     }
+"34
+[; ;microgochi.c: 34:     }
 }
 [e :U 365 ]
-"34
-[; ;microgochi.c: 34: }
+"35
+[; ;microgochi.c: 35: }
 [e :UE 364 ]
 }
-"36
-[; ;microgochi.c: 36: void micro_manger ()
-[v _micro_manger `(v ~T0 @X0 1 ef ]
 "37
-[; ;microgochi.c: 37: {
+[; ;microgochi.c: 37: void micro_manger ()
+[v _micro_manger `(v ~T0 @X0 1 ef ]
+"38
+[; ;microgochi.c: 38: {
 {
 [e :U _micro_manger ]
 [f ]
-"38
-[; ;microgochi.c: 38:     mGogo.satiete += 20;
-[e =+ . _mGogo 1 -> -> 20 `i `uc ]
 "39
-[; ;microgochi.c: 39: }
+[; ;microgochi.c: 39:     mGogo.satiete += 20;
+[e =+ . _mGogo 1 -> -> 20 `i `uc ]
+"40
+[; ;microgochi.c: 40:     if(mGogo.satiete < 50){
+[e $ ! < -> . _mGogo 1 `i -> 50 `i 367  ]
+{
+"42
+[; ;microgochi.c: 42:     }
+}
+[e :U 367 ]
+"43
+[; ;microgochi.c: 43: }
 [e :UE 366 ]
 }
-"41
-[; ;microgochi.c: 41: void micro_calin ()
+"45
+[; ;microgochi.c: 45: void micro_calin ()
 [v _micro_calin `(v ~T0 @X0 1 ef ]
-"42
-[; ;microgochi.c: 42: {
+"46
+[; ;microgochi.c: 46: {
 {
 [e :U _micro_calin ]
 [f ]
-<<<<<<< HEAD
-"43
-[; ;microgochi.c: 43:     mGogo.bonheur += 20;
-[e =+ . _mGogo 3 -> -> 20 `i `uc ]
-"44
-[; ;microgochi.c: 44: }
-=======
-"40
-[; ;microgochi.c: 40:     mGogo.bonheur = mGogo.bonheur + 20;
-[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
-"41
-[; ;microgochi.c: 41: }
->>>>>>> bc7a8739d4a83b0cd8a17e5aab9920b4bfa499f8
-[e :UE 367 ]
-}
-"46
-[; ;microgochi.c: 46: void micro_dormir ()
-[v _micro_dormir `(v ~T0 @X0 1 ef ]
 "47
-[; ;microgochi.c: 47: {
+[; ;microgochi.c: 47:     mGogo.bonheur = mGogo.bonheur + 20;
+[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
+"48
+[; ;microgochi.c: 48: }
+[e :UE 368 ]
+}
+"50
+[; ;microgochi.c: 50: void micro_dormir ()
+[v _micro_dormir `(v ~T0 @X0 1 ef ]
+"51
+[; ;microgochi.c: 51: {
 {
 [e :U _micro_dormir ]
 [f ]
-"48
-[; ;microgochi.c: 48:     mGogo.energie += 20;
+"52
+[; ;microgochi.c: 52:     mGogo.energie += 20;
 [e =+ . _mGogo 2 -> -> 20 `i `uc ]
-"49
-[; ;microgochi.c: 49: }
-[e :UE 368 ]
+"54
+[; ;microgochi.c: 54: }
+[e :UE 369 ]
 }

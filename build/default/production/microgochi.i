@@ -5498,6 +5498,14 @@ void micro_calin();
 # 1 "./main.h" 1
 # 9 "microgochi.c" 2
 
+# 1 "./game.h" 1
+# 11 "./game.h"
+extern int cpt;
+
+void game_play();
+void game_stats();
+void anim();
+# 10 "microgochi.c" 2
 
 
 struct Microgochi mGogo;
@@ -5521,12 +5529,16 @@ void micro_vieillir()
     if (mGogo.age>=100)
     {
         mGogo.vivant=0;
+
     }
 }
 
 void micro_manger ()
 {
     mGogo.satiete += 20;
+    if(mGogo.satiete < 50){
+
+    }
 }
 
 void micro_calin ()
@@ -5537,4 +5549,5 @@ void micro_calin ()
 void micro_dormir ()
 {
     mGogo.energie += 20;
+
 }

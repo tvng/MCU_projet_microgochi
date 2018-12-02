@@ -17,6 +17,7 @@
 
 char buffer[3];
 int cpt=0;
+int cpt_anim=0;
 
 //fonction de jeu
 void game_play()
@@ -37,8 +38,9 @@ void game_play()
    // ETAPE 2: gni
     while (mGogo.vivant==1) //tant que le microgochi est vivant
     {
-            //si on appuie sur le bouton de gauche
-        
+        //animation();
+        //anim();
+        //si on appuie sur le bouton de gauche
         if (button_pressed==0)
         {
             if (BUTTON_LEFT == 1)
@@ -135,4 +137,133 @@ void game_stats()
      
     glcd_FillScreen(0); //efface l'ecran
 }
+/*
+void anim()
+{
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
+    
+    if (PIR1bits.TMR1IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
+    { 
 
+        cpt_anim++;
+    	PIE1bits.TMR1IE = 1; 
+        PIR1bits.TMR1IF = 0; //on baisse le flag
+    
+    }
+
+        if (cpt_anim==1)
+        {
+            displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+            displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);   
+        }
+    
+        if (cpt_anim==2)
+        {
+            displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);  
+        }
+          
+}*/
+/*
+void animation()
+{
+    while(BUTTON_LEFT == 0 && BUTTON_MID ==0 && BUTTON_RIGHT == 0){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
+
+    //running loop for 5 times produces 0.5 s delay
+    //for(int i=0;i<=5;i++){//DELAY????
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+    //}
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
+
+    //for(int i=0;i<=5;i++){
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+    //}
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
+    }
+}
+
+void animationDodo(){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochiDodo, 75, 35, 2, 8, 1);
+    displayObject (Z1, 88, 20, 6, 6, 1);
+    
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+        
+    displayObject (Z1, 88, 20, 6, 6, 0);
+    displayObject (Z2, 95, 18, 4, 4, 1);
+
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+
+    displayObject (Z2, 95, 18, 4, 4, 0);
+}
+
+void animationCaca(){
+    displayObject (champi, 30, 37, 9, 14, 1);
+    displayObject (mouche, 32, 32, 4, 6, 1);
+
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+        
+    displayObject (mouche, 32, 32, 4, 6, 0);
+    displayObject (mouche, 31, 33, 4, 6, 1);
+
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+
+    displayObject (mouche, 31, 33, 4, 6, 0);
+}
+
+void animationDead(){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochiMort, 75, 33, 3, 8, 1);
+    
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+}
+
+void animationPasContent(){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    displayObject (gochiPasContent, 75, 33, 4, 8, 1);
+
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+    
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
+
+        T3CONbits.TMR3ON=1;//run timer
+        while(!PIR2bits.TMR3IF);//wait for flag to overflow
+        T3CONbits.TMR3ON=0;//switch off timer
+        PIR2bits.TMR3IF=0;//clear interrupt
+
+    displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
+}
+*/

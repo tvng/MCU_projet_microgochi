@@ -1901,6 +1901,1584 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
+"138
+[; ;./myglcd.h: 138: char gochi_corps [] = {
+[v _gochi_corps `uc ~T0 @X0 -> 782 `i e ]
+[i _gochi_corps
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"164
+[; ;./myglcd.h: 164: char gochi_oreilles1 [] = {
+[v _gochi_oreilles1 `uc ~T0 @X0 -> 238 `i e ]
+[i _gochi_oreilles1
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"174
+[; ;./myglcd.h: 174: char gochi_oreilles2 [] = {
+[v _gochi_oreilles2 `uc ~T0 @X0 -> 238 `i e ]
+[i _gochi_oreilles2
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"184
+[; ;./myglcd.h: 184: char gochi_yeux1 [] = {
+[v _gochi_yeux1 `uc ~T0 @X0 -> 102 `i e ]
+[i _gochi_yeux1
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"190
+[; ;./myglcd.h: 190: char gochiPasContent [] = {
+[v _gochiPasContent `uc ~T0 @X0 -> 32 `i e ]
+[i _gochiPasContent
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+]
+"197
+[; ;./myglcd.h: 197: char gochiMort [] = {
+[v _gochiMort `uc ~T0 @X0 -> 24 `i e ]
+[i _gochiMort
+:U ..
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+]
+"203
+[; ;./myglcd.h: 203: char gochiDodo [] = {
+[v _gochiDodo `uc ~T0 @X0 -> 16 `i e ]
+[i _gochiDodo
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+]
+"208
+[; ;./myglcd.h: 208: char Z1 [] = {
+[v _Z1 `uc ~T0 @X0 -> 36 `i e ]
+[i _Z1
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+]
+"217
+[; ;./myglcd.h: 217: char Z2 [] = {
+[v _Z2 `uc ~T0 @X0 -> 16 `i e ]
+[i _Z2
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+]
+"224
+[; ;./myglcd.h: 224: char mouche [] = {
+[v _mouche `uc ~T0 @X0 -> 24 `i e ]
+[i _mouche
+:U ..
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
 "18 game.c
 [; ;game.c: 18: char buffer[3];
 [v _buffer `uc ~T0 @X0 -> 3 `i e ]
@@ -1910,299 +3488,305 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _cpt
 -> 0 `i
 ]
-"22
-[; ;game.c: 22: void game_play()
-[v _game_play `(v ~T0 @X0 1 ef ]
+"20
+[; ;game.c: 20: int cpt_anim=0;
+[v _cpt_anim `i ~T0 @X0 1 e ]
+[i _cpt_anim
+-> 0 `i
+]
 "23
-[; ;game.c: 23: {
+[; ;game.c: 23: void game_play()
+[v _game_play `(v ~T0 @X0 1 ef ]
+"24
+[; ;game.c: 24: {
 {
 [e :U _game_play ]
 [f ]
-"25
-[; ;game.c: 25:     glcd_FillScreen(0);
+"26
+[; ;game.c: 26:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"27
-[; ;game.c: 27:     glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "28
-[; ;game.c: 28:     glcd_Image();
+[; ;game.c: 28:     glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"29
+[; ;game.c: 29:     glcd_Image();
 [e ( _glcd_Image ..  ]
-"30
-[; ;game.c: 30:     menu_cursor (-1, 1);
+"31
+[; ;game.c: 31:     menu_cursor (-1, 1);
 [e ( _menu_cursor (2 , -U -> 1 `i -> 1 `i ]
-"33
-[; ;game.c: 33:     int action=0;
+"34
+[; ;game.c: 34:     int action=0;
 [v _action `i ~T0 @X0 1 a ]
 [e = _action -> 0 `i ]
-"34
-[; ;game.c: 34:     int write=0;
+"35
+[; ;game.c: 35:     int write=0;
 [v _write `i ~T0 @X0 1 a ]
 [e = _write -> 0 `i ]
-"35
-[; ;game.c: 35:     int button_pressed=0;
+"36
+[; ;game.c: 36:     int button_pressed=0;
 [v _button_pressed `i ~T0 @X0 1 a ]
 [e = _button_pressed -> 0 `i ]
-"38
-[; ;game.c: 38:     while (mGogo.vivant==1)
+"39
+[; ;game.c: 39:     while (mGogo.vivant==1)
 [e $U 372  ]
 [e :U 373 ]
-"39
-[; ;game.c: 39:     {
-{
-"42
-[; ;game.c: 42:         if (button_pressed==0)
-[e $ ! == _button_pressed -> 0 `i 375  ]
-"43
-[; ;game.c: 43:         {
+"40
+[; ;game.c: 40:     {
 {
 "44
-[; ;game.c: 44:             if (PORTCbits.RC0 == 1)
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 376  ]
+[; ;game.c: 44:         if (button_pressed==0)
+[e $ ! == _button_pressed -> 0 `i 375  ]
 "45
-[; ;game.c: 45:             {
+[; ;game.c: 45:         {
 {
 "46
-[; ;game.c: 46:                button_pressed=1;
-[e = _button_pressed -> 1 `i ]
-"48
-[; ;game.c: 48:                menu_cursor (action, 0);
-[e ( _menu_cursor (2 , _action -> 0 `i ]
-"49
-[; ;game.c: 49:                action--;
-[e -- _action -> 1 `i ]
-"50
-[; ;game.c: 50:                if (action < 0)
-[e $ ! < _action -> 0 `i 377  ]
-"51
-[; ;game.c: 51:                {
+[; ;game.c: 46:             if (PORTCbits.RC0 == 1)
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 376  ]
+"47
+[; ;game.c: 47:             {
 {
+"48
+[; ;game.c: 48:                button_pressed=1;
+[e = _button_pressed -> 1 `i ]
+"50
+[; ;game.c: 50:                menu_cursor (action, 0);
+[e ( _menu_cursor (2 , _action -> 0 `i ]
+"51
+[; ;game.c: 51:                action--;
+[e -- _action -> 1 `i ]
 "52
-[; ;game.c: 52:                    action=7;
-[e = _action -> 7 `i ]
+[; ;game.c: 52:                if (action < 0)
+[e $ ! < _action -> 0 `i 377  ]
 "53
-[; ;game.c: 53:                }
+[; ;game.c: 53:                {
+{
+"54
+[; ;game.c: 54:                    action=7;
+[e = _action -> 7 `i ]
+"55
+[; ;game.c: 55:                }
 }
 [e :U 377 ]
-"54
-[; ;game.c: 54:                 menu_cursor (action, 1);
-[e ( _menu_cursor (2 , _action -> 1 `i ]
 "56
-[; ;game.c: 56:            }
+[; ;game.c: 56:                 menu_cursor (action, 1);
+[e ( _menu_cursor (2 , _action -> 1 `i ]
+"58
+[; ;game.c: 58:            }
 }
 [e $U 378  ]
-"58
-[; ;game.c: 58:             else if (PORTCbits.RC2 == 1)
+"60
+[; ;game.c: 60:             else if (PORTCbits.RC2 == 1)
 [e :U 376 ]
 [e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 379  ]
-"59
-[; ;game.c: 59:            {
-{
-"60
-[; ;game.c: 60:                button_pressed=1;
-[e = _button_pressed -> 1 `i ]
 "61
-[; ;game.c: 61:                menu_cursor (action, 0);
-[e ( _menu_cursor (2 , _action -> 0 `i ]
-"63
-[; ;game.c: 63:                action++;
-[e ++ _action -> 1 `i ]
-"65
-[; ;game.c: 65:                if (action > 7)
-[e $ ! > _action -> 7 `i 380  ]
-"66
-[; ;game.c: 66:                {
+[; ;game.c: 61:            {
 {
+"62
+[; ;game.c: 62:                button_pressed=1;
+[e = _button_pressed -> 1 `i ]
+"63
+[; ;game.c: 63:                menu_cursor (action, 0);
+[e ( _menu_cursor (2 , _action -> 0 `i ]
+"65
+[; ;game.c: 65:                action++;
+[e ++ _action -> 1 `i ]
 "67
-[; ;game.c: 67:                    action= 0;
-[e = _action -> 0 `i ]
+[; ;game.c: 67:                if (action > 7)
+[e $ ! > _action -> 7 `i 380  ]
 "68
-[; ;game.c: 68:                }
+[; ;game.c: 68:                {
+{
+"69
+[; ;game.c: 69:                    action= 0;
+[e = _action -> 0 `i ]
+"70
+[; ;game.c: 70:                }
 }
 [e :U 380 ]
-"69
-[; ;game.c: 69:                 menu_cursor (action, 1);
+"71
+[; ;game.c: 71:                 menu_cursor (action, 1);
 [e ( _menu_cursor (2 , _action -> 1 `i ]
-"70
-[; ;game.c: 70:            }
+"72
+[; ;game.c: 72:            }
 }
 [e $U 381  ]
-"72
-[; ;game.c: 72:             else if (PORTCbits.RC1 == 1)
+"74
+[; ;game.c: 74:             else if (PORTCbits.RC1 == 1)
 [e :U 379 ]
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 382  ]
-"73
-[; ;game.c: 73:            {
-{
-"74
-[; ;game.c: 74:                 button_pressed=2;
-[e = _button_pressed -> 2 `i ]
 "75
-[; ;game.c: 75:            }
+[; ;game.c: 75:            {
+{
+"76
+[; ;game.c: 76:                 button_pressed=2;
+[e = _button_pressed -> 2 `i ]
+"77
+[; ;game.c: 77:            }
 }
 [e :U 382 ]
 [e :U 381 ]
 [e :U 378 ]
-"76
-[; ;game.c: 76:         }
+"78
+[; ;game.c: 78:         }
 }
 [e :U 375 ]
-"78
-[; ;game.c: 78:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0 && button_pressed!=0)
-[e $ ! && && && == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i != _button_pressed -> 0 `i 383  ]
-"79
-[; ;game.c: 79:         {
-{
 "80
-[; ;game.c: 80:             if (button_pressed==2)
-[e $ ! == _button_pressed -> 2 `i 384  ]
+[; ;game.c: 80:         if (PORTCbits.RC0 == 0 && PORTCbits.RC1 ==0 && PORTCbits.RC2 == 0 && button_pressed!=0)
+[e $ ! && && && == -> . . _PORTCbits 0 0 `i -> 0 `i == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i != _button_pressed -> 0 `i 383  ]
 "81
-[; ;game.c: 81:             {
+[; ;game.c: 81:         {
 {
 "82
-[; ;game.c: 82:                 menu_actions(action);
-[e ( _menu_actions (1 _action ]
+[; ;game.c: 82:             if (button_pressed==2)
+[e $ ! == _button_pressed -> 2 `i 384  ]
 "83
-[; ;game.c: 83:                 glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;game.c: 83:             {
+{
 "84
-[; ;game.c: 84:                 glcd_Image();
-[e ( _glcd_Image ..  ]
+[; ;game.c: 84:                 menu_actions(action);
+[e ( _menu_actions (1 _action ]
 "85
-[; ;game.c: 85:                 menu_cursor (action, 1);
-[e ( _menu_cursor (2 , _action -> 1 `i ]
+[; ;game.c: 85:                 glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "86
-[; ;game.c: 86:             }
+[; ;game.c: 86:                 glcd_Image();
+[e ( _glcd_Image ..  ]
+"87
+[; ;game.c: 87:                 menu_cursor (action, 1);
+[e ( _menu_cursor (2 , _action -> 1 `i ]
+"88
+[; ;game.c: 88:             }
 }
 [e :U 384 ]
-"87
-[; ;game.c: 87:             button_pressed=0;
+"89
+[; ;game.c: 89:             button_pressed=0;
 [e = _button_pressed -> 0 `i ]
-"88
-[; ;game.c: 88:         }
+"90
+[; ;game.c: 90:         }
 }
 [e :U 383 ]
-"89
-[; ;game.c: 89:     }
+"91
+[; ;game.c: 91:     }
 }
 [e :U 372 ]
-"38
-[; ;game.c: 38:     while (mGogo.vivant==1)
+"39
+[; ;game.c: 39:     while (mGogo.vivant==1)
 [e $ == -> . _mGogo 4 `i -> 1 `i 373  ]
 [e :U 374 ]
-"90
-[; ;game.c: 90: }
+"92
+[; ;game.c: 92: }
 [e :UE 371 ]
 }
-"93
-[; ;game.c: 93: void game_stats()
+"95
+[; ;game.c: 95: void game_stats()
 [v _game_stats `(v ~T0 @X0 1 ef ]
-"94
-[; ;game.c: 94: {
+"96
+[; ;game.c: 96: {
 {
 [e :U _game_stats ]
 [f ]
-"95
-[; ;game.c: 95:     glcd_FillScreen(0);
-[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"96
-[; ;game.c: 96:     glcd_SetCursor(0,0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "97
-[; ;game.c: 97:  glcd_WriteString("Stats:", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;game.c: 97:     glcd_FillScreen(0);
+[e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
+"98
+[; ;game.c: 98:     glcd_SetCursor(0,0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "99
-[; ;game.c: 99:     glcd_SetCursor(50,0);
+[; ;game.c: 99:  glcd_WriteString("Stats:", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"101
+[; ;game.c: 101:     glcd_SetCursor(50,0);
 [e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 0 `i `uc ]
-"100
-[; ;game.c: 100:  glcd_WriteString("RC2=exit",1,1);
-[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "102
-[; ;game.c: 102:     int sortie_enable=0;
+[; ;game.c: 102:  glcd_WriteString("RC2=exit",1,1);
+[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"104
+[; ;game.c: 104:     int sortie_enable=0;
 [v _sortie_enable `i ~T0 @X0 1 a ]
 [e = _sortie_enable -> 0 `i ]
-"104
-[; ;game.c: 104:     do
-[e :U 388 ]
-"105
-[; ;game.c: 105:     {
-{
 "106
-[; ;game.c: 106:         glcd_SetCursor(0,2);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;game.c: 106:     do
+[e :U 388 ]
 "107
-[; ;game.c: 107:         glcd_WriteString("Faim:",1,1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"108
-[; ;game.c: 108:         glcd_SetCursor(50,2);
-[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 2 `i `uc ]
-"109
-[; ;game.c: 109:         itoa(mGogo.satiete, buffer);
-[e ( _itoa (2 , -> . _mGogo 1 `i &U _buffer ]
-"110
-[; ;game.c: 110:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"111
-[; ;game.c: 111:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"113
-[; ;game.c: 113:         glcd_SetCursor(0,3);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
-"114
-[; ;game.c: 114:         glcd_WriteString("Energie:",1,1);
-[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"115
-[; ;game.c: 115:         glcd_SetCursor(65,3);
-[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
-"116
-[; ;game.c: 116:         itoa(mGogo.energie, buffer);
-[e ( _itoa (2 , -> . _mGogo 2 `i &U _buffer ]
-"117
-[; ;game.c: 117:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"118
-[; ;game.c: 118:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"120
-[; ;game.c: 120:         glcd_SetCursor(0,4);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
-"121
-[; ;game.c: 121:         glcd_WriteString("Amour:",1,1);
-[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"122
-[; ;game.c: 122:         glcd_SetCursor(55,4);
-[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 4 `i `uc ]
-"123
-[; ;game.c: 123:         itoa(mGogo.bonheur, buffer);
-[e ( _itoa (2 , -> . _mGogo 3 `i &U _buffer ]
-"124
-[; ;game.c: 124:         glcd_WriteString(buffer,1,1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"125
-[; ;game.c: 125:         memset(&buffer, 0, sizeof(buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"128
-[; ;game.c: 128:         if (PORTCbits.RC1==1)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 389  ]
-"129
-[; ;game.c: 129:         {
+[; ;game.c: 107:     {
 {
+"108
+[; ;game.c: 108:         glcd_SetCursor(0,2);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"109
+[; ;game.c: 109:         glcd_WriteString("Faim:",1,1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"110
+[; ;game.c: 110:         glcd_SetCursor(50,2);
+[e ( _glcd_SetCursor (2 , -> -> 50 `i `uc -> -> 2 `i `uc ]
+"111
+[; ;game.c: 111:         itoa(mGogo.satiete, buffer);
+[e ( _itoa (2 , -> . _mGogo 1 `i &U _buffer ]
+"112
+[; ;game.c: 112:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"113
+[; ;game.c: 113:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"115
+[; ;game.c: 115:         glcd_SetCursor(0,3);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 3 `i `uc ]
+"116
+[; ;game.c: 116:         glcd_WriteString("Energie:",1,1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"117
+[; ;game.c: 117:         glcd_SetCursor(65,3);
+[e ( _glcd_SetCursor (2 , -> -> 65 `i `uc -> -> 3 `i `uc ]
+"118
+[; ;game.c: 118:         itoa(mGogo.energie, buffer);
+[e ( _itoa (2 , -> . _mGogo 2 `i &U _buffer ]
+"119
+[; ;game.c: 119:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"120
+[; ;game.c: 120:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"122
+[; ;game.c: 122:         glcd_SetCursor(0,4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"123
+[; ;game.c: 123:         glcd_WriteString("Amour:",1,1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"124
+[; ;game.c: 124:         glcd_SetCursor(55,4);
+[e ( _glcd_SetCursor (2 , -> -> 55 `i `uc -> -> 4 `i `uc ]
+"125
+[; ;game.c: 125:         itoa(mGogo.bonheur, buffer);
+[e ( _itoa (2 , -> . _mGogo 3 `i &U _buffer ]
+"126
+[; ;game.c: 126:         glcd_WriteString(buffer,1,1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"127
+[; ;game.c: 127:         memset(&buffer, 0, sizeof(buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
 "130
-[; ;game.c: 130:             sortie_enable=1;
-[e = _sortie_enable -> 1 `i ]
+[; ;game.c: 130:         if (PORTCbits.RC1==1)
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 389  ]
 "131
-[; ;game.c: 131:         }
+[; ;game.c: 131:         {
+{
+"132
+[; ;game.c: 132:             sortie_enable=1;
+[e = _sortie_enable -> 1 `i ]
+"133
+[; ;game.c: 133:         }
 }
 [e :U 389 ]
-"134
-[; ;game.c: 134:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
+"136
+[; ;game.c: 136:     }while(sortie_enable != 1 && PORTCbits.RC1!=1);
 }
 [e $ && != _sortie_enable -> 1 `i != -> . . _PORTCbits 0 1 `i -> 1 `i 388  ]
 [e :U 387 ]
-"136
-[; ;game.c: 136:     glcd_FillScreen(0);
+"138
+[; ;game.c: 138:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"137
-[; ;game.c: 137: }
+"139
+[; ;game.c: 139: }
 [e :UE 385 ]
 }
 [a 2C 82 67 50 61 101 120 105 116 0 ]

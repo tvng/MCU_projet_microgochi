@@ -7,7 +7,7 @@
 #include <pic18f4550.h>
 #include "microgochi.h"
 #include "main.h"
-
+#include "game.h"
 
 struct Microgochi mGogo;    //creation structure Microgochi
 
@@ -30,12 +30,16 @@ void micro_vieillir()
     if (mGogo.age>=100)
     {
         mGogo.vivant=0;
+        //animationDead();
     }
 }
 
 void micro_manger ()
 {
     mGogo.satiete += 20;
+    if(mGogo.satiete < 50){
+       // animationPasContent();
+    }
 }
 
 void micro_calin ()
@@ -46,4 +50,5 @@ void micro_calin ()
 void micro_dormir ()
 {
     mGogo.energie += 20;
+    //animationDodo();
 }

@@ -87,7 +87,16 @@ int main(int argc, char** argv) {
     PIR1bits.TMR1IF = 0; //baisse le flag
     
     INTCONbits.GIE = 1; //global interrupt Enable
-    
+    ////////CETTE LIGNE FAIT BEUGUER MON TIMER PR UNE RAISON QUE JIGNORE 
+    //////ET QUD JE LENLEVE RIEN NE FCTIONNE
+    /*
+    //TIMER3 UTILISE PR ANIMATIONS
+    T3CON=0b10010000;
+    //TMR3H=0b00001011;//3035 en binaire, sur 16 bits ouBDB en hex
+    //TMR3L=0b11011011;//est supposé compter ttes les 0.1s
+    TMR3=0xBDB;
+    PIR2bits.TMR3IF = 0;
+	PIE2bits.TMR3IE = 1;*/
     
     // ******
 
@@ -131,16 +140,20 @@ int main(int argc, char** argv) {
 
 void __interrupt() mdr(void)
 {
-    
+    //displayObject (gochi_corps, 52, 23, 24, 34, 1);
     if (PIR1bits.TMR1IF==1) // Ici le bit TMR0IF (bit2) du registre INTCON est testé
     { 
 
         cpt++;
+        //cpt_anim++;
     	PIE1bits.TMR1IE = 1; 
         PIR1bits.TMR1IF = 0; //on baisse le flag
     
     }
-
+        /*if(cpt_anim==5){
+            displayObject (gochi_corps, 52, 23, 24, 34, 0);
+        }*/
+    
         if (cpt==90)
         {
             mGogo.satiete -= 10;   
