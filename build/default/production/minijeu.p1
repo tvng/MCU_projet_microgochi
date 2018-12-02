@@ -3,8 +3,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;minijeu.c: 19: {
 [s S371 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S371 champi pos_x pos_y champ_h champ_l ]
-"230 ./myglcd.h
-[; ;./myglcd.h: 230: void displayObject (char *tab, int x, int y, int height, int width, int write);
+"234 ./myglcd.h
+[; ;./myglcd.h: 234: void displayObject (char *tab, int x, int y, int height, int width, int write);
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
@@ -3357,8 +3357,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"203
-[; ;./myglcd.h: 203: char gochiDodo [] = {
+"207
+[; ;./myglcd.h: 207: char gochiDodo [] = {
 [v _gochiDodo `uc ~T0 @X0 -> 16 `i e ]
 [i _gochiDodo
 :U ..
@@ -3380,8 +3380,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"208
-[; ;./myglcd.h: 208: char Z1 [] = {
+"212
+[; ;./myglcd.h: 212: char Z1 [] = {
 [v _Z1 `uc ~T0 @X0 -> 36 `i e ]
 [i _Z1
 :U ..
@@ -3423,8 +3423,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"217
-[; ;./myglcd.h: 217: char Z2 [] = {
+"221
+[; ;./myglcd.h: 221: char Z2 [] = {
 [v _Z2 `uc ~T0 @X0 -> 16 `i e ]
 [i _Z2
 :U ..
@@ -3446,8 +3446,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"224
-[; ;./myglcd.h: 224: char mouche [] = {
+"228
+[; ;./myglcd.h: 228: char mouche [] = {
 [v _mouche `uc ~T0 @X0 -> 24 `i e ]
 [i _mouche
 :U ..

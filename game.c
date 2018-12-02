@@ -92,7 +92,9 @@ void game_play()
         if(mGogo.satiete < 50){
             animationPasContent();
         }else{
-            animation();
+            if(mGogo.dodo!=1){
+                animation();
+            }
         }
         
         if(mGogo.caca == 1){
@@ -102,9 +104,12 @@ void game_play()
             displayObject (mouche, 32, 32, 4, 6, 0);
         }
         
-       /* if(mGogo.dodo==1){//COMMENT ON LUI DIT DE SE REVEILLER ==>cment remettre le booleen a 0
+        if(mGogo.dodo==1){//le booleen est remis a 0 apres 10 cpt
             animationDodo();
-        }*/
+        }else{
+            displayObject (Z1, 88, 20, 6, 6, 0);
+            displayObject (Z2, 95, 18, 4, 4, 0);
+        }
     }
     //animationDead();
     
@@ -197,9 +202,9 @@ void animation()
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
-    displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
-    displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
-    displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
+    //displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
+    //displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
+    //displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
 /*
     //running loop for 5 times produces 0.5 s delay
     //for(int i=0;i<=5;i++){//DELAY????
@@ -221,10 +226,11 @@ void animation()
 }
 
 void animationDodo(){
-    //displayObject (gochi_corps, 52, 23, 24, 34, 1);
-    //displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
-    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    //displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
     displayObject (gochiDodo, 75, 35, 2, 8, 1);
+    //displayObject (gochiDodo, 75, 35, 2, 8, 0);
     displayObject (Z1, 88, 20, 6, 6, 1);
     displayObject (Z2, 95, 18, 4, 4, 1);
     
@@ -277,10 +283,10 @@ void animationDead(){
 }
 
 void animationPasContent(){
-    //displayObject (gochi_corps, 52, 23, 24, 34, 1);
-    //displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
-    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
-    displayObject (gochiPasContent, 75, 33, 4, 8, 1);
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    //displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochiPasContent, 75, 32, 4, 8, 1);
 /*
         T3CONbits.TMR3ON=1;//run timer
         while(!PIR2bits.TMR3IF);//wait for flag to overflow

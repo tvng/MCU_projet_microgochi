@@ -6603,6 +6603,10 @@ char gochiMort [] = {
 1,0,1,0,0,1,0,1,
 };
 
+
+
+
+
 char gochiDodo [] = {
 1,1,1,0,0,1,1,1,
 1,1,1,0,0,1,1,1,
@@ -6781,6 +6785,12 @@ void __attribute__((picinterrupt(""))) mdr(void)
 
         if (cpt == 200){
             mGogo.caca++;
+        }
+
+        if (mGogo.dodo == 1){
+            if(cpt==30){
+                mGogo.dodo=0;
+            }
         }
 
          if (cpt==300)

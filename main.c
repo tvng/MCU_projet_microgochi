@@ -174,6 +174,12 @@ void __interrupt() mdr(void)
             mGogo.caca++;
         }
         
+        if (mGogo.dodo == 1){
+            if(cpt==30){
+                mGogo.dodo=0;
+            }
+        }
+        
          if (cpt==300)
         {
             mGogo.age++; 

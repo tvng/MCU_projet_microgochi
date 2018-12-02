@@ -627,6 +627,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52
 [; ;microgochi.c: 52:     mGogo.energie += 20;
 [e =+ . _mGogo 2 -> -> 20 `i `uc ]
+"53
+[; ;microgochi.c: 53:     mGogo.dodo=1;
+[e = . _mGogo 5 -> -> 1 `i `uc ]
 "54
 [; ;microgochi.c: 54: }
 [e :UE 368 ]

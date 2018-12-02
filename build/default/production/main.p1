@@ -3433,8 +3433,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"203
-[; ;./myglcd.h: 203: char gochiDodo [] = {
+"207
+[; ;./myglcd.h: 207: char gochiDodo [] = {
 [v _gochiDodo `uc ~T0 @X0 -> 16 `i e ]
 [i _gochiDodo
 :U ..
@@ -3456,8 +3456,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"208
-[; ;./myglcd.h: 208: char Z1 [] = {
+"212
+[; ;./myglcd.h: 212: char Z1 [] = {
 [v _Z1 `uc ~T0 @X0 -> 36 `i e ]
 [i _Z1
 :U ..
@@ -3499,8 +3499,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"217
-[; ;./myglcd.h: 217: char Z2 [] = {
+"221
+[; ;./myglcd.h: 221: char Z2 [] = {
 [v _Z2 `uc ~T0 @X0 -> 16 `i e ]
 [i _Z2
 :U ..
@@ -3522,8 +3522,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ..
 ]
-"224
-[; ;./myglcd.h: 224: char mouche [] = {
+"228
+[; ;./myglcd.h: 228: char mouche [] = {
 [v _mouche `uc ~T0 @X0 -> 24 `i e ]
 [i _mouche
 :U ..
@@ -3723,22 +3723,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 380 ]
 "177
-[; ;main.c: 177:          if (cpt==300)
-[e $ ! == _cpt -> 300 `i 381  ]
+[; ;main.c: 177:         if (mGogo.dodo == 1){
+[e $ ! == -> . _mGogo 5 `i -> 1 `i 381  ]
+{
 "178
-[; ;main.c: 178:         {
+[; ;main.c: 178:             if(cpt==30){
+[e $ ! == _cpt -> 30 `i 382  ]
 {
 "179
-[; ;main.c: 179:             mGogo.age++;
-[e ++ . _mGogo 0 -> -> 1 `i `uc ]
+[; ;main.c: 179:                 mGogo.dodo=0;
+[e = . _mGogo 5 -> -> 0 `i `uc ]
 "180
-[; ;main.c: 180:             cpt=0;
-[e = _cpt -> 0 `i ]
+[; ;main.c: 180:             }
+}
+[e :U 382 ]
 "181
 [; ;main.c: 181:         }
 }
 [e :U 381 ]
+"183
+[; ;main.c: 183:          if (cpt==300)
+[e $ ! == _cpt -> 300 `i 383  ]
+"184
+[; ;main.c: 184:         {
+{
+"185
+[; ;main.c: 185:             mGogo.age++;
+[e ++ . _mGogo 0 -> -> 1 `i `uc ]
 "186
-[; ;main.c: 186: }
+[; ;main.c: 186:             cpt=0;
+[e = _cpt -> 0 `i ]
+"187
+[; ;main.c: 187:         }
+}
+[e :U 383 ]
+"192
+[; ;main.c: 192: }
 [e :UE 376 ]
 }

@@ -50,5 +50,5 @@ void micro_calin ()
 void micro_dormir ()
 {
     mGogo.energie += 20;
-    //mGogo.dodo=1;
+    mGogo.dodo=1;
 }

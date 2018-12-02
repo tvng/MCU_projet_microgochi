@@ -6620,6 +6620,10 @@ char gochiMort [] = {
 1,0,1,0,0,1,0,1,
 };
 
+
+
+
+
 char gochiDodo [] = {
 1,1,1,0,0,1,1,1,
 1,1,1,0,0,1,1,1,
@@ -6813,7 +6817,9 @@ void game_play()
         if(mGogo.satiete < 50){
             animationPasContent();
         }else{
-            animation();
+            if(mGogo.dodo!=1){
+                animation();
+            }
         }
 
         if(mGogo.caca == 1){
@@ -6823,9 +6829,12 @@ void game_play()
             displayObject (mouche, 32, 32, 4, 6, 0);
         }
 
-
-
-
+        if(mGogo.dodo==1){
+            animationDodo();
+        }else{
+            displayObject (Z1, 88, 20, 6, 6, 0);
+            displayObject (Z2, 95, 18, 4, 4, 0);
+        }
     }
 
 
@@ -6877,7 +6886,7 @@ void game_stats()
 
     glcd_FillScreen(0);
 }
-# 188 "game.c"
+# 193 "game.c"
 void animation()
 {
 
@@ -6890,26 +6899,24 @@ void animation()
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
-    displayObject (gochi_oreilles1, 52, 23, 7, 34, 0);
-    displayObject (gochi_oreilles2, 52, 23, 7, 34, 1);
-    displayObject (gochi_oreilles2, 52, 23, 7, 34, 0);
-# 221 "game.c"
+# 226 "game.c"
 }
 
 void animationDodo(){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 
-
-    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
     displayObject (gochiDodo, 75, 35, 2, 8, 1);
+
     displayObject (Z1, 88, 20, 6, 6, 1);
     displayObject (Z2, 95, 18, 4, 4, 1);
-# 245 "game.c"
+# 251 "game.c"
 }
 
 void animationCaca(){
     displayObject (champi, 30, 37, 9, 14, 1);
     displayObject (mouche, 32, 32, 4, 6, 1);
-# 265 "game.c"
+# 271 "game.c"
 }
 
 void animationDead(){
@@ -6925,9 +6932,9 @@ void animationDead(){
 }
 
 void animationPasContent(){
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 
-
-    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
-    displayObject (gochiPasContent, 75, 33, 4, 8, 1);
-# 299 "game.c"
+    displayObject (gochiPasContent, 75, 32, 4, 8, 1);
+# 305 "game.c"
 }
