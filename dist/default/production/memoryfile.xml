@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\MCU_projet_tamagogo.X.production.hex">
+  <executable name="dist/default/production\MCU_projet_microgochi.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>14922</used>
-      <free>17846</free>
+      <used>15084</used>
+      <free>17684</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

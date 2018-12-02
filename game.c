@@ -119,7 +119,7 @@ void game_play()
     
     glcd_WriteString("RIP", f8X8, 1);	//ecrit 
 
-    //animationDead();
+    animationDead();
     
 }
 
@@ -293,9 +293,9 @@ void animationCaca(){
 }
 
 void animationDead(){
-    //displayObject (gochi_corps, 52, 23, 24, 34, 1);
-    //displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
-    displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
+    displayObject (gochi_corps, 52, 23, 24, 34, 1);
+    displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+    //displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
     displayObject (gochiMort, 75, 33, 3, 8, 1);
     /*
         T3CONbits.TMR3ON=1;//run timer
@@ -308,7 +308,7 @@ void animationPasContent(){
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
     //displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
-    displayObject (gochiPasContent, 75, 32, 4, 8, 1);
+    displayObject (gochiPasContent, 75, 33, 4, 8, 1);
 /*
         T3CONbits.TMR3ON=1;//run timer
         while(!PIR2bits.TMR3IF);//wait for flag to overflow

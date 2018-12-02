@@ -66,6 +66,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 ./glcd.h
 [; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
 [v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
+"17 ./game.h
+[; ;./game.h: 17: void animationDead(void);
+[v _animationDead `(v ~T0 @X0 0 ef ]
 "13 ./itoa.h
 [; ;./itoa.h: 13:  void itoa(int n, char s[]);
 [v _itoa `(v ~T0 @X0 0 ef2`i`*uc ]
@@ -3768,6 +3771,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;game.c: 120:     glcd_WriteString("RIP", 1, 1);
 [e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"122
+[; ;game.c: 122:     animationDead();
+[e ( _animationDead ..  ]
 "124
 [; ;game.c: 124: }
 [e :UE 371 ]
@@ -3988,9 +3994,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _animationDead ]
 [f ]
-"298
-[; ;game.c: 298:     displayObject (gochi_yeux1, 52, 33, 3, 34, 0);
-[e ( _displayObject (4 , , , , , &U _gochi_yeux1 -> 52 `i -> 33 `i -> 3 `i -> 34 `i -> 0 `i ]
+"296
+[; ;game.c: 296:     displayObject (gochi_corps, 52, 23, 24, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_corps -> 52 `i -> 23 `i -> 24 `i -> 34 `i -> 1 `i ]
+"297
+[; ;game.c: 297:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
+[e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
 "299
 [; ;game.c: 299:     displayObject (gochiMort, 75, 33, 3, 8, 1);
 [e ( _displayObject (4 , , , , , &U _gochiMort -> 75 `i -> 33 `i -> 3 `i -> 8 `i -> 1 `i ]
@@ -4011,8 +4020,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;game.c: 309:     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 [e ( _displayObject (4 , , , , , &U _gochi_oreilles1 -> 52 `i -> 23 `i -> 7 `i -> 34 `i -> 1 `i ]
 "311
-[; ;game.c: 311:     displayObject (gochiPasContent, 75, 32, 4, 8, 1);
-[e ( _displayObject (4 , , , , , &U _gochiPasContent -> 75 `i -> 32 `i -> 4 `i -> 8 `i -> 1 `i ]
+[; ;game.c: 311:     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
+[e ( _displayObject (4 , , , , , &U _gochiPasContent -> 75 `i -> 33 `i -> 4 `i -> 8 `i -> 1 `i ]
 "327
 [; ;game.c: 327: }
 [e :UE 401 ]
