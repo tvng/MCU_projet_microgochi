@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=MCU_projet_microgochi
+PROJECTNAME=MCU_projet_tamagogo.X
 
 # Active Configuration
 DEFAULTCONF=default

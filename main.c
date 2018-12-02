@@ -153,7 +153,7 @@ void __interrupt() isr(void)
     }
    
     
-        if ((cpt%100)==0)
+        if ((cpt%200)==0)
         {
             mGogo.satiete -= 10;   
             if (mGogo.satiete<=0)
@@ -171,6 +171,14 @@ void __interrupt() isr(void)
             if (mGogo.energie<=0)
             {
                 mGogo.vivant=0;
+            }
+             if (mGogo.caca<=0)
+            {
+                mGogo.caca=0;
+            }
+             if (mGogo.bonheur<=0)
+            {
+                mGogo.bonheur=0;
             }
             
         }

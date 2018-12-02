@@ -278,6 +278,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 12 "menu.c" 2
 
 # 1 "./myglcd.h" 1
@@ -6723,6 +6724,7 @@ void menu_actions(int action)
     if (action == 3)
     {
         lancer_minijeu();
+        micro_jeu();
     }
     if (action == 4)
     {

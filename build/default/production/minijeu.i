@@ -6668,6 +6668,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 6 "minijeu.c" 2
 
 # 1 "./itoa.h" 1
@@ -6825,7 +6826,12 @@ void saut_tamago ()
 
 
     int i=0;
-
+    int a=0;
+    score = score + 1;
+      glcd_SetCursor(100, 0);
+        itoa(score, buffer);
+        glcd_WriteString(buffer, 1, 1);
+        memset(&buffer, 0, sizeof (buffer));
     while (i!=5)
     {
      bouger_sequence();
@@ -6846,6 +6852,8 @@ void saut_tamago ()
       i++;
      }
 
+
+
 }
 
 void collision ()
@@ -6855,19 +6863,24 @@ void collision ()
     int i=0;
     for (i=0;i<taille;i++)
     {
-# 157 "minijeu.c"
+# 164 "minijeu.c"
          if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
          ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y )&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h )))
          {
              colli=1;
              score= score -1 ;
+             itoa(score, buffer);
+             glcd_SetCursor(100, 0);
+        glcd_WriteString(buffer, 1, 1);
+        memset(&buffer, 0, sizeof (buffer));
              mGogo.pos_x =0;
              mGogo.pos_y =0;
              displayObject (tamago, 30 , 40, 9, 14, 0);
+             glcd_SetCursor(100, 0);
 
 
          }
-# 176 "minijeu.c"
+# 188 "minijeu.c"
     }
 
     if (colli == 1) {
@@ -6887,10 +6900,13 @@ void collision ()
         }
 
 
+
+
 }
 
 void lancer_minijeu() {
 
+    PIE1bits.TMR1IE=0;
     glcd_FillScreen(0);
     remplir_tableau();
     mGogo.pos_x = 30;
@@ -6906,25 +6922,48 @@ void lancer_minijeu() {
 
         }
 
-        glcd_SetCursor(100, 0);
-        itoa(score, buffer);
+     itoa(score, buffer);
+             glcd_SetCursor(100, 0);
         glcd_WriteString(buffer, 1, 1);
-        memset(&buffer, 0, sizeof (buffer));
 
-    } while (score != 0) ;
-    do {
 
-        glcd_SetCursor(0, 0);
-        glcd_WriteString("FAIL", 1, 1);
-        glcd_SetCursor(0, 4);
-        glcd_WriteString("exit  ", 1, 1);
-        glcd_SetCursor(0, 6);
-        glcd_WriteString("RC0 ", 1, 1);
-        if (PORTCbits.RC0 == 1) {
-            score = 3;
-            break;
-        }
 
-    } while (1);
+    } while (score <=5 && score >0 ) ;
+
+    if (score == 0) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("FAIL", 1, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", 1, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", 1, 1);
+            if (PORTCbits.RC0 == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
+
+    if (score == 6) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("WIN", 1, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", 1, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", 1, 1);
+            if (PORTCbits.RC0 == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
 
 }

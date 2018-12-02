@@ -3689,8 +3689,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 377 ]
 "156
-[; ;main.c: 156:         if ((cpt%100)==0)
-[e $ ! == % _cpt -> 100 `i -> 0 `i 378  ]
+[; ;main.c: 156:         if ((cpt%200)==0)
+[e $ ! == % _cpt -> 200 `i -> 0 `i 378  ]
 "157
 [; ;main.c: 157:         {
 {
@@ -3742,46 +3742,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 174:             }
 }
 [e :U 381 ]
+"175
+[; ;main.c: 175:              if (mGogo.caca<=0)
+[e $ ! <= -> . _mGogo 6 `i -> 0 `i 382  ]
 "176
-[; ;main.c: 176:         }
-}
-[e :U 380 ]
-"179
-[; ;main.c: 179:         if (mGogo.dodo == 1){
-[e $ ! == -> . _mGogo 5 `i -> 1 `i 382  ]
+[; ;main.c: 176:             {
 {
+"177
+[; ;main.c: 177:                 mGogo.caca=0;
+[e = . _mGogo 6 -> -> 0 `i `uc ]
+"178
+[; ;main.c: 178:             }
+}
+[e :U 382 ]
+"179
+[; ;main.c: 179:              if (mGogo.bonheur<=0)
+[e $ ! <= -> . _mGogo 3 `i -> 0 `i 383  ]
 "180
-[; ;main.c: 180:             if(cpt==30){
-[e $ ! == _cpt -> 30 `i 383  ]
+[; ;main.c: 180:             {
 {
 "181
-[; ;main.c: 181:                 mGogo.dodo=0;
-[e = . _mGogo 5 -> -> 0 `i `uc ]
+[; ;main.c: 181:                 mGogo.bonheur=0;
+[e = . _mGogo 3 -> -> 0 `i `uc ]
 "182
 [; ;main.c: 182:             }
 }
 [e :U 383 ]
-"183
-[; ;main.c: 183:         }
+"184
+[; ;main.c: 184:         }
 }
-[e :U 382 ]
-"185
-[; ;main.c: 185:          if (cpt%500 == 0)
-[e $ ! == % _cpt -> 500 `i -> 0 `i 384  ]
-"186
-[; ;main.c: 186:         {
-{
+[e :U 380 ]
 "187
-[; ;main.c: 187:             micro_vieillir();
-[e ( _micro_vieillir ..  ]
+[; ;main.c: 187:         if (mGogo.dodo == 1){
+[e $ ! == -> . _mGogo 5 `i -> 1 `i 384  ]
+{
 "188
-[; ;main.c: 188:             cpt=0;
-[e = _cpt -> 0 `i ]
+[; ;main.c: 188:             if(cpt==30){
+[e $ ! == _cpt -> 30 `i 385  ]
+{
 "189
-[; ;main.c: 189:         }
+[; ;main.c: 189:                 mGogo.dodo=0;
+[e = . _mGogo 5 -> -> 0 `i `uc ]
+"190
+[; ;main.c: 190:             }
+}
+[e :U 385 ]
+"191
+[; ;main.c: 191:         }
 }
 [e :U 384 ]
+"193
+[; ;main.c: 193:          if (cpt%500 == 0)
+[e $ ! == % _cpt -> 500 `i -> 0 `i 386  ]
 "194
-[; ;main.c: 194: }
+[; ;main.c: 194:         {
+{
+"195
+[; ;main.c: 195:             micro_vieillir();
+[e ( _micro_vieillir ..  ]
+"196
+[; ;main.c: 196:             cpt=0;
+[e = _cpt -> 0 `i ]
+"197
+[; ;main.c: 197:         }
+}
+[e :U 386 ]
+"202
+[; ;main.c: 202: }
 [e :UE 376 ]
 }

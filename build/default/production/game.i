@@ -5503,6 +5503,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 11 "game.c" 2
 
 # 1 "./glcd.h" 1
@@ -6750,6 +6751,7 @@ int cpt=0;
 void game_play()
 {
 
+
     glcd_FillScreen(0);
 
     glcd_SetCursor(0,0);
@@ -6910,7 +6912,7 @@ void game_stats()
 
     glcd_FillScreen(0);
 }
-# 215 "game.c"
+# 216 "game.c"
 void animation()
 {
 
@@ -6923,7 +6925,7 @@ void animation()
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
-# 248 "game.c"
+# 249 "game.c"
 }
 
 void animationDodo(){
@@ -6934,13 +6936,13 @@ void animationDodo(){
 
     displayObject (Z1, 88, 20, 6, 6, 1);
     displayObject (Z2, 95, 18, 4, 4, 1);
-# 273 "game.c"
+# 274 "game.c"
 }
 
 void animationCaca(){
     displayObject (champi, 30, 37, 9, 14, 1);
     displayObject (mouche, 32, 32, 4, 6, 1);
-# 293 "game.c"
+# 294 "game.c"
 }
 
 void animationDead(){
@@ -6960,5 +6962,5 @@ void animationPasContent(){
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 
     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
-# 327 "game.c"
+# 328 "game.c"
 }

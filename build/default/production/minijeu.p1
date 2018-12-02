@@ -6,6 +6,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "234 ./myglcd.h
 [; ;./myglcd.h: 234: void displayObject (char *tab, int x, int y, int height, int width, int write);
 [v _displayObject `(v ~T0 @X0 0 ef6`*uc`i`i`i`i`i ]
+"49 ./glcd.h
+[; ;./glcd.h: 49: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
+[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"13 ./itoa.h
+[; ;./itoa.h: 13:  void itoa(int n, char s[]);
+[v _itoa `(v ~T0 @X0 0 ef2`i`*uc ]
+"54 ./glcd.h
+[; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
+[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
+"29 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "10 ./microgochi.h
 [; ;./microgochi.h: 10: struct Microgochi{
 [s S372 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -13,6 +25,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;./microgochi.h: 28: extern struct Microgochi mGogo;
 [v _mGogo `S372 ~T0 @X0 0 e ]
+"4390 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4390:     struct {
+[s S170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S170 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
+"4400
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4400:     struct {
+[s S171 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S171 . . TX1IE RC1IE . PSPIE ]
+"4389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4389: typedef union {
+[u S169 `S170 1 `S171 1 ]
+[n S169 . . . ]
+"4408
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 4408: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS169 ~T0 @X0 0 e@3997 ]
 "51 ./glcd.h
 [; ;./glcd.h: 51: extern void glcd_FillScreen(unsigned char color);
 [v _glcd_FillScreen `(v ~T0 @X0 0 ef1`uc ]
@@ -43,18 +70,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2605
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 2605: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 [v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
-"49 ./glcd.h
-[; ;./glcd.h: 49: extern void glcd_SetCursor(unsigned char xpos,unsigned char ypos);
-[v _glcd_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"13 ./itoa.h
-[; ;./itoa.h: 13:  void itoa(int n, char s[]);
-[v _itoa `(v ~T0 @X0 0 ef2`i`*uc ]
-"54 ./glcd.h
-[; ;./glcd.h: 54: extern void glcd_WriteString(const char str[],unsigned char font,unsigned char color);
-[v _glcd_WriteString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
-"29 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
-[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -3738,290 +3753,390 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;minijeu.c: 99:     int i=0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
+"100
+[; ;minijeu.c: 100:     int a=0;
+[v _a `i ~T0 @X0 1 a ]
+[e = _a -> 0 `i ]
 "101
-[; ;minijeu.c: 101:     while (i!=5)
+[; ;minijeu.c: 101:     score = score + 1;
+[e = _score + _score -> 1 `i ]
+"102
+[; ;minijeu.c: 102:       glcd_SetCursor(100, 0);
+[e ( _glcd_SetCursor (2 , -> -> 100 `i `uc -> -> 0 `i `uc ]
+"103
+[; ;minijeu.c: 103:         itoa(score, buffer);
+[e ( _itoa (2 , _score &U _buffer ]
+"104
+[; ;minijeu.c: 104:         glcd_WriteString(buffer, 1, 1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"105
+[; ;minijeu.c: 105:         memset(&buffer, 0, sizeof (buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"106
+[; ;minijeu.c: 106:     while (i!=5)
 [e $U 398  ]
 [e :U 399 ]
-"102
-[; ;minijeu.c: 102:     {
+"107
+[; ;minijeu.c: 107:     {
 {
-"103
-[; ;minijeu.c: 103:      bouger_sequence();
-[e ( _bouger_sequence ..  ]
-"104
-[; ;minijeu.c: 104:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
-"105
-[; ;minijeu.c: 105:     mGogo.pos_y -=4;
-[e =- . _mGogo 8 -> -> 4 `i `uc ]
-"106
-[; ;minijeu.c: 106:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y,9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "108
-[; ;minijeu.c: 108:     i++;
-[e ++ _i -> 1 `i ]
+[; ;minijeu.c: 108:      bouger_sequence();
+[e ( _bouger_sequence ..  ]
 "109
-[; ;minijeu.c: 109:     }
+[; ;minijeu.c: 109:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
+"110
+[; ;minijeu.c: 110:     mGogo.pos_y -=4;
+[e =- . _mGogo 8 -> -> 4 `i `uc ]
+"111
+[; ;minijeu.c: 111:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y,9, 14, 1);
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
+"113
+[; ;minijeu.c: 113:     i++;
+[e ++ _i -> 1 `i ]
+"114
+[; ;minijeu.c: 114:     }
 }
 [e :U 398 ]
-"101
-[; ;minijeu.c: 101:     while (i!=5)
+"106
+[; ;minijeu.c: 106:     while (i!=5)
 [e $ != _i -> 5 `i 399  ]
 [e :U 400 ]
-"111
-[; ;minijeu.c: 111:     while (i!=10)
+"116
+[; ;minijeu.c: 116:     while (i!=10)
 [e $U 401  ]
 [e :U 402 ]
-"112
-[; ;minijeu.c: 112:     {
-{
-"113
-[; ;minijeu.c: 113:      bouger_sequence();
-[e ( _bouger_sequence ..  ]
-"114
-[; ;minijeu.c: 114:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
-"115
-[; ;minijeu.c: 115:     mGogo.pos_y +=4;
-[e =+ . _mGogo 8 -> -> 4 `i `uc ]
-"116
-[; ;minijeu.c: 116:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 1);
-[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
 "117
-[; ;minijeu.c: 117:       bouger_sequence();
-[e ( _bouger_sequence ..  ]
+[; ;minijeu.c: 117:     {
+{
 "118
-[; ;minijeu.c: 118:       i++;
-[e ++ _i -> 1 `i ]
+[; ;minijeu.c: 118:      bouger_sequence();
+[e ( _bouger_sequence ..  ]
 "119
-[; ;minijeu.c: 119:      }
+[; ;minijeu.c: 119:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
+"120
+[; ;minijeu.c: 120:     mGogo.pos_y +=4;
+[e =+ . _mGogo 8 -> -> 4 `i `uc ]
+"121
+[; ;minijeu.c: 121:     displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 1);
+[e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
+"122
+[; ;minijeu.c: 122:       bouger_sequence();
+[e ( _bouger_sequence ..  ]
+"123
+[; ;minijeu.c: 123:       i++;
+[e ++ _i -> 1 `i ]
+"124
+[; ;minijeu.c: 124:      }
 }
 [e :U 401 ]
-"111
-[; ;minijeu.c: 111:     while (i!=10)
+"116
+[; ;minijeu.c: 116:     while (i!=10)
 [e $ != _i -> 10 `i 402  ]
 [e :U 403 ]
-"121
-[; ;minijeu.c: 121: }
+"128
+[; ;minijeu.c: 128: }
 [e :UE 397 ]
 }
-"123
-[; ;minijeu.c: 123: void collision ()
+"130
+[; ;minijeu.c: 130: void collision ()
 [v _collision `(v ~T0 @X0 1 ef ]
-"124
-[; ;minijeu.c: 124: {
+"131
+[; ;minijeu.c: 131: {
 {
 [e :U _collision ]
 [f ]
-"127
-[; ;minijeu.c: 127:     int i=0;
+"134
+[; ;minijeu.c: 134:     int i=0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"128
-[; ;minijeu.c: 128:     for (i=0;i<taille;i++)
+"135
+[; ;minijeu.c: 135:     for (i=0;i<taille;i++)
 {
 [e = _i -> 0 `i ]
 [e $U 408  ]
 [e :U 405 ]
-"129
-[; ;minijeu.c: 129:     {
+"136
+[; ;minijeu.c: 136:     {
 {
-"157
-[; ;minijeu.c: 157:          if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
-[e $ ! && && >= + -> . _mGogo 7 `i _tamago_largeur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i <= + -> . _mGogo 7 `i _tamago_largeur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 3 `i && >= + -> . _mGogo 8 `i _tamago_hauteur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i <= + -> . _mGogo 8 `i _tamago_hauteur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 2 `i 409  ]
-"159
-[; ;minijeu.c: 159:          {
-{
-"160
-[; ;minijeu.c: 160:              colli=1;
-[e = _colli -> 1 `i ]
-"161
-[; ;minijeu.c: 161:              score= score -1 ;
-[e = _score - _score -> 1 `i ]
-"162
-[; ;minijeu.c: 162:              mGogo.pos_x =0;
-[e = . _mGogo 7 -> -> 0 `i `uc ]
-"163
-[; ;minijeu.c: 163:              mGogo.pos_y =0;
-[e = . _mGogo 8 -> -> 0 `i `uc ]
 "164
-[; ;minijeu.c: 164:              displayObject (tamago, 30 , 40, 9, 14, 0);
-[e ( _displayObject (4 , , , , , &U _tamago -> 30 `i -> 40 `i -> 9 `i -> 14 `i -> 0 `i ]
+[; ;minijeu.c: 164:          if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
+[e $ ! && && >= + -> . _mGogo 7 `i _tamago_largeur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i <= + -> . _mGogo 7 `i _tamago_largeur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 0 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 3 `i && >= + -> . _mGogo 8 `i _tamago_hauteur -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i <= + -> . _mGogo 8 `i _tamago_hauteur + -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 1 `i -> . *U + &U _tab * -> -> _i `ui `ux -> -> # *U &U _tab `ui `ux 2 `i 409  ]
+"166
+[; ;minijeu.c: 166:          {
+{
 "167
-[; ;minijeu.c: 167:          }
+[; ;minijeu.c: 167:              colli=1;
+[e = _colli -> 1 `i ]
+"168
+[; ;minijeu.c: 168:              score= score -1 ;
+[e = _score - _score -> 1 `i ]
+"169
+[; ;minijeu.c: 169:              itoa(score, buffer);
+[e ( _itoa (2 , _score &U _buffer ]
+"170
+[; ;minijeu.c: 170:              glcd_SetCursor(100, 0);
+[e ( _glcd_SetCursor (2 , -> -> 100 `i `uc -> -> 0 `i `uc ]
+"171
+[; ;minijeu.c: 171:         glcd_WriteString(buffer, 1, 1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
+"172
+[; ;minijeu.c: 172:         memset(&buffer, 0, sizeof (buffer));
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
+"173
+[; ;minijeu.c: 173:              mGogo.pos_x =0;
+[e = . _mGogo 7 -> -> 0 `i `uc ]
+"174
+[; ;minijeu.c: 174:              mGogo.pos_y =0;
+[e = . _mGogo 8 -> -> 0 `i `uc ]
+"175
+[; ;minijeu.c: 175:              displayObject (tamago, 30 , 40, 9, 14, 0);
+[e ( _displayObject (4 , , , , , &U _tamago -> 30 `i -> 40 `i -> 9 `i -> 14 `i -> 0 `i ]
+"176
+[; ;minijeu.c: 176:              glcd_SetCursor(100, 0);
+[e ( _glcd_SetCursor (2 , -> -> 100 `i `uc -> -> 0 `i `uc ]
+"179
+[; ;minijeu.c: 179:          }
 }
 [e :U 409 ]
-"176
-[; ;minijeu.c: 176:     }
+"188
+[; ;minijeu.c: 188:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 408 ]
 [e $ < _i _taille 405  ]
 [e :U 406 ]
 }
-"178
-[; ;minijeu.c: 178:     if (colli == 1) {
+"190
+[; ;minijeu.c: 190:     if (colli == 1) {
 [e $ ! == _colli -> 1 `i 410  ]
 {
-"179
-[; ;minijeu.c: 179:             int i = 0;
+"191
+[; ;minijeu.c: 191:             int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"180
-[; ;minijeu.c: 180:             mGogo.pos_x = 30;
+"192
+[; ;minijeu.c: 192:             mGogo.pos_x = 30;
 [e = . _mGogo 7 -> -> 30 `i `uc ]
-"181
-[; ;minijeu.c: 181:             mGogo.pos_y = 0;
+"193
+[; ;minijeu.c: 193:             mGogo.pos_y = 0;
 [e = . _mGogo 8 -> -> 0 `i `uc ]
-"182
-[; ;minijeu.c: 182:             while (i != 4) {
+"194
+[; ;minijeu.c: 194:             while (i != 4) {
 [e $U 411  ]
 [e :U 412 ]
 {
-"183
-[; ;minijeu.c: 183:                 bouger_sequence();
+"195
+[; ;minijeu.c: 195:                 bouger_sequence();
 [e ( _bouger_sequence ..  ]
-"184
-[; ;minijeu.c: 184:                 bouger_sequence();
+"196
+[; ;minijeu.c: 196:                 bouger_sequence();
 [e ( _bouger_sequence ..  ]
-"185
-[; ;minijeu.c: 185:                 bouger_sequence();
+"197
+[; ;minijeu.c: 197:                 bouger_sequence();
 [e ( _bouger_sequence ..  ]
-"186
-[; ;minijeu.c: 186:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
+"198
+[; ;minijeu.c: 198:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
 [e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 0 `i ]
-"187
-[; ;minijeu.c: 187:                 mGogo.pos_y += 10;
+"199
+[; ;minijeu.c: 199:                 mGogo.pos_y += 10;
 [e =+ . _mGogo 8 -> -> 10 `i `uc ]
-"188
-[; ;minijeu.c: 188:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
+"200
+[; ;minijeu.c: 200:                 displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
 [e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
-"189
-[; ;minijeu.c: 189:                 i++;
+"201
+[; ;minijeu.c: 201:                 i++;
 [e ++ _i -> 1 `i ]
-"190
-[; ;minijeu.c: 190:             }
+"202
+[; ;minijeu.c: 202:             }
 }
 [e :U 411 ]
-"182
-[; ;minijeu.c: 182:             while (i != 4) {
+"194
+[; ;minijeu.c: 194:             while (i != 4) {
 [e $ != _i -> 4 `i 412  ]
 [e :U 413 ]
-"191
-[; ;minijeu.c: 191:             colli = 0;
+"203
+[; ;minijeu.c: 203:             colli = 0;
 [e = _colli -> 0 `i ]
-"192
-[; ;minijeu.c: 192:         }
+"204
+[; ;minijeu.c: 204:         }
 }
 [e :U 410 ]
-"195
-[; ;minijeu.c: 195: }
+"209
+[; ;minijeu.c: 209: }
 [e :UE 404 ]
 }
-"197
-[; ;minijeu.c: 197: void lancer_minijeu() {
+"211
+[; ;minijeu.c: 211: void lancer_minijeu() {
 [v _lancer_minijeu `(v ~T0 @X0 1 ef ]
 {
 [e :U _lancer_minijeu ]
 [f ]
-"199
-[; ;minijeu.c: 199:     glcd_FillScreen(0);
+"213
+[; ;minijeu.c: 213:     PIE1bits.TMR1IE=0;
+[e = . . _PIE1bits 0 0 -> -> 0 `i `uc ]
+"214
+[; ;minijeu.c: 214:     glcd_FillScreen(0);
 [e ( _glcd_FillScreen (1 -> -> 0 `i `uc ]
-"200
-[; ;minijeu.c: 200:     remplir_tableau();
+"215
+[; ;minijeu.c: 215:     remplir_tableau();
 [e ( _remplir_tableau ..  ]
-"201
-[; ;minijeu.c: 201:     mGogo.pos_x = 30;
+"216
+[; ;minijeu.c: 216:     mGogo.pos_x = 30;
 [e = . _mGogo 7 -> -> 30 `i `uc ]
-"202
-[; ;minijeu.c: 202:     mGogo.pos_y = 40;
+"217
+[; ;minijeu.c: 217:     mGogo.pos_y = 40;
 [e = . _mGogo 8 -> -> 40 `i `uc ]
-"203
-[; ;minijeu.c: 203:     displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
+"218
+[; ;minijeu.c: 218:     displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
 [e ( _displayObject (4 , , , , , &U _tamago -> . _mGogo 7 `i -> . _mGogo 8 `i -> 9 `i -> 14 `i -> 1 `i ]
-"205
-[; ;minijeu.c: 205:      do {
+"220
+[; ;minijeu.c: 220:      do {
 [e :U 417 ]
 {
-"206
-[; ;minijeu.c: 206:         bouger_sequence();
+"221
+[; ;minijeu.c: 221:         bouger_sequence();
 [e ( _bouger_sequence ..  ]
-"207
-[; ;minijeu.c: 207:         collision();
+"222
+[; ;minijeu.c: 222:         collision();
 [e ( _collision ..  ]
-"209
-[; ;minijeu.c: 209:          if (PORTCbits.RC1 == 1) {
+"224
+[; ;minijeu.c: 224:          if (PORTCbits.RC1 == 1) {
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 418  ]
 {
-"210
-[; ;minijeu.c: 210:             saut_tamago();
+"225
+[; ;minijeu.c: 225:             saut_tamago();
 [e ( _saut_tamago ..  ]
-"212
-[; ;minijeu.c: 212:         }
+"227
+[; ;minijeu.c: 227:         }
 }
 [e :U 418 ]
-"214
-[; ;minijeu.c: 214:         glcd_SetCursor(100, 0);
-[e ( _glcd_SetCursor (2 , -> -> 100 `i `uc -> -> 0 `i `uc ]
-"215
-[; ;minijeu.c: 215:         itoa(score, buffer);
-[e ( _itoa (2 , _score &U _buffer ]
-"216
-[; ;minijeu.c: 216:         glcd_WriteString(buffer, 1, 1);
-[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
-"217
-[; ;minijeu.c: 217:         memset(&buffer, 0, sizeof (buffer));
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> # _buffer `ui ]
-"219
-[; ;minijeu.c: 219:     } while (score != 0) ;
-}
-[e $ != _score -> 0 `i 417  ]
-[e :U 416 ]
-"220
-[; ;minijeu.c: 220:     do {
-[e :U 421 ]
-{
-"222
-[; ;minijeu.c: 222:         glcd_SetCursor(0, 0);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"223
-[; ;minijeu.c: 223:         glcd_WriteString("FAIL", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"224
-[; ;minijeu.c: 224:         glcd_SetCursor(0, 4);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
-"225
-[; ;minijeu.c: 225:         glcd_WriteString("exit  ", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"226
-[; ;minijeu.c: 226:         glcd_SetCursor(0, 6);
-[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
-"227
-[; ;minijeu.c: 227:         glcd_WriteString("RC0 ", 1, 1);
-[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
-"228
-[; ;minijeu.c: 228:         if (PORTCbits.RC0 == 1) {
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 422  ]
-{
 "229
-[; ;minijeu.c: 229:             score = 3;
-[e = _score -> 3 `i ]
+[; ;minijeu.c: 229:      itoa(score, buffer);
+[e ( _itoa (2 , _score &U _buffer ]
 "230
-[; ;minijeu.c: 230:             break;
-[e $U 420  ]
+[; ;minijeu.c: 230:              glcd_SetCursor(100, 0);
+[e ( _glcd_SetCursor (2 , -> -> 100 `i `uc -> -> 0 `i `uc ]
 "231
-[; ;minijeu.c: 231:         }
-}
-[e :U 422 ]
-"233
-[; ;minijeu.c: 233:     } while (1);
-}
-[e $ != -> 1 `i -> 0 `i 421  ]
-[e :U 420 ]
+[; ;minijeu.c: 231:         glcd_WriteString(buffer, 1, 1);
+[e ( _glcd_WriteString (3 , , -> &U _buffer `*Cuc -> -> 1 `i `uc -> -> 1 `i `uc ]
 "235
-[; ;minijeu.c: 235: }
+[; ;minijeu.c: 235:     } while (score <=5 && score >0 ) ;
+}
+[e $ && <= _score -> 5 `i > _score -> 0 `i 417  ]
+[e :U 416 ]
+"237
+[; ;minijeu.c: 237:     if (score == 0) {
+[e $ ! == _score -> 0 `i 419  ]
+{
+"238
+[; ;minijeu.c: 238:         do {
+[e :U 422 ]
+{
+"240
+[; ;minijeu.c: 240:             glcd_SetCursor(0, 0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"241
+[; ;minijeu.c: 241:             glcd_WriteString("FAIL", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 1C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"242
+[; ;minijeu.c: 242:             glcd_SetCursor(0, 4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"243
+[; ;minijeu.c: 243:             glcd_WriteString("exit  ", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 2C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"244
+[; ;minijeu.c: 244:             glcd_SetCursor(0, 6);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
+"245
+[; ;minijeu.c: 245:             glcd_WriteString("RC0 ", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 3C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"246
+[; ;minijeu.c: 246:             if (PORTCbits.RC0 == 1) {
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 423  ]
+{
+"247
+[; ;minijeu.c: 247:                 score = 3;
+[e = _score -> 3 `i ]
+"248
+[; ;minijeu.c: 248:                 PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"249
+[; ;minijeu.c: 249:                 break;
+[e $U 421  ]
+"250
+[; ;minijeu.c: 250:             }
+}
+[e :U 423 ]
+"252
+[; ;minijeu.c: 252:         } while (1);
+}
+[e $ != -> 1 `i -> 0 `i 422  ]
+[e :U 421 ]
+"253
+[; ;minijeu.c: 253:     }
+}
+[e :U 419 ]
+"255
+[; ;minijeu.c: 255:     if (score == 6) {
+[e $ ! == _score -> 6 `i 424  ]
+{
+"256
+[; ;minijeu.c: 256:         do {
+[e :U 427 ]
+{
+"258
+[; ;minijeu.c: 258:             glcd_SetCursor(0, 0);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"259
+[; ;minijeu.c: 259:             glcd_WriteString("WIN", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 4C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"260
+[; ;minijeu.c: 260:             glcd_SetCursor(0, 4);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+"261
+[; ;minijeu.c: 261:             glcd_WriteString("exit  ", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 5C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"262
+[; ;minijeu.c: 262:             glcd_SetCursor(0, 6);
+[e ( _glcd_SetCursor (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
+"263
+[; ;minijeu.c: 263:             glcd_WriteString("RC0 ", 1, 1);
+[e ( _glcd_WriteString (3 , , :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+"264
+[; ;minijeu.c: 264:             if (PORTCbits.RC0 == 1) {
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 428  ]
+{
+"265
+[; ;minijeu.c: 265:                 score = 3;
+[e = _score -> 3 `i ]
+"266
+[; ;minijeu.c: 266:                 PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"267
+[; ;minijeu.c: 267:                 break;
+[e $U 426  ]
+"268
+[; ;minijeu.c: 268:             }
+}
+[e :U 428 ]
+"270
+[; ;minijeu.c: 270:         } while (1);
+}
+[e $ != -> 1 `i -> 0 `i 427  ]
+[e :U 426 ]
+"271
+[; ;minijeu.c: 271:     }
+}
+[e :U 424 ]
+"273
+[; ;minijeu.c: 273: }
 [e :UE 414 ]
 }
+[a 4C 87 73 78 0 ]
 [a 1C 70 65 73 76 0 ]
 [a 3C 82 67 48 32 0 ]
+[a 6C 82 67 48 32 0 ]
 [a 2C 101 120 105 116 32 32 0 ]
+[a 5C 101 120 105 116 32 32 0 ]

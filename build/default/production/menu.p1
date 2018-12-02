@@ -41,7 +41,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14 ./minijeu.h
 [; ;./minijeu.h: 14: void lancer_minijeu(void);
 [v _lancer_minijeu `(v ~T0 @X0 0 ef ]
-"34 ./microgochi.h
+"36 ./microgochi.h
+[; ;./microgochi.h: 36: void micro_jeu(void);
+[v _micro_jeu `(v ~T0 @X0 0 ef ]
+"34
 [; ;./microgochi.h: 34: void micro_laver(void);
 [v _micro_laver `(v ~T0 @X0 0 ef ]
 "14 ./game.h
@@ -3599,45 +3602,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;menu.c: 64:         lancer_minijeu();
 [e ( _lancer_minijeu ..  ]
 "65
-[; ;menu.c: 65:     }
+[; ;menu.c: 65:         micro_jeu();
+[e ( _micro_jeu ..  ]
+"66
+[; ;menu.c: 66:     }
 }
 [e :U 384 ]
-"66
-[; ;menu.c: 66:     if (action == 4)
-[e $ ! == _action -> 4 `i 385  ]
 "67
-[; ;menu.c: 67:     {
-{
+[; ;menu.c: 67:     if (action == 4)
+[e $ ! == _action -> 4 `i 385  ]
 "68
-[; ;menu.c: 68:         micro_laver();
-[e ( _micro_laver ..  ]
+[; ;menu.c: 68:     {
+{
 "69
-[; ;menu.c: 69:     }
+[; ;menu.c: 69:         micro_laver();
+[e ( _micro_laver ..  ]
+"70
+[; ;menu.c: 70:     }
 }
 [e :U 385 ]
-"70
-[; ;menu.c: 70:     if (action == 7)
-[e $ ! == _action -> 7 `i 386  ]
 "71
-[; ;menu.c: 71:     {
-{
+[; ;menu.c: 71:     if (action == 7)
+[e $ ! == _action -> 7 `i 386  ]
 "72
-[; ;menu.c: 72:         game_stats();
-[e ( _game_stats ..  ]
+[; ;menu.c: 72:     {
+{
 "73
-[; ;menu.c: 73:     }
+[; ;menu.c: 73:         game_stats();
+[e ( _game_stats ..  ]
+"74
+[; ;menu.c: 74:     }
 }
 [e :U 386 ]
-"75
-[; ;menu.c: 75:       do{
+"76
+[; ;menu.c: 76:       do{
 [e :U 389 ]
 {
-"77
-[; ;menu.c: 77:     }while(PORTCbits.RC1!=0);
+"78
+[; ;menu.c: 78:     }while(PORTCbits.RC1!=0);
 }
 [e $ != -> . . _PORTCbits 0 1 `i -> 0 `i 389  ]
 [e :U 388 ]
-"78
-[; ;menu.c: 78: }
+"79
+[; ;menu.c: 79: }
 [e :UE 377 ]
 }

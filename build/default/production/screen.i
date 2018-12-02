@@ -6661,6 +6661,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 17 "screen.c" 2
 
 # 1 "./game.h" 1
