@@ -172,6 +172,14 @@ void __interrupt() isr(void)
             {
                 mGogo.vivant=0;
             }
+             if (mGogo.caca<=0)
+            {
+                mGogo.caca=0;
+            }
+             if (mGogo.bonheur<=0)
+            {
+                mGogo.bonheur=0;
+            }
             
         }
         

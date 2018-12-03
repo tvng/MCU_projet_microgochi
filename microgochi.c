@@ -43,7 +43,11 @@ void micro_manger ()
     {
         mGogo.satiete=100;
     }
-    mGogo.caca-=40;
+    mGogo.caca-=30;
+    if (mGogo.caca<=0)
+    {
+        mGogo.caca=0;
+    }
 }
 
 void micro_calin ()
@@ -68,4 +72,28 @@ void micro_dormir ()
         mGogo.energie=100;
     }
     mGogo.dodo=1;
+}
+
+
+void micro_jeu()
+{
+     mGogo.energie -= 10;
+    if (mGogo.energie <0)
+    {
+        mGogo.energie=0;
+    }
+     
+      mGogo.satiete -= 10;
+    if (mGogo.satiete <0)
+    {
+        mGogo.satiete=0;
+    }
+      
+       mGogo.caca -= 10;
+    if (mGogo.caca <0)
+    {
+        mGogo.caca=0;
+    }
+       
+    micro_calin ();
 }
