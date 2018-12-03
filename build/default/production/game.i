@@ -6750,6 +6750,7 @@ int cpt=0;
 void game_play()
 {
 
+
     glcd_FillScreen(0);
 
     glcd_SetCursor(0,0);
@@ -6761,6 +6762,8 @@ void game_play()
     int action=0;
     int write=0;
     int button_pressed=0;
+
+    int cpt_dodo;
 
 
     while (mGogo.vivant==1)
@@ -6816,13 +6819,24 @@ void game_play()
             button_pressed=0;
         }
 
-        if(mGogo.satiete < 50){
-            animationPasContent();
-        }else{
-            if(mGogo.dodo!=1){
-                animation();
-            }
+
+
+        if(mGogo.dodo==1){
+            animationDodo();
+            cpt_dodo++;
+                if (cpt_dodo==30)
+                {cpt_dodo=0;
+                    mGogo.dodo=0;
+                    displayObject (Z1, 88, 20, 6, 6, 0);
+                    displayObject (Z2, 95, 18, 4, 4, 0);
+                }
         }
+        else if(mGogo.satiete < 50){
+            animationPasContent();
+        } else if(mGogo.dodo!=1){
+                animation();
+        }
+
 
         if(mGogo.caca <=50){
             animationCaca();
@@ -6831,12 +6845,7 @@ void game_play()
             displayObject (mouche, 32, 32, 4, 6, 0);
         }
 
-        if(mGogo.dodo==1){
-            animationDodo();
-        }else{
-            displayObject (Z1, 88, 20, 6, 6, 0);
-            displayObject (Z2, 95, 18, 4, 4, 0);
-        }
+
 
     }
 
@@ -6910,7 +6919,7 @@ void game_stats()
 
     glcd_FillScreen(0);
 }
-# 215 "game.c"
+# 224 "game.c"
 void animation()
 {
 
@@ -6923,7 +6932,7 @@ void animation()
     displayObject (gochi_corps, 52, 23, 24, 34, 1);
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
     displayObject (gochi_yeux1, 52, 33, 3, 34, 1);
-# 248 "game.c"
+# 257 "game.c"
 }
 
 void animationDodo(){
@@ -6934,13 +6943,13 @@ void animationDodo(){
 
     displayObject (Z1, 88, 20, 6, 6, 1);
     displayObject (Z2, 95, 18, 4, 4, 1);
-# 273 "game.c"
+# 282 "game.c"
 }
 
 void animationCaca(){
     displayObject (champi, 30, 37, 9, 14, 1);
     displayObject (mouche, 32, 32, 4, 6, 1);
-# 293 "game.c"
+# 302 "game.c"
 }
 
 void animationDead(){
@@ -6960,5 +6969,5 @@ void animationPasContent(){
     displayObject (gochi_oreilles1, 52, 23, 7, 34, 1);
 
     displayObject (gochiPasContent, 75, 33, 4, 8, 1);
-# 327 "game.c"
+# 336 "game.c"
 }

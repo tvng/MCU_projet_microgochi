@@ -3689,14 +3689,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 377 ]
 "156
-[; ;main.c: 156:         if ((cpt%100)==0)
-[e $ ! == % _cpt -> 100 `i -> 0 `i 378  ]
+[; ;main.c: 156:         if ((cpt%200)==0)
+[e $ ! == % _cpt -> 200 `i -> 0 `i 378  ]
 "157
 [; ;main.c: 157:         {
 {
 "158
-[; ;main.c: 158:             mGogo.satiete -= 10;
-[e =- . _mGogo 1 -> -> 10 `i `uc ]
+[; ;main.c: 158:             mGogo.satiete -= 5;
+[e =- . _mGogo 1 -> -> 5 `i `uc ]
 "159
 [; ;main.c: 159:             if (mGogo.satiete<=0)
 [e $ ! <= -> . _mGogo 1 `i -> 0 `i 379  ]
@@ -3746,28 +3746,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 176:         }
 }
 [e :U 380 ]
-"179
-[; ;main.c: 179:         if (mGogo.dodo == 1){
-[e $ ! == -> . _mGogo 5 `i -> 1 `i 382  ]
-{
-"180
-[; ;main.c: 180:             if(cpt==30){
-[e $ ! == _cpt -> 30 `i 383  ]
-{
-"181
-[; ;main.c: 181:                 mGogo.dodo=0;
-[e = . _mGogo 5 -> -> 0 `i `uc ]
-"182
-[; ;main.c: 182:             }
-}
-[e :U 383 ]
-"183
-[; ;main.c: 183:         }
-}
-[e :U 382 ]
 "185
 [; ;main.c: 185:          if (cpt%500 == 0)
-[e $ ! == % _cpt -> 500 `i -> 0 `i 384  ]
+[e $ ! == % _cpt -> 500 `i -> 0 `i 382  ]
 "186
 [; ;main.c: 186:         {
 {
@@ -3780,7 +3761,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "189
 [; ;main.c: 189:         }
 }
-[e :U 384 ]
+[e :U 382 ]
 "194
 [; ;main.c: 194: }
 [e :UE 376 ]

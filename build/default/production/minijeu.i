@@ -6735,11 +6735,11 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 
 
-int taille=2;
-int direction =0;
+int taille = 2;
+int direction = 0;
 int tamago_largeur = 13;
 int tamago_hauteur = 8;
-int colli =0;
+int colli = 0;
 int score = 3;
 char buffer[3];
 
@@ -6751,6 +6751,7 @@ struct champi
     char champ_l;
 
 };
+
 struct tamagotchi
 {
     char pos_x;
@@ -6761,170 +6762,193 @@ struct tamagotchi
 
 struct champi tab[2];
 
-struct champi creer_champi(char x, char y)
-{
+struct champi creer_champi(char x, char y) {
     struct champi new_champi;
     new_champi.pos_x = x;
     new_champi.pos_y = y;
-    new_champi.champ_h=9;
-    new_champi.champ_l=10;
+    new_champi.champ_h = 9;
+    new_champi.champ_l = 10;
     return new_champi;
 }
 
-void remplir_tableau()
-{
+void remplir_tableau() {
     char x = 100;
-    int i=0;
-    for (i=0;i< taille ;i++)
-    {
-        tab[i]= creer_champi(x,40);
-        x= x+60;
-    }
-}
-void afficher_sequence ()
-{
-    int i=0;
-    for (i=0;i<taille;i++)
-    {
-
-        displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
-
+    int i = 0;
+    for (i = 0; i < taille; i++) {
+        tab[i] = creer_champi(x, 40);
+        x = x + 60;
     }
 }
 
-void effacer_sequence ()
-{
-    int i=0;
-    for (i=0;i<taille;i++)
-    {
+void afficher_sequence() {
+    int i = 0;
+    for (i = 0; i < taille; i++) {
 
+        displayObject(champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 1);
 
-      displayObject (champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
     }
 }
 
-void bouger_sequence ()
-{
+void effacer_sequence() {
+    int i = 0;
+    for (i = 0; i < taille; i++) {
+
+
+        displayObject(champi, tab[i].pos_x, tab[i].pos_y, 9, 14, 0);
+    }
+}
+
+void bouger_sequence() {
     effacer_sequence();
-    int i=0;
-    for (i=0;i<taille;i++)
-    {
-       tab[i].pos_x -=3;
-        if(tab[i].pos_x <= 4)
-        {
-            tab[i].pos_x= 110;
+    int i = 0;
+    for (i = 0; i < taille; i++) {
+        tab[i].pos_x -= 3;
+        if (tab[i].pos_x <= 4) {
+            tab[i].pos_x = 110;
         }
-   }
+    }
 
     afficher_sequence();
 }
 
-void saut_tamago ()
-{
+void saut_tamago() {
 
 
 
-    int i=0;
+    int i = 0;
+    int a = 0;
+    score = score + 1;
+    glcd_SetCursor(100, 0);
+    itoa(score, buffer);
+    glcd_WriteString(buffer, 1, 1);
+    memset(&buffer, 0, sizeof (buffer));
+    while (i != 5) {
+        bouger_sequence();
+        displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
+        mGogo.pos_y -= 4;
+        displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
 
-    while (i!=5)
-    {
-     bouger_sequence();
-    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-    mGogo.pos_y -=4;
-    displayObject (tamago, mGogo.pos_x , mGogo.pos_y,9, 14, 1);
-
-    i++;
+        i++;
     }
 
-    while (i!=10)
-    {
-     bouger_sequence();
-    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 0);
-    mGogo.pos_y +=4;
-    displayObject (tamago, mGogo.pos_x , mGogo.pos_y, 9, 14, 1);
-      bouger_sequence();
-      i++;
-     }
+    while (i != 10) {
+        bouger_sequence();
+        displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
+        mGogo.pos_y += 4;
+        displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
+        bouger_sequence();
+        i++;
+    }
+
+
 
 }
 
-void collision ()
-{
+void collision() {
 
 
-    int i=0;
-    for (i=0;i<taille;i++)
-    {
-# 157 "minijeu.c"
-         if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x )&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l ))&&
-         ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y )&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h )))
-         {
-             colli=1;
-             score= score -1 ;
-             mGogo.pos_x =0;
-             mGogo.pos_y =0;
-             displayObject (tamago, 30 , 40, 9, 14, 0);
+    int i = 0;
+    for (i = 0; i < taille; i++) {
+# 151 "minijeu.c"
+        if (((mGogo.pos_x + tamago_largeur >= tab[i].pos_x)&&(mGogo.pos_x + tamago_largeur <= tab[i].pos_x + tab[i].champ_l))&&
+                ((mGogo.pos_y + tamago_hauteur >= tab[i].pos_y)&&(mGogo.pos_y + tamago_hauteur <= tab[i].pos_y + tab[i].champ_h))) {
+            colli = 1;
+            score = score - 1;
+            itoa(score, buffer);
+            glcd_SetCursor(100, 0);
+            glcd_WriteString(buffer, 1, 1);
+            memset(&buffer, 0, sizeof (buffer));
+            mGogo.pos_x = 0;
+            mGogo.pos_y = 0;
+            displayObject(tamago, 30, 40, 9, 14, 0);
+            glcd_SetCursor(100, 0);
 
 
-         }
-# 176 "minijeu.c"
+        }
+# 174 "minijeu.c"
     }
 
     if (colli == 1) {
-            int i = 0;
-            mGogo.pos_x = 30;
-            mGogo.pos_y = 0;
-            while (i != 4) {
-                bouger_sequence();
-                bouger_sequence();
-                bouger_sequence();
-                displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
-                mGogo.pos_y += 10;
-                displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
-                i++;
-            }
-            colli = 0;
+        int i = 0;
+        mGogo.pos_x = 30;
+        mGogo.pos_y = 0;
+        while (i != 4) {
+            bouger_sequence();
+            bouger_sequence();
+            bouger_sequence();
+            displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 0);
+            mGogo.pos_y += 10;
+            displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
+            i++;
         }
+        colli = 0;
+    }
+
+
 
 
 }
 
 void lancer_minijeu() {
 
+    PIE1bits.TMR1IE = 0;
     glcd_FillScreen(0);
     remplir_tableau();
     mGogo.pos_x = 30;
     mGogo.pos_y = 40;
     displayObject(tamago, mGogo.pos_x, mGogo.pos_y, 9, 14, 1);
 
-     do {
+    do {
         bouger_sequence();
         collision();
 
-         if (PORTCbits.RC1 == 1) {
+        if (PORTCbits.RC1 == 1) {
             saut_tamago();
 
         }
 
-        glcd_SetCursor(100, 0);
         itoa(score, buffer);
+        glcd_SetCursor(100, 0);
         glcd_WriteString(buffer, 1, 1);
-        memset(&buffer, 0, sizeof (buffer));
 
-    } while (score != 0) ;
-    do {
 
-        glcd_SetCursor(0, 0);
-        glcd_WriteString("FAIL", 1, 1);
-        glcd_SetCursor(0, 4);
-        glcd_WriteString("exit  ", 1, 1);
-        glcd_SetCursor(0, 6);
-        glcd_WriteString("RC0 ", 1, 1);
-        if (PORTCbits.RC0 == 1) {
-            score = 3;
-            break;
-        }
 
-    } while (1);
+    } while (score <= 5 && score > 0);
+
+    if (score == 0) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("FAIL", 1, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", 1, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", 1, 1);
+            if (PORTCbits.RC0 == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
+
+    if (score == 6) {
+        do {
+
+            glcd_SetCursor(0, 0);
+            glcd_WriteString("WIN", 1, 1);
+            glcd_SetCursor(0, 4);
+            glcd_WriteString("exit  ", 1, 1);
+            glcd_SetCursor(0, 6);
+            glcd_WriteString("RC0 ", 1, 1);
+            if (PORTCbits.RC0 == 1) {
+                score = 3;
+                PIE1bits.TMR1IE = 1;
+                break;
+            }
+
+        } while (1);
+    }
 
 }

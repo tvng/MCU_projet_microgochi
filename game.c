@@ -36,6 +36,8 @@ void game_play()
     int write=0;
     int button_pressed=0;
     
+    int cpt_dodo;
+    
    // ETAPE 2: gni
     while (mGogo.vivant==1) //tant que le microgochi est vivant
     {
@@ -90,13 +92,24 @@ void game_play()
             button_pressed=0;
         } 
         
-        if(mGogo.satiete < 50){
-            animationPasContent();
-        }else{
-            if(mGogo.dodo!=1){
-                animation();
-            }
+        
+        
+        if(mGogo.dodo==1){//le booleen est remis a 0 apres 10 cpt
+            animationDodo();
+            cpt_dodo++;
+                if (cpt_dodo==30)
+                {cpt_dodo=0; ///reset
+                    mGogo.dodo=0;
+                    displayObject (Z1, 88, 20, 6, 6, 0);
+                    displayObject (Z2, 95, 18, 4, 4, 0);
+                }
         }
+        else if(mGogo.satiete < 50){
+            animationPasContent();
+        } else if(mGogo.dodo!=1){
+                animation();
+        }
+           
         
         if(mGogo.caca <=50){
             animationCaca();
@@ -105,13 +118,8 @@ void game_play()
             displayObject (mouche, 32, 32, 4, 6, 0);
         }
         
-        if(mGogo.dodo==1){//le booleen est remis a 0 apres 10 cpt
-            animationDodo();
-        }else{
-            displayObject (Z1, 88, 20, 6, 6, 0);
-            displayObject (Z2, 95, 18, 4, 4, 0);
-        }
         
+    
     } //les conditions de mort sont dans les interrupt dans le main
     
     glcd_FillScreen(0); 

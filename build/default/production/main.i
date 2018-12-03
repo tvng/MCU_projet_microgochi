@@ -6768,9 +6768,9 @@ void __attribute__((picinterrupt(""))) isr(void)
     }
 
 
-        if ((cpt%100)==0)
+        if ((cpt%200)==0)
         {
-            mGogo.satiete -= 10;
+            mGogo.satiete -= 5;
             if (mGogo.satiete<=0)
             {
                 mGogo.vivant=0;
@@ -6789,14 +6789,7 @@ void __attribute__((picinterrupt(""))) isr(void)
             }
 
         }
-
-
-        if (mGogo.dodo == 1){
-            if(cpt==30){
-                mGogo.dodo=0;
-            }
-        }
-
+# 185 "main.c"
          if (cpt%500 == 0)
         {
             micro_vieillir();
