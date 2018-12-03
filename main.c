@@ -168,11 +168,11 @@ void __interrupt() isr(void)
             mGogo.caca--;
             mGogo.bonheur--;
             
-            if (mGogo.energie<=0)
+            if (mGogo.energie<=0 )
             {
                 mGogo.vivant=0;
             }
-             if (mGogo.caca<=0)
+             if (mGogo.caca<=0 || mGogo.caca>100)
             {
                 mGogo.caca=0;
             }

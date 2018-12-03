@@ -44,7 +44,7 @@ void micro_manger ()
         mGogo.satiete=100;
     }
     mGogo.caca-=30;
-    if (mGogo.caca<=0)
+    if (mGogo.caca<=0 || mGogo.caca>100)
     {
         mGogo.caca=0;
     }
@@ -61,7 +61,7 @@ void micro_calin ()
 
 void micro_laver()
 {
-    mGogo.caca=100;
+    mGogo.caca=99;
 }
 
 void micro_dormir ()
@@ -90,7 +90,7 @@ void micro_jeu()
     }
       
        mGogo.caca -= 10;
-    if (mGogo.caca <0)
+    if (mGogo.caca <0 || mGogo.caca>100)
     {
         mGogo.caca=0;
     }

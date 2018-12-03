@@ -6666,6 +6666,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 38 "main.c" 2
 
 # 1 "./game.h" 1
@@ -6783,13 +6784,21 @@ void __attribute__((picinterrupt(""))) isr(void)
             mGogo.caca--;
             mGogo.bonheur--;
 
-            if (mGogo.energie<=0)
+            if (mGogo.energie<=0 )
             {
                 mGogo.vivant=0;
             }
+             if (mGogo.caca<=0 || mGogo.caca>100)
+            {
+                mGogo.caca=0;
+            }
+             if (mGogo.bonheur<=0)
+            {
+                mGogo.bonheur=0;
+            }
 
         }
-# 185 "main.c"
+# 193 "main.c"
          if (cpt%500 == 0)
         {
             micro_vieillir();

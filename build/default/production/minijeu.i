@@ -6668,6 +6668,7 @@ void micro_dormir(void);
 void micro_calin(void);
 void micro_laver(void);
 void micro_vieillir(void);
+void micro_jeu(void);
 # 6 "minijeu.c" 2
 
 # 1 "./itoa.h" 1

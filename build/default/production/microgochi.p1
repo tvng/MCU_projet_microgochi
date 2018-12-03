@@ -608,83 +608,159 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 367 ]
 "46
-[; ;microgochi.c: 46:     mGogo.caca-=40;
-[e =- . _mGogo 6 -> -> 40 `i `uc ]
+[; ;microgochi.c: 46:     mGogo.caca-=30;
+[e =- . _mGogo 6 -> -> 30 `i `uc ]
 "47
-[; ;microgochi.c: 47: }
+[; ;microgochi.c: 47:     if (mGogo.caca<=0 || mGogo.caca>100)
+[e $ ! || <= -> . _mGogo 6 `i -> 0 `i > -> . _mGogo 6 `i -> 100 `i 368  ]
+"48
+[; ;microgochi.c: 48:     {
+{
+"49
+[; ;microgochi.c: 49:         mGogo.caca=0;
+[e = . _mGogo 6 -> -> 0 `i `uc ]
+"50
+[; ;microgochi.c: 50:     }
+}
+[e :U 368 ]
+"51
+[; ;microgochi.c: 51: }
 [e :UE 366 ]
 }
-"49
-[; ;microgochi.c: 49: void micro_calin ()
+"53
+[; ;microgochi.c: 53: void micro_calin ()
 [v _micro_calin `(v ~T0 @X0 1 ef ]
-"50
-[; ;microgochi.c: 50: {
+"54
+[; ;microgochi.c: 54: {
 {
 [e :U _micro_calin ]
 [f ]
-"51
-[; ;microgochi.c: 51:     mGogo.bonheur = mGogo.bonheur + 20;
-[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
-"52
-[; ;microgochi.c: 52:     if (mGogo.bonheur >100)
-[e $ ! > -> . _mGogo 3 `i -> 100 `i 369  ]
-"53
-[; ;microgochi.c: 53:     {
-{
-"54
-[; ;microgochi.c: 54:         mGogo.bonheur=100;
-[e = . _mGogo 3 -> -> 100 `i `uc ]
 "55
-[; ;microgochi.c: 55:     }
-}
-[e :U 369 ]
+[; ;microgochi.c: 55:     mGogo.bonheur = mGogo.bonheur + 20;
+[e = . _mGogo 3 -> + -> . _mGogo 3 `i -> 20 `i `uc ]
 "56
-[; ;microgochi.c: 56: }
-[e :UE 368 ]
-}
+[; ;microgochi.c: 56:     if (mGogo.bonheur >100)
+[e $ ! > -> . _mGogo 3 `i -> 100 `i 370  ]
+"57
+[; ;microgochi.c: 57:     {
+{
 "58
-[; ;microgochi.c: 58: void micro_laver()
-[v _micro_laver `(v ~T0 @X0 1 ef ]
+[; ;microgochi.c: 58:         mGogo.bonheur=100;
+[e = . _mGogo 3 -> -> 100 `i `uc ]
 "59
-[; ;microgochi.c: 59: {
+[; ;microgochi.c: 59:     }
+}
+[e :U 370 ]
+"60
+[; ;microgochi.c: 60: }
+[e :UE 369 ]
+}
+"62
+[; ;microgochi.c: 62: void micro_laver()
+[v _micro_laver `(v ~T0 @X0 1 ef ]
+"63
+[; ;microgochi.c: 63: {
 {
 [e :U _micro_laver ]
 [f ]
-"60
-[; ;microgochi.c: 60:     mGogo.caca=100;
-[e = . _mGogo 6 -> -> 100 `i `uc ]
-"61
-[; ;microgochi.c: 61: }
-[e :UE 370 ]
-}
-"63
-[; ;microgochi.c: 63: void micro_dormir ()
-[v _micro_dormir `(v ~T0 @X0 1 ef ]
 "64
-[; ;microgochi.c: 64: {
+[; ;microgochi.c: 64:     mGogo.caca=99;
+[e = . _mGogo 6 -> -> 99 `i `uc ]
+"65
+[; ;microgochi.c: 65: }
+[e :UE 371 ]
+}
+"67
+[; ;microgochi.c: 67: void micro_dormir ()
+[v _micro_dormir `(v ~T0 @X0 1 ef ]
+"68
+[; ;microgochi.c: 68: {
 {
 [e :U _micro_dormir ]
 [f ]
-"65
-[; ;microgochi.c: 65:     mGogo.energie += 30;
-[e =+ . _mGogo 2 -> -> 30 `i `uc ]
-"66
-[; ;microgochi.c: 66:     if (mGogo.energie > 100)
-[e $ ! > -> . _mGogo 2 `i -> 100 `i 372  ]
-"67
-[; ;microgochi.c: 67:     {
-{
-"68
-[; ;microgochi.c: 68:         mGogo.energie=100;
-[e = . _mGogo 2 -> -> 100 `i `uc ]
 "69
-[; ;microgochi.c: 69:     }
-}
-[e :U 372 ]
+[; ;microgochi.c: 69:     mGogo.energie += 30;
+[e =+ . _mGogo 2 -> -> 30 `i `uc ]
 "70
-[; ;microgochi.c: 70:     mGogo.dodo=1;
-[e = . _mGogo 5 -> -> 1 `i `uc ]
+[; ;microgochi.c: 70:     if (mGogo.energie > 100)
+[e $ ! > -> . _mGogo 2 `i -> 100 `i 373  ]
 "71
-[; ;microgochi.c: 71: }
-[e :UE 371 ]
+[; ;microgochi.c: 71:     {
+{
+"72
+[; ;microgochi.c: 72:         mGogo.energie=100;
+[e = . _mGogo 2 -> -> 100 `i `uc ]
+"73
+[; ;microgochi.c: 73:     }
+}
+[e :U 373 ]
+"74
+[; ;microgochi.c: 74:     mGogo.dodo=1;
+[e = . _mGogo 5 -> -> 1 `i `uc ]
+"75
+[; ;microgochi.c: 75: }
+[e :UE 372 ]
+}
+"78
+[; ;microgochi.c: 78: void micro_jeu()
+[v _micro_jeu `(v ~T0 @X0 1 ef ]
+"79
+[; ;microgochi.c: 79: {
+{
+[e :U _micro_jeu ]
+[f ]
+"80
+[; ;microgochi.c: 80:      mGogo.energie -= 10;
+[e =- . _mGogo 2 -> -> 10 `i `uc ]
+"81
+[; ;microgochi.c: 81:     if (mGogo.energie <0)
+[e $ ! < -> . _mGogo 2 `i -> 0 `i 375  ]
+"82
+[; ;microgochi.c: 82:     {
+{
+"83
+[; ;microgochi.c: 83:         mGogo.energie=0;
+[e = . _mGogo 2 -> -> 0 `i `uc ]
+"84
+[; ;microgochi.c: 84:     }
+}
+[e :U 375 ]
+"86
+[; ;microgochi.c: 86:       mGogo.satiete -= 10;
+[e =- . _mGogo 1 -> -> 10 `i `uc ]
+"87
+[; ;microgochi.c: 87:     if (mGogo.satiete <0)
+[e $ ! < -> . _mGogo 1 `i -> 0 `i 376  ]
+"88
+[; ;microgochi.c: 88:     {
+{
+"89
+[; ;microgochi.c: 89:         mGogo.satiete=0;
+[e = . _mGogo 1 -> -> 0 `i `uc ]
+"90
+[; ;microgochi.c: 90:     }
+}
+[e :U 376 ]
+"92
+[; ;microgochi.c: 92:        mGogo.caca -= 10;
+[e =- . _mGogo 6 -> -> 10 `i `uc ]
+"93
+[; ;microgochi.c: 93:     if (mGogo.caca <0 || mGogo.caca>100)
+[e $ ! || < -> . _mGogo 6 `i -> 0 `i > -> . _mGogo 6 `i -> 100 `i 377  ]
+"94
+[; ;microgochi.c: 94:     {
+{
+"95
+[; ;microgochi.c: 95:         mGogo.caca=0;
+[e = . _mGogo 6 -> -> 0 `i `uc ]
+"96
+[; ;microgochi.c: 96:     }
+}
+[e :U 377 ]
+"98
+[; ;microgochi.c: 98:     micro_calin ();
+[e ( _micro_calin ..  ]
+"99
+[; ;microgochi.c: 99: }
+[e :UE 374 ]
 }
